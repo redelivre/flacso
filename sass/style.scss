@@ -45,14 +45,15 @@ and Blueprint http://www.blueprintcss.org/
 	12.2 Galleries
 --------------------------------------------------------------*/
 
+@import "bootstrap";
 @import "wordpress/mixins/mixins-master";
 @import "wordpress/variables-site/variables-site";
+@import "blueprint";
 
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
 @import "normalize";
-@import "bootstrap";
 
 /*--------------------------------------------------------------
 2.0 Typography

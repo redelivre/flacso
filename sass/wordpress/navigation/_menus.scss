@@ -1,8 +1,20 @@
+.site-navigation {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding-left: 0;
+	}
+}
+
+.top-navigation {
+	li {
+		display: inline-block;
+	}
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
 
 	ul {
 		list-style: none;
@@ -44,7 +56,6 @@
 		}
 	}
 	li {
-		float: left;
 		position: relative;
 
 		&:hover > a {
