@@ -7,6 +7,18 @@
  * @package Flacso
  */
 
+/**
+ * Display the main menu
+ */
+function flacso_the_menu() {
+	?>
+	<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
+		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'flacso' ); ?></button>
+		<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+	</nav><!-- #site-navigation -->  	
+	<?php
+}
+
 if ( ! function_exists( 'flacso_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
