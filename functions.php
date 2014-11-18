@@ -42,7 +42,8 @@ function flacso_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'flacso' ),
+		'main' => __( 'Main Menu', 'flacso' ),
+		'top' => __( 'Top Menu', 'flacso' ),
 	) );
 
 	/*
