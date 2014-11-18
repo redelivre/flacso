@@ -15,6 +15,7 @@ wp-content/wp-cache-config.php
 # Sass files
 .sass-cache
 .sass-cache/*
+*.map
 
 # Cache files for sublime text
 *.tmlanguage.cache
