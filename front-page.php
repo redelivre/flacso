@@ -13,7 +13,37 @@ get_header(); ?>
 	  	</div>
 
 	  	<div class="col-md-8">
-	  		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quo maxime architecto velit dolores mollitia pariatur amet possimus eaque facere cupiditate, vero iusto sint reiciendis esse adipisci maiores minima odit!</p>
+	  		<?php
+	  		// Featured Page via Customizer
+	  		$page_id = (int) get_theme_mod( 'flacso_featured_page');
+
+	  		if ( $page_id > 0 ) :
+	  			$featured_page = new WP_Query( array( 'page_id' => $page_id ) );
+
+	  			if ( $featured_page->have_posts() ) : while ( $featured_page->have_posts() ) : $featured_page->the_post(); ?>
+		  			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<div class="entry-image">
+								<a href="<?php the_permalink(); ?>" rel="bookmark">
+									<?php
+									if ( has_post_thumbnail() ) :
+										the_post_thumbnail( 'large' );
+									else :
+										echo '<img src="http://placehold.it/350x262/">';
+									endif;
+									?>
+								</a>
+							</div><!-- .entry-image -->
+						</header><!-- .entry-header -->
+
+						<div class="entry-content entry-content--summary lead">
+							<?php the_excerpt(); ?>
+						</div><!-- .entry-content -->
+					</article><!-- #post-## -->
+				<?php
+				endwhile; endif;
+	  		endif;
+	  		?>
 	  	</div>
 	</div><!-- .row -->
 
@@ -33,7 +63,6 @@ get_header(); ?>
 			if ( $noticias->have_posts() ) : while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
 
 				<div class="col-md-4">
-
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="entry-header">
 							<div class="entry-image">

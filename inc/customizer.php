@@ -14,6 +14,28 @@ function flacso_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	/*
+     * Front Page Content
+     */
+    $wp_customize->add_section( 'flacso_front_page_content', array(
+        'title'    => __( 'Front Page Content', 'flacso' ),
+        'priority' => 60,
+    ) );
+    
+    // Featured Page
+    $wp_customize->add_setting( 'flacso_featured_page', array(
+        'default'       => 1,
+        'capability'    => 'edit_theme_options'
+    ) );
+
+    $wp_customize->add_control( 'flacso_featured_page', array(
+        'label'    	=> __( 'Featured Page', 'flacso' ),
+        'type'		=> 'dropdown-pages',
+        'section'  	=> 'flacso_front_page_content',
+        'settings' 	=> 'flacso_featured_page'
+    ) );
+
 }
 add_action( 'customize_register', 'flacso_customize_register' );
 
