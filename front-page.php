@@ -74,7 +74,7 @@ get_header(); ?>
 					if ( $noticias->have_posts() ) : while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
 
 						<div class="col-md-4">
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'hentry--columns' ); ?>>
 								<header class="entry-header">
 									<div class="entry-image">
 										<a href="<?php the_permalink(); ?>" rel="bookmark">
