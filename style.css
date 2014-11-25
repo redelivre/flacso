@@ -5413,11 +5413,11 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.site-complementary,
-.site-footer {
+.site-header {
   background: #f2f2f2; }
 
-.site-branding {
+.site-footer,
+.featured-category {
   background: #f2f2f2; }
 
 /*--------------------------------------------------------------
