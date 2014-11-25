@@ -26,7 +26,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="row">
-				<div class="site-complementary clear">
+				<div class="site-complementary wrapper clear">
 					<div class="col-md-6">
 						<nav id="site-navigation--top" class="site-navigation top-navigation" role="navigation">
 							<?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>

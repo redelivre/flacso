@@ -1,5 +1,36 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
+// 
+
+.wrapper {
+	padding: $section__padding;
+}
+
+.area-title {
+	color: $color__area-title;
+}
+
+.area-title--secondary {
+	color: $color__area-title--secondary;
+}
+
+.site-header a {
+	color: $color__link--secondary;
+}
+
+.featured-category {
+	background-color: $color__featured-category;
+}
+
+.featured-news {
+	background-color: $color__featured-news;	
+}
+
+.site-footer {
+	background-color: $color__footer;
+	color: $color__text-alternate;
+}
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/

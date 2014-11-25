@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section class="featured-intro">
+	<section class="wrapper featured-intro">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
@@ -51,21 +51,22 @@ get_header(); ?>
 		</div><!-- .container -->
 	</section><!-- .featured-intro -->
 
-	<section class="featured-category">
+	<section class="wrapper featured-category">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Biblioteca</h3>
+					<h4 class="area-title area-title--secondary">Biblioteca</h3>
+					<?php wp_tag_cloud(); ?>
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- .featured-category-->
 
-	<section class="featured-news">
+	<section class="wrapper featured-news">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Notícias</h3>
+					<h4 class="area-title">Notícias</h3>
 				</div>
 					<?php
 					$noticias = new WP_Query( array ( 'posts_per_page' => 3, 'ignore_sticky_posts' => true ) );
@@ -108,11 +109,22 @@ get_header(); ?>
 		</div><!-- .container -->
 	</section><!-- .featured-news -->
 
-	<section class="featured-links">
+	<section class="wrapper featured-links">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Destaques</h3>
+					<h4 class="area-title">Destaques</h3>
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
+					<img src="http://placehold.it/95" />
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
