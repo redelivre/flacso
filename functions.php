@@ -95,6 +95,10 @@ add_action( 'widgets_init', 'flacso_widgets_init' );
 function flacso_scripts() {
 	wp_enqueue_style( 'flacso-style', get_stylesheet_uri() );
 
+	// Google Fonts
+    wp_register_style( 'flacso-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,700' );
+    wp_enqueue_style( 'flacso-fonts' );
+
 	wp_enqueue_script( 'flacso-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'flacso-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

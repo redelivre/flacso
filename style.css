@@ -5610,7 +5610,7 @@ input,
 select,
 textarea {
   color: #363636;
-  font-family: sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5; }
@@ -5834,7 +5834,8 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #2c6db6;
+  font-weight: bold; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
