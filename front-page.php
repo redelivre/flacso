@@ -29,7 +29,7 @@ get_header(); ?>
 										<a href="<?php the_permalink(); ?>" rel="bookmark">
 											<?php
 											if ( has_post_thumbnail() ) :
-												the_post_thumbnail( 'large' );
+												the_post_thumbnail( 'archive' );
 											else :
 												echo '<img src="http://placehold.it/350x262/">';
 											endif;
@@ -80,7 +80,7 @@ get_header(); ?>
 										<a href="<?php the_permalink(); ?>" rel="bookmark">
 											<?php
 											if ( has_post_thumbnail() ) :
-												the_post_thumbnail( 'large' );
+												the_post_thumbnail( 'archive' );
 											else :
 												echo '<img src="http://placehold.it/350x262/">';
 											endif;
