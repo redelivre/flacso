@@ -14,6 +14,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
+					<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+			        <div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
+			                <?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			        </div><!-- .widget-area--footer -->
+			    	<?php endif; ?>
 					<div class="site-info">
 						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'flacso' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'flacso' ), 'WordPress' ); ?></a>
 						<span class="sep"> | </span>
