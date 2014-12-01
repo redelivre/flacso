@@ -5,11 +5,19 @@
  * @package Flacso
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-main' ) ) {
 	return;
 }
 ?>
 
-<div id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+<div class="col-md-3 col-md-pull-9">
+	<div id="secondary" class="widget-area" role="complementary">
+		<?php flacso_the_menu(); ?>
+		
+		<?php
+		if ( ! is_active_sidebar( 'sidebar-main' ) ) {
+			dynamic_sidebar( 'sidebar-main' );
+		}
+		?>
+	</div><!-- #secondary -->
+</div><!-- .col-md-# -->
