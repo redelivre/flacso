@@ -42,7 +42,7 @@ function flacso_create_taxs()
 			//'_builtin' => '' // Core
 	);
 	
-	register_taxonomy('document_type', array('document'), $args);
+	$ret = register_taxonomy('document_type', array('document'), $args);
 	
 	// Gea Generic end-place archive
 	
@@ -81,6 +81,7 @@ function flacso_create_taxs()
 			//'_builtin' => '' // Core
 	);
 	
-	register_taxonomy('document_type', array('document', 'post', 'page'), $args);
+	register_taxonomy('gea', array('document', 'post', 'page'), $args);
 	
 }
+add_action('init', 'flacso_create_taxs');
