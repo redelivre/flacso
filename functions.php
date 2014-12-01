@@ -86,8 +86,8 @@ function flacso_widgets_init() {
 		'description'   => __( 'The main sidebar', 'flacso' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
+		'after_title'   => '</h4>',
 	) );
 
 	register_sidebar( array(
@@ -96,8 +96,8 @@ function flacso_widgets_init() {
 		'description'	=> __( 'The widget area on the footer', 'flacso' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-3">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'flacso_widgets_init' );
