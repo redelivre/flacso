@@ -1,6 +1,43 @@
+.comment-list,
+.comment-list ol {
+	list-style-type: none;
+	padding: 0;
+}
+
+.comment-list .media {
+	margin-top: 0;
+}
+
+.comment-body {
+	border-bottom: 2px dotted $color__link;
+	padding: 1.5em 0;
+}
+
+.comment-meta {
+	margin-bottom: 1em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 	display: block;
+}
+
+.comment-awaiting-moderation {
+	padding: 1em;
+}
+
+/* Comment form */
+.comment-form label {
+	display: block
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="url"],
+.comment-form input[type="email"],
+.comment-form input[type="password"],
+.comment-form input[type="search"] {
+	width: 100%;
 }
