@@ -27,12 +27,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="site-complementary wrapper clear">
-					<div class="col-md-6">
+					<div class="col-md-offset-6 col-md-3 ">
 						<nav id="site-navigation--top" class="site-navigation top-navigation" role="navigation">
 							<?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
 						</nav><!-- #site-navigation -->
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<?php get_search_form(); ?>
 					</div>
 				</div><!-- .site-complementary -->
