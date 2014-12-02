@@ -41,3 +41,36 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-share {
+	padding: 1em 0;
+}
+
+.entry-footer {
+	border-width: $border-width 0;
+	border-color: $color__tertiary;
+	border-style: solid;
+	padding: 1em 0;
+}
+
+/* Share links */
+.share-link {
+	background: $color__tertiary;
+	color: #fff;
+	font-weight: normal;
+	display: block;
+	padding: 1em;
+	text-align: center;
+}
+
+.share-link--twitter {
+	background: $color__twitter;
+}
+
+.share-link--facebook {
+	background: $color__facebook;
+}
+
+.share-link--googleplus {
+	background: $color__googleplus;
+}

@@ -110,13 +110,14 @@ function flacso_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'flacso' ) );
 		if ( $categories_list && flacso_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'flacso' ) . '</span>', $categories_list );
+
+			printf( '<div class="cat-links">' . __( 'Posted %1$s', 'flacso' ) . '</div>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'flacso' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'flacso' ) . '</span>', $tags_list );
+			printf( '<div class="tags-links">' . __( 'Tagged %1$s', 'flacso' ) . '</div>', $tags_list );
 		}
 	}
 
@@ -127,6 +128,22 @@ function flacso_entry_footer() {
 	}
 
 	edit_post_link( __( 'Edit', 'flacso' ), '<span class="edit-link">', '</span>' );
+}
+endif;
+
+if ( ! function_exists( 'flacso_entry_share' ) ) :
+/**
+ * Prints HTML with share buttons
+ */
+function flacso_entry_share() {
+	?>
+	<div class="row">
+		<div class="col-md-3"><a href="#" class="share-link"><?php _e( 'Share this content', 'flacso' ); ?></a></div>
+		<div class="col-md-3"><a href="#" class="share-link share-link--twitter">Twitter</a></div>
+		<div class="col-md-3"><a href="#" class="share-link share-link--facebook">Facebook</a></div>
+		<div class="col-md-3"><a href="#" class="share-link share-link--googleplus">Google+</a></div>
+	</div>
+	<?php
 }
 endif;
 
