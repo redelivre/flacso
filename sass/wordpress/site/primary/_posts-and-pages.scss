@@ -22,14 +22,13 @@
 	font-size: 1.25em;
 }
 
-.byline,
-.updated:not(.published){
-	display: none;
+.entry-title {
+	font-weight: bold;
+	margin-bottom: 0.25em;
 }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
+.updated:not(.published){
+	display: none;
 }
 
 .page-content,
