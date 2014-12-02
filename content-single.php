@@ -29,7 +29,11 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<div class="entry-share">
+		<?php flacso_entry_share(); ?>
+	</div><!-- .entry-share -->
+
+	<footer class="entry-footer clear">
 		<?php flacso_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

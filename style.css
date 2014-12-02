@@ -5417,6 +5417,7 @@ button.close {
 /* Dark blue */
 /* Light blue */
 /* Light gray */
+/* Social colors */
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
@@ -6049,6 +6050,33 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.entry-share {
+  padding: 1em 0; }
+
+.entry-footer {
+  border-width: 6px 0;
+  border-color: #ebebeb;
+  border-style: solid;
+  padding: 1em 0; }
+
+/* Share links */
+.share-link {
+  background: #ebebeb;
+  color: #fff;
+  font-weight: normal;
+  display: block;
+  padding: 1em;
+  text-align: center; }
+
+.share-link--twitter {
+  background: #00aced; }
+
+.share-link--facebook {
+  background: #3b5998; }
+
+.share-link--googleplus {
+  background: #dd4b39; }
 
 /*--------------------------------------------------------------
 10.2 Asides
