@@ -6034,13 +6034,12 @@ a {
 .hentry--columns .entry-title {
   font-size: 1.25em; }
 
-.byline,
+.entry-title {
+  font-weight: bold;
+  margin-bottom: 0.25em; }
+
 .updated:not(.published) {
   display: none; }
-
-.single .byline,
-.group-blog .byline {
-  display: inline; }
 
 .page-content,
 .entry-content,

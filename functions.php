@@ -42,6 +42,7 @@ function flacso_setup() {
 
 	// Image sizes
 	add_image_size( 'archive', 328, 246, true );
+	add_image_size( 'singular', 825, 619, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
