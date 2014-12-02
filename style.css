@@ -5747,7 +5747,7 @@ input[type="submit"] {
   font-size: 0.875em;
   font-weight: bold;
   line-height: 1;
-  padding: .6em 1em .4em; }
+  padding: .6em 1em 0.5em; }
 
 button:hover,
 input[type="button"]:hover,
@@ -5794,7 +5794,8 @@ textarea {
   color: #666;
   background: #ebebeb;
   border: 0;
-  border-radius: 8px; }
+  border-radius: 8px;
+  padding: 0.25em 0.5em; }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -5804,17 +5805,10 @@ input[type="search"]:focus,
 textarea:focus {
   color: #111; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  padding: 3px; }
-
 textarea {
   overflow: auto;
   /* Removes default vertical scrollbar in IE6/7/8/9 */
-  padding-left: 3px;
+  padding: 0.25em 0.5em;
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 100%; }
@@ -6088,11 +6082,40 @@ a {
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
+.comment-list,
+.comment-list ol {
+  list-style-type: none;
+  padding: 0; }
+
+.comment-list .media {
+  margin-top: 0; }
+
+.comment-body {
+  border-bottom: 2px dotted #2c6db6;
+  padding: 1.5em 0; }
+
+.comment-meta {
+  margin-bottom: 1em; }
+
 .comment-content a {
   word-wrap: break-word; }
 
 .bypostauthor {
   display: block; }
+
+.comment-awaiting-moderation {
+  padding: 1em; }
+
+/* Comment form */
+.comment-form label {
+  display: block; }
+
+.comment-form input[type="text"],
+.comment-form input[type="url"],
+.comment-form input[type="email"],
+.comment-form input[type="password"],
+.comment-form input[type="search"] {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
@@ -6123,6 +6146,10 @@ embed,
 iframe,
 object {
   max-width: 100%; }
+
+/* Rounded avatars */
+.avatar {
+  border-radius: 50%; }
 
 /*--------------------------------------------------------------
 12.1 Captions

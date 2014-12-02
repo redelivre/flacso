@@ -87,3 +87,59 @@ function flacso_setup_author() {
 	}
 }
 add_action( 'wp', 'flacso_setup_author' );
+
+/**
+ * Callback for wp_list_comments
+ * @param  [type] $comment [description]
+ * @param  [type] $args    [description]
+ * @param  [type] $depth   [description]
+ */
+function flacso_comments_list($comment, $args, $depth) {
+	$GLOBALS['comment'] = $comment;
+	extract($args, EXTR_SKIP);
+
+	if ( 'div' == $args['style'] ) {
+		$tag = 'div';
+		$add_below = 'comment';
+	} else {
+		$tag = 'li';
+		$add_below = 'div-comment';
+	}
+?>
+	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? 'media' : 'media parent' ) ?> id="comment-<?php comment_ID() ?>">
+	
+	<article id="div-comment-<?php comment_ID() ?>" class="comment-body">
+		<?php if ( $args['avatar_size'] != 0 ) : ?>
+		<div class="comment-author--image media-left">
+			<?php echo get_avatar( $comment ); ?>
+		</div><!-- .comment-author--image.media-left -->
+		<?php endif; ?>
+
+		<div class="media-body">
+			<div class="comment-meta">
+				<span class="comment-author vcard">
+					<?php printf( __( '<cite class="fn media-heading">%s</cite>' ), get_comment_author_link() ); ?>
+				</span><!-- .comment-author.vcard -->
+
+				<span class="comment-metadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+					<?php
+						/* translators: 1: date, 2: time */
+						printf( __('%s'), get_comment_date() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+					?>
+				</span><!-- .comment-metadata -->
+			</div><!-- .comment-meta. -->
+
+			<div class="comment-content">
+				<?php if ( $comment->comment_approved == '0' ) : ?>
+					<p class="comment-awaiting-moderation bg-warning text-warning"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+				<?php endif; ?>
+				<?php comment_text(); ?>
+			</div><!-- .comment-content -->
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div><!-- .reply -->
+		</div><!-- .media-body -->
+	</article><!-- .comment-body -->
+<?php
+}
