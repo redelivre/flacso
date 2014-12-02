@@ -8,6 +8,7 @@
 
 .area-title {
 	color: $color__area-title;
+	font-weight: bold;
 }
 
 .area-title--secondary {
@@ -23,7 +24,7 @@
 }
 
 .featured-news {
-	background-color: $color__featured-news;	
+	background-color: $color__tertiary;	
 }
 
 .site-footer {
