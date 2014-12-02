@@ -6,9 +6,20 @@
 	margin: 0 0 1.5em;
 }
 
+/* Posts in columns */
 .hentry--columns {
 	background-color: #fff;
 	padding: 1em;
+}
+
+.hentry--columns .entry-meta {
+	background-color: $color__tertiary;
+	font-size: 0.875em;
+	padding: 0.5em;
+}
+
+.hentry--columns .entry-title {
+	font-size: 1.25em;
 }
 
 .byline,

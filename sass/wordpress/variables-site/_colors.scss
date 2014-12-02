@@ -10,7 +10,7 @@ $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: #2c6db6;
 $color__link--secondary: #ba0933;
-$color__link-visited: purple;
+$color__link-visited: #2c6db6;
 $color__link-hover: #2c6db6;
 $color__text-main: #363636;
 $color__text-alternate: #fff;
@@ -27,3 +27,8 @@ $color__footer: #002044;
 
 $color__area-title: #002044;
 $color__area-title--secondary: #fff;
+
+/* Color merging test */
+$color__primary: #002044; /* Dark blue */
+$color__secondary: #2c6db6; /* Light blue */
+$color__tertiary: #ebebeb; /* Light gray */
