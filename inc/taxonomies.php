@@ -46,28 +46,40 @@ function flacso_create_taxs()
 	
 	// Gea Generic end-place archive
 	
+	$gea_label = get_theme_mod('flacso_gea_name', false);
+	if($gea_label == false)
+	{
+		$gea_label = "Generic end-place archive";
+	}
+	
 	$labels = array
 	(
-			'name' => __('Generic end-place archive', 'flacso'),
-			'singular_name' => __('Generic end-place archive', 'flacso'),
-			'search_items' => __('Search for generic end-place archive','flacso'),
-			'all_items' => __('All generic end-place archive','flacso'),
-			'parent_item' => __( 'Parent generic end-place archive','flacso'),
-			'parent_item_colon' => __( 'Parent generic end-place archive:','flacso'),
-			'edit_item' => __('Edit generic end-place archive','flacso'),
-			'update_item' => __('Update generic end-place archive','flacso'),
-			'add_new_item' => __('Add new generic end-place archive','flacso'),
-			'add_new' => __('Add new','flacso'),
-			'new_item_name' => __('New generic end-place archive','flacso'),
-			'view_item' => __('View generic end-place archive','flacso'),
-			'not_found' =>  __('No generic end-place archive found','flacso'),
-			'not_found_in_trash' => __('No generic end-place archive found in the trash','flacso'),
-			'menu_name' => __('Gea','flacso')
+			"name" => "$gea_label",
+			"singular_name" => "$gea_label",
+			"search_items" => "Search for $gea_label",
+			"all_items" => "All $gea_label",
+			"parent_item" =>  "Parent $gea_label",
+			"parent_item_colon" =>  "Parent $gea_label:",
+			"edit_item" => "Edit $gea_label",
+			"update_item" => "Update $gea_label",
+			"add_new_item" => "Add new $gea_label",
+			"add_new" => "Add new",
+			"new_item_name" => "New $gea_label",
+			"view_item" => "View $gea_label",
+			"not_found" =>  "No $gea_label found",
+			"not_found_in_trash" => "No $gea_label found in the trash",
+			"menu_name" => "GEA"
 	);
+	
+	$gea_abreviation = get_theme_mod('flacso_gea_abreviation', false);
+	if($gea_abreviation != false)
+	{
+		$labels['menu_name'] = $gea_abreviation;
+	}
 	
 	$args = array
 	(
-			'label' => __('Generic end-place archive','flacso'),
+			'label' => __($gea_label,'flacso'),
 			'labels' => $labels,
 			'public' => true,
 			'capabilities' => array('assign_terms' => 'edit_documents',
