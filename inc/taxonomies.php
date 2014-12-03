@@ -54,20 +54,20 @@ function flacso_create_taxs()
 	
 	$labels = array
 	(
-			"name" => "$gea_label",
-			"singular_name" => "$gea_label",
-			"search_items" => "Search for $gea_label",
-			"all_items" => "All $gea_label",
-			"parent_item" =>  "Parent $gea_label",
-			"parent_item_colon" =>  "Parent $gea_label:",
-			"edit_item" => "Edit $gea_label",
-			"update_item" => "Update $gea_label",
-			"add_new_item" => "Add new $gea_label",
-			"add_new" => "Add new",
-			"new_item_name" => "New $gea_label",
-			"view_item" => "View $gea_label",
-			"not_found" =>  "No $gea_label found",
-			"not_found_in_trash" => "No $gea_label found in the trash",
+			"name" => $gea_label,
+			"singular_name" => $gea_label,
+			"search_items" => __("Search for", 'flacso')." $gea_label",
+			"all_items" => __("All", 'flacso')." $gea_label",
+			"parent_item" =>  __("Parent", 'flacso')." $gea_label",
+			"parent_item_colon" =>  __("Parent", 'flacso')." $gea_label:",
+			"edit_item" => __("Edit", 'flacso')." $gea_label",
+			"update_item" => __("Update", 'flacso')." $gea_label",
+			"add_new_item" => __("Add new", 'flacso')." $gea_label",
+			"add_new" => __("Add new", 'flacso'),
+			"new_item_name" => __("New", 'flacso')." $gea_label",
+			"view_item" => __("View", 'flacso')." $gea_label",
+			"not_found" =>  __("No", 'flacso')." $gea_label ".__("found", 'flacso'),
+			"not_found_in_trash" => __("No", 'flacso')." $gea_label ".__("found in the trash", 'flacso'),
 			"menu_name" => "GEA"
 	);
 	
