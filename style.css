@@ -5413,11 +5413,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/* Color merging test */
-/* Dark blue */
-/* Light blue */
-/* Light gray */
-/* Social colors */
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
@@ -5998,6 +5993,9 @@ a {
 
 .site-header a {
   color: #ba0933; }
+
+.featured-intro .hentry .entry-content--summary {
+  font-size: 1.125em; }
 
 .featured-category {
   background-color: #002044; }

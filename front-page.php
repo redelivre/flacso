@@ -24,23 +24,28 @@ get_header(); ?>
 
 			  			if ( $featured_page->have_posts() ) : while ( $featured_page->have_posts() ) : $featured_page->the_post(); ?>
 				  			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<header class="entry-header">
-									<div class="entry-image">
-										<a href="<?php the_permalink(); ?>" rel="bookmark">
-											<?php
-											if ( has_post_thumbnail() ) :
-												the_post_thumbnail( 'archive' );
-											else :
-												echo '<img src="http://placehold.it/350x262/">';
-											endif;
-											?>
-										</a>
-									</div><!-- .entry-image -->
-								</header><!-- .entry-header -->
+								<div class="col-sm-4 col-md-4">
+									<header class="entry-header">
+										<div class="entry-image">
+											<a href="<?php the_permalink(); ?>" rel="bookmark">
+												<?php
+												if ( has_post_thumbnail() ) :
+													the_post_thumbnail( 'featured' );
+												else :
+													echo '<img src="http://placehold.it/350x262/">';
+												endif;
+												?>
+											</a>
+										</div><!-- .entry-image -->
+									</header><!-- .entry-header -->
+								</div>
 
-								<div class="entry-content entry-content--summary lead">
-									<?php the_excerpt(); ?>
-								</div><!-- .entry-content -->
+								<div class="col-sm-8 col-md-8">
+									<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+									<div class="entry-content entry-content--summary">
+										<?php the_excerpt(); ?>
+									</div><!-- .entry-content -->
+								</div>
 							</article><!-- #post-## -->
 						<?php
 						endwhile; endif;

@@ -1,6 +1,5 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
-// 
 
 .wrapper {
 	padding: $section__padding;
@@ -17,6 +16,10 @@
 
 .site-header a {
 	color: $color__link--secondary;
+}
+
+.featured-intro .hentry .entry-content--summary {
+	font-size: 1.125em;
 }
 
 .featured-category {
