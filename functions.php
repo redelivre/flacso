@@ -41,6 +41,7 @@ function flacso_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Image sizes
+	add_image_size( 'featured', 328, 328, true );
 	add_image_size( 'archive', 328, 246, true );
 	add_image_size( 'singular', 825, 619, true );
 
@@ -71,6 +72,9 @@ function flacso_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Add support for excerpt in pages
+	add_post_type_support( 'page', 'excerpt' );
 }
 endif; // flacso_setup
 add_action( 'after_setup_theme', 'flacso_setup' );
