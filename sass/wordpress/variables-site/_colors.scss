@@ -28,12 +28,13 @@ $color__footer: #002044;
 $color__area-title: #002044;
 $color__area-title--secondary: #fff;
 
-/* Color merging test */
-$color__primary: #002044; /* Dark blue */
-$color__secondary: #2c6db6; /* Light blue */
-$color__tertiary: #ebebeb; /* Light gray */
+// Color merging test
+$color__primary: #002044; // Dark blue
+$color__secondary: #2c6db6; // Light blue
+$color__tertiary: #ebebeb; // Light gray
+$color__quaternary: #ba0933; // Red
 
-/* Social colors */
+// Social colors
 $color__facebook: #3b5998;
 $color__twitter: #00aced;
 $color__googleplus: #dd4b39;
