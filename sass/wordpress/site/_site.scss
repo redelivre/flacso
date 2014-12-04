@@ -8,6 +8,7 @@
 .area-title {
 	color: $color__area-title;
 	font-weight: bold;
+	margin-bottom: 1.5em;
 }
 
 .area-title--secondary {
@@ -18,8 +19,18 @@
 	color: $color__link--secondary;
 }
 
+/* Front Page content */
+.featured-intro .hentry {
+	border-bottom: $border-width solid $color__tertiary;
+	padding: 1.5em 0;
+}
+
 .featured-intro .hentry .entry-content--summary {
 	font-size: 1.125em;
+}
+
+.feature .entry-title {
+	font-size: 1.25em;
 }
 
 .featured-category {

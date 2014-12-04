@@ -5982,11 +5982,12 @@ a {
 10.0 Content
 --------------------------------------------------------------*/
 .wrapper {
-  padding: 1.5em 0; }
+  padding: 2.5em 0; }
 
 .area-title {
   color: #002044;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 1.5em; }
 
 .area-title--secondary {
   color: #fff; }
@@ -5994,8 +5995,16 @@ a {
 .site-header a {
   color: #ba0933; }
 
+/* Front Page content */
+.featured-intro .hentry {
+  border-bottom: 6px solid #ebebeb;
+  padding: 1.5em 0; }
+
 .featured-intro .hentry .entry-content--summary {
   font-size: 1.125em; }
+
+.feature .entry-title {
+  font-size: 1.25em; }
 
 .featured-category {
   background-color: #002044; }
@@ -6026,9 +6035,6 @@ a {
   font-size: 0.875em;
   padding: 0.5em; }
 
-.hentry--columns .entry-title {
-  font-size: 1.25em; }
-
 .entry-title {
   font-weight: bold;
   margin-bottom: 0.25em; }
@@ -6053,6 +6059,38 @@ a {
   border-color: #ebebeb;
   border-style: solid;
   padding: 1em 0; }
+
+/* Read more */
+.more-sign {
+  background: #002044;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0.125em 0.35em;
+  line-height: 1; }
+
+.more-sign--alternate {
+  background: #fff;
+  color: #002044; }
+
+.read-more {
+  color: #ba0933;
+  font-size: 0.875em;
+  padding: 0.25em;
+  text-transform: lowercase; }
+  .read-more .more-sign {
+    color: #fff;
+    font-weight: normal;
+    margin-left: 0.5em; }
+  .read-more .more-sign--alternate {
+    color: #002044; }
+
+.read-more--absolute {
+  position: absolute;
+  top: 0.5em;
+  right: 1.5em; }
+
+.read-more:visited {
+  color: #ba0933; }
 
 /* Share links */
 .share-link {
