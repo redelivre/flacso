@@ -35,6 +35,36 @@ function flacso_customize_register( $wp_customize ) {
         'section'  	=> 'flacso_front_page_content',
         'settings' 	=> 'flacso_featured_page'
     ) );
+    
+    /*
+     * GEA
+    */
+    $wp_customize->add_section( 'flacso_gea', array(
+    		'title'    => __( 'GEA Settings', 'flacso' ), // TODO Better name
+    		//'priority' => 60,
+    ) );
+    
+    // Labels
+    $wp_customize->add_setting( 'flacso_gea_name', array(
+    		'default'       => '',
+    		'capability'    => 'edit_theme_options'
+    ) );
+    
+    $wp_customize->add_control( 'flacso_gea_name', array(
+    		'label'    	=> __( 'GEA Custom Label', 'flacso' ),
+    		'section'  	=> 'flacso_gea',
+    		'settings' 	=> 'flacso_gea_name'
+    ) );
+    $wp_customize->add_setting( 'flacso_gea_abreviation', array(
+    		'default'       => '',
+    		'capability'    => 'edit_theme_options'
+    ) );
+    
+    $wp_customize->add_control( 'flacso_gea_abreviation', array(
+    		'label'    	=> __( 'GEA Custom Abreviation', 'flacso' ),
+    		'section'  	=> 'flacso_gea',
+    		'settings' 	=> 'flacso_gea_abreviation'
+    ) );
 
 }
 add_action( 'customize_register', 'flacso_customize_register' );
