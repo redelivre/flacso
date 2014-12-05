@@ -125,3 +125,16 @@
 	font-size: 1.125em;
 	font-weight: bold;
 }
+
+/* Page templates */
+.general-list__item {
+	border-bottom: $border-width solid $color__tertiary;
+	padding: 1em 0;
+	margin-bottom: 1.5em;
+}
+
+.general-list {
+	.general-list__item:last-child {
+		border-bottom: 0;
+	}
+}
