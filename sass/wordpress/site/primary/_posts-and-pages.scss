@@ -112,3 +112,29 @@
 .share-link--googleplus {
 	background: $color__googleplus;
 }
+
+/* Archive */
+.page-header {
+	background: $color__tertiary;
+	margin: 0 0 2em;	
+	padding: 1.5em;
+}
+
+.page-title {
+	padding: 0;
+	font-size: 1.125em;
+	font-weight: bold;
+}
+
+/* Page templates */
+.general-list__item {
+	border-bottom: $border-width solid $color__tertiary;
+	padding: 1em 0;
+	margin-bottom: 1.5em;
+}
+
+.general-list {
+	.general-list__item:last-child {
+		border-bottom: 0;
+	}
+}
