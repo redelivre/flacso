@@ -64,8 +64,15 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
 					<h4 class="area-title area-title--secondary">Biblioteca</h3>
-						<a href="<?php the_permalink(); ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a>
-					<?php wp_tag_cloud(); ?>
+					<a href="<?php the_permalink(); ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a>
+					<ul class="taxonomy-list clear">
+						<?php
+						wp_list_categories( array(
+							'depth'		=> 1,
+							'title_li' 	=> '',
+						)
+						); ?>
+					</ul>
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->

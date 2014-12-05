@@ -38,15 +38,36 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-share {
-	padding: 1em 0;
-}
-
 .entry-footer {
 	border-width: $border-width 0;
 	border-color: $color__tertiary;
 	border-style: solid;
 	padding: 1em 0;
+}
+
+/* Taxonomy blocks / lists */
+.taxonomy-list {
+
+	list-style-type: none;
+
+	.cat-item {
+		display: inline;
+		width: 10%;
+	}
+
+	.cat-item a {
+		background: rgba(0,0,0,0.1);
+		border: 1px solid $color__primary;
+		display: block;
+		color: $color__text-alternate;
+		float: left;
+		height: 4.5em;
+		line-height: 1.2;
+		text-align: center;
+		padding: 1em;
+		width: 10%;
+		word-wrap: break-word;
+	}
 }
 
 /* Read more */
@@ -92,6 +113,10 @@
 }
 
 /* Share links */
+.entry-share {
+	padding: 1em 0;
+}
+
 .share-link {
 	background: $color__tertiary;
 	color: #fff;

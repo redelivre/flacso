@@ -6051,14 +6051,30 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-.entry-share {
-  padding: 1em 0; }
-
 .entry-footer {
   border-width: 6px 0;
   border-color: #ebebeb;
   border-style: solid;
   padding: 1em 0; }
+
+/* Taxonomy blocks / lists */
+.taxonomy-list {
+  list-style-type: none; }
+  .taxonomy-list .cat-item {
+    display: inline;
+    width: 10%; }
+  .taxonomy-list .cat-item a {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #002044;
+    display: block;
+    color: #fff;
+    float: left;
+    height: 4.5em;
+    line-height: 1.2;
+    text-align: center;
+    padding: 1em;
+    width: 10%;
+    word-wrap: break-word; }
 
 /* Read more */
 .more-sign {
@@ -6093,6 +6109,9 @@ a {
   color: #ba0933; }
 
 /* Share links */
+.entry-share {
+  padding: 1em 0; }
+
 .share-link {
   background: #ebebeb;
   color: #fff;
