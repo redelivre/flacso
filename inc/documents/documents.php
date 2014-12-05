@@ -5,6 +5,12 @@ class Documents
 	function __construct()
 	{
 		$this->_customs = array(
+			'author' => array
+			(
+					'slug' => 'custom-author',
+					'title' => __('Author', 'flacso'),
+					'tip' => __('Document Author', 'flacso'),
+			), 
 			'url' => array
 			(
 					'slug' => 'document-url',
@@ -20,7 +26,7 @@ class Documents
 					'slug' => 'document-reference',
 					'title' => __ ( 'Reference', 'flacso' ),
 					//'tip' => __ ( '', 'flacso' ),
-			) 
+			)
 		);
 		
 		add_action('init', array($this, 'init'));
