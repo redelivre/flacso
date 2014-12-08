@@ -7,43 +7,6 @@ require get_template_directory() . '/inc/documents/documents.php';
 
 function flacso_create_taxs()
 {
-	$labels = array
-	(
-			'name' => __('Document Types', 'flacso'),
-			'singular_name' => __('Document Type', 'flacso'),
-			'search_items' => __('Search for Document Types','flacso'),
-			'all_items' => __('All Document Types','flacso'),
-			'parent_item' => __( 'Parent Document Type','flacso'),
-			'parent_item_colon' => __( 'Parent Document Type:','flacso'),
-			'edit_item' => __('Edit Document Type','flacso'),
-			'update_item' => __('Update Document Type','flacso'),
-			'add_new_item' => __('Add new Document Type','flacso'),
-			'add_new' => __('Add new','flacso'),
-			'new_item_name' => __('New Document Type','flacso'),
-			'view_item' => __('View Document Type','flacso'),
-			'not_found' =>  __('No Document Type found','flacso'),
-			'not_found_in_trash' => __('No Document Type found in the trash','flacso'),
-			'menu_name' => __('Document Types','flacso')
-	);
-	
-	$args = array
-	(
-			'label' => __('Document Types','flacso'),
-			'labels' => $labels,
-			'public' => true,
-			'capabilities' => array('assign_terms' => 'edit_documents',
-					'edit_terms' => 'edit_documents'),
-			//'show_in_nav_menus' => true, // Public
-			// 'show_ui' => '', // Public
-			'hierarchical' => true,
-			//'update_count_callback' => '', //Contar objetos associados
-			'rewrite' => true,
-			//'query_var' => '',
-			//'_builtin' => '' // Core
-	);
-	
-	$ret = register_taxonomy('document_type', array('document'), $args);
-	
 	// Gea Generic end-place archive
 	
 	$gea_label = get_theme_mod('flacso_gea_name', false);
@@ -95,5 +58,60 @@ function flacso_create_taxs()
 	
 	register_taxonomy('gea', array('document', 'post', 'page'), $args);
 	
+	$taxs = array(
+		'Event' => array('event', true),
+		'Areas and Programs' => array('program', false),
+		'Publications' => array('publication', true),
+		'Communication'=> array('communication', true),
+		'Higher Education' => array('higher-education', false),
+		'Project' => array('project', true)
+	);
+	
+	foreach ( $taxs as $label => $tax)
+	{
+		$ret = flacso_register_tax($label, $tax[0], array('document', 'post', 'page'), $tax[1]);
+	}
+	
 }
 add_action('init', 'flacso_create_taxs');
+
+function flacso_register_tax($name, $slug, $post_types, $plural = true)
+{
+	$s = $plural ? 's' : '';
+	$labels = array
+	(
+			"name" => __("{$name}{$s}", "flacso"),
+			"singular_name" => __("{$name}", "flacso"),
+			"search_items" => __("Search for {$name}{$s}","flacso"),
+			"all_items" => __("All {$name}{$s}","flacso"),
+			"parent_item" => __( "Parent {$name}","flacso"),
+			"parent_item_colon" => __( "Parent {$name}:","flacso"),
+			"edit_item" => __("Edit {$name}","flacso"),
+			"update_item" => __("Update {$name}","flacso"),
+			"add_new_item" => __("Add new {$name}","flacso"),
+			"add_new" => __("Add new","flacso"),
+			"new_item_name" => __("New {$name}","flacso"),
+			"view_item" => __("View {$name}","flacso"),
+			"not_found" =>  __("No {$name} found","flacso"),
+			"not_found_in_trash" => __("No {$name} found in the trash","flacso"),
+			"menu_name" => __("{$name}{$s}","flacso")
+	);
+	
+	$args = array
+	(
+			"label" => __("{$name}s","flacso"),
+			"labels" => $labels,
+			"public" => true,
+			"capabilities" => array("assign_terms" => "edit_documents",
+					"edit_terms" => "edit_documents"),
+			//"show_in_nav_menus" => true, // Public
+			// "show_ui" => "", // Public
+			"hierarchical" => true,
+			//"update_count_callback" => "", //Contar objetos associados
+			"rewrite" => true,
+			//"query_var" => "",
+			//"_builtin" => "" // Core
+	);
+	
+	return register_taxonomy($slug, $post_types, $args);
+}
