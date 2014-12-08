@@ -104,6 +104,17 @@ function flacso_widgets_init() {
 		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
 		'after_title'   => '</h4>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Banners Widget Area', 'flacso' ),
+		'id'            => 'sidebar-banners',
+		'description'	=> __( 'The widget area for banners', 'flacso' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
+		'after_title'   => '</h4>',
+	) );
+	
 }
 add_action( 'widgets_init', 'flacso_widgets_init' );
 
