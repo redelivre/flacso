@@ -31,14 +31,18 @@ get_header(); ?>
 				<?php if ( $categories ) : ?>
 				<div class="general-list">
 					<?php foreach( $categories as $category ) : ?>
-					<div class="general-list__item clear">
-						
-					    <h1 class="general-list__title page-title"><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a></h1>
-					    <?php if ( ! empty( $category->description ) ) : ?>
-					    <div class="taxonomy-description"><?php echo $category->description; ?></div>
-						<?php endif; ?>
-					    <a href="<?php echo get_category_link( $category->term_id ); ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
-				    </div><!-- .general-list__item -->
+					<div class="general-list__item media clear">
+						<a class="pull-left" href="#">
+					    	<img alt="" src="http://placehold.it/100x100/0eafff/ffffff.png" />
+						</a>
+						<div class="media-body">
+						    <h1 class="general-list__title page-title media-heading"><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a></h1>
+						    <?php if ( ! empty( $category->description ) ) : ?>
+						    <div class="taxonomy-description"><?php echo $category->description; ?></div>
+							<?php endif; ?>
+						    <a href="<?php echo get_category_link( $category->term_id ); ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
+						</div><!-- .media-body -->
+				    </div><!-- .general-list__item.media -->
 				    <?php endforeach; ?>
 				</div><!-- .general-list -->
 				<?php endif; ?>

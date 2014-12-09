@@ -17,11 +17,10 @@
   padding-right: 10px;
 }
 
-.media-left,
-.media-right,
+.media,
 .media-body {
-  display: table-cell;
-  vertical-align: top;
+  overflow: hidden;
+  zoom: 1;
 }
 
 .media-middle {
