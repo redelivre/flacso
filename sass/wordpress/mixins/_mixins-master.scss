@@ -20,3 +20,9 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin main-border-bottom() {
+	border-width: 0 0 $border-width;
+	border-color: $color__tertiary;
+	border-style: solid;
+}

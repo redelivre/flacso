@@ -6011,7 +6011,9 @@ a {
 
 /* Front Page content */
 .featured-intro .hentry {
-  border-bottom: 6px solid #ebebeb;
+  border-width: 0 0 6px;
+  border-color: #ebebeb;
+  border-style: solid;
   padding: 2em 0; }
 
 .featured-intro .hentry .entry-content--summary {
@@ -6174,7 +6176,9 @@ a {
 
 /* Page templates */
 .general-list__item {
-  border-bottom: 6px solid #ebebeb;
+  border-width: 0 0 6px;
+  border-color: #ebebeb;
+  border-style: solid;
   padding: 1em 0;
   margin-bottom: 1.5em; }
 

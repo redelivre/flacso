@@ -172,7 +172,7 @@
 
 /* Page templates */
 .general-list__item {
-	border-bottom: $border-width solid $color__tertiary;
+	@include main-border-bottom;
 	padding: 1em 0;
 	margin-bottom: 1.5em;
 }
