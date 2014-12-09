@@ -2,7 +2,11 @@
 // @import "../layout/sidebar-content";
 
 .wrapper {
-	padding: $section__padding;
+	padding: $section__padding 0;
+}
+
+.wrapper--small {
+	padding: ($section__padding/2.5) 0;
 }
 
 .area-title {
@@ -15,14 +19,19 @@
 	color: $color__area-title--secondary;
 }
 
+/* Site header */
 .site-header a {
 	color: $color__link--secondary;
+}
+
+.site-complementary {
+	font-size: 0.875em;
 }
 
 /* Front Page content */
 .featured-intro .hentry {
 	border-bottom: $border-width solid $color__tertiary;
-	padding: 1.5em 0;
+	padding: 2em 0;
 }
 
 .featured-intro .hentry .entry-content--summary {
@@ -44,6 +53,10 @@
 .site-footer {
 	background-color: $color__footer;
 	color: $color__text-alternate;
+}
+
+.site-footer a {
+	color: $color__secondary;
 }
 
 /*--------------------------------------------------------------

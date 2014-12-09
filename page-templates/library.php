@@ -20,9 +20,10 @@ get_header(); ?>
 
 				<?php
 				$args = array(
-					'orderby' => 'name',
-					'order' => 'ASC',
-					'parent' => 0
+					'orderby' 	=> 'name',
+					'order' 	=> 'ASC',
+					'parent' 	=> 0,
+					'taxonomy'	=> 'publication'
 				);
 
 				$categories = get_categories($args);

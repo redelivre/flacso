@@ -1,13 +1,15 @@
 a {
-	color: $color__link;
+	color: $color__primary;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__primary;
 	}
+
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color__secondary;
+		text-decoration: none;
 	}
 
 	font-weight: bold;

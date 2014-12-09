@@ -5815,12 +5815,13 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #2c6db6;
+  color: #002044;
   font-weight: bold; }
   a:visited {
-    color: #2c6db6; }
+    color: #002044; }
   a:hover, a:focus, a:active {
-    color: #2c6db6; }
+    color: #2c6db6;
+    text-decoration: none; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -5828,16 +5829,22 @@ a {
 .site-navigation ul {
   list-style-type: none;
   margin: 0;
-  padding-left: 0; }
+  padding: 0; }
 
 .top-navigation ul {
   padding: 0.25em; }
 .top-navigation li {
   display: inline-block; }
+.top-navigation a {
+  padding: 0 0.5em; }
+.top-navigation a:hover {
+  color: #002044; }
 
 .main-navigation {
+  background-color: #ebebeb;
   clear: both;
-  display: block; }
+  display: block;
+  padding: 0.5em 0; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -5862,7 +5869,8 @@ a {
     position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    padding: 0.5em 2em;
+    position: relative; }
 
 /* Small menu */
 .menu-toggle {
@@ -5984,6 +5992,9 @@ a {
 .wrapper {
   padding: 2.5em 0; }
 
+.wrapper--small {
+  padding: 1em 0; }
+
 .area-title {
   color: #002044;
   font-weight: bold;
@@ -5992,13 +6003,17 @@ a {
 .area-title--secondary {
   color: #fff; }
 
+/* Site header */
 .site-header a {
   color: #ba0933; }
+
+.site-complementary {
+  font-size: 0.875em; }
 
 /* Front Page content */
 .featured-intro .hentry {
   border-bottom: 6px solid #ebebeb;
-  padding: 1.5em 0; }
+  padding: 2em 0; }
 
 .featured-intro .hentry .entry-content--summary {
   font-size: 1.125em; }
@@ -6016,6 +6031,9 @@ a {
   background-color: #002044;
   color: #fff; }
 
+.site-footer a {
+  color: #2c6db6; }
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -6024,6 +6042,9 @@ a {
 
 .hentry {
   margin: 0 0 1.5em; }
+
+.hentry--no-margin {
+  margin: 0; }
 
 /* Posts in columns */
 .hentry--columns {
@@ -6168,7 +6189,7 @@ a {
   margin-top: 0; }
 
 .comment-body {
-  border-bottom: 2px dotted #2c6db6;
+  border-bottom: 2px dotted #002044;
   padding: 1.5em 0; }
 
 .comment-meta {

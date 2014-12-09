@@ -2,7 +2,7 @@
 	ul {
 		list-style-type: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 0;
 	}
 }
 
@@ -14,11 +14,22 @@
 	li {
 		display: inline-block;
 	}
+
+	a {
+		padding: 0 0.5em;
+	}
+
+	a:hover {
+		color: $color__primary;
+	}
 }
 
 .main-navigation {
+	background-color: $color__tertiary;
 	clear: both;
 	display: block;
+	padding: 0.5em 0;
+
 
 	ul {
 		list-style: none;
@@ -67,7 +78,12 @@
 	}
 	a {
 		display: block;
-		text-decoration: none;
+		padding: 0.5em 2em;
+		position: relative;
+	}
+
+	a:hover {
+		
 	}
 
 	.current_page_item > a,

@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section class="wrapper feature featured-intro">
+	<section class="feature featured-intro">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
@@ -17,13 +17,13 @@ get_header(); ?>
 			  	<div class="col-md-9">
 			  		<?php
 			  		// Featured Page via Customizer
-			  		$page_id = (int) get_theme_mod( 'flacso_featured_page');
+			  		$page_id = (int) get_theme_mod( 'flacso_featured_page' );
 
 			  		if ( $page_id > 0 ) :
 			  			$featured_page = new WP_Query( array( 'page_id' => $page_id ) );
 
 			  			if ( $featured_page->have_posts() ) : while ( $featured_page->have_posts() ) : $featured_page->the_post(); ?>
-				  			<article id="post-<?php the_ID(); ?>" <?php post_class( 'clear' ); ?>>
+				  			<article id="post-<?php the_ID(); ?>" <?php post_class( 'clear hentry--no-margin' ); ?>>
 				  				<div class="row">
 									<div class="col-sm-4 col-md-4">
 										<header class="entry-header">
