@@ -1,9 +1,20 @@
+/* Sticky posts */
 .sticky {
 	display: block;
 }
 
 .hentry {
 	margin: 0 0 1.5em;
+
+	/* Bootstrap pull-left classes inside .hentry divs */
+	.pull-left {
+		margin-right: 1em;
+	}
+	
+	/* Add a border bottom for .hentry.media */
+	&.media {
+		@include main-border-bottom;
+	}
 }
 
 .hentry--no-margin {
@@ -25,6 +36,10 @@
 .entry-title {
 	font-weight: bold;
 	margin-bottom: 0.25em;
+}
+
+.archive .entry-title {
+	font-size: 1.25em;
 }
 
 .updated:not(.published){

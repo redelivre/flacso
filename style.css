@@ -4210,11 +4210,10 @@ a.thumbnail.active {
 .media > .pull-left {
   padding-right: 10px; }
 
-.media-left,
-.media-right,
+.media,
 .media-body {
-  display: table-cell;
-  vertical-align: top; }
+  overflow: hidden;
+  zoom: 1; }
 
 .media-middle {
   vertical-align: middle; }
@@ -6037,11 +6036,20 @@ a {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+/* Sticky posts */
 .sticky {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5em;
+  /* Bootstrap pull-left classes inside .hentry divs */
+  /* Add a border bottom for .hentry.media */ }
+  .hentry .pull-left {
+    margin-right: 1em; }
+  .hentry.media {
+    border-width: 0 0 6px;
+    border-color: #ebebeb;
+    border-style: solid; }
 
 .hentry--no-margin {
   margin: 0; }
@@ -6059,6 +6067,9 @@ a {
 .entry-title {
   font-weight: bold;
   margin-bottom: 0.25em; }
+
+.archive .entry-title {
+  font-size: 1.25em; }
 
 .updated:not(.published) {
   display: none; }

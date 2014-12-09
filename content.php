@@ -4,35 +4,30 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'media' ); ?>>
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+	<div class="entry-image pull-left">
+		<a href="<?php the_permalink(); ?>">
+	    	<?php the_post_thumbnail( 'thumbnail' ); ?>
+		</a>
+	</div><!-- .entry-image -->
+	<?php endif; ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php flacso_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<div class="media-body">
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'flacso' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
+			<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php flacso_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<div class="entry-content entry-content--sumary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php flacso_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div><!-- .media-body -->
 </article><!-- #post-## -->
