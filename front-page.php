@@ -128,20 +128,23 @@ get_header(); ?>
 	<section class="wrapper feature featured-links">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h4 class="area-title">Destaques</h3>
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-					<img src="http://placehold.it/95" />
-				</div>
+				<h4 class="area-title">Destaques</h3>
+					<div class="col-md-1 banners-cycle-button" >
+						<div class="banners-cycle-ball" id="banners-cycle-prev">
+						</div>
+					</div> 
+					<div class="col-md-10 banners-widget-area">
+						<?php
+						//if ( ! is_active_sidebar( 'sidebar-banners' ) )
+						{
+							dynamic_sidebar( 'sidebar-banners' );
+						}
+						?>
+					</div>
+					<div class="col-md-1 banners-cycle-button" >
+						<div class="banners-cycle-ball" id="banners-cycle-next">
+						</div>
+					</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- .featured-links -->
