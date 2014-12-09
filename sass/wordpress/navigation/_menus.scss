@@ -14,6 +14,14 @@
 	li {
 		display: inline-block;
 	}
+
+	a {
+		padding: 0 0.5em;
+	}
+
+	a:hover {
+		color: $color__primary;
+	}
 }
 
 .main-navigation {
@@ -72,12 +80,10 @@
 		display: block;
 		padding: 0.5em 2em;
 		position: relative;
-		text-decoration: none;
 	}
 
 	a:hover {
-		background-color: #333;
-		color: #fff;
+		
 	}
 
 	.current_page_item > a,

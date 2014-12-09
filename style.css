@@ -5834,6 +5834,10 @@ a {
   padding: 0.25em; }
 .top-navigation li {
   display: inline-block; }
+.top-navigation a {
+  padding: 0 0.5em; }
+.top-navigation a:hover {
+  color: #002044; }
 
 .main-navigation {
   background-color: #ebebeb;
@@ -5865,11 +5869,7 @@ a {
   .main-navigation a {
     display: block;
     padding: 0.5em 2em;
-    position: relative;
-    text-decoration: none; }
-  .main-navigation a:hover {
-    background-color: #333;
-    color: #fff; }
+    position: relative; }
 
 /* Small menu */
 .menu-toggle {
@@ -5991,6 +5991,9 @@ a {
 .wrapper {
   padding: 2.5em 0; }
 
+.wrapper--small {
+  padding: 1em 0; }
+
 .area-title {
   color: #002044;
   font-weight: bold;
@@ -5999,8 +6002,12 @@ a {
 .area-title--secondary {
   color: #fff; }
 
+/* Site header */
 .site-header a {
   color: #ba0933; }
+
+.site-complementary {
+  font-size: 0.875em; }
 
 /* Front Page content */
 .featured-intro .hentry {
