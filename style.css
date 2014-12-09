@@ -5815,12 +5815,13 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #2c6db6;
+  color: #002044;
   font-weight: bold; }
   a:visited {
-    color: #2c6db6; }
+    color: #002044; }
   a:hover, a:focus, a:active {
-    color: #2c6db6; }
+    color: #2c6db6;
+    text-decoration: none; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -6030,6 +6031,9 @@ a {
   background-color: #002044;
   color: #fff; }
 
+.site-footer a {
+  color: #2c6db6; }
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -6185,7 +6189,7 @@ a {
   margin-top: 0; }
 
 .comment-body {
-  border-bottom: 2px dotted #2c6db6;
+  border-bottom: 2px dotted #002044;
   padding: 1.5em 0; }
 
 .comment-meta {
