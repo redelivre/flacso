@@ -1,0 +1,18 @@
+.banners-cycle-ball {
+    background-color: blue;
+    border-radius: 3em;
+    min-height: 5em;
+    min-width: 5em;
+    margin-top: 1.5em;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#banners-cycle-prev {
+    background-image: url(../images/prev.png);
+}
+
+#banners-cycle-next {
+    background-image: url(../images/next.png);
+    
+}

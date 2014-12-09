@@ -109,7 +109,7 @@ function flacso_widgets_init() {
 		'name'          => __( 'Banners Widget Area', 'flacso' ),
 		'id'            => 'sidebar-banners',
 		'description'	=> __( 'The widget area for banners', 'flacso' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s banners-cycle">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
 		'after_title'   => '</h4>',
@@ -135,6 +135,15 @@ function flacso_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	// Banners Cycle
+	wp_enqueue_script('jquery-cycle2', get_template_directory_uri() . '/js/jquery.cycle2.min.js', array('jquery'));
+	wp_enqueue_script('jquery-cycle2-carousel', get_template_directory_uri() . '/js/jquery.cycle2.carousel.min.js', array('jquery-cycle2'));
+	wp_enqueue_script('jquery-cycle2-swipe', get_template_directory_uri() . '/js/jquery.cycle2.swipe.min.js', array('jquery-cycle2'));
+	wp_enqueue_script('banners-scroller', get_template_directory_uri() . '/js/banners_scroller.js', array('jquery-cycle2'));
+	wp_register_style( 'flacso-banners-cycle', get_template_directory_uri() . '/css/banners-cycle.css' );
+	wp_enqueue_style( 'flacso-banners-cycle' );
+	
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
