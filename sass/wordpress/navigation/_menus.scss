@@ -2,7 +2,7 @@
 	ul {
 		list-style-type: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 0;
 	}
 }
 
@@ -17,8 +17,11 @@
 }
 
 .main-navigation {
+	background-color: $color__tertiary;
 	clear: both;
 	display: block;
+	padding: 0.5em 0;
+
 
 	ul {
 		list-style: none;
@@ -67,7 +70,14 @@
 	}
 	a {
 		display: block;
+		padding: 0.5em 2em;
+		position: relative;
 		text-decoration: none;
+	}
+
+	a:hover {
+		background-color: #333;
+		color: #fff;
 	}
 
 	.current_page_item > a,
