@@ -70,8 +70,12 @@ get_header(); ?>
 						wp_list_categories( array(
 							'depth'		=> 1,
 							'title_li' 	=> '',
-						)
-						); ?>
+							'orderby' 	=> 'name',
+							'order' 	=> 'ASC',
+							'parent' 	=> 0,
+							'taxonomy'	=> 'publication'
+						) );
+						?>
 					</ul>
 				</div>
 			</div><!-- .row -->
