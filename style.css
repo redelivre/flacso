@@ -6051,7 +6051,8 @@ a {
   .hentry.media {
     border-width: 0 0 6px;
     border-color: #ebebeb;
-    border-style: solid; }
+    border-style: solid;
+    padding-bottom: 1.5em; }
 
 .hentry--no-margin {
   margin: 0; }
@@ -6078,8 +6079,11 @@ a {
 
 .page-content,
 .entry-content,
-.entry-summary {
+.entry-content--summary {
   margin: 1.5em 0 0; }
+
+.entry-content--summary p {
+  margin: 0; }
 
 .page-links {
   clear: both;

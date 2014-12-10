@@ -9,7 +9,16 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="entry-image pull-left">
 		<a href="<?php the_permalink(); ?>">
-	    	<?php the_post_thumbnail( 'thumbnail' ); ?>
+			<?php
+			if ( get_post_type() == 'document' ) {
+				$image_size = 'document--small';	
+			}
+			else {
+				$image_size = 'thumbnail';
+			}
+
+			the_post_thumbnail( $image_size );
+			?>
 		</a>
 	</div><!-- .entry-image -->
 	<?php endif; ?>
@@ -25,7 +34,7 @@
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content entry-content--sumary">
+		<div class="entry-content entry-content--summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-content -->
 
