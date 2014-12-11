@@ -106,7 +106,7 @@ if ( ! function_exists( 'flacso_entry_footer' ) ) :
  */
 function flacso_entry_footer() {
 	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
+	if ( in_array( get_post_type(), array( 'post', 'document' ) ) ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'flacso' ) );
 		if ( $categories_list && flacso_categorized_blog() ) {
