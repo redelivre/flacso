@@ -27,10 +27,10 @@ and Blueprint http://www.blueprintcss.org/
 1.0 Reset
 2.0 Typography
 3.0 Elements
-4.0 Forms
-5.0 Navigation
-	5.1 Links
-	5.2 Menus
+4.0 Navigation
+	4.1 Links
+	4.2 Menus
+5.0 Forms
 6.0 Accessibility
 7.0 Alignments
 8.0 Clearings
@@ -65,14 +65,14 @@ and Blueprint http://www.blueprintcss.org/
 @import "wordpress/elements/elements";
 
 /*--------------------------------------------------------------
-4.0 Forms
---------------------------------------------------------------*/
-@import "wordpress/forms/forms";
-
-/*--------------------------------------------------------------
-5.0 Navigation
+4.0 Navigation
 --------------------------------------------------------------*/
 @import "wordpress/navigation/navigation";
+
+/*--------------------------------------------------------------
+5.0 Forms
+--------------------------------------------------------------*/
+@import "wordpress/forms/forms";
 
 /*--------------------------------------------------------------
 6.0 Accessibility

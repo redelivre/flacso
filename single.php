@@ -13,7 +13,16 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
+				<?php
+				if ( get_post_type() == 'document' ) {
+					$template_part = 'document';	
+				}
+				else {
+					$template_part = 'single';
+				}
+
+				get_template_part( 'content', $template_part );
+				?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

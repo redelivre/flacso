@@ -5,6 +5,7 @@
 
 .hentry {
 	margin: 0 0 1.5em;
+	word-wrap: break-word;
 
 	/* Bootstrap pull-left classes inside .hentry divs */
 	.pull-left {
@@ -64,7 +65,8 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-footer {
+.entry-footer,
+.single-document .entry-meta {
 	border-width: $border-width 0;
 	border-color: $color__tertiary;
 	border-style: solid;

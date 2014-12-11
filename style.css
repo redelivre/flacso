@@ -27,10 +27,10 @@ and Blueprint http://www.blueprintcss.org/
 1.0 Reset
 2.0 Typography
 3.0 Elements
-4.0 Forms
-5.0 Navigation
-	5.1 Links
-	5.2 Menus
+4.0 Navigation
+	4.1 Links
+	4.2 Menus
+5.0 Forms
 6.0 Accessibility
 7.0 Alignments
 8.0 Clearings
@@ -5713,102 +5713,7 @@ th {
   font-weight: bold; }
 
 /*--------------------------------------------------------------
-4.0 Forms
---------------------------------------------------------------*/
-button,
-input,
-select,
-textarea {
-  font-size: 100%;
-  /* Corrects font size not being inherited in all browsers */
-  margin: 0;
-  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-  vertical-align: baseline;
-  /* Improves appearance and consistency in all browsers */ }
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 0;
-  border-radius: 8px;
-  background: #2c6db6;
-  color: #fff;
-  cursor: pointer;
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
-  -webkit-appearance: button;
-  /* Corrects inability to style clickable 'input' types in iOS */
-  font-size: 0.875em;
-  font-weight: bold;
-  line-height: 1;
-  padding: 0.6em 1em 0.5em; }
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  background: #002044; }
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  padding: 0;
-  /* Addresses excess padding in IE8/9 */ }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* Addresses appearance set to searchfield in S5, Chrome */
-  box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-decoration {
-  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-  -webkit-appearance: none; }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-  border: 0;
-  padding: 0; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  background: #ebebeb;
-  border: 0;
-  border-radius: 8px;
-  padding: 0.25em 0.5em; }
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-  color: #111; }
-
-textarea {
-  overflow: auto;
-  /* Removes default vertical scrollbar in IE6/7/8/9 */
-  padding: 0.25em 0.5em;
-  vertical-align: top;
-  /* Improves readability and alignment in all browsers */
-  width: 100%; }
-
-/*--------------------------------------------------------------
-5.0 Navigation
+4.0 Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 5.1 Links
@@ -5900,6 +5805,106 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+/*--------------------------------------------------------------
+5.0 Forms
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */ }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.button {
+  border: 0;
+  border-radius: 8px;
+  background: #2c6db6;
+  color: #fff;
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.6em 1em 0.5em;
+  text-align: center; }
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+a.button:hover {
+  background: #002044; }
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+a.button:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+a.button:active {
+  border-color: #aaa #bbb #bbb; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */ }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  background: #ebebeb;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.25em 0.5em; }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #111; }
+
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 100%; }
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -6044,6 +6049,7 @@ a {
 
 .hentry {
   margin: 0 0 1.5em;
+  word-wrap: break-word;
   /* Bootstrap pull-left classes inside .hentry divs */
   /* Add a border bottom for .hentry.media */ }
   .hentry .pull-left {
@@ -6089,7 +6095,8 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-.entry-footer {
+.entry-footer,
+.single-document .entry-meta {
   border-width: 6px 0;
   border-color: #ebebeb;
   border-style: solid;
