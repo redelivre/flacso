@@ -14,7 +14,13 @@ function flacso_the_menu() {
 	?>
 	<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
 		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'flacso' ); ?></button>
-		<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+		<?php
+		wp_nav_menu( array(
+            'theme_location'    => 'main',
+            //'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            'walker'            => new wp_bootstrap_navwalker()
+        ));
+        ?>
 	</nav><!-- #site-navigation -->  	
 	<?php
 }
