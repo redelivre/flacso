@@ -5999,6 +5999,9 @@ textarea {
 .wrapper--small {
   padding: 1em 0; }
 
+.site-main {
+  padding: 2.5em 0; }
+
 .area-title {
   color: #002044;
   font-weight: bold;
@@ -6195,6 +6198,10 @@ textarea {
 
 .general-list .general-list__item:last-child {
   border-bottom: 0; }
+
+/* Post type Document */
+.single-document .entry-meta {
+  margin-top: 1.5em; }
 
 /*--------------------------------------------------------------
 10.2 Asides
