@@ -33,7 +33,7 @@ get_header(); ?>
 					<?php $publication_link = get_term_link( $publication ); ?>
 					<div class="general-list__item media clear">
 						<a class="pull-left" href="<?php echo $publication_link; ?>">
-					    	<img alt="" src="http://placehold.it/100x100/0eafff/ffffff.png" />
+					    	<img alt="" src="http://placehold.it/150x150/0eafff/ffffff.png" />
 						</a>
 						<div class="media-body">
 						    <h1 class="general-list__title page-title media-heading"><a href="<?php echo $publication_link; ?>"><?php echo $publication->name; ?></a></h1>

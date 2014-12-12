@@ -7,12 +7,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'row' ); ?>>
 	
-	<div class="entry-image col-md-3">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="entry-image">
+	<div class="col-md-3">
+		<div class="entry-image">
+			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'document' ); ?>
-			</div><!-- .entry-image -->
-		<?php endif; ?>
+			<?php else : ?>
+				<img alt="" src="http://placehold.it/150x212/0eafff/ffffff&text=Imagem" />
+			<?php endif; ?>
+		</div><!-- .entry-image -->
 		<p><br/><a href="" class="button">Faça o download</a></p>
 	</div>
 
