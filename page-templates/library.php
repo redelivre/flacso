@@ -23,24 +23,24 @@ get_header(); ?>
 					'orderby' 	=> 'name',
 					'order' 	=> 'ASC',
 					'parent' 	=> 0,
-					'taxonomy'	=> 'publication'
 				);
 
-				$categories = get_categories($args);
+				$publications = get_terms( 'publication', $args );
 				?>
-				<?php if ( $categories ) : ?>
+				<?php if ( $publications ) : ?>
 				<div class="general-list">
-					<?php foreach( $categories as $category ) : ?>
+					<?php foreach( $publications as $publication ) : ?>
+					<?php $publication_link = get_term_link( $publication ); ?>
 					<div class="general-list__item media clear">
-						<a class="pull-left" href="#">
+						<a class="pull-left" href="<?php echo $publication_link; ?>">
 					    	<img alt="" src="http://placehold.it/100x100/0eafff/ffffff.png" />
 						</a>
 						<div class="media-body">
-						    <h1 class="general-list__title page-title media-heading"><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a></h1>
-						    <?php if ( ! empty( $category->description ) ) : ?>
-						    <div class="taxonomy-description"><?php echo $category->description; ?></div>
+						    <h1 class="general-list__title page-title media-heading"><a href="<?php echo $publication_link; ?>"><?php echo $publication->name; ?></a></h1>
+						    <?php if ( ! empty( $publication->description ) ) : ?>
+						    <div class="taxonomy-description"><?php echo $publication->description; ?></div>
 							<?php endif; ?>
-						    <a href="<?php echo get_category_link( $category->term_id ); ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
+						    <a href="<?php echo $publication_link; ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
 						</div><!-- .media-body -->
 				    </div><!-- .general-list__item.media -->
 				    <?php endforeach; ?>
