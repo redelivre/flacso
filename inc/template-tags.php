@@ -147,6 +147,30 @@ function flacso_entry_share() {
 }
 endif;
 
+if ( ! function_exists( 'flacso_the_document_download_list' ) ) :
+/**
+ * Prints HTML with share buttons
+ */
+function flacso_the_document_download_list() {
+	$allowed_medias = array(
+		'application/pdf', // PDF (.pdf)
+		'application/msword', // Microsoft Word (.doc)
+		'application/vnd.oasis.opendocument.text' // OpenOffice (.odt)
+	);
+
+	$documents = get_attached_media( $allowed_medias );
+
+	if ( $documents ) : ?>
+		<div class="entry-download">
+			<?php foreach ( $documents as $document ) : ?>
+				<a class="button download-link" href="<?php echo $document->guid; ?>"><?php echo $document->post_title; ?></a>
+			<?php endforeach; ?>
+		</div><!-- .entry-download -->
+	<?php
+	endif;
+}
+endif;
+
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.

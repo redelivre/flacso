@@ -6203,6 +6203,11 @@ textarea {
 .single-document .entry-meta {
   margin-top: 1.5em; }
 
+.entry-download {
+  margin-top: 1.5em; }
+  .entry-download .download-link {
+    margin-bottom: 1em; }
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/

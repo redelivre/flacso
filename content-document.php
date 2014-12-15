@@ -15,7 +15,7 @@
 				<img alt="" src="http://placehold.it/150x212/0eafff/ffffff&text=Imagem" />
 			<?php endif; ?>
 		</div><!-- .entry-image -->
-		<p><br/><a href="" class="button">Faça o download</a></p>
+		<?php echo flacso_the_document_download_list(); ?>
 	</div>
 
 	<div class="col-md-9">
