@@ -5677,7 +5677,7 @@ hr {
 
 ul, ol {
   margin: 0 0 1.5em 0;
-  padding: 1em; }
+  padding: 0 0 0 1.125em; }
 
 ul {
   list-style: disc; }
@@ -6214,6 +6214,18 @@ textarea {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none; }
+
+.widget-area ul {
+  list-style-type: none;
+  padding: 0; }
+.widget-area .widget-title {
+  margin: 0 0 1.5em;
+  font-size: 1em; }
+
+.widget-area--main .widget {
+  padding: 1.5em; }
+.widget-area--main .widget-title {
+  color: #2c6db6; }
 
 /*--------------------------------------------------------------
 10.3 Comments
