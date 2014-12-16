@@ -1,13 +1,32 @@
 .widget {
-	margin: 0 0 1.5em;
-
 	/* Make sure select elements fit in widgets */
 	select {
 		max-width: 100%;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.widget-title {
+		margin: 0 0 1.5em;
+		font-size: 1em;
 	}
 }
 
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+.widget-area--main {
+	.widget {
+		padding: 1.5em;
+	}
+
+	.widget-title {
+		color: $color__secondary;
+	}
 }

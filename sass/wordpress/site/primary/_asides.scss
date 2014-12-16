@@ -2,25 +2,3 @@
 .archive .format-aside .entry-title {
 	display: none;
 }
-
-.widget-area {
-	ul {
-		list-style-type: none;
-		padding: 0;
-	}
-
-	.widget-title {
-		margin: 0 0 1.5em;
-		font-size: 1em;
-	}
-}
-
-.widget-area--main {
-	.widget {
-		padding: 1.5em;
-	}
-
-	.widget-title {
-		color: $color__secondary;
-	}
-}

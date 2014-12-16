@@ -5982,14 +5982,25 @@ textarea {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets */ }
   .widget select {
     max-width: 100%; }
+  .widget ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .widget .widget-title {
+    margin: 0 0 1.5em;
+    font-size: 1em; }
 
 /* Search widget */
 .widget_search .search-submit {
   display: none; }
+
+.widget-area--main .widget {
+  padding: 1.5em; }
+.widget-area--main .widget-title {
+  color: #2c6db6; }
 
 /*--------------------------------------------------------------
 10.0 Content
@@ -6040,7 +6051,6 @@ textarea {
 .site-footer {
   background-color: #002044;
   background-image: url("images/bg-footer.png");
-  background-repeat: repeat;
   color: #fff; }
   .site-footer a {
     color: #2c6db6; }
@@ -6216,18 +6226,6 @@ textarea {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none; }
-
-.widget-area ul {
-  list-style-type: none;
-  padding: 0; }
-.widget-area .widget-title {
-  margin: 0 0 1.5em;
-  font-size: 1em; }
-
-.widget-area--main .widget {
-  padding: 1.5em; }
-.widget-area--main .widget-title {
-  color: #2c6db6; }
 
 /*--------------------------------------------------------------
 10.3 Comments
