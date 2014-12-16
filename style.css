@@ -5746,6 +5746,7 @@ a {
 
 .main-navigation {
   background-color: #ebebeb;
+  background-image: url("images/bg-menu.png");
   clear: both;
   display: block;
   padding: 0.5em 0; }
@@ -6038,10 +6039,11 @@ textarea {
 
 .site-footer {
   background-color: #002044;
+  background-image: url("images/bg-footer.png");
+  background-repeat: repeat;
   color: #fff; }
-
-.site-footer a {
-  color: #2c6db6; }
+  .site-footer a {
+    color: #2c6db6; }
 
 /*--------------------------------------------------------------
 10.1 Posts and pages
