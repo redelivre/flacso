@@ -131,6 +131,10 @@ function flacso_scripts() {
     wp_register_style( 'flacso-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,700' );
     wp_enqueue_style( 'flacso-fonts' );
 
+    // Icon fonts by Fontello
+    wp_register_style( 'flacso-icons', get_template_directory_uri() . '/css/flacso.css' );
+    wp_enqueue_style( 'flacso-icons' );
+
 	wp_enqueue_script( 'flacso-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'flacso-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

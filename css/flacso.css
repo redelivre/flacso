@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'flacso';
+  src: url('../font/flacso.eot?54565866');
+  src: url('../font/flacso.eot?54565866#iefix') format('embedded-opentype'),
+       url('../font/flacso.woff?54565866') format('woff'),
+       url('../font/flacso.ttf?54565866') format('truetype'),
+       url('../font/flacso.svg?54565866#flacso') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'flacso';
+    src: url('../font/flacso.svg?54565866#flacso') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "flacso";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-newspaper:before { content: '\e800'; } /* '' */
+.icon-book:before { content: '\e801'; } /* '' */
+.icon-book-open:before { content: '\e802'; } /* '' */
+.icon-video:before { content: '\e803'; } /* '' */
+.icon-tape:before { content: '\e804'; } /* '' */
+.icon-camera:before { content: '\e805'; } /* '' */
+.icon-pencil:before { content: '\e806'; } /* '' */
+.icon-graduation-cap:before { content: '\e807'; } /* '' */
+.icon-folder:before { content: '\e808'; } /* '' */
+.icon-docs:before { content: '\e809'; } /* '' */
+.icon-rss:before { content: '\e80a'; } /* '' */
+.icon-facebook:before { content: '\e80b'; } /* '' */
+.icon-gplus:before { content: '\e80c'; } /* '' */
+.icon-twitter:before { content: '\e80d'; } /* '' */
+.icon-instagram:before { content: '\e80e'; } /* '' */
+.icon-pinterest:before { content: '\e80f'; } /* '' */
+.icon-youtube:before { content: '\e810'; } /* '' */
+.icon-chat:before { content: '\e811'; } /* '' */
+.icon-calendar:before { content: '\e812'; } /* '' */
+.icon-book-open-1:before { content: '\e813'; } /* '' */
+.icon-search:before { content: '\e814'; } /* '' */
