@@ -179,3 +179,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Taxonomies
  */
 require get_template_directory() . '/inc/taxonomies.php';
+
+/**
+ * Custom Fields
+ */
+require get_template_directory() . '/inc/custom-fields.php';

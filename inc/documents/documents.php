@@ -140,7 +140,7 @@ class Documents
 	function flacso_document_custom_meta()
 	{
 		add_meta_box("document_meta", __("Document Details", 'flacso'), array($this, 'document_meta'), 'document', 'side', 'default');
-		add_meta_box("second_image_meta", __("Document Header Image", 'flacso'), array($this, 'second_image_meta'), 'document', 'side', 'default');
+		//add_meta_box("second_image_meta", __("Document Header Image", 'flacso'), array($this, 'second_image_meta'), 'document', 'side', 'default');
 	}
 	
 	protected $_customs = array();

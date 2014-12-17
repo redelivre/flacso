@@ -64,42 +64,82 @@ function flacso_create_taxs()
 		'Publications' => array('publication', true),
 		'Communication'=> array('communication', true),
 		'Higher Education' => array('higher-education', false),
-		'Project' => array('project', true)
+		'Project' => array('project', true),
+		'Countr' => array('country', 'ies', 'y' ),
+		'Year' => array('year', true),
+		'Territor' => array('territory', 'ies', 'y'),
 	);
 	
 	foreach ( $taxs as $label => $tax)
 	{
-		$ret = flacso_register_tax($label, $tax[0], array('document', 'post', 'page'), $tax[1]);
+		if(count($tax) == 3)
+		{
+			$ret = flacso_register_tax($label, $tax[0], array('document', 'post', 'page'), $tax[1], $tax[2]);
+		}
+		else 
+		{
+			$ret = flacso_register_tax($label, $tax[0], array('document', 'post', 'page'), $tax[1]);
+		}
+	}
+	
+	if(!term_exists('2014') )
+	{
+		for ($i = 2000; $i < 2021; $i++)
+		{
+			wp_insert_term(
+				$i, // the term
+				'year', // the taxonomy
+				array(
+					'description'=> $i,
+				)
+			);
+		}
+	}
+	
+	if(!term_exists(__('National', 'flacso')) )
+	{
+		foreach ( array(__('National', 'flacso'), __('International', 'flacso'), __('State', 'flacso') ) as $territory )
+		{
+			wp_insert_term($territory, 'territory');
+		}
 	}
 	
 }
 add_action('init', 'flacso_create_taxs');
 
-function flacso_register_tax($name, $slug, $post_types, $plural = true)
+function flacso_register_tax($name, $slug, $post_types, $plural = true, $single = '')
 {
-	$s = $plural ? 's' : '';
+	if(is_bool($plural))
+	{
+		$s = $plural ? 's' : '';
+	}
+	elseif(is_string($plural)) 
+	{
+		$s = $plural;
+	}
+	
 	$labels = array
 	(
 			"name" => __("{$name}{$s}", "flacso"),
-			"singular_name" => __("{$name}", "flacso"),
+			"singular_name" => __("{$name}{$single}", "flacso"),
 			"search_items" => __("Search for {$name}{$s}","flacso"),
 			"all_items" => __("All {$name}{$s}","flacso"),
-			"parent_item" => __( "Parent {$name}","flacso"),
-			"parent_item_colon" => __( "Parent {$name}:","flacso"),
-			"edit_item" => __("Edit {$name}","flacso"),
-			"update_item" => __("Update {$name}","flacso"),
-			"add_new_item" => __("Add new {$name}","flacso"),
+			"parent_item" => __( "Parent {$name}{$single}","flacso"),
+			"parent_item_colon" => __( "Parent {$name}{$single}:","flacso"),
+			"edit_item" => __("Edit {$name}{$single}","flacso"),
+			"update_item" => __("Update {$name}{$single}","flacso"),
+			"add_new_item" => __("Add new {$name}{$single}","flacso"),
 			"add_new" => __("Add new","flacso"),
-			"new_item_name" => __("New {$name}","flacso"),
-			"view_item" => __("View {$name}","flacso"),
-			"not_found" =>  __("No {$name} found","flacso"),
-			"not_found_in_trash" => __("No {$name} found in the trash","flacso"),
+			"new_item_name" => __("New {$name}{$single}","flacso"),
+			"view_item" => __("View {$name}{$single}","flacso"),
+			"not_found" =>  __("No {$name}{$single} found","flacso"),
+			"not_found_in_trash" => __("No {$name}{$single} found in the trash","flacso"),
 			"menu_name" => __("{$name}{$s}","flacso")
 	);
 	
 	$args = array
 	(
-			"label" => __("{$name}s","flacso"),
+			"label" => __("{$name}{$s}","flacso"),
 			"labels" => $labels,
 			"public" => true,
 			"capabilities" => array("assign_terms" => "edit_documents",
