@@ -183,3 +183,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Taxonomies
  */
 require get_template_directory() . '/inc/taxonomies.php';
+
+/**
+ * Custom fields for taxonomies
+ */
+require get_template_directory() . '/inc/tax-meta-fields.php';
