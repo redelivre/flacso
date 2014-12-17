@@ -12,7 +12,7 @@
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'document' ); ?>
 			<?php else : ?>
-				<img alt="" src="http://placehold.it/150x212/0eafff/ffffff&text=Imagem" />
+				<img alt="" src="http://placehold.it/176x234/0eafff/ffffff&text=Imagem" />
 			<?php endif; ?>
 		</div><!-- .entry-image -->
 		<?php echo flacso_the_document_download_list(); ?>

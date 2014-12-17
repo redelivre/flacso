@@ -5677,7 +5677,7 @@ hr {
 
 ul, ol {
   margin: 0 0 1.5em 0;
-  padding: 1em; }
+  padding: 0 0 0 1.125em; }
 
 ul {
   list-style: disc; }
@@ -5746,6 +5746,7 @@ a {
 
 .main-navigation {
   background-color: #ebebeb;
+  background-image: url("images/bg-menu.png");
   clear: both;
   display: block;
   padding: 0.5em 0; }
@@ -5981,18 +5982,39 @@ textarea {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets */ }
   .widget select {
     max-width: 100%; }
+  .widget ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .widget .widget-title {
+    margin: 0 0 1.5em;
+    font-size: 1em; }
 
 /* Search widget */
 .widget_search .search-submit {
   display: none; }
 
+.widget-area--main .widget {
+  padding: 1.5em; }
+.widget-area--main .widget-title {
+  color: #2c6db6; }
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
+a.icon--rounded {
+  background-color: #002044;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 3em;
+  padding: 0.25em; }
+  a.icon--rounded:hover {
+    background-color: #2c6db6; }
+
 .wrapper {
   padding: 2.5em 0; }
 
@@ -6038,10 +6060,10 @@ textarea {
 
 .site-footer {
   background-color: #002044;
+  background-image: url("images/bg-footer.png");
   color: #fff; }
-
-.site-footer a {
-  color: #2c6db6; }
+  .site-footer a {
+    color: #2c6db6; }
 
 /*--------------------------------------------------------------
 10.1 Posts and pages

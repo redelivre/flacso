@@ -44,7 +44,7 @@ function flacso_setup() {
 	add_image_size( 'featured', 328, 328, true );
 	add_image_size( 'archive', 328, 246, true );
 	add_image_size( 'singular', 825, 619, true );
-	add_image_size( 'document', 232, 328, true );
+	add_image_size( 'document', 176, 234, true );
 	add_image_size( 'document--small', 150, 212, true );
 
 
@@ -131,6 +131,10 @@ function flacso_scripts() {
     wp_register_style( 'flacso-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,700' );
     wp_enqueue_style( 'flacso-fonts' );
 
+    // Icon fonts by Fontello
+    wp_register_style( 'flacso-icons', get_template_directory_uri() . '/css/flacso.css' );
+    wp_enqueue_style( 'flacso-icons' );
+
 	wp_enqueue_script( 'flacso-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'flacso-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -184,3 +188,8 @@ require get_template_directory() . '/inc/taxonomies.php';
  * Custom Fields
  */
 require get_template_directory() . '/inc/custom-fields.php';
+
+/** 
+ * Custom fields for taxonomies
+ */
+require get_template_directory() . '/inc/tax-meta-fields.php';
