@@ -30,7 +30,7 @@
 }
 
 .hentry--columns .entry-meta {
-	background-color: $color__tertiary;
+	background-color: $color__quaternary;
 	font-size: 0.875em;
 	padding: 0.5em;
 }
@@ -68,7 +68,7 @@
 .entry-footer,
 .single-document .entry-meta {
 	border-width: $border-width 0;
-	border-color: $color__tertiary;
+	border-color: $color__quaternary;
 	border-style: solid;
 	padding: 1em 0;
 }
@@ -126,7 +126,7 @@
 }
 
 .read-more {
-	 color: $color__quaternary;
+	 color: $color__quinary;
 	 font-size: 0.875em;
 	 padding: 0.25em;
 	 text-transform: lowercase;
@@ -150,7 +150,7 @@
 }
 
 .read-more:visited {
-	color: $color__quaternary;
+	color: $color__quinary;
 }
 
 /* Share links */
@@ -159,7 +159,7 @@
 }
 
 .share-link {
-	background: $color__tertiary;
+	background: $color__quaternary;
 	color: #fff;
 	font-weight: normal;
 	display: block;
@@ -181,7 +181,7 @@
 
 /* Archive */
 .page-header {
-	background: $color__tertiary;
+	background: $color__quaternary;
 	margin: 0 0 2em;	
 	padding: 1.5em;
 }

@@ -10,7 +10,7 @@ a.icon--rounded {
 	padding: 0.25em;
 
 	&:hover {
-		background-color: $color__secondary;
+		background-color: $color__tertiary;
 	}
 
 }
@@ -65,7 +65,7 @@ a.icon--rounded {
 }
 
 .featured-news {
-	background-color: $color__tertiary;	
+	background-color: $color__quaternary;	
 }
 
 .site-footer {
@@ -74,7 +74,7 @@ a.icon--rounded {
 	color: $color__text-alternate;
 
 	a {
-		color: $color__secondary;
+		color: $color__tertiary;
 	}
 }
 

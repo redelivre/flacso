@@ -25,7 +25,7 @@
 }
 
 .main-navigation {
-	background-color: $color__tertiary;
+	background-color: $color__quaternary;
 	background-image: url('images/bg-menu.png');
 	clear: both;
 	display: block;
@@ -71,20 +71,23 @@
 			left: auto;
 		}
 	}
+
 	li {
 		position: relative;
 
 		&:hover > a {
 		}
 	}
+
 	a {
+		color: $color__secondary;
 		display: block;
 		padding: 0.5em 2em;
 		position: relative;
 	}
 
 	a:hover {
-		
+		color: $color__tertiary;
 	}
 
 	.current_page_item > a,

@@ -5719,10 +5719,10 @@ th {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #002044;
+  color: #023670;
   font-weight: bold; }
   a:visited {
-    color: #002044; }
+    color: #023670; }
   a:hover, a:focus, a:active {
     color: #2c6db6;
     text-decoration: none; }
@@ -5773,9 +5773,12 @@ a {
   .main-navigation li {
     position: relative; }
   .main-navigation a {
+    color: #023670;
     display: block;
     padding: 0.5em 2em;
     position: relative; }
+  .main-navigation a:hover {
+    color: #2c6db6; }
 
 /* Small menu */
 .menu-toggle {
@@ -6253,7 +6256,7 @@ a.icon--rounded {
   margin-top: 0; }
 
 .comment-body {
-  border-bottom: 2px dotted #002044;
+  border-bottom: 2px dotted #023670;
   padding: 1.5em 0; }
 
 .comment-meta {
