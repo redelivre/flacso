@@ -143,3 +143,4 @@ function flacso_comments_list($comment, $args, $depth) {
 	</article><!-- .comment-body -->
 <?php
 }
+?>

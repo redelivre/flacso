@@ -6130,21 +6130,25 @@ a.icon--rounded {
 /* Taxonomy blocks / lists */
 .taxonomy-list {
   list-style-type: none; }
-  .taxonomy-list .cat-item {
+  .taxonomy-list.taxonomy-list--inline li {
     display: inline;
     width: 10%; }
-  .taxonomy-list .cat-item a {
+  .taxonomy-list li a {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid #002044;
     display: block;
     color: #fff;
     float: left;
-    height: 4.5em;
     line-height: 1.2;
     text-align: center;
     padding: 1em;
     width: 10%;
     word-wrap: break-word; }
+  .taxonomy-list li .icon {
+    display: inline-block;
+    margin-bottom: 0.5em; }
+    .taxonomy-list li .icon:before {
+      font-size: 3em; }
 
 /* Read more */
 .more-sign {

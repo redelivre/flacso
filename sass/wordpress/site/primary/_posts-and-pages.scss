@@ -78,24 +78,37 @@
 
 	list-style-type: none;
 
-	.cat-item {
-		display: inline;
-		width: 10%;
+	&.taxonomy-list--inline {
+		li {
+			display: inline;
+			width: 10%;
+		}
 	}
 
-	.cat-item a {
-		background: rgba(0,0,0,0.1);
-		border: 1px solid $color__primary;
-		display: block;
-		color: $color__text-alternate;
-		float: left;
-		height: 4.5em;
-		line-height: 1.2;
-		text-align: center;
-		padding: 1em;
-		width: 10%;
-		word-wrap: break-word;
+	li  {
+		a {
+			background: rgba(0,0,0,0.1);
+			border: 1px solid $color__primary;
+			display: block;
+			color: $color__text-alternate;
+			float: left;
+			line-height: 1.2;
+			text-align: center;
+			padding: 1em;
+			width: 10%;
+			word-wrap: break-word;
+		}
+
+		.icon {
+			display: inline-block;
+			margin-bottom: 0.5em;
+
+			&:before {
+				font-size: 3em;
+			}
+		}
 	}
+
 }
 
 /* Read more */
