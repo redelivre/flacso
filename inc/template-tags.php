@@ -143,12 +143,13 @@ if ( ! function_exists( 'flacso_entry_share' ) ) :
  */
 function flacso_entry_share() {
 	?>
-	<div class="row">
-		<div class="col-md-3"><a href="#" class="share-link"><?php _e( 'Share this content', 'flacso' ); ?></a></div>
-		<div class="col-md-3"><a href="#" class="share-link share-link--twitter">Twitter</a></div>
-		<div class="col-md-3"><a href="#" class="share-link share-link--facebook">Facebook</a></div>
-		<div class="col-md-3"><a href="#" class="share-link share-link--googleplus">Google+</a></div>
-	</div>
+	<!-- ul? -->
+	<ul class="entry-share__list clearfix">
+		<li class="entry-share__item"><?php _e( 'Share this content', 'flacso' ); ?></li>
+		<li class="entry-share__item entry-share__item--twitter"><a href="#" class="share-link share-link--twitter icon-twitter">Twitter</a></li>
+		<li class="entry-share__item entry-share__item--facebook"><a href="#" class="share-link share-link--facebook icon-facebook">Facebook</a></li>
+		<li class="entry-share__item entry-share__item--googleplus"><a href="#" class="share-link share-link--googleplus icon-gplus">Google+</a></li>
+	</ul>
 	<?php
 }
 endif;
