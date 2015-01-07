@@ -193,3 +193,6 @@ require get_template_directory() . '/inc/custom-fields.php';
  * Custom fields for taxonomies
  */
 require get_template_directory() . '/inc/tax-meta-fields.php';
+
+/** Opções do Tema **/
+include_once dirname(__FILE__).'/inc/options.php';
