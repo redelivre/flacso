@@ -31,19 +31,21 @@
 	display: block;
 	padding: 0.5em 0;
 
+	.children {
+		a {
+			font-size: 0.875em;
+			padding: 0.571em 2.286em;
+		}
+	}
+
 
 	ul {
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
+			background: $color__quaternary;
 
 			ul {
 				left: -999em;
@@ -56,9 +58,7 @@
 				}
 			}
 
-			a {
-				width: 200px;
-			}
+			
 
 			:hover > a {
 			}
