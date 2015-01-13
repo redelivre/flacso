@@ -6051,6 +6051,13 @@ a.icon--rounded {
 .site-complementary {
   font-size: 0.875em; }
 
+.site-title {
+  margin-bottom: 0; }
+
+.site-description {
+  font-size: 1.5em;
+  margin-top: 0; }
+
 /* Front Page content */
 .featured-intro .hentry {
   border-width: 0 0 6px;
