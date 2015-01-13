@@ -4,10 +4,6 @@
  *
  * @package Flacso
  */
-
-if ( ! is_active_sidebar( 'sidebar-main' ) ) {
-	return;
-}
 ?>
 
 <div class="col-md-3 col-md-pull-9">
