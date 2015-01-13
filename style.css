@@ -5736,7 +5736,8 @@ a {
   padding: 0; }
 
 .top-navigation ul {
-  padding: 0.25em; }
+  padding: 0.25em;
+  text-align: right; }
 .top-navigation li {
   display: inline-block; }
 .top-navigation a {
