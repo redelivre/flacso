@@ -25,7 +25,7 @@ function flacso_customize_register( $wp_customize ) {
     
     // Featured Page
     $wp_customize->add_setting( 'flacso_featured_page', array(
-        'default'       => 1,
+        'default'       => 0,
         'capability'    => 'edit_theme_options'
     ) );
 
