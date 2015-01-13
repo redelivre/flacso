@@ -17,7 +17,7 @@ function flacso_the_menu() {
 		<?php
 		wp_nav_menu( array(
             'theme_location'    => 'main',
-            //'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
             'walker'            => new wp_bootstrap_navwalker()
         ));
         ?>
