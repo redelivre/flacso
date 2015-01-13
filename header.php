@@ -58,3 +58,4 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content<?php if ( ! is_front_page() ) : echo ' container'; endif; ?>">
+		<div class="row">
