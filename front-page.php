@@ -52,6 +52,11 @@ get_header(); ?>
 							</article><!-- #post-## -->
 						<?php
 						endwhile; endif;
+					elseif ( current_user_can( 'edit_theme_options' ) ) : ?>
+					<div class="alert alert-info" role="alert">
+  						Você pode destacar uma página de seu interesse. Aqui, será mostrado o resumo dessa página e, se houver, a sua imagem destacada. <a href="<?php echo admin_url( 'customize.php' ); ?>" class="alert-link">Faça isso agora.</a>
+					</div><!-- .alert.alert-info -->
+					<?php
 			  		endif;
 			  		?>
 			  	</div>
