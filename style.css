@@ -6051,6 +6051,10 @@ a.icon--rounded {
 .site-complementary {
   font-size: 0.875em; }
 
+.site-branding__image_link {
+  display: block;
+  text-align: center; }
+
 .site-title {
   margin-bottom: 0; }
 
