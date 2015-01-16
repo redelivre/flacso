@@ -205,3 +205,8 @@ require get_template_directory() . '/inc/tax-meta-fields.php';
  * Register Custom Navigation Walker
  */ 
 require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+
+/**
+ * Back-end functions
+ */
+require get_template_directory() . '/inc/back-end.php';
