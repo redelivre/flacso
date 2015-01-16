@@ -103,6 +103,45 @@ function flacso_create_taxs()
 			wp_insert_term($territory, 'territory');
 		}
 	}
+
+
+    // Register new taxonomy which applies to attachments
+    
+    $tax_language = 'language';
+
+    $labels = array(
+        'name'              => 'Languages',
+        'singular_name'     => 'Language',
+        'search_items'      => 'Search Languages',
+        'all_items'         => 'All Languages',
+        'parent_item'       => 'Parent Language',
+        'parent_item_colon' => 'Parent Language:',
+        'edit_item'         => 'Edit Language',
+        'update_item'       => 'Update Language',
+        'add_new_item'      => 'Add New Language',
+        'new_item_name'     => 'New Language Name',
+        'menu_name'         => 'Language',
+    );
+ 
+    $args = array(
+        'labels' 			=> $labels,
+        'hierarchical' 		=> true,
+        'query_var' 		=> true,
+        'rewrite' 			=> true,
+        'show_admin_column' => false,
+    );
+ 
+    register_taxonomy( $tax_language, 'attachment', $args );
+
+    if( ! term_exists( 'Português', $tax_language ) )
+	{
+		foreach ( array( 'Português', 'English', 'Español' ) as $term ) {
+			wp_insert_term(
+				$term,			// The term
+				$tax_language	// The taxonomy
+			);
+		}
+	}
 	
 }
 add_action('init', 'flacso_create_taxs');

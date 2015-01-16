@@ -170,7 +170,26 @@ function flacso_the_document_download_list() {
 	if ( $documents ) : ?>
 		<div class="entry-download">
 			<?php foreach ( $documents as $document ) : ?>
-				<a class="button download-link" href="<?php echo $document->guid; ?>"><?php echo $document->post_title; ?></a>
+				<?php
+				$terms = get_the_terms( $document->ID, 'language' );
+										
+				if ( $terms && ! is_wp_error( $terms ) ) {
+
+					$term_list = array();
+					$documents_list = '';
+
+					foreach ( $terms as $term ) {
+						$term_list[] = $term->name;
+					}
+		
+					$documents_list =  __( 'Download', 'flacso' ) . ' (' . join( ', ', $term_list ) . ')';
+				}
+				else {
+					$documents_list =  __( 'Download', 'flacso' );
+				}
+				?>
+
+				<a class="button download-link btn-block" href="<?php echo $document->guid; ?>"><?php echo $documents_list; ?></a>
 			<?php endforeach; ?>
 		</div><!-- .entry-download -->
 	<?php
