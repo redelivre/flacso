@@ -1,12 +1,13 @@
 jQuery(document).ready(function(){
 	jQuery(".banners-widget-area").cycle({
-	    speed: 600,
-	    manualSpeed: 100,
-	    slides: ".banners-cycle",
+	    allowWrap: false,
+	    carouselFluid: true,
 	    fx: "carousel",
+	    manualSpeed: 400,
+	    slides: ".banners-cycle",
+	    speed: 600,
 	    timeout: 0,
 	    
-	    carouselFluid: true,
 	    next:"#banners-cycle-next",
 	    prev:"#banners-cycle-prev"
 	});
