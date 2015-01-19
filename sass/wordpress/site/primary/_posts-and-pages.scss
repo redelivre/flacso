@@ -73,6 +73,12 @@
 	padding: 1em 0;
 }
 
+.single {
+	.entry-title {
+		margin-top: 0;
+	}
+}
+
 /* Taxonomy blocks / lists */
 .taxonomy-list {
 
@@ -238,5 +244,17 @@
 
 	.download-link {
 		margin-bottom: 1em;
+	}
+}
+
+/* Post type Agenda */
+.entry-agenda__item {
+	border-bottom: 2px dotted $color__secondary;
+	padding: 1em 0;
+
+	span {
+		display: block;
+		font-size: 0.875em;
+		text-transform: lowercase;
 	}
 }

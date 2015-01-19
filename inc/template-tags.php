@@ -197,6 +197,59 @@ function flacso_the_document_download_list() {
 }
 endif;
 
+if ( ! function_exists( 'flacso_the_agenda_list' ) ) :
+/**
+ * Prints HTML with dates, place and source link for Agenda post type
+ */
+function flacso_the_agenda_list() {
+	global $post;
+	?>
+	
+	<ul class="entry-agenda list-unstyled">
+		<?php if ( $date_start = get_post_meta( $post->ID, '_data_inicial', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Data</span>
+			<?php
+			$date_end = get_post_meta( $post->ID, '_data_final', true );
+			if ( $date_end && $date_end != $date_start ) :
+				/* translators: Initial & final date for the event */
+				printf(
+					'%1$s to %2$s',
+					date( get_option( 'date_format' ), strtotime( $date_start ) ),
+					date( get_option( 'date_format' ), strtotime( $date_end ) )
+				);
+			else :
+				echo date( get_option( 'date_format' ), strtotime( $date_start ) );
+			endif;
+			?>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+		
+		<?php if ( $time = get_post_meta( $post->ID, '_horario', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Horário</span>
+			<?php echo $time; ?>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+		
+		<?php if ( $location = get_post_meta( $post->ID, '_onde', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Local</span>
+			<?php echo $location; ?>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+		
+		<?php if ( $link = get_post_meta( $post->ID, '_link', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Mais informações</span>
+			<a href="<?php echo esc_url( $link ); ?>"><?php echo esc_url( $link ); ?></a>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+	</ul><!-- .entry-agenda -->
+	<?php
+}
+endif;
+
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.

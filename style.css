@@ -6154,6 +6154,9 @@ a.icon--rounded {
   border-style: solid;
   padding: 1em 0; }
 
+.single .entry-title {
+  margin-top: 0; }
+
 /* Taxonomy blocks / lists */
 .taxonomy-list {
   list-style-type: none; }
@@ -6276,6 +6279,15 @@ a.icon--rounded {
   margin-top: 1.5em; }
   .entry-download .download-link {
     margin-bottom: 1em; }
+
+/* Post type Agenda */
+.entry-agenda__item {
+  border-bottom: 2px dotted #023670;
+  padding: 1em 0; }
+  .entry-agenda__item span {
+    display: block;
+    font-size: 0.875em;
+    text-transform: lowercase; }
 
 /*--------------------------------------------------------------
 10.2 Asides
