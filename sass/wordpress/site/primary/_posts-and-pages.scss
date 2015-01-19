@@ -40,10 +40,6 @@
 	margin-bottom: 0.25em;
 }
 
-.archive .entry-title {
-	font-size: 1.25em;
-}
-
 .updated:not(.published){
 	display: none;
 }
@@ -207,6 +203,16 @@
 }
 
 /* Archive */
+.archive {
+	.entry-title {
+		font-size: 1.25em;
+	}
+
+	.entry-image {
+		max-width: 150px;
+	}
+}
+
 .page-header {
 	background: $color__quaternary;
 	margin: 0 0 2em;	

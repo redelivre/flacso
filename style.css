@@ -6129,9 +6129,6 @@ a.icon--rounded {
   font-weight: bold;
   margin-bottom: 0.25em; }
 
-.archive .entry-title {
-  font-size: 1.25em; }
-
 .updated:not(.published) {
   display: none; }
 
@@ -6250,6 +6247,11 @@ a.icon--rounded {
     font-weight: bold; }
 
 /* Archive */
+.archive .entry-title {
+  font-size: 1.25em; }
+.archive .entry-image {
+  max-width: 150px; }
+
 .page-header {
   background: #ebebeb;
   margin: 0 0 2em;
