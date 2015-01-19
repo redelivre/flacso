@@ -9,21 +9,19 @@
 	<div class="entry-image pull-left">
 		<?php
 		if ( get_post_type() == 'document' ) {
-			$image_size = 'document--small';
-			$placeholder_size = '150x212';	
+			$image_size = 'document';
 		}
 		else {
 			$image_size = 'thumbnail';
-			$placeholder_size = '150x150';
 		}
 		?>
 	
 		<a href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( $image_size ); ?>
-			<?php else : ?>
-				<img alt="" src="http://placehold.it/<?php echo $placeholder_size; ?>/0eafff/ffffff&text=Imagem" />
-			<?php endif; ?>
+			<?php else :
+				flacso_the_dummy_image( $image_size );
+			endif; ?>
 		</a>
 	</div><!-- .entry-image -->
 	

@@ -250,6 +250,25 @@ function flacso_the_agenda_list() {
 }
 endif;
 
+if ( ! function_exists( 'flacso_the_dummy_image' ) ) :
+/**
+ * Prints HTML for a dummy image
+ */
+function flacso_the_dummy_image( $post_type = 'post' ) {
+
+	if ( $post_type == 'document' ) {
+		$placeholder_size = '176x234';	
+	}
+	else {
+		$placeholder_size = '150x150';
+	}
+
+	echo '<img alt="Image" src="http://placehold.it/' . $placeholder_size . '/eeeeee/cccccc&text=Imagem" />';
+
+}
+endif;
+
+
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.

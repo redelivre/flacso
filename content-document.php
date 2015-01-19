@@ -9,11 +9,14 @@
 	
 	<div class="col-md-3">
 		<div class="entry-image">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'document' ); ?>
-			<?php else : ?>
-				<img alt="" src="http://placehold.it/176x234/0eafff/ffffff&text=Imagem" />
-			<?php endif; ?>
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'document' );
+			}
+			else {
+				flacso_the_dummy_image( 'document' );
+			}
+			?>
 		</div><!-- .entry-image -->
 		<?php echo flacso_the_document_download_list(); ?>
 	</div>

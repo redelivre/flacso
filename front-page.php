@@ -27,17 +27,11 @@ get_header(); ?>
 				  				<div class="row">
 									<div class="col-sm-4 col-md-4">
 										<header class="entry-header">
+											<?php if ( has_post_thumbnail() ) : ?>
 											<div class="entry-image">
-												<a href="<?php the_permalink(); ?>" rel="bookmark">
-													<?php
-													if ( has_post_thumbnail() ) :
-														the_post_thumbnail( 'featured' );
-													else :
-														echo '<img src="http://placehold.it/350x262/">';
-													endif;
-													?>
-												</a>
+												<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'featured' ); ?></a>
 											</div><!-- .entry-image -->
+											<?php endif; ?>
 										</header><!-- .entry-header -->
 									</div>
 
@@ -127,17 +121,11 @@ get_header(); ?>
 									<div class="entry-meta">
 										<?php the_category(', '); ?>
 									</div><!-- .entry-meta -->
+									<?php if ( has_post_thumbnail() ) : ?>
 									<div class="entry-image">
-										<a href="<?php the_permalink(); ?>" rel="bookmark">
-											<?php
-											if ( has_post_thumbnail() ) :
-												the_post_thumbnail( 'archive' );
-											else :
-												echo '<img src="http://placehold.it/350x262/">';
-											endif;
-											?>
-										</a>
+										<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'archive' ); ?></a>
 									</div><!-- .entry-image -->
+									<?php endif; ?>
 									
 									<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 								</header><!-- .entry-header -->
