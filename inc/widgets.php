@@ -21,8 +21,8 @@ add_action( 'widgets_init', 'flacso_register_widgets' );
 class Flacso_Library_Widget extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'widget_flacso_library', 'description' => __( 'Displays the latest posts from a certain category', 'flacso' ) );
-		parent::__construct( 'widget_flacso_library', __( 'Library', 'flacso' ), $widget_ops );
+		$widget_ops = array( 'classname' => 'widget_flacso_library', 'description' => __( 'Display a list with the elements inside Flacso Library', 'flacso' ) );
+		parent::__construct( 'widget_flacso_library', __( 'Flacso Library', 'flacso' ), $widget_ops );
 	}
 
 	/**
@@ -86,8 +86,8 @@ class Flacso_Library_Widget extends WP_Widget {
 
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
+		$new_instance = wp_parse_args( (array) $new_instance, array( 'title' => '') );
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		//$instance['category'] = (int)( $new_instance['category'] );
 
 		return $instance;
 	}
@@ -97,18 +97,12 @@ class Flacso_Library_Widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$title = esc_attr( $instance['title'] );
-		//$category = isset( $instance['category'] ) ? (int) $instance['category'] : 0;
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
+		$title = $instance['title'];
 		?>
-		
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'flacso' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-		</p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Category:', 'flacso' ); ?></label>
-			<?php wp_dropdown_categories( 'name='.$this->get_field_name( 'category' ) . '&id=' . $this->get_field_id( 'category' ) . '&show_count=1&class=widefat&selected=' . $category );?>
 		</p>
 	<?php
 	}
