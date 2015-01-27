@@ -30,3 +30,29 @@
 		color: $color__tertiary;
 	}
 }
+
+/* Library widget */
+.widget_flacso_library {
+	background: $color__primary;
+
+	.taxonomy-list {
+		li {
+			display: block;
+		}
+
+		a {
+			background: transparent;
+			text-align: left;
+			margin-bottom: 0.5em;
+			padding: 0;
+			width: 100%;
+		}
+	}
+}
+
+/* Featured links / Banners Widget Area */
+.featured-links {
+	.widget-title {
+		display: none;
+	}
+}

@@ -17,7 +17,7 @@ function flacso_the_menu() {
 		<?php
 		wp_nav_menu( array(
             'theme_location'    => 'main',
-            //'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
             'walker'            => new wp_bootstrap_navwalker()
         ));
         ?>
@@ -143,12 +143,13 @@ if ( ! function_exists( 'flacso_entry_share' ) ) :
  */
 function flacso_entry_share() {
 	?>
-	<div class="row">
-		<div class="col-md-3"><a href="#" class="share-link"><?php _e( 'Share this content', 'flacso' ); ?></a></div>
-		<div class="col-md-3"><a href="#" class="share-link share-link--twitter">Twitter</a></div>
-		<div class="col-md-3"><a href="#" class="share-link share-link--facebook">Facebook</a></div>
-		<div class="col-md-3"><a href="#" class="share-link share-link--googleplus">Google+</a></div>
-	</div>
+	<!-- ul? -->
+	<ul class="entry-share__list clearfix">
+		<li class="entry-share__item"><?php _e( 'Share', 'flacso' ); ?></li>
+		<li class="entry-share__item entry-share__item--twitter"><a href="#" class="share-link share-link--twitter icon-twitter">Twitter</a></li>
+		<li class="entry-share__item entry-share__item--facebook"><a href="#" class="share-link share-link--facebook icon-facebook">Facebook</a></li>
+		<li class="entry-share__item entry-share__item--googleplus"><a href="#" class="share-link share-link--googleplus icon-gplus">Google+</a></li>
+	</ul>
 	<?php
 }
 endif;
@@ -169,13 +170,104 @@ function flacso_the_document_download_list() {
 	if ( $documents ) : ?>
 		<div class="entry-download">
 			<?php foreach ( $documents as $document ) : ?>
-				<a class="button download-link" href="<?php echo $document->guid; ?>"><?php echo $document->post_title; ?></a>
+				<?php
+				$terms = get_the_terms( $document->ID, 'language' );
+										
+				if ( $terms && ! is_wp_error( $terms ) ) {
+
+					$term_list = array();
+					$documents_list = '';
+
+					foreach ( $terms as $term ) {
+						$term_list[] = $term->name;
+					}
+		
+					$documents_list =  __( 'Download', 'flacso' ) . ' (' . join( ', ', $term_list ) . ')';
+				}
+				else {
+					$documents_list =  __( 'Download', 'flacso' );
+				}
+				?>
+
+				<a class="button download-link btn-block" href="<?php echo $document->guid; ?>"><?php echo $documents_list; ?></a>
 			<?php endforeach; ?>
 		</div><!-- .entry-download -->
 	<?php
 	endif;
 }
 endif;
+
+if ( ! function_exists( 'flacso_the_agenda_list' ) ) :
+/**
+ * Prints HTML with dates, place and source link for Agenda post type
+ */
+function flacso_the_agenda_list() {
+	global $post;
+	?>
+	
+	<ul class="entry-agenda list-unstyled">
+		<?php if ( $date_start = get_post_meta( $post->ID, '_data_inicial', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Data</span>
+			<?php
+			$date_end = get_post_meta( $post->ID, '_data_final', true );
+			if ( $date_end && $date_end != $date_start ) :
+				/* translators: Initial & final date for the event */
+				printf(
+					'%1$s to %2$s',
+					date( get_option( 'date_format' ), strtotime( $date_start ) ),
+					date( get_option( 'date_format' ), strtotime( $date_end ) )
+				);
+			else :
+				echo date( get_option( 'date_format' ), strtotime( $date_start ) );
+			endif;
+			?>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+		
+		<?php if ( $time = get_post_meta( $post->ID, '_horario', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Horário</span>
+			<?php echo $time; ?>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+		
+		<?php if ( $location = get_post_meta( $post->ID, '_onde', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Local</span>
+			<?php echo $location; ?>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+		
+		<?php if ( $link = get_post_meta( $post->ID, '_link', true ) ) : ?>
+		<li class="entry-agenda__item">
+			<span>Mais informações</span>
+			<a href="<?php echo esc_url( $link ); ?>"><?php echo esc_url( $link ); ?></a>
+		</li><!-- .entry-agenda__item -->
+		<?php endif; ?>
+	</ul><!-- .entry-agenda -->
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'flacso_the_dummy_image' ) ) :
+/**
+ * Prints HTML for a dummy image
+ */
+function flacso_the_dummy_image( $post_type = 'post' ) {
+
+	if ( $post_type == 'document' ) {
+		$placeholder_size = '176x234';	
+	}
+	else {
+		$placeholder_size = '150x150';
+	}
+
+	echo '<img alt="Image" src="http://placehold.it/' . $placeholder_size . '/eeeeee/cccccc&text=Imagem" />';
+
+}
+endif;
+
 
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**

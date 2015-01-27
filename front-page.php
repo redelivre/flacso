@@ -27,17 +27,11 @@ get_header(); ?>
 				  				<div class="row">
 									<div class="col-sm-4 col-md-4">
 										<header class="entry-header">
+											<?php if ( has_post_thumbnail() ) : ?>
 											<div class="entry-image">
-												<a href="<?php the_permalink(); ?>" rel="bookmark">
-													<?php
-													if ( has_post_thumbnail() ) :
-														the_post_thumbnail( 'featured' );
-													else :
-														echo '<img src="http://placehold.it/350x262/">';
-													endif;
-													?>
-												</a>
+												<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'featured' ); ?></a>
 											</div><!-- .entry-image -->
+											<?php endif; ?>
 										</header><!-- .entry-header -->
 									</div>
 
@@ -52,6 +46,19 @@ get_header(); ?>
 							</article><!-- #post-## -->
 						<?php
 						endwhile; endif;
+					elseif ( current_user_can( 'edit_theme_options' ) ) : ?>
+					<div class="alert alert-info" role="alert">
+  						<?php
+  						global $wp_customize;
+						if ( isset( $wp_customize ) ) {
+						    echo 'Você pode destacar uma página de seu interesse no menu à sua esquerda, dentro da opção <em>Front Page Content</em>. Aqui, será mostrado o resumo dessa página e, se houver, a sua imagem destacada.';
+						}
+						else {
+							echo 'Você pode destacar uma página de seu interesse. Aqui, será mostrado o resumo dessa página e, se houver, a sua imagem destacada. <a href="' . admin_url( 'customize.php' ) . '" class="alert-link">Faça isso agora.</a>';
+						}
+						?>
+					</div><!-- .alert.alert-info -->
+					<?php
 			  		endif;
 			  		?>
 			  	</div>
@@ -114,17 +121,11 @@ get_header(); ?>
 									<div class="entry-meta">
 										<?php the_category(', '); ?>
 									</div><!-- .entry-meta -->
+									<?php if ( has_post_thumbnail() ) : ?>
 									<div class="entry-image">
-										<a href="<?php the_permalink(); ?>" rel="bookmark">
-											<?php
-											if ( has_post_thumbnail() ) :
-												the_post_thumbnail( 'archive' );
-											else :
-												echo '<img src="http://placehold.it/350x262/">';
-											endif;
-											?>
-										</a>
+										<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'archive' ); ?></a>
 									</div><!-- .entry-image -->
+									<?php endif; ?>
 									
 									<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 								</header><!-- .entry-header -->

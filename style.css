@@ -5736,7 +5736,8 @@ a {
   padding: 0; }
 
 .top-navigation ul {
-  padding: 0.25em; }
+  padding: 0.25em;
+  text-align: right; }
 .top-navigation li {
   display: inline-block; }
 .top-navigation a {
@@ -6001,6 +6002,22 @@ textarea {
 .widget-area--main .widget-title {
   color: #2c6db6; }
 
+/* Library widget */
+.widget_flacso_library {
+  background: #002044; }
+  .widget_flacso_library .taxonomy-list li {
+    display: block; }
+  .widget_flacso_library .taxonomy-list a {
+    background: transparent;
+    text-align: left;
+    margin-bottom: 0.5em;
+    padding: 0;
+    width: 100%; }
+
+/* Featured links / Banners Widget Area */
+.featured-links .widget-title {
+  display: none; }
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -6037,6 +6054,17 @@ a.icon--rounded {
 
 .site-complementary {
   font-size: 0.875em; }
+
+.site-branding__image_link {
+  display: block;
+  text-align: center; }
+
+.site-title {
+  margin-bottom: 0; }
+
+.site-description {
+  font-size: 1.5em;
+  margin-top: 0; }
 
 /* Front Page content */
 .featured-intro .hentry {
@@ -6101,9 +6129,6 @@ a.icon--rounded {
   font-weight: bold;
   margin-bottom: 0.25em; }
 
-.archive .entry-title {
-  font-size: 1.25em; }
-
 .updated:not(.published) {
   display: none; }
 
@@ -6125,6 +6150,9 @@ a.icon--rounded {
   border-color: #ebebeb;
   border-style: solid;
   padding: 1em 0; }
+
+.single .entry-title {
+  margin-top: 0; }
 
 /* Taxonomy blocks / lists */
 .taxonomy-list {
@@ -6185,24 +6213,45 @@ a.icon--rounded {
 .entry-share {
   padding: 1em 0; }
 
-.share-link {
+.entry-share__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.entry-share__item {
   background: #ebebeb;
-  color: #fff;
-  font-weight: normal;
+  color: #002044;
   display: block;
   padding: 1em;
   text-align: center; }
+  @media (min-width: 768px) {
+    .entry-share__item {
+      float: left;
+      width: 25%; } }
 
-.share-link--twitter {
+.entry-share__item--twitter {
   background: #00aced; }
 
-.share-link--facebook {
+.entry-share__item--facebook {
   background: #3b5998; }
 
-.share-link--googleplus {
+.entry-share__item--googleplus {
   background: #dd4b39; }
 
+.share-link {
+  font-weight: normal;
+  color: #fff;
+  display: block; }
+  .share-link:hover {
+    color: #fff;
+    font-weight: bold; }
+
 /* Archive */
+.archive .entry-title {
+  font-size: 1.25em; }
+.archive .entry-image {
+  max-width: 150px; }
+
 .page-header {
   background: #ebebeb;
   margin: 0 0 2em;
@@ -6232,6 +6281,15 @@ a.icon--rounded {
   margin-top: 1.5em; }
   .entry-download .download-link {
     margin-bottom: 1em; }
+
+/* Post type Agenda */
+.entry-agenda__item {
+  border-bottom: 2px dotted #023670;
+  padding: 1em 0; }
+  .entry-agenda__item span {
+    display: block;
+    font-size: 0.875em;
+    text-transform: lowercase; }
 
 /*--------------------------------------------------------------
 10.2 Asides

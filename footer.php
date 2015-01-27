@@ -7,7 +7,7 @@
  * @package Flacso
  */
 ?>
-
+		</div><!-- .row -->
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer wrapper" role="contentinfo">

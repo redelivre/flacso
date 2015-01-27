@@ -27,9 +27,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="site-complementary  wrapper--small clear">
-					<div class="col-md-offset-5 col-md-4 ">
+					<div class="col-md-9">
 						<nav id="site-navigation--top" class="site-navigation top-navigation pull-right" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'top', 'depth' => 1 ) ); ?>
 						</nav><!-- #site-navigation -->
 					</div>
 					<div class="col-md-3">
@@ -41,7 +41,7 @@
 		
 		<div class="site-branding clear">
 			<?php if ( get_header_image() ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<a class="site-branding__image_link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
 			</a>
 			<?php endif; // End header image check. ?>
@@ -58,3 +58,4 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content<?php if ( ! is_front_page() ) : echo ' container'; endif; ?>">
+		<div class="row">

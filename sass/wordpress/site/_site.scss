@@ -46,6 +46,20 @@ a.icon--rounded {
 	font-size: 0.875em;
 }
 
+.site-branding__image_link {
+	display: block;
+	text-align: center;
+}
+
+.site-title {
+	margin-bottom: 0;
+}
+
+.site-description {
+	font-size: 1.5em;
+	margin-top: 0;
+}
+
 /* Front Page content */
 .featured-intro .hentry {
 	@include main-border-bottom;

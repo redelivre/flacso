@@ -31,6 +31,10 @@ function flacso_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_search() ) {
+		$classes[] = 'archive';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'flacso_body_classes' );

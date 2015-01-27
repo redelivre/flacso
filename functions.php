@@ -43,7 +43,7 @@ function flacso_setup() {
 	// Image sizes
 	add_image_size( 'featured', 328, 328, true );
 	add_image_size( 'archive', 328, 246, true );
-	add_image_size( 'singular', 825, 619, true );
+	add_image_size( 'singular', 825, 619, false );
 	add_image_size( 'document', 176, 234, true );
 	add_image_size( 'document--small', 150, 212, true );
 
@@ -167,6 +167,11 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom widgets.
+ */
+require get_template_directory() . '/inc/widgets.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
@@ -206,3 +211,7 @@ require get_template_directory() . '/inc/options.php';
  */ 
 require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
+/**
+ * Back-end functions
+ */
+require get_template_directory() . '/inc/back-end.php';
