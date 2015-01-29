@@ -202,6 +202,11 @@ require get_template_directory() . '/inc/custom-fields.php';
 require get_template_directory() . '/inc/tax-meta-fields.php';
 
 /**
+ * Opções do Tema 
+ */
+require get_template_directory() . '/inc/options.php';
+
+/**
  * Register Custom Navigation Walker
  */ 
 require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
