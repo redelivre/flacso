@@ -84,6 +84,10 @@
 		li {
 			display: inline;
 			width: 10%;
+
+			.icon {
+				display: block;
+			}
 		}
 	}
 
@@ -94,11 +98,27 @@
 			display: block;
 			color: $color__text-alternate;
 			float: left;
+			font-size: 0.875em;
 			line-height: 1.2;
 			text-align: center;
 			padding: 1em;
-			width: 10%;
-			word-wrap: break-word;
+			width: 50%;
+
+			@media (min-width: $screen-xs-min) {
+				width: 25%;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				width: 12.5%;
+			}
+
+			@media (min-width: $screen-md-min) {
+				width: 16.666%;
+			}
+
+			@media (min-width: $screen-lg-min) {
+				width: 8.333%;
+			}
 		}
 
 		.icon {

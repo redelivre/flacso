@@ -6160,17 +6160,31 @@ a.icon--rounded {
   .taxonomy-list.taxonomy-list--inline li {
     display: inline;
     width: 10%; }
+    .taxonomy-list.taxonomy-list--inline li .icon {
+      display: block; }
   .taxonomy-list li a {
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid #002044;
     display: block;
     color: #fff;
     float: left;
+    font-size: 0.875em;
     line-height: 1.2;
     text-align: center;
     padding: 1em;
-    width: 10%;
-    word-wrap: break-word; }
+    width: 50%; }
+    @media (min-width: 480px) {
+      .taxonomy-list li a {
+        width: 25%; } }
+    @media (min-width: 768px) {
+      .taxonomy-list li a {
+        width: 12.5%; } }
+    @media (min-width: 992px) {
+      .taxonomy-list li a {
+        width: 16.666%; } }
+    @media (min-width: 1200px) {
+      .taxonomy-list li a {
+        width: 8.333%; } }
   .taxonomy-list li .icon {
     display: inline-block;
     margin-bottom: 0.5em; }
