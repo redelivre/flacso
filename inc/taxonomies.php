@@ -62,7 +62,6 @@ function flacso_create_taxs()
 		'Event' => array('event', true),
 		'Areas and Programs' => array('program', false),
 		'Publications' => array('publication', true),
-		'Communication'=> array('communication', true),
 		'Higher Education' => array('higher-education', false),
 		'Project' => array('project', true),
 		'Countr' => array('country', 'ies', 'y' ),
