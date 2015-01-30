@@ -63,12 +63,10 @@ function flacso_setup() {
 	) );
 
 	/*
-	 * Enable support for Post Formats.
+	 * Remove support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
+	remove_theme_support( 'post-formats' );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'flacso_custom_background_args', array(
