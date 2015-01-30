@@ -29,6 +29,12 @@ class FlacsoCustomFields
 					'title' => __('Url', 'flacso'),
 					'tip' => __('Source Address or external link', 'flacso'),
 			),
+			'data' => array
+			(
+					'slug' => 'Data',
+					'title' => __('Data', 'flacso'),
+					//'tip' => __('', 'flacso'),
+			),
 		);
 		
 		add_action('init', array($this, 'init'));
@@ -43,7 +49,7 @@ class FlacsoCustomFields
 	
 	function custom_meta()
 	{
-		add_meta_box("custom_post_meta", __("Post Details", 'flacso'), array($this, 'meta'), 'post', 'side', 'default');
+		add_meta_box("custom_post_meta", __("Post Details", 'flacso'), array($this, 'meta'), 'post', 'advanced', 'core');
 	}
 	
 	protected $_customs = array();
@@ -88,7 +94,7 @@ class FlacsoCustomFields
 				<label for="<?php echo $slug; ?>" class="<?php echo 'label_'.$slug; ?>"><?php echo $campo['title'] ?>:</label>
 				<input <?php echo $disable_edicao ?> id="<?php echo $slug; ?>"
 					name="<?php echo $slug; ?>"
-					class="<?php echo $slug.(array_key_exists('type', $campo) && $campo['type'] == 'date' ? 'hasdatepicker' : '') ; ?> "
+					class="widefat <?php echo $slug.(array_key_exists('type', $campo) && $campo['type'] == 'date' ? 'hasdatepicker' : '') ; ?> "
 					value="<?php echo $dado; ?>" />
 			</p>
 			<?php
