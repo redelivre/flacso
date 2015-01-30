@@ -1,5 +1,21 @@
 <?php
 /**
+ * Remove unnecessary metaboxes from posts, pages and documents
+ */
+function flacso_manage_metaboxes() {
+
+	foreach ( array( 'post', 'page', 'document' ) as $post_type ) {
+		remove_meta_box( 'authordiv', $post_type, 'normal' ); // Author Metabox
+		remove_meta_box( 'commentstatusdiv', $post_type, 'normal' ); // Comments Status Metabox
+		remove_meta_box( 'commentsdiv', $post_type, 'normal' ); // Comments Metabox
+		remove_meta_box( 'postcustom', $post_type, 'normal' ); // Custom Fields Metabox
+		remove_meta_box( 'slugdiv', $post_type, 'normal' ); // Slug Metabox
+		remove_meta_box( 'trackbacksdiv', $post_type, 'normal' ); // Trackback Metabox
+	}
+}
+add_action('admin_menu','flacso_manage_metaboxes');
+
+/**
  * Custom Post Columns
  *
  * @param array $columns
