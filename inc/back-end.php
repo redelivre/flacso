@@ -16,6 +16,19 @@ function flacso_manage_metaboxes() {
 add_action('admin_menu','flacso_manage_metaboxes');
 
 /**
+ * Set default image link to file
+ */
+function flacso_set_image_default_link_type() {
+	
+	$image_set = get_option( 'image_default_link_type' );
+	
+	if ( $image_set !== 'file' ) {
+		update_option( 'image_default_link_type', 'file');
+	}
+}
+add_action( 'admin_init', 'flacso_set_image_default_link_type', 10 );
+
+/**
  * Custom Post Columns
  *
  * @param array $columns
