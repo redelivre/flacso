@@ -6154,6 +6154,11 @@ a.icon--rounded {
 .single .entry-title {
   margin-top: 0; }
 
+/* Galleries */
+.gallery-item {
+  margin-bottom: 0;
+  padding: 1px; }
+
 /* Taxonomy blocks / lists */
 .taxonomy-list {
   list-style-type: none; }

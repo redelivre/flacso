@@ -147,4 +147,9 @@ function flacso_comments_list($comment, $args, $depth) {
 	</article><!-- .comment-body -->
 <?php
 }
+
+/**
+ * Remove gallery styles
+ */
+add_filter( 'use_default_gallery_style', '__return_false' );
 ?>
