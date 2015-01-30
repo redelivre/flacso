@@ -137,9 +137,7 @@ get_header(); ?>
 							</article><!-- #post-## -->
 						</div>
 
-					<?php endwhile; endif;
-
-					?>
+					<?php endwhile; endif; ?>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- .featured-news -->
@@ -154,7 +152,7 @@ get_header(); ?>
 					</div> 
 					<div class="col-md-10 banners-widget-area">
 						<?php
-						//if ( ! is_active_sidebar( 'sidebar-banners' ) )
+						if ( is_active_sidebar( 'sidebar-banners' ) )
 						{
 							dynamic_sidebar( 'sidebar-banners' );
 						}
