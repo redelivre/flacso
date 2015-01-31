@@ -84,3 +84,19 @@ function flacso_post_edit_columns_content( $column, $post_id ) {
     }
 }
 add_action( 'manage_posts_custom_column' , 'flacso_post_edit_columns_content', 10, 2 );
+
+/**
+ * Add character counter to the excerpt meta box
+ * @link http://wpsnipp.com/index.php/excerpt/add-a-character-counter-to-excerpt-metabox/
+ */
+function flaso_excerpt_counter(){
+    echo '<script>jQuery(document).ready(function(){
+		jQuery("#postexcerpt .inside").after("<div style=\"background: #f7f7f7; padding: 4px 10px; font-size: 12px;\">Contagem de caracteres: <span id=\"excerpt_counter\"></span></div>");
+	    jQuery("#excerpt_counter").val(jQuery("#excerpt").val().length);
+	    jQuery("#excerpt").keyup( function() {
+	    	jQuery("#excerpt_counter").html(jQuery("#excerpt").val().length);
+		});
+	});</script>';
+}
+add_action( 'admin_head-post.php', 'flaso_excerpt_counter');
+add_action( 'admin_head-post-new.php', 'flaso_excerpt_counter');
