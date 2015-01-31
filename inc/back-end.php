@@ -100,3 +100,18 @@ function flaso_excerpt_counter(){
 }
 add_action( 'admin_head-post.php', 'flaso_excerpt_counter');
 add_action( 'admin_head-post-new.php', 'flaso_excerpt_counter');
+
+/**
+ * Increase height of excerpt textarea
+ */
+function flacso_increase_excerpt_textarea_height() {
+    echo'
+    <style type="text/css">
+        #excerpt {
+    		height: 100px;
+    		resize: vertical;
+    	}
+    </style>
+    ';
+}
+add_action('admin_head', 'flacso_increase_excerpt_textarea_height');
