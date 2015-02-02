@@ -61,7 +61,7 @@ function flacso_create_taxs()
 	$taxs = array(
 		'Event' => array('event', true),
 		'Areas and Programs' => array('program', false),
-		'Publications' => array('publication', true),
+		'Publication' => array('publication', true),
 		'Higher Education' => array('higher-education', false),
 		'Project' => array('project', true),
 		'Countr' => array('country', 'ies', 'y' ),
