@@ -1,5 +1,7 @@
 #Flacso
 
+[![Join the chat at https://gitter.im/redelivre/flacso](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/redelivre/flacso?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Organização das **issues**
 As *issues* podem ser acompanhadas através do [Waffle.io](https://waffle.io). As colunas usadas para separar os estágios são as [mesmas recomendadas pelos desenvolvedores da ferramenta](https://waffle.io/blog/2014/06/15/how-waffle-uses-waffle-to-build-waffle/), sendo elas:
 
