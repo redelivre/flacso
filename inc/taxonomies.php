@@ -59,25 +59,25 @@ function flacso_create_taxs()
 	register_taxonomy('gea', array('document', 'post', 'page'), $args);
 	
 	$taxs = array(
-		'Event' => array('event', true),
-		'Areas and Programs' => array('program', false),
-		'Publication' => array('publication', true),
-		'Higher Education' => array('higher-education', false),
-		'Project' => array('project', true),
-		'Countr' => array('country', 'ies', 'y' ),
-		'Year' => array('year', true),
-		'Territor' => array('territory', 'ies', 'y'),
+		'Event' => array('event', array('document', 'post', 'page'), true),
+		'Areas and Programs' => array('program', array('document', 'post', 'page'), false),
+		'Publication' => array('publication', array('document'), true),
+		'Higher Education' => array('higher-education', array('document', 'post', 'page'), false),
+		'Project' => array('project', array('document', 'post', 'page'), true),
+		'Countr' => array('country', array('document', 'post', 'page'), 'ies', 'y' ),
+		'Year' => array('year', array('document', 'post', 'page'), true),
+		'Territor' => array('territory', array('document', 'post', 'page'), 'ies', 'y'),
 	);
 	
 	foreach ( $taxs as $label => $tax)
 	{
-		if(count($tax) == 3)
+		if(count($tax) == 4)
 		{
-			$ret = flacso_register_tax($label, $tax[0], array('document', 'post', 'page'), $tax[1], $tax[2]);
+			$ret = flacso_register_tax($label, $tax[0], $tax[1], $tax[2], $tax[3]);
 		}
 		else 
 		{
-			$ret = flacso_register_tax($label, $tax[0], array('document', 'post', 'page'), $tax[1]);
+			$ret = flacso_register_tax($label, $tax[0], $tax[1], $tax[2]);
 		}
 	}
 	
