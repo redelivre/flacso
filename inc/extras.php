@@ -152,4 +152,23 @@ function flacso_comments_list($comment, $args, $depth) {
  * Remove gallery styles
  */
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+/**
+ * Change gallery defaults on the front end
+ */
+function flacso_change_gallery_defaults( $out, $pairs, $atts ) {
+
+    $atts = shortcode_atts( array(
+      'columns'	=> 8,
+      'link'	=> 'file'
+
+    ), $atts );
+ 
+    $out['columns'] = $atts['columns'];
+    $out['link'] = $atts['link'];
+ 
+    return $out;
+ 
+}
+add_filter( 'shortcode_atts_gallery', 'flacso_change_gallery_defaults', 10, 3 );
 ?>
