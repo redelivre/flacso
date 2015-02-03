@@ -28,13 +28,7 @@ class FlacsoCustomFields
 					'slug' => 'Url',
 					'title' => __('Url', 'flacso'),
 					'tip' => __('Source Address or external link', 'flacso'),
-			),
-			'data' => array
-			(
-					'slug' => 'Data',
-					'title' => __('Data', 'flacso'),
-					//'tip' => __('', 'flacso'),
-			),
+			)
 		);
 		
 		add_action('init', array($this, 'init'));
