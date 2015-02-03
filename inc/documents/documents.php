@@ -116,7 +116,7 @@ class Documents
 				'show_ui' => true, // public
 				'show_in_menu' => true,
 				'menu_position' => 5,
-				// 'menu_icon' => '',
+				'menu_icon' => 'dashicons-book',
 				'capability_type' => array('document','documents'),
 				'map_meta_cap' => true,
 				'hierarchical' => false,
