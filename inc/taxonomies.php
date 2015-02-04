@@ -61,7 +61,7 @@ function flacso_create_taxs()
 	$taxs = array(
 		'Event' => array('event', array('document', 'post', 'page'), true),
 		'Areas and Programs' => array('program', array('document', 'post', 'page'), false),
-		'Publication' => array('publication', array('document'), true),
+		'Publication Type' => array('publication', array('document'), true),
 		'Higher Education' => array('higher-education', array('document', 'post', 'page'), false),
 		'Project' => array('project', array('document', 'post', 'page'), true),
 		'Countr' => array('country', array('document', 'post', 'page'), 'ies', 'y' ),
@@ -147,6 +147,7 @@ add_action('init', 'flacso_create_taxs');
 
 function flacso_register_tax($name, $slug, $post_types, $plural = true, $single = '')
 {
+
 	if(is_bool($plural))
 	{
 		$s = $plural ? 's' : '';
@@ -190,6 +191,59 @@ function flacso_register_tax($name, $slug, $post_types, $plural = true, $single 
 			//"query_var" => "",
 			//"_builtin" => "" // Core
 	);
+
+	// Add another argument if we're using publication type	
+	if ( $slug == 'publication' ) {
+		$args['meta_box_cb'] = 'flacso_publication_type_meta_box';
+	}
 	
 	return register_taxonomy($slug, $post_types, $args);
+}
+
+/**
+ * Callback function for taxonomy meta boxes
+ * 
+ * A simple callback function for 'meta_box_cb' argument
+ * inside register_taxonomy() that replaces the regular
+ * checkboxes with a plain dropdown list
+ * 
+ * @param  [type] $post [description]
+ * @param  [type] $box  [description]
+ * @link   http://wordpress.stackexchange.com/a/148965
+ */
+function flacso_publication_type_meta_box( $post, $box ) {
+
+	$defaults = array( 'taxonomy' => 'category' );
+	
+	if ( ! isset( $box['args'] ) || ! is_array( $box['args'] ) ) {
+	    $args = array();
+	}
+	else {
+	    $args = $box['args'];
+	}
+
+	extract( wp_parse_args($args, $defaults), EXTR_SKIP );
+	$tax = get_taxonomy( $taxonomy );
+	?>
+	
+	<div id="taxonomy-<?php echo $taxonomy; ?>" class="categorydiv">
+	        <?php 
+	        $name = ( $taxonomy == 'category' ) ? 'post_category' : 'tax_input[' . $taxonomy . ']';
+	        echo "<input type='hidden' name='{$name}[]' value='0' />"; // Allows for an empty term set to be sent. 0 is an invalid Term ID and will be ignored by empty() checks.
+	        
+	        $term_obj = wp_get_object_terms( $post->ID, $taxonomy ); //_log($term_obj[0]->term_id)
+	
+	        wp_dropdown_categories( array(
+	        	'taxonomy'			=> $taxonomy,
+	        	'hide_empty'		=> 0,
+	        	'name'				=> "{$name}[]",
+	        	'selected'			=> $term_obj[0]->term_id,
+	        	'orderby'			=> 'name',
+	        	'hierarchical'		=> 0,
+	        	'show_option_none'	=> '&mdash;',
+	        	'class'				=> 'widefat'
+	        ) );
+	        ?>
+	</div>
+	<?php
 }
