@@ -3,7 +3,7 @@
  * Flacso tax meta class
  *
  * Insert meta fields for taxonomies. Current being used only with 
- * 'publication' taxonomy under 'Document' post type
+ * 'publication-type' taxonomy under 'Document' post type
  * 
  * @link https://github.com/bainternet/Tax-Meta-Class
  * @package Flacso
@@ -29,7 +29,7 @@ if ( is_admin() ) {
     $config = array(
         'id' => 'flacso_icons',          // meta box id, unique per meta box
         //'title' => 'Demo Meta Box',          // meta box title
-        'pages' => array( 'publication' ),        // taxonomy name, accept categories, post_tag and custom taxonomies
+        'pages' => array( 'publication-type' ),        // taxonomy name, accept categories, post_tag and custom taxonomies
         'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
         'fields' => array(),            // list of meta fields (can be added by field arrays)
         'local_images' => false,          // Use local or hosted images (meta box images for add/remove)

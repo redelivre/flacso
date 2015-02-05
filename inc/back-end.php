@@ -46,7 +46,7 @@ function flacso_post_edit_columns( $columns ) {
 
   	foreach( $columns as $key => $title ) {
     	if ( $key=='categories' ) {
-      		$new_columns['publication'] = __( 'Publication', 'flacso' );
+      		$new_columns['publication-type'] = __( 'Publication', 'flacso' );
       	}
     
     	$new_columns[$key] = $title;
@@ -65,9 +65,9 @@ add_filter( 'manage_document_posts_columns' , 'flacso_post_edit_columns' );
  */
 function flacso_post_edit_columns_content( $column, $post_id ) {
 	$post_type = 'document';
-	$taxonomy = 'publication';
+	$taxonomy = 'publication-type';
     
-    if ( $column == 'publication' ) {
+    if ( $column == 'publication-type' ) {
 	    $terms = get_the_terms( $post_id , $taxonomy );
         
         if ( $terms && ! is_wp_error( $terms ) ) {
