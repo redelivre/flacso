@@ -14,7 +14,7 @@ add_action( 'widgets_init', 'flacso_register_widgets' );
 
 /**
  * Library Widget
- * List all items under 'publication' taxonomy
+ * List all items under 'publication-type' taxonomy
  *
  * @since Flacso 1.0
  */
@@ -58,7 +58,7 @@ class Flacso_Library_Widget extends WP_Widget {
 			'parent' 	=> 0,
 		);
 
-		$publications = get_terms( 'publication', $a );
+		$publications = get_terms( 'publication-type', $a );
 		?>
 		<?php if ( $publications ) : ?>
 		<ul class="taxonomy-list clear taxonomy-list--inline clear">

@@ -79,7 +79,7 @@ get_header(); ?>
 						'parent' 	=> 0,
 					);
 
-					$publications = get_terms( 'publication', $args );
+					$publications = get_terms( 'publication-type', $args );
 					?>
 					<?php if ( $publications ) : ?>
 					<ul class="taxonomy-list clear taxonomy-list--inline clear">

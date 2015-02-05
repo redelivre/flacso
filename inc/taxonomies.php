@@ -61,7 +61,7 @@ function flacso_create_taxs()
 	$taxs = array(
 		'Event' => array('event', array('document', 'post', 'page'), true),
 		'Areas and Programs' => array('program', array('document', 'post', 'page'), false),
-		'Publication Type' => array('publication', array('document'), true),
+		'Publication Type' => array('publication-type', array('document'), true),
 		'Higher Education' => array('higher-education', array('document', 'post', 'page'), false),
 		'Project' => array('project', array('document', 'post', 'page'), true),
 		'Countr' => array('country', array('document', 'post', 'page'), 'ies', 'y' ),
@@ -193,7 +193,7 @@ function flacso_register_tax($name, $slug, $post_types, $plural = true, $single 
 	);
 
 	// Add another argument if we're using publication type	
-	if ( $slug == 'publication' ) {
+	if ( $slug == 'publication-type' ) {
 		$args['meta_box_cb'] = 'flacso_publication_type_meta_box';
 	}
 	

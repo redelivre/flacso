@@ -25,7 +25,7 @@ get_header(); ?>
 					'parent' 	=> 0,
 				);
 
-				$publications = get_terms( 'publication', $args );
+				$publications = get_terms( 'publication-type', $args );
 				?>
 				<?php if ( $publications ) : ?>
 				<div class="general-list">
