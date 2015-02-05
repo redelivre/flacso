@@ -1,9 +1,9 @@
 <?php
 
 /**
- * New post type Document
+ * New post type Publication
  */
-require get_template_directory() . '/inc/documents/documents.php';
+require get_template_directory() . '/inc/publications/publications.php';
 
 function flacso_create_taxs()
 {
@@ -45,8 +45,8 @@ function flacso_create_taxs()
 			'label' => __($gea_label,'flacso'),
 			'labels' => $labels,
 			'public' => true,
-			'capabilities' => array('assign_terms' => 'edit_documents',
-					'edit_terms' => 'edit_documents'),
+			'capabilities' => array('assign_terms' => 'edit_publications',
+					'edit_terms' => 'edit_publications'),
 			//'show_in_nav_menus' => true, // Public
 			// 'show_ui' => '', // Public
 			'hierarchical' => true,
@@ -56,17 +56,17 @@ function flacso_create_taxs()
 			//'_builtin' => '' // Core
 	);
 	
-	register_taxonomy('gea', array('document', 'post', 'page'), $args);
+	register_taxonomy('gea', array('publication', 'post', 'page'), $args);
 	
 	$taxs = array(
-		'Event' => array('event', array('document', 'post', 'page'), true),
-		'Areas and Programs' => array('program', array('document', 'post', 'page'), false),
-		'Publication Type' => array('publication', array('document'), true),
-		'Higher Education' => array('higher-education', array('document', 'post', 'page'), false),
-		'Project' => array('project', array('document', 'post', 'page'), true),
-		'Countr' => array('country', array('document', 'post', 'page'), 'ies', 'y' ),
-		'Year' => array('year', array('document', 'post', 'page'), true),
-		'Territor' => array('territory', array('document', 'post', 'page'), 'ies', 'y'),
+		'Event' => array('event', array('publication', 'post', 'page'), true),
+		'Areas and Programs' => array('program', array('publication', 'post', 'page'), false),
+		'Publication Type' => array('publication', array('publication'), true),
+		'Higher Education' => array('higher-education', array('publication', 'post', 'page'), false),
+		'Project' => array('project', array('publication', 'post', 'page'), true),
+		'Countr' => array('country', array('publication', 'post', 'page'), 'ies', 'y' ),
+		'Year' => array('year', array('publication', 'post', 'page'), true),
+		'Territor' => array('territory', array('publication', 'post', 'page'), 'ies', 'y'),
 	);
 	
 	foreach ( $taxs as $label => $tax)
@@ -181,8 +181,8 @@ function flacso_register_tax($name, $slug, $post_types, $plural = true, $single 
 			"label" => __("{$name}{$s}","flacso"),
 			"labels" => $labels,
 			"public" => true,
-			"capabilities" => array("assign_terms" => "edit_documents",
-					"edit_terms" => "edit_documents"),
+			"capabilities" => array("assign_terms" => "edit_publications",
+					"edit_terms" => "edit_publications"),
 			//"show_in_nav_menus" => true, // Public
 			// "show_ui" => "", // Public
 			"hierarchical" => true,

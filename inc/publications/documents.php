@@ -1,6 +1,6 @@
 <?php
 
-class Documents
+class Publications
 {
 	function __construct()
 	{
@@ -9,21 +9,21 @@ class Documents
 			(
 					'slug' => 'custom-author',
 					'title' => __('Author', 'flacso'),
-					'tip' => __('Document Author', 'flacso'),
+					'tip' => __('Publication Author', 'flacso'),
 			), 
 			'url' => array
 			(
-					'slug' => 'document-url',
+					'slug' => 'publication-url',
 					'title' => __('URL', 'flacso'),
 					'tip' => __('web site address', 'flacso'),
 			),
 			'country' => array (
-					'slug' => 'document-country',
+					'slug' => 'publication-country',
 					'title' => __ ( 'Country', 'flacso' ),
 					//'tip' => _n( 'country', 'country', 1, 'flacso' )
 			),
 			'reference' => array (
-					'slug' => 'document-reference',
+					'slug' => 'publication-reference',
 					'title' => __ ( 'Reference', 'flacso' ),
 					//'tip' => __ ( '', 'flacso' ),
 			)
@@ -48,37 +48,37 @@ class Documents
 		$permissoes = array(
 			'administrator' => array('Novo' => false, 'Caps' => array
 			(
-				'delete_documents',
-				'delete_private_documents',
-				'edit_document',
-				'edit_documents',
-				'edit_private_documents',
-				'publish_documents',
-				'read_document',
-				'read_private_documents',
-				'delete_published_documents',
-				'edit_published_documents',
-				'edit_published_document',
-				'edit_others_documents',
-				'edit_others_document',
-				'delete_others_documents',
-				'delete_others_document'
+				'delete_publications',
+				'delete_private_publications',
+				'edit_publication',
+				'edit_publications',
+				'edit_private_publications',
+				'publish_publications',
+				'read_publication',
+				'read_private_publications',
+				'delete_published_publications',
+				'edit_published_publications',
+				'edit_published_publication',
+				'edit_others_publications',
+				'edit_others_publication',
+				'delete_others_publications',
+				'delete_others_publication'
 			)),
 			'contributor' => array('Novo' => false, 'Caps' => array
 			(
-				'read_document',
+				'read_publication',
 			)),
 			'subscriber' => array('Novo' => false, 'Caps' => array
 			(
-				'read_document',
+				'read_publication',
 			)),
 			'author' => array('Novo' => false, 'Caps' => array
 			(
-				'read_document',
+				'read_publication',
 			)),
 			'editor' => array('Novo' => false, 'Caps' => array
 			(
-				'read_document',
+				'read_publication',
 			)),
 		);
 		
@@ -90,26 +90,26 @@ class Documents
 	{
 		$labels = array
 		(
-				'name' => __('Documents','flacso'),
-				'singular_name' => __('Document','flacso'),
+				'name' => __('Publications','flacso'),
+				'singular_name' => __('Publication','flacso'),
 				'add_new' => __('Add new','flacso'),
-				'add_new_item' => __('Add new document','flacso'),
-				'edit_item' => __('Edit document','flacso'),
-				'new_item' => __('New Document','flacso'),
-				'view_item' => __('View Document','flacso'),
-				'search_items' => __('Search Document','flacso'),
-				'not_found' =>  __('Document not found','flacso'),
-				'not_found_in_trash' => __('Document not found in the trash','flacso'),
+				'add_new_item' => __('Add new publication','flacso'),
+				'edit_item' => __('Edit publication','flacso'),
+				'new_item' => __('New Publication','flacso'),
+				'view_item' => __('View Publication','flacso'),
+				'search_items' => __('Search Publication','flacso'),
+				'not_found' =>  __('Publication not found','flacso'),
+				'not_found_in_trash' => __('Publication not found in the trash','flacso'),
 				'parent_item_colon' => '',
-				'menu_name' => __('Documents','flacso')
+				'menu_name' => __('Publications','flacso')
 	
 		);
 	
 		$args = array
 		(
-				'label' => __('Documents','flacso'),
+				'label' => __('Publications','flacso'),
 				'labels' => $labels,
-				'description' => __('Documents','flacso'),
+				'description' => __('Publications','flacso'),
 				'public' => true,
 				'publicly_queryable' => true, // public
 				//'exclude_from_search' => '', // public
@@ -117,11 +117,11 @@ class Documents
 				'show_in_menu' => true,
 				'menu_position' => 5,
 				'menu_icon' => 'dashicons-book',
-				'capability_type' => array('document','documents'),
+				'capability_type' => array('publication','publications'),
 				'map_meta_cap' => true,
 				'hierarchical' => false,
 				'supports' => array('title', 'editor', 'author', 'excerpt', 'trackbacks','thumbnail', 'revisions', 'comments'),
-				'register_meta_box_cb' => array($this, 'flacso_document_custom_meta'), // função para chamar na edição
+				'register_meta_box_cb' => array($this, 'flacso_publication_custom_meta'), // função para chamar na edição
 				'taxonomies' => array('post_tag','category'), // Taxionomias já existentes relaciondas, vamos criar e registrar na sequência
 				'permalink_epmask' => 'EP_PERMALINK ',
 				'has_archive' => true, // Opção de arquivamento por slug
@@ -134,13 +134,13 @@ class Documents
 	
 		);
 	
-		register_post_type("document", $args);
+		register_post_type("publication", $args);
 	}
 	
-	function flacso_document_custom_meta()
+	function flacso_publication_custom_meta()
 	{
-		add_meta_box("document_meta", __("Document Details", 'flacso'), array($this, 'document_meta'), 'document', 'side', 'default');
-		//add_meta_box("second_image_meta", __("Document Header Image", 'flacso'), array($this, 'second_image_meta'), 'document', 'side', 'default');
+		add_meta_box("publication_meta", __("Publication Details", 'flacso'), array($this, 'publication_meta'), 'publication', 'side', 'default');
+		//add_meta_box("second_image_meta", __("Publication Header Image", 'flacso'), array($this, 'second_image_meta'), 'publication', 'side', 'default');
 	}
 	
 	protected $_customs = array();
@@ -150,7 +150,7 @@ class Documents
 		$post = array(
 			'post_title' => array(
 				'slug' => 'post_title',
-				'title' => __('Document name', 'flacso'),
+				'title' => __('Publication name', 'flacso'),
 				'tip' => '',
 				'required' => true,
 				'buildin' => true
@@ -168,7 +168,7 @@ class Documents
 		return array_merge($post, $this->_customs);
 	}
 	
-	function document_meta()
+	function publication_meta()
 	{
 		global $post;
 		
@@ -186,7 +186,7 @@ class Documents
 			$disable_edicao = 'readonly="readonly"';
 		}*/
 		
-		wp_nonce_field( 'document_meta_inner_custom_box', 'document_meta_inner_custom_box_nonce' );
+		wp_nonce_field( 'publication_meta_inner_custom_box', 'publication_meta_inner_custom_box_nonce' );
 		
 		foreach ($this->_customs as $key => $campo )
 		{
@@ -219,7 +219,7 @@ class Documents
 		<?php
 	}
 	
-	const NEW_DOCUMENT_PAGE = 'new-document';
+	const NEW_DOCUMENT_PAGE = 'new-publication';
 	
 	function print_variables($public_query_vars) {
 		$public_query_vars[] = self::NEW_DOCUMENT_PAGE;
@@ -236,19 +236,19 @@ class Documents
 	{
 		if(get_query_var(self::NEW_DOCUMENT_PAGE) == true)
 		{
-			//wp_enqueue_script('jquery-ui-datepicker-ptbr', WP_CONTENT_URL.'/themes/flacso/documents/js/jquery.ui.datepicker-pt-BR.js', array('jquery-ui-datepicker'));
-			//wp_enqueue_script('date-scripts',WP_CONTENT_URL.'/themes/flacso/documents/js/date_scripts.js', array( 'jquery-ui-datepicker-ptbr'));
-			wp_enqueue_script('new-document', get_template_directory_uri().'/inc/documents/js/new-document.js', array( 'jquery'));
+			//wp_enqueue_script('jquery-ui-datepicker-ptbr', WP_CONTENT_URL.'/themes/flacso/publications/js/jquery.ui.datepicker-pt-BR.js', array('jquery-ui-datepicker'));
+			//wp_enqueue_script('date-scripts',WP_CONTENT_URL.'/themes/flacso/publications/js/date_scripts.js', array( 'jquery-ui-datepicker-ptbr'));
+			wp_enqueue_script('new-publication', get_template_directory_uri().'/inc/publications/js/new-publication.js', array( 'jquery'));
 			
 			get_header();
-			$file_path = get_stylesheet_directory() . '/new-document.php';
+			$file_path = get_stylesheet_directory() . '/new-publication.php';
 			if(file_exists($file_path))
 			{
 				include $file_path;
 			}
 			else
 			{
-				include dirname(__FILE__) . '/new-document.php';;
+				include dirname(__FILE__) . '/new-publication.php';;
 			}
 			get_footer();
 			exit();
@@ -263,7 +263,7 @@ class Documents
 	 * @param string $post_type A post type string, defaults to 'post'.
 	 * @return WP_Post Post object containing all the default post data as attributes
 	 */
-	function get_default_post_to_edit( $post_type = 'document', $create_in_db = false ) {
+	function get_default_post_to_edit( $post_type = 'publication', $create_in_db = false ) {
 		global $wpdb;
 	
 		$post_title = '';
@@ -314,7 +314,7 @@ class Documents
 	
 	/**
 	 * Inclui os arquivos do tema relacionados com
-	 * a listagem de documents e retorna o template
+	 * a listagem de publications e retorna o template
 	 * a ser usado.
 	 *
 	 * @param string $archiveTemplate
@@ -324,15 +324,15 @@ class Documents
 	{
 		global $post;
 	
-		if (get_post_type($post) == "document" || is_post_type_archive('document'))
+		if (get_post_type($post) == "publication" || is_post_type_archive('publication'))
 		{
-			if(file_exists(get_stylesheet_directory()."/archive-document.php"))
+			if(file_exists(get_stylesheet_directory()."/archive-publication.php"))
 			{
-				$archive_template = get_stylesheet_directory()."/archive-document.php";
+				$archive_template = get_stylesheet_directory()."/archive-publication.php";
 			}
 			else
 			{
-				$archiveTemplate = $this->themeFilePath('archive-document.php');
+				$archiveTemplate = $this->themeFilePath('archive-publication.php');
 			}
 		}
 	
@@ -341,7 +341,7 @@ class Documents
 	
 	/**
 	 * Inclui os arquivos do tema relacionados com
-	 * a página de uma document e retorna o template
+	 * a página de uma publication e retorna o template
 	 * a ser usado.
 	 *
 	 * @param string $singleTemplate
@@ -351,15 +351,15 @@ class Documents
 	{
 		global $post;
 	
-		if (get_post_type($post) == "document" || is_post_type_archive('document'))
+		if (get_post_type($post) == "publication" || is_post_type_archive('publication'))
 		{
-			if(file_exists(get_stylesheet_directory()."/single-document.php"))
+			if(file_exists(get_stylesheet_directory()."/single-publication.php"))
 			{
-				$singleTemplate = get_stylesheet_directory()."/single-document.php";
+				$singleTemplate = get_stylesheet_directory()."/single-publication.php";
 			}
 			else
 			{
-				$singleTemplate = $this->themeFilePath('single-document.php');
+				$singleTemplate = $this->themeFilePath('single-publication.php');
 			}
 		}
 	
@@ -379,15 +379,15 @@ class Documents
 		*/
 		
 		// Check if our nonce is set.
-		if ( ! isset( $_POST['document_meta_inner_custom_box_nonce'] ) )
+		if ( ! isset( $_POST['publication_meta_inner_custom_box_nonce'] ) )
 		{
 			return $post_id;
 		}
 		
-		$nonce = $_POST['document_meta_inner_custom_box_nonce'];
+		$nonce = $_POST['publication_meta_inner_custom_box_nonce'];
 		
 		// Verify that the nonce is valid.
-		if ( ! wp_verify_nonce( $nonce, 'document_meta_inner_custom_box' ) )
+		if ( ! wp_verify_nonce( $nonce, 'publication_meta_inner_custom_box' ) )
 		{
 			return $post_id;
 		}
@@ -400,9 +400,9 @@ class Documents
 		}
 	
 		// Check the user's permissions.
-		if ( 'document' == $_POST['post_type'] )
+		if ( 'publication' == $_POST['post_type'] )
 		{
-			if ( ! current_user_can( 'edit_document', $post_id ) )
+			if ( ! current_user_can( 'edit_publication', $post_id ) )
 			{
 				return $post_id;
 			}
@@ -438,12 +438,12 @@ class Documents
 	function admin_enqueue_scripts()
 	{
 		global $typenow;
-		if( $typenow == 'document' )
+		if( $typenow == 'publication' )
 		{
 			wp_enqueue_media();
 	
 			// Registers and enqueues the required javascript.
-			wp_register_script( 'meta-box-image', get_template_directory_uri() . '/inc/documents/js/meta-box-image.js', array( 'jquery' ) );
+			wp_register_script( 'meta-box-image', get_template_directory_uri() . '/inc/publications/js/meta-box-image.js', array( 'jquery' ) );
 			wp_localize_script( 'meta-box-image', 'meta_image',
 			array(
 			'title' => __( 'Choose or Upload an Image', 'flacso' ),
@@ -554,6 +554,6 @@ class Documents
 	
 }
 
-$Document_global = new Documents();
+$Publication_global = new Publications();
 
 ?>
