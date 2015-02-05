@@ -23,10 +23,10 @@ class FlacsoSettingsPage
 	{
 		// This page will be under "Settings"
 		add_options_page(
-		__('Configurações do Tema', 'flacso'),
-		__('Configurações do Tema', 'flacso'),
+		__('Data Import', 'flacso'),
+		__('Data Import', 'flacso'),
 		'manage_options',
-		'flacso-setting-admin',
+		'flacso-import-admin',
 		array( $this, 'create_admin_page' )
 		);
 	}
@@ -45,8 +45,10 @@ class FlacsoSettingsPage
             <?php
                 // This prints out all hidden setting fields
                 settings_fields( 'flacso_option_group' );   
-                do_settings_sections( 'flacso-setting-admin' );
+                do_settings_sections( 'flacso-import-admin' );
                 submit_button("Importar Csv", 'secundary', 'importcsv' );
+                submit_button("Importar Gea Csv", 'secundary', 'importcsvgea' );
+                submit_button("Importar Gea Docs Csv", 'secundary', 'importcsvgeadocs' );
                 submit_button(); 
             ?>
             </form>
@@ -61,7 +63,7 @@ class FlacsoSettingsPage
      */
     public function page_init()
     {        
-		if(array_key_exists('page', $_REQUEST) && $_REQUEST['page'] == 'flacso-setting-admin')
+		if(array_key_exists('page', $_REQUEST) && $_REQUEST['page'] == 'flacso-import-admin')
 		{
 			$path = get_template_directory_uri() . '/js';
 			wp_register_script('flacso_options_scripts', $path . '/flacso_options_scripts.js', array('jquery'));
@@ -73,6 +75,10 @@ class FlacsoSettingsPage
 		}
 		add_action( 'wp_ajax_ImportarCsv', array($this, 'ImportarCsv_callback') );
 		add_action( 'wp_ajax_nopriv_ImportarCsv', array($this, 'ImportarCsv_callback') );
+		add_action( 'wp_ajax_ImportarCsvGea', array($this, 'ImportarCsvGea_callback') );
+		add_action( 'wp_ajax_nopriv_ImportarCsvGea', array($this, 'ImportarCsvGea_callback') );
+		add_action( 'wp_ajax_ImportarCsvGeaDocs', array($this, 'ImportarCsvGeaDocs_callback') );
+		add_action( 'wp_ajax_nopriv_ImportarCsvGeaDocs', array($this, 'ImportarCsvGeaDocs_callback') );
     }
 
     /**
@@ -84,7 +90,6 @@ class FlacsoSettingsPage
     {
         $new_input = array();
        
-
         return $new_input;
     }
 
@@ -103,13 +108,14 @@ class FlacsoSettingsPage
     	if($print_r)
     	{
     		print_r($msn."<br/>");
-    		file_put_contents(dirname(__FILE__)."/csv_import.log", print_r($msn."/n", true), FILE_APPEND);
+    		file_put_contents(dirname(__FILE__)."/csv_import.log", print_r($msn.PHP_EOL, true), FILE_APPEND);
     	}
     	else
     	{
 	    	echo $msn;
-	    	$msn = str_replace("<br/>", "\n", $msn);
-	    	$msn = str_replace("<br>", "\n", $msn);
+	    	$msn = str_replace("<br/>", PHP_EOL, $msn);
+	    	$msn = str_replace("<br>", PHP_EOL, $msn);
+	    	if(strpos($msn, PHP_EOL) === false ) $msn .= PHP_EOL;
 	    	file_put_contents(dirname(__FILE__)."/csv_import.log", $msn, FILE_APPEND);
     	}
     }
@@ -129,9 +135,51 @@ class FlacsoSettingsPage
     	{
     		include_once dirname(__FILE__).'/import/data-importer.php';
     		$imp = new dataImporter();
-    		$imp->debug = true;
+    		$imp->debug = false;
+    		$imp->gea = false;
+    		$imp->img_url = "http://flacso.org.br/portal/intranet/flacsomidia/imagenes/";
     		$imp->ImportCsV();
     		
+    	}
+    	echo '</div>';
+    	die();
+    }
+    
+    public function ImportarCsvGea_callback()
+    {
+    	FlacsoSettingsPage::newLog();
+    	 
+    	echo '<div id="result">';
+    	 
+    	if(function_exists('mapasdevista_get_coords') )
+    	{
+    		include_once dirname(__FILE__).'/import/data-importer.php';
+    		$imp = new dataImporter();
+    		$imp->debug = false;
+    		$imp->gea = true;
+    		$imp->img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
+    		$imp->ImportCsV();
+    
+    	}
+    	echo '</div>';
+    	die();
+    }
+    
+    public function ImportarCsvGeaDocs_callback()
+    {
+    	FlacsoSettingsPage::newLog();
+    
+    	echo '<div id="result">';
+    
+    	if(function_exists('mapasdevista_get_coords') )
+    	{
+    		include_once dirname(__FILE__).'/import/data-importer.php';
+    		$imp = new dataImporter();
+    		$imp->debug = false;
+    		$imp->gea = true;
+    		$imp->img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
+    		$imp->ImportDocsCsV();
+    
     	}
     	echo '</div>';
     	die();
