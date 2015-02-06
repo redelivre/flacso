@@ -45,7 +45,7 @@ function flacso_post_edit_columns( $columns ) {
 	$new_columns = array();
 
   	foreach( $columns as $key => $title ) {
-    	if ( $key=='categories' ) {
+    	if ( $key == 'tags' ) {
       		$new_columns['publication-type'] = __( 'Publication', 'flacso' );
       	}
     
