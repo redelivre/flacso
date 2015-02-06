@@ -1,10 +1,10 @@
 <?php
 /**
- * Remove unnecessary metaboxes from posts, pages and documents
+ * Remove unnecessary metaboxes from posts, pages and publications
  */
 function flacso_manage_metaboxes() {
 
-	foreach ( array( 'post', 'page', 'document' ) as $post_type ) {
+	foreach ( array( 'post', 'page', 'publication' ) as $post_type ) {
 		remove_meta_box( 'authordiv', $post_type, 'normal' ); // Author Metabox
 		remove_meta_box( 'commentstatusdiv', $post_type, 'normal' ); // Comments Status Metabox
 		remove_meta_box( 'commentsdiv', $post_type, 'normal' ); // Comments Metabox
@@ -45,7 +45,7 @@ function flacso_post_edit_columns( $columns ) {
 	$new_columns = array();
 
   	foreach( $columns as $key => $title ) {
-    	if ( $key=='categories' ) {
+    	if ( $key == 'tags' ) {
       		$new_columns['publication-type'] = __( 'Publication', 'flacso' );
       	}
     
@@ -55,7 +55,7 @@ function flacso_post_edit_columns( $columns ) {
   	return $new_columns;
 
 }
-add_filter( 'manage_document_posts_columns' , 'flacso_post_edit_columns' );
+add_filter( 'manage_publication_posts_columns' , 'flacso_post_edit_columns' );
 
 /**
  * Custom Post Columns Data
@@ -64,7 +64,7 @@ add_filter( 'manage_document_posts_columns' , 'flacso_post_edit_columns' );
  * @param int $post_id
  */
 function flacso_post_edit_columns_content( $column, $post_id ) {
-	$post_type = 'document';
+	$post_type = 'publication';
 	$taxonomy = 'publication-type';
     
     if ( $column == 'publication-type' ) {

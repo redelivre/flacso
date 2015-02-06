@@ -232,17 +232,23 @@ function flacso_publication_type_meta_box( $post, $box ) {
 	        echo "<input type='hidden' name='{$name}[]' value='0' />"; // Allows for an empty term set to be sent. 0 is an invalid Term ID and will be ignored by empty() checks.
 	        
 	        $term_obj = wp_get_object_terms( $post->ID, $taxonomy ); //_log($term_obj[0]->term_id)
+
+	        if ( ! empty( $term_obj ) ) {
 	
-	        wp_dropdown_categories( array(
-	        	'taxonomy'			=> $taxonomy,
-	        	'hide_empty'		=> 0,
-	        	'name'				=> "{$name}[]",
-	        	'selected'			=> $term_obj[0]->term_id,
-	        	'orderby'			=> 'name',
-	        	'hierarchical'		=> 0,
-	        	'show_option_none'	=> '&mdash;',
-	        	'class'				=> 'widefat'
-	        ) );
+		        wp_dropdown_categories( array(
+		        	'taxonomy'			=> $taxonomy,
+		        	'hide_empty'		=> 0,
+		        	'name'				=> "{$name}[]",
+		        	'selected'			=> $term_obj[0]->term_id,
+		        	'orderby'			=> 'name',
+		        	'hierarchical'		=> 0,
+		        	'show_option_none'	=> '&mdash;',
+		        	'class'				=> 'widefat'
+		        ) );
+	    	}
+	    	else {
+	    		echo '<p>' . sprintf( __( 'We could not find any publication types. <a href="%s">Please add one</a>.' ), admin_url( 'edit-tags.php?taxonomy=publication-type' ) )  . '</p>';
+	    	}
 	        ?>
 	</div>
 	<?php
