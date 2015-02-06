@@ -13,18 +13,13 @@ class Publications
 			), 
 			'url' => array
 			(
-					'slug' => 'publication-url',
-					'title' => __('URL', 'flacso'),
-					'tip' => __('web site address', 'flacso'),
+					'slug' => 'url',
+					'title' => __('Url', 'flacso'),
+					'tip' => __('Source Address or external link', 'flacso'),
 			),
-			'country' => array (
-					'slug' => 'publication-country',
-					'title' => __ ( 'Country', 'flacso' ),
-					//'tip' => _n( 'country', 'country', 1, 'flacso' )
-			),
-			'reference' => array (
-					'slug' => 'publication-reference',
-					'title' => __ ( 'Reference', 'flacso' ),
+			'fonte' => array (
+					'slug' => 'fonte',
+					'title' => __ ( 'Fonte', 'flacso' ),
 					//'tip' => __ ( '', 'flacso' ),
 			)
 		);

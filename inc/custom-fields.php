@@ -13,19 +13,19 @@ class FlacsoCustomFields
 			),*/
 			'fonte' => array
 			(
-					'slug' => 'Fonte',
+					'slug' => 'fonte',
 					'title' => __('Fonte', 'flacso'),
 					//'tip' => __('', 'flacso'),
 			),
 			'editoria' => array
 			(
-					'slug' => 'Editoria',
+					'slug' => 'editoria',
 					'title' => __('Editoria', 'flacso'),
 					//'tip' => __('', 'flacso'),
 			),
 			'url' => array
 			(
-					'slug' => 'Url',
+					'slug' => 'url',
 					'title' => __('Url', 'flacso'),
 					'tip' => __('Source Address or external link', 'flacso'),
 			)
