@@ -1,5 +1,13 @@
 <?php
 /**
+ * Remove comments support for pages
+ */
+function flacso_remove_page_comments_support() {
+	remove_post_type_support( 'page', 'comments' );
+}
+add_action( 'init', 'flacso_remove_page_comments_support' );
+
+/**
  * Remove unnecessary metaboxes from posts, pages and publications
  */
 function flacso_manage_metaboxes() {
@@ -13,7 +21,7 @@ function flacso_manage_metaboxes() {
 		remove_meta_box( 'trackbacksdiv', $post_type, 'normal' ); // Trackback Metabox
 	}
 }
-add_action('admin_menu','flacso_manage_metaboxes');
+add_action( 'admin_menu','flacso_manage_metaboxes' );
 
 /**
  * Set default image link to file

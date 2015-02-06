@@ -56,17 +56,17 @@ function flacso_create_taxs()
 			//'_builtin' => '' // Core
 	);
 	
-	register_taxonomy('gea', array('publication', 'post', 'page'), $args);
+	register_taxonomy('gea', array('publication', 'post'), $args);
 	
 	$taxs = array(
-		'Event' => array('event', array('publication', 'post', 'page'), true),
-		'Areas and Programs' => array('program', array('publication', 'post', 'page'), false),
+		'Event' => array('event', array('publication', 'post'), true),
+		'Areas and Programs' => array('program', array('publication', 'post'), false),
 		'Publication Type' => array('publication-type', array('publication'), true),
-		'Higher Education' => array('higher-education', array('publication', 'post', 'page'), false),
-		'Project' => array('project', array('publication', 'post', 'page'), true),
-		'Countr' => array('country', array('publication', 'post', 'page'), 'ies', 'y' ),
-		'Year' => array('year', array('publication', 'post', 'page'), true),
-		'Territor' => array('territory', array('publication', 'post', 'page'), 'ies', 'y'),
+		'Higher Education' => array('higher-education', array('publication', 'post'), false),
+		'Project' => array('project', array('publication', 'post'), true),
+		'Countr' => array('country', array('publication', 'post'), 'ies', 'y' ),
+		'Year' => array('year', array('publication', 'post'), true),
+		'Territor' => array('territory', array('publication', 'post'), 'ies', 'y'),
 	);
 	
 	foreach ( $taxs as $label => $tax)
