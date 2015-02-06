@@ -139,13 +139,15 @@ if ( ! function_exists( 'flacso_entry_share' ) ) :
  * Prints HTML with share buttons
  */
 function flacso_entry_share() {
+
+	$permalink = wp_get_shortlink();
 	?>
 	<!-- ul? -->
 	<ul class="entry-share__list clearfix">
 		<li class="entry-share__item"><?php _e( 'Share', 'flacso' ); ?></li>
-		<li class="entry-share__item entry-share__item--twitter"><a href="#" class="share-link share-link--twitter icon-twitter">Twitter</a></li>
-		<li class="entry-share__item entry-share__item--facebook"><a href="#" class="share-link share-link--facebook icon-facebook">Facebook</a></li>
-		<li class="entry-share__item entry-share__item--googleplus"><a href="#" class="share-link share-link--googleplus icon-gplus">Google+</a></li>
+		<li class="entry-share__item entry-share__item--twitter"><a href="https://twitter.com/home?status=<?php echo $permalink; ?>" class="share-link share-link--twitter icon-twitter">Twitter</a></li>
+		<li class="entry-share__item entry-share__item--facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink; ?>" class="share-link share-link--facebook icon-facebook">Facebook</a></li>
+		<li class="entry-share__item entry-share__item--googleplus"><a href="https://plus.google.com/share?url=<?php echo $permalink; ?>" class="share-link share-link--googleplus icon-gplus">Google+</a></li>
 	</ul>
 	<?php
 }
