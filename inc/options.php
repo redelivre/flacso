@@ -158,7 +158,7 @@ class FlacsoSettingsPage
     		$imp->debug = false;
     		$imp->gea = true;
     		$imp->img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
-    		$imp->ImportCsV();
+    		$imp->ImportCsV('/tmp/importgea.csv');
     
     	}
     	echo '</div>';
@@ -177,7 +177,7 @@ class FlacsoSettingsPage
     		$imp = new dataImporter();
     		$imp->debug = false;
     		$imp->gea = true;
-    		$imp->img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
+    		$imp->img_url = "http://flacso.org.br/gea/documentos/archivos/";
     		$imp->ImportDocsCsV();
     
     	}
