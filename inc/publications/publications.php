@@ -139,7 +139,7 @@ class Publications
 	
 	function flacso_publication_custom_meta()
 	{
-		add_meta_box("publication_meta", __("Publication Details", 'flacso'), array($this, 'publication_meta'), 'publication', 'side', 'default');
+		add_meta_box("publication_meta", __("Publication Details", 'flacso'), array($this, 'publication_meta'), 'publication', 'advanced', 'core');
 		//add_meta_box("second_image_meta", __("Publication Header Image", 'flacso'), array($this, 'second_image_meta'), 'publication', 'side', 'default');
 	}
 	
@@ -199,7 +199,7 @@ class Publications
 				<label for="<?php echo $slug; ?>" class="<?php echo 'label_'.$slug; ?>"><?php echo $campo['title'] ?>:</label>
 				<input <?php echo $disable_edicao ?> id="<?php echo $slug; ?>"
 					name="<?php echo $slug; ?>"
-					class="<?php echo $slug.(array_key_exists('type', $campo) && $campo['type'] == 'date' ? 'hasdatepicker' : '') ; ?> "
+					class="widefat <?php echo $slug.(array_key_exists('type', $campo) && $campo['type'] == 'date' ? 'hasdatepicker' : '') ; ?> "
 					value="<?php echo $dado; ?>" />
 			</p>
 			<?php
