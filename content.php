@@ -19,9 +19,7 @@
 		<a href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( $image_size ); ?>
-			<?php else :
-				flacso_the_dummy_image( $image_size );
-			endif; ?>
+			<?php endif; ?>
 		</a>
 	</div><!-- .entry-image -->
 	
