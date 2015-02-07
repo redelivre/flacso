@@ -171,4 +171,15 @@ function flacso_change_gallery_defaults( $out, $pairs, $atts ) {
  
 }
 add_filter( 'shortcode_atts_gallery', 'flacso_change_gallery_defaults', 10, 3 );
+
+/**
+ * Remove WordPress's default padding on images with captions
+ *
+ * @param int $width Default WP .wp-caption width (image width + 10px)
+ * @return int Updated width to remove 10px padding
+ */
+function remove_caption_padding( $width ) {
+	return $width - 10;
+}
+add_filter( 'img_caption_shortcode_width', 'remove_caption_padding' );
 ?>

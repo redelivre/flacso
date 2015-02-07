@@ -1,4 +1,5 @@
 .wp-caption {
+	background: $color__quaternary;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 
@@ -7,10 +8,9 @@
 	}
 
 	.wp-caption-text {
-		margin: 0.8075em 0;
+		font-size: 0.875em;
+		margin-bottom: 0;
+		padding: 0.5em;
+		text-align: center;
 	}
-}
-
-.wp-caption-text {
-	text-align: center;
 }
