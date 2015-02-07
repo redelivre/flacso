@@ -124,12 +124,6 @@ function flacso_entry_footer() {
 		}
 	}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'flacso' ), __( '1 Comment', 'flacso' ), __( '% Comments', 'flacso' ) );
-		echo '</span>';
-	}
-
 	edit_post_link( __( 'Edit', 'flacso' ), '<span class="edit-link">', '</span>' );
 }
 endif;
