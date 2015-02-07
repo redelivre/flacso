@@ -20,8 +20,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'flacso' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
+	
+	<?php edit_post_link( __( 'Edit', 'flacso' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+	
 </article><!-- #post-## -->
