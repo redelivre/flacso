@@ -6151,6 +6151,10 @@ a.icon--rounded {
   border-style: solid;
   padding: 1em 0; }
 
+.entry-footer .tax-name {
+  margin-right: 0.5em;
+  text-transform: lowercase; }
+
 .single .entry-title {
   margin-top: 0; }
 
@@ -6264,6 +6268,8 @@ a.icon--rounded {
   .share-link:hover {
     color: #fff;
     font-weight: bold; }
+  .share-link:visited {
+    color: #fff; }
 
 /* Archive */
 .archive .entry-title {

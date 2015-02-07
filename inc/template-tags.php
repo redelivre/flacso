@@ -114,13 +114,13 @@ function flacso_entry_footer() {
 		$categories_list = get_the_category_list( __( ', ', 'flacso' ) );
 		if ( $categories_list && flacso_categorized_blog() ) {
 
-			printf( '<div class="cat-links">' . __( 'Posted %1$s', 'flacso' ) . '</div>', $categories_list );
+			echo '<div class="cat-links tax-links"><span class="tax-name">' . __( 'Categorias', 'flacso' ) . '</span>' . $categories_list . '</div>';
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'flacso' ) );
 		if ( $tags_list ) {
-			printf( '<div class="tags-links">' . __( 'Tagged %1$s', 'flacso' ) . '</div>', $tags_list );
+			echo '<div class="tag-links tax-links"><span class="tax-name">' . __( 'Tags', 'flacso' ) . '</span>' . $tags_list . '</div>';
 		}
 	}
 
