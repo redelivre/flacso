@@ -4,6 +4,7 @@
  * New post type Publication
  */
 require get_template_directory() . '/inc/publications/publications.php';
+require get_template_directory() . '/inc/projects/projects.php';
 
 function flacso_create_taxs()
 {
@@ -59,13 +60,12 @@ function flacso_create_taxs()
 	register_taxonomy('gea', array('publication', 'post', 'agenda'), $args);
 	
 	$taxs = array(
-		'Areas and Programs' => array('program', array('publication', 'post'), false),
 		'Publication Type' => array('publication-type', array('publication'), true),
 		'Higher Education' => array('higher-education', array('publication', 'post'), false),
-		'Project' => array('project', array('publication', 'post'), true),
 		'Countr' => array('country', array('publication', 'post'), 'ies', 'y' ),
 		'Year' => array('year', array('publication', 'post'), true),
 		'Territor' => array('territory', array('publication', 'post'), 'ies', 'y'),
+		'Status' => array('status', array('project'), false),
 	);
 	
 	foreach ( $taxs as $label => $tax)
@@ -99,6 +99,16 @@ function flacso_create_taxs()
 		foreach ( array(__('National', 'flacso'), __('International', 'flacso'), __('State', 'flacso') ) as $territory )
 		{
 			wp_insert_term($territory, 'territory');
+		}
+	}
+	
+	if(!term_exists('Realizado', 'status') )
+	{
+		foreach ( array( 'Realizado', 'Em Andamento' ) as $term ) {
+			wp_insert_term(
+				$term,			// The term
+				'status'	// The taxonomy
+			);
 		}
 	}
 

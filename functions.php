@@ -154,6 +154,19 @@ function flacso_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
+function flacso_print_variables($public_query_vars) {
+	$public_query_vars[] = 'gea';
+	return $public_query_vars;
+}
+//add_filter('query_vars', 'flacso_print_variables');
+
+function flacso_rewrite_rules()
+{
+	add_rewrite_rule('/gea(.*)', 'index.php?gea=true$matches[1]', 'top');
+	flush_rewrite_rules();
+}
+//add_action('init', 'flacso_rewrite_rules');
+
 /**
  * Implement the Custom Header feature.
  */
