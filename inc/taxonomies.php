@@ -56,10 +56,9 @@ function flacso_create_taxs()
 			//'_builtin' => '' // Core
 	);
 	
-	register_taxonomy('gea', array('publication', 'post'), $args);
+	register_taxonomy('gea', array('publication', 'post', 'agenda'), $args);
 	
 	$taxs = array(
-		'Event' => array('event', array('publication', 'post'), true),
 		'Areas and Programs' => array('program', array('publication', 'post'), false),
 		'Publication Type' => array('publication-type', array('publication'), true),
 		'Higher Education' => array('higher-education', array('publication', 'post'), false),
