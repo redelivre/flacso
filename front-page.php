@@ -122,14 +122,15 @@ get_header(); ?>
 						<div class="col-md-4">
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'hentry--columns clear' ); ?>>
 								<header class="entry-header">
-									<div class="entry-meta">
-										<?php the_category(', '); ?>
-									</div><!-- .entry-meta -->
 									<?php if ( has_post_thumbnail() ) : ?>
 									<div class="entry-image">
 										<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'archive' ); ?></a>
 									</div><!-- .entry-image -->
 									<?php endif; ?>
+
+									<div class="entry-meta">
+										<?php the_category(', '); ?>
+									</div><!-- .entry-meta -->
 									
 									<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 								</header><!-- .entry-header -->
