@@ -108,7 +108,11 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
 					<h4 class="area-title">Notícias</h3>
-						<a href="<?php the_permalink(); ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
+						<?php
+						$noticias_page = get_page_by_title( 'Notícias' );
+						$noticias_permalink = ( ! empty( $noticias_page ) ) ? $noticias_page->guid : '';
+						?>
+						<a href="<?php echo $noticias_permalink; ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
 				</div>
 					<?php
 					$noticias = new WP_Query( array ( 'posts_per_page' => 3, 'ignore_sticky_posts' => true ) );

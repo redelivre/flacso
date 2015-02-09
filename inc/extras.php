@@ -31,7 +31,7 @@ function flacso_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
-	if ( is_search() || is_page_template( 'page-templates/child-page-list.php' ) ) {
+	if ( is_search() || is_page_template( 'page-templates/news.php' ) || is_page_template( 'page-templates/child-page-list.php' ) ) {
 		$classes[] = 'archive';
 	}
 
