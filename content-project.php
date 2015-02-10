@@ -62,7 +62,7 @@
 	<div class="entry-program">
 		<?php
 		foreach ( $programs as $program ) :
-			$program_links[] = '<a href="' . get_page_link( $program ) . '">' . get_post_field( 'post_title', $program ) . '</a>';
+			$program_links[] = '<a href="' . get_page_link( $program ) . '">' . trim( get_post_field( 'post_title', $program ) ) . '</a>';
 		endforeach;
 
 		printf( __( 'Este projeto pertence ao(s) programa(s) %s', 'flacso' ), join( ', ', $program_links ) );

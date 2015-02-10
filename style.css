@@ -6310,7 +6310,8 @@ a.icon--rounded {
 /* Post type Project */
 .single-project .entry-program {
   background-color: #ebebeb;
-  padding: 1.5em; }
+  padding: 1.5em;
+  text-align: center; }
 
 /* Post type Document */
 .single-document .entry-meta {
