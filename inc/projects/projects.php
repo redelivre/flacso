@@ -5,9 +5,14 @@ class Projects
 	function __construct()
 	{
 		$this->_customs = array(
+			'coordenacao' => array (
+					'slug' => 'coordenacao',
+					'title' => __ ( 'Coordenação', 'flacso' ),
+					//'tip' => __ ( '', 'flacso' ),
+			),
 			'parceria' => array
 			(
-					'slug' => 'custom-author',
+					'slug' => 'parceria',
 					'title' => __('Instituições Parceiras', 'flacso'),
 					'tip' => __('Instituições Parceiras', 'flacso'),
 			), 
@@ -17,12 +22,8 @@ class Projects
 					'title' => __('Patrocínio', 'flacso'),
 					'tip' => __('Patrocínio', 'flacso'),
 			),
-			'coordenacao' => array (
-					'slug' => 'coordenacao',
-					'title' => __ ( 'Coordenação', 'flacso' ),
-					//'tip' => __ ( '', 'flacso' ),
-			),
-			'financiamento' => array (
+			'financiamento' => array
+			(
 					'slug' => 'financiamento',
 					'title' => __ ( 'Financiamento', 'flacso' ),
 					//'tip' => __ ( '', 'flacso' ),
@@ -120,7 +121,7 @@ class Projects
 				'capability_type' => array('project','projects'),
 				'map_meta_cap' => true,
 				'hierarchical' => false,
-				'supports' => array('title', 'editor', 'excerpt', 'trackbacks', 'thumbnail', 'revisions'),
+				'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
 				'register_meta_box_cb' => array($this, 'flacso_project_custom_meta'), // função para chamar na edição
 				'taxonomies' => array('post_tag'), // Taxionomias já existentes relaciondas, vamos criar e registrar na sequência
 				'permalink_epmask' => 'EP_PERMALINK ',
