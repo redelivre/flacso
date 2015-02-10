@@ -53,7 +53,7 @@ class FlacsoCustomFields
 		$types = array('post', 'publication', 'project');
 		if(in_array($postType, $types))
 		{
-			add_meta_box("project_rel_meta", __("Projeto", 'flacso'), array($this, 'project_rel_meta'), null, 'advanced', 'core');
+			if($postType != 'project') add_meta_box("project_rel_meta", __("Projeto", 'flacso'), array($this, 'project_rel_meta'), null, 'advanced', 'core');
 			add_meta_box("program_rel_meta", __("Areas e Programas", 'flacso'), array($this, 'program_rel_meta'), null, 'advanced', 'core');
 		}
 	}
