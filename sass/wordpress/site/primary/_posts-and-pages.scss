@@ -287,6 +287,14 @@
 	}
 }
 
+/* Post type Project */
+.single-project {
+	.entry-program {
+		background-color: $color__quaternary;
+		padding: 1.5em;
+	}
+}
+
 /* Post type Document */
 .single-document {
 	.entry-meta {
