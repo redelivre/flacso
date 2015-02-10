@@ -8,8 +8,8 @@
 	
 	<div class="entry-image pull-left">
 		<?php
-		if ( get_post_type() == 'document' ) {
-			$image_size = 'document';
+		if ( get_post_type() == 'publication' ) {
+			$image_size = 'publication';
 		}
 		else {
 			$image_size = 'thumbnail';

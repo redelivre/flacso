@@ -152,11 +152,11 @@ function flacso_entry_share() {
 }
 endif;
 
-if ( ! function_exists( 'flacso_the_document_download_list' ) ) :
+if ( ! function_exists( 'flacso_the_publication_download_list' ) ) :
 /**
  * Prints HTML with share buttons
  */
-function flacso_the_document_download_list() {
+function flacso_the_publication_download_list() {
 	$allowed_medias = array(
 		'application/pdf', // PDF (.pdf)
 		'application/msword', // Microsoft Word (.doc)
@@ -254,7 +254,7 @@ if ( ! function_exists( 'flacso_the_dummy_image' ) ) :
  */
 function flacso_the_dummy_image( $post_type = 'post' ) {
 
-	if ( $post_type == 'document' ) {
+	if ( $post_type == 'publication' ) {
 		$placeholder_size = '176x234';	
 	}
 	else {

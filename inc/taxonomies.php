@@ -236,29 +236,37 @@ function flacso_publication_type_meta_box( $post, $box ) {
 	?>
 	
 	<div id="taxonomy-<?php echo $taxonomy; ?>" class="categorydiv">
-	        <?php 
-	        $name = ( $taxonomy == 'category' ) ? 'post_category' : 'tax_input[' . $taxonomy . ']';
-	        echo "<input type='hidden' name='{$name}[]' value='0' />"; // Allows for an empty term set to be sent. 0 is an invalid Term ID and will be ignored by empty() checks.
-	        
-	        $term_obj = wp_get_object_terms( $post->ID, $taxonomy ); //_log($term_obj[0]->term_id)
+        <?php 
+        $name = ( $taxonomy == 'category' ) ? 'post_category' : 'tax_input[' . $taxonomy . ']';
+        echo "<input type='hidden' name='{$name}[]' value='0' />"; // Allows for an empty term set to be sent. 0 is an invalid Term ID and will be ignored by empty() checks.
+        
+        $term_obj = wp_get_object_terms( $post->ID, $taxonomy ); //_log($term_obj[0]->term_id)
 
-	        if ( ! empty( $term_obj ) ) {
-	
-		        wp_dropdown_categories( array(
-		        	'taxonomy'			=> $taxonomy,
-		        	'hide_empty'		=> 0,
-		        	'name'				=> "{$name}[]",
-		        	'selected'			=> $term_obj[0]->term_id,
-		        	'orderby'			=> 'name',
-		        	'hierarchical'		=> 0,
-		        	'show_option_none'	=> '&mdash;',
-		        	'class'				=> 'widefat'
-		        ) );
-	    	}
-	    	else {
-	    		echo '<p>' . sprintf( __( 'We could not find any publication types. <a href="%s">Please add one</a>.' ), admin_url( 'edit-tags.php?taxonomy=publication-type' ) )  . '</p>';
-	    	}
-	        ?>
+        if ( ! empty ( $term_obj[0]->term_id ) ) {
+        	$selected = $term_obj[0]->term_id;
+        }
+        else {
+        	$selected = 0;
+        }
+
+        $tax_count =  get_terms( $taxonomy, array( 'hide_empty' => false ) );
+
+        if ( ! empty ( $tax_count ) ) {
+	        wp_dropdown_categories( array(
+	        	'taxonomy'			=> $taxonomy,
+	        	'hide_empty'		=> 0,
+	        	'name'				=> "{$name}[]",
+	        	'selected'			=> $selected,
+	        	'orderby'			=> 'name',
+	        	'hierarchical'		=> 0,
+	        	'show_option_none'	=> '&mdash;',
+	        	'class'				=> 'widefat'
+	        ) );
+    	}
+    	else {
+    		echo '<p>' . sprintf( __( 'We could not find any publication types. <a href="%s">Please add one</a>.' ), admin_url( 'edit-tags.php?taxonomy=publication-type' ) )  . '</p>';
+    	}
+        ?>
 	</div>
 	<?php
 }
