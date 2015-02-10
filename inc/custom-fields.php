@@ -186,7 +186,7 @@ class FlacsoCustomFields
 			$post_id = get_the_ID();
 		}
 		
-		delete_metadata(get_post_type($post_id), $post_id, '_flacso-project-relation');
+		delete_metadata('post', $post_id, '_flacso-project-relation');
 		
 		if(array_key_exists('project_rel_meta_input', $_POST))
 		{
@@ -196,7 +196,7 @@ class FlacsoCustomFields
 			}
 		}
 		
-		delete_metadata(get_post_type($post_id), $post_id, '_flacso-program-relation');
+		delete_metadata('post', $post_id, '_flacso-program-relation');
 		
 		if(array_key_exists('program_rel_meta_input', $_POST))
 		{
