@@ -1,23 +1,23 @@
 @CHARSET "UTF-8";
 
-.dropdown dd, .dropdown dt {
+.dropdown-checkbox dd, .dropdown-checkbox dt {
     margin:0px;
     padding:0px;
 }
-.dropdown ul {
+.dropdown-checkbox ul {
     margin: -1px 0 0 0;
 }
-.dropdown dd {
+.dropdown-checkbox dd {
     position:relative;
 }
-.dropdown a, 
-.dropdown a:visited {
+.dropdown-checkbox a, 
+.dropdown-checkbox a:visited {
     color:#fff;
     text-decoration:none;
     outline:none;
     font-size: 12px;
 }
-.dropdown dt .clickable {
+.dropdown-checkbox dt .clickable {
     background-color:#4F6877;
     display:block;
     padding: 8px 20px 0px 10px;
@@ -27,12 +27,12 @@
     border:0;
     width:272px;
 }
-.dropdown dt div span, .multiSel span {
+.dropdown-checkbox dt div span, .multiSel span {
     cursor:pointer;
     display:inline-block;
     padding: 0 3px 2px 0;
 }
-.dropdown dd ul {
+.dropdown-checkbox dd ul {
     background-color: #4F6877;
     border:0;
     color:#fff;
@@ -46,18 +46,23 @@
     height: 100px;
     overflow: auto;
 }
-.dropdown span.value {
+.dropdown-checkbox span.value {
     display:none;
 }
-.dropdown dd ul li a {
+.dropdown-checkbox dd ul li a {
     padding:5px;
     display:block;
 }
-.dropdown dd ul li a:hover {
+.dropdown-checkbox dd ul li a:hover {
     background-color:#fff;
 }
 
-.dropdown .mutliSelect {
+.dropdown-checkbox .mutliSelect {
 	position: relative;
 	z-index: 9999;
+}
+
+.dropdown-checkbox .clickable p {
+    display: block;
+    float: left;
 }

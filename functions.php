@@ -203,14 +203,14 @@ function is_gea($post_data = null)
 	return false;
 }
 
-function flacso_create_dropdown($taxonomy, $taxonomy_obj)
+function flacso_create_dropdown_checkbox($taxonomy, $taxonomy_obj)
 {
 	$terms = get_terms($taxonomy);
 	if(count($terms) > 0)
 	{
 		?>
 	
-		<dl class="dropdown"> 
+		<dl class="dropdown-checkbox"> 
 		  
 		    <dt>
 		    	<div class="clickable">
@@ -239,11 +239,24 @@ function flacso_create_dropdown($taxonomy, $taxonomy_obj)
 
 function get_search_adv()
 {
-	global $wp_taxonomies;
 	
-	foreach ($wp_taxonomies as $taxonomy => $wp_taxonomy)
+	$args=array(
+		'object_type' => array('post')
+	);
+	$output = 'objects';
+	$operator = 'and';
+	
+	$taxonomies = get_taxonomies($args, $output, $operator);
+	
+	$args=array(
+		'object_type' => array('publication')
+	);
+
+	$taxonomies = array_merge($taxonomies, get_taxonomies($args, $output, $operator));
+	
+	foreach ($taxonomies as $taxonomy => $wp_taxonomy)
 	{
-		flacso_create_dropdown($taxonomy, $wp_taxonomy);
+		flacso_create_dropdown_checkbox($taxonomy, $wp_taxonomy);
 	}
 }
 

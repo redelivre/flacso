@@ -9,18 +9,18 @@ function getSelectedValue(id) {
 	}
 
 jQuery(document).ready(function() {
-	jQuery(".dropdown dt .clickable").on('click', function() {
+	jQuery(".dropdown-checkbox dt .clickable").on('click', function() {
 		jQuery(this).parent().parent().find('dd ul').slideToggle('fast');
 	});
 	
-	jQuery(".dropdown dd ul li a").on('click', function() {
-		jQuery(".dropdown dd ul").hide();
+	jQuery(".dropdown-checkbox dd ul li a").on('click', function() {
+		jQuery(".dropdown-checkbox dd ul").hide();
 	});
 	
 	jQuery(document).bind('click', function(e) {
 		var jQueryclicked = jQuery(e.target);
-		if (!jQueryclicked.parents().hasClass("dropdown"))
-			jQuery(".dropdown dd ul").hide();
+		if (!jQueryclicked.parents().hasClass("dropdown-checkbox"))
+			jQuery(".dropdown-checkbox dd ul").hide();
 	});
 	
 	jQuery('.mutliSelect input[type="checkbox"]').on(
