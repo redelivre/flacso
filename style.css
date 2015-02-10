@@ -6157,7 +6157,7 @@ a.icon--rounded {
   border-width: 6px 0;
   border-color: #ebebeb;
   border-style: solid;
-  margin-top: 1em;
+  margin-top: 1.5em;
   padding: 1em 0; }
 
 .entry-footer .tax-name {
@@ -6306,6 +6306,12 @@ a.icon--rounded {
 
 .general-list .general-list__item:last-child {
   border-bottom: 0; }
+
+/* Post type Project */
+.single-project .entry-program {
+  background-color: #ebebeb;
+  padding: 1.5em;
+  text-align: center; }
 
 /* Post type Document */
 .single-document .entry-meta {
