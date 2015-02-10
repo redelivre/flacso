@@ -154,6 +154,11 @@ function flacso_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
+/**
+ * Function to check if a post object is from gea place
+ * @param WP_Post|int $post_data null for global post
+ * @return boolean
+ */
 function is_gea($post_data = null)
 {
 	if( empty($post_data ) )
