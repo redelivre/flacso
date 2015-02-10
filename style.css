@@ -6103,6 +6103,14 @@ a.icon--rounded {
     font-size: 0.875em;
     padding: 0.5em; }
 
+.post-edit-link {
+  background-color: #ebebeb;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: normal;
+  padding: 0.125em 0.25em;
+  text-transform: uppercase; }
+
 /* Sticky posts */
 .sticky {
   display: block; }

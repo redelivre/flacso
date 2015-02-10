@@ -9,6 +9,15 @@
 	}
 }
 
+.post-edit-link {
+	background-color: $color__quaternary;
+	display: inline-block;
+	font-size: 0.75em;
+	font-weight: normal;
+	padding: 0.125em 0.25em;
+	text-transform: uppercase;
+}
+
 /* Sticky posts */
 .sticky {
 	display: block;
