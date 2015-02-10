@@ -34,6 +34,7 @@ class FlacsoCustomFields
 		add_action('init', array($this, 'init'));
 		add_action( 'save_post', array( $this, 'save' ) );
 		add_action( 'add_meta_boxes_post', array( $this, 'custom_meta' ) );
+		add_action( 'add_meta_boxes', array( $this, 'special_metas' ) );
 	}
 
 	function init()
@@ -44,6 +45,16 @@ class FlacsoCustomFields
 	function custom_meta()
 	{
 		add_meta_box("custom_post_meta", __("Post Details", 'flacso'), array($this, 'meta'), 'post', 'advanced', 'core');
+	}
+	
+	function special_metas($postType)
+	{
+		$types = array('post', 'publication');
+		if(in_array($postType, $types))
+		{
+			add_meta_box("project_rel_meta", __("Projeto", 'flacso'), array($this, 'project_rel_meta'), null, 'advanced', 'core');
+			add_meta_box("program_rel_meta", __("Areas e Programas", 'flacso'), array($this, 'program_rel_meta'), null, 'advanced', 'core');
+		}
 	}
 	
 	protected $_customs = array();
@@ -92,9 +103,20 @@ class FlacsoCustomFields
 					value="<?php echo $dado; ?>" />
 			</p>
 			<?php
-			
 		}
+		$slug = 'project-rel';
+		?>
+		<p>
+			<label for="<?php echo $slug; ?>" class="<?php echo 'label_'.$slug; ?>"><?php _e('Projeto(s) relacionado(s)', 'flacso'); ?>:</label>
+			<input <?php echo $disable_edicao ?> id="<?php echo $slug; ?>"
+				name="<?php echo $slug; ?>"
+				class="widefat dropdown-project-rel"
+				value="<?php echo $dado; ?>" />
+		</p>
+		<?php
+		
 	}
+	
 	
 	/**
 	 * Save the meta when the post is saved.
@@ -155,8 +177,115 @@ class FlacsoCustomFields
 			}
 		}
 		
+		delete_metadata(get_post_type($post_id), $post_id, '.flacso-project-relation');
+		
+		if(array_key_exists('project_rel_meta_input', $_POST))
+		{
+			foreach ($_POST['project_rel_meta_input'] as $id)
+			{
+				add_post_meta($post_id, '.flacso-project-relation', $id);
+				echo "$id : $post_id ";
+			}
+		}
+		
+		delete_metadata(get_post_type($post_id), $post_id, '.flacso-program-relation');
+		
+		if(array_key_exists('program_rel_meta_input', $_POST))
+		{					 
+			foreach ($_POST['program_rel_meta_input'] as $id)
+			{
+				add_post_meta($post_id, '.flacso-program-relation', $id);
+				echo "$id : $post_id ";
+			}
+		}
+		
 	}
 	
+	public function project_rel_meta()
+	{
+		global $post;
+		global $wp_query;
+		
+		$temp_query = clone $wp_query;
+		$temp_post = clone $post;
+		
+		$checked = get_post_meta($post->ID, '.flacso-project-relation', false);
+
+		$data = array();
+		
+		$args = array(
+				'post_status' => 'publish',
+				'post_type' => 'project',
+				'orderby' => 'title',
+				'order'   => 'ASC',
+		);
+		
+		$query = new WP_Query($args);
+		
+		while ( $query->have_posts() )
+		{
+			$query->the_post();
+			$data[] = array('id' => get_the_ID(), 'name' => get_the_title(), 'checked' => in_array(get_the_ID(), $checked));
+		}
+		
+		$wp_query = clone $temp_query;
+		$post = clone $temp_post;
+		
+		wp_reset_postdata();
+		
+		flacso_metabox_checkbox('project_rel_meta', $post, $data);
+	}
+	
+	public function program_rel_meta()
+	{
+		global $post;
+		global $wp_query;
+		
+		$temp_query = clone $wp_query;
+		$temp_post = clone $post;
+		
+		$checked = get_post_meta($post->ID, '.flacso-program-relation', false);
+		
+		$page = false;
+		
+		$pages = get_pages(array(
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'page-templates/child-page-list.php'
+		));
+
+		if (is_array($pages) && count($pages) > 0)
+		{
+
+			$page = $pages[0];
+			
+			wp_reset_query();
+			
+			$args = array(
+				'post_parent' => $page->ID,
+				'post_status' => 'publish',
+				'post_type' => 'page',
+				'orderby' => 'title',
+				'order'   => 'ASC',
+			);
+			
+			$query = new WP_Query($args);
+			
+			$data = array();
+		
+			while ( $query->have_posts() )
+			{
+				$query->the_post();
+				$data[] = array('id' => get_the_ID(), 'name' => get_the_title(), 'checked' => in_array(get_the_ID(), $checked));
+			}
+		
+			flacso_metabox_checkbox('program_rel_meta', $post, $data);
+		
+		}
+		
+		$wp_query = clone $temp_query;
+		$post = clone $temp_post;
+		wp_reset_postdata();
+	}
 }
 
 $CustomFields_global = new FlacsoCustomFields();

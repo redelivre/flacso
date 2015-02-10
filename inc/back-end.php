@@ -123,3 +123,27 @@ function flacso_increase_excerpt_textarea_height() {
     ';
 }
 add_action('admin_head', 'flacso_increase_excerpt_textarea_height');
+
+/**
+ * Create a metabox checklist with a custom data
+ * @param string $name Slug of data for postback
+ * @param WP_Post|int $post 
+ * @param array $data Format array( item1 => array('id' => value, 'name' => label, 'checked' => true ), item2 => array('id' => value, 'name' => label, , 'checked' => false))
+ */
+function flacso_metabox_checkbox( $name, $post, $data )
+{?>
+	<div id="<?php echo $name; ?>-all" class="tabs-panel">
+		<ul class="categorychecklist form-no-clear"><?php
+			foreach ($data as $data_item)
+			{
+				$checked = array_key_exists('checked', $data_item) && $data_item['checked'] ? ' checked="checked" ' : ''; ?>
+				<li id="<?php echo $name."-".$data_item['id']; ?>" >
+					<label class="selectit">
+						<input id="in-<?php echo $name."-".$data_item['id']; ?>" type="checkbox" name="<?php echo $name; ?>_input[]" value="<?php echo $data_item['id']; ?>" <?php echo $checked; ?> >
+							<?php echo $data_item['name']; ?>
+					</label>
+				</li><?php 
+			}?>
+		</ul>
+	</div><?php
+}
