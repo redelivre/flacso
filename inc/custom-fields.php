@@ -187,24 +187,24 @@ class FlacsoCustomFields
 			$post_id = get_the_ID();
 		}
 		
-		delete_metadata(get_post_type($post_id), $post_id, '.flacso-project-relation');
+		delete_metadata(get_post_type($post_id), $post_id, '_flacso-project-relation');
 		
 		if(array_key_exists('project_rel_meta_input', $_POST))
 		{
 			foreach ($_POST['project_rel_meta_input'] as $id)
 			{
-				add_post_meta($post_id, '.flacso-project-relation', $id);
+				add_post_meta($post_id, '_flacso-project-relation', $id);
 				echo "$id : $post_id ";
 			}
 		}
 		
-		delete_metadata(get_post_type($post_id), $post_id, '.flacso-program-relation');
+		delete_metadata(get_post_type($post_id), $post_id, '_flacso-program-relation');
 		
 		if(array_key_exists('program_rel_meta_input', $_POST))
 		{
 			foreach ($_POST['program_rel_meta_input'] as $id)
 			{
-				add_post_meta($post_id, '.flacso-program-relation', $id);
+				add_post_meta($post_id, '_flacso-program-relation', $id);
 				echo "$id : $post_id ";
 			}
 		}
@@ -218,7 +218,7 @@ class FlacsoCustomFields
 		$temp_query = clone $wp_query;
 		$temp_post = clone $post;
 		
-		$checked = get_post_meta($post->ID, '.flacso-project-relation', false);
+		$checked = get_post_meta($post->ID, '_flacso-project-relation', false);
 
 		$data = array();
 		
@@ -253,7 +253,7 @@ class FlacsoCustomFields
 		$temp_query = clone $wp_query;
 		$temp_post = clone $post;
 		
-		$checked = get_post_meta($post->ID, '.flacso-program-relation', false);
+		$checked = get_post_meta($post->ID, '_flacso-program-relation', false);
 		
 		$page = false;
 		
