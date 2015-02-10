@@ -181,7 +181,6 @@ class FlacsoCustomFields
 	
 	public function save_rel_metas($post_id = null)
 	{
-		
 		if(is_null($post_id))
 		{
 			$post_id = get_the_ID();
@@ -194,7 +193,6 @@ class FlacsoCustomFields
 			foreach ($_POST['project_rel_meta_input'] as $id)
 			{
 				add_post_meta($post_id, '_flacso-project-relation', $id);
-				echo "$id : $post_id ";
 			}
 		}
 		
@@ -205,7 +203,6 @@ class FlacsoCustomFields
 			foreach ($_POST['program_rel_meta_input'] as $id)
 			{
 				add_post_meta($post_id, '_flacso-program-relation', $id);
-				echo "$id : $post_id ";
 			}
 		}
 	} 
