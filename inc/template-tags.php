@@ -195,6 +195,49 @@ function flacso_the_publication_download_list() {
 }
 endif;
 
+if ( ! function_exists( 'flacso_the_terms' ) ) :
+/**
+ * Prints HTML with the selected taxonomy
+ * @param  string  $taxonomy The taxonomy slug
+ * @param  string  $before 	 The html printed before
+ * @param  boolean $link     Whether to print the terms with links
+ */
+function flacso_the_terms( $taxonomy = '', $before = '', $link = false ) {
+	global $post;
+
+	if ( empty ( $taxonomy ) ) {
+		return;
+	}
+
+	$terms = get_the_terms( $post->ID, $taxonomy );
+							
+	if ( $terms && ! is_wp_error( $terms ) ) { 
+
+		$terms_list = array();
+
+		foreach ( $terms as $term ) {
+			if ( $link ) {
+				$terms_list[] = '<a href="' . get_term_link( $term->slug, $taxonomy ) . '">' . $term->name . '</a>';
+			}
+			else {
+				$terms_list[] = $term->name;
+			}
+		}
+							
+		$output = join( ", ", $terms_list );
+		$output = '<span class="tax-term tax-term--' . $taxonomy . '">' . $output . '</span>';
+
+		if ( ! empty ( $before ) ) {
+			$output = '<span class="tax-term--sep">' . $before . '</span>' . $output;
+		}
+
+		echo $output;
+
+	}
+
+}
+endif;
+
 if ( ! function_exists( 'flacso_the_agenda_list' ) ) :
 /**
  * Prints HTML with dates, place and source link for Agenda post type

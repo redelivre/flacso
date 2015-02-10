@@ -6153,10 +6153,11 @@ a.icon--rounded {
   margin: 0 0 1.5em; }
 
 .entry-footer,
-.single-document .entry-meta {
+.single .entry-meta {
   border-width: 6px 0;
   border-color: #ebebeb;
   border-style: solid;
+  margin-top: 1em;
   padding: 1em 0; }
 
 .entry-footer .tax-name {

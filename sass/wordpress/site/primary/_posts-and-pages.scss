@@ -73,10 +73,11 @@
 }
 
 .entry-footer,
-.single-document .entry-meta {
+.single .entry-meta {
 	border-width: $border-width 0;
 	border-color: $color__quaternary;
 	border-style: solid;
+	margin-top: 1.5em;
 	padding: 1em 0;
 }
 

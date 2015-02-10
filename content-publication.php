@@ -23,31 +23,54 @@
 
 	<div class="col-md-9">
 		<header class="entry-header">
+			<div class="entry--general-info">
+				<?php
+				// Publication type
+				flacso_the_terms( 'publication-type', '', true );
+
+				// Publication year
+				flacso_the_terms( 'year', ' &bull; ' );
+
+				// Publication country
+				flacso_the_terms( 'country', ' &bull; ' );
+				?>
+			</div>
 			<?php the_title( '<h1 class="entry-title media-heading">', '</h1>' ); ?>
 
 			<div class="entry-meta">
 				<?php
-
-				$country = get_post_meta( $post->ID, 'publication-country', true );
-				if ( ! empty ( $country ) ) {
-					printf( '<div class="publication-country">Country: ' . $country . '</div>' );
+				// Custom author
+				$custom_author = get_post_meta( $post->ID, 'custom-author', true );
+				if ( ! empty ( $custom_author ) ) {
+					printf( '<div class="custom-author">' . __( 'Author: %1$s', 'flacso' ) . '</div>', $custom_author );
 				}
 
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'flacso' ) );
-				if ( $categories_list && flacso_categorized_blog() ) {
-					printf( '<div class="cat-links">' . __( 'Categories: %1$s', 'flacso' ) . '</div>', $categories_list );
+				// Source
+				$url = get_post_meta( $post->ID, 'url', true );
+				if ( ! empty ( $source ) ) {
+					$url = esc_url( $url );
 				}
+
+				$source = get_post_meta( $post->ID, 'fonte', true );
+				if ( empty ( $source ) && ! empty ( $url ) ) {
+					$source_link = '<a href="' . $url . '">' . $url . '</a>';
+					printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source_link );
+				}
+				elseif ( ! empty ( $source ) && ! empty ( $url ) ) {
+					$source_link = '<a href="' . $url . '">' . $source . '</a>';
+					printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source_link );
+				}
+				elseif ( ! empty ( $source ) ) {
+					printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source );
+				}
+
+				// Higher Education
+				flacso_the_terms( 'higher-education', 'Categorias: ' );
 
 				/* translators: used between list items, there is a space after the comma */
 				$tags_list = get_the_tag_list( '', __( ', ', 'flacso' ) );
 				if ( $tags_list ) {
 					printf( '<div class="tags-links">' . __( 'Tags: %1$s', 'flacso' ) . '</div>', $tags_list );
-				}
-
-				$reference = get_post_meta( $post->ID, 'publication-reference', true );
-				if ( ! empty ( $reference ) ) {
-					printf( '<div class="publication-reference">Source: ' . $reference . '</div>' );
 				}
 				?>
 			</div><!-- .entry-meta -->
