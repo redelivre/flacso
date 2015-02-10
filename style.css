@@ -6095,6 +6095,14 @@ a.icon--rounded {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+/* General items */
+.entry-meta--tax {
+  margin-bottom: 0.5em; }
+  .entry-meta--tax a {
+    background-color: #ebebeb;
+    font-size: 0.875em;
+    padding: 0.5em; }
+
 /* Sticky posts */
 .sticky {
   display: block; }

@@ -1,3 +1,14 @@
+/* General items */
+.entry-meta--tax {
+	margin-bottom: 0.5em;
+	
+	a {
+		background-color: $color__quaternary;
+		font-size: 0.875em;
+		padding: 0.5em;
+	}
+}
+
 /* Sticky posts */
 .sticky {
 	display: block;
