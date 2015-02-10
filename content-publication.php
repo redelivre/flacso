@@ -1,6 +1,6 @@
 <?php
 /**
- * Single content for Document post type
+ * Single content for publication post type
  * @package Flacso
  */
 ?>
@@ -11,14 +11,14 @@
 		<div class="entry-image">
 			<?php
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail( 'document' );
+				the_post_thumbnail( 'publication' );
 			}
 			else {
-				flacso_the_dummy_image( 'document' );
+				flacso_the_dummy_image( 'publication' );
 			}
 			?>
 		</div><!-- .entry-image -->
-		<?php echo flacso_the_document_download_list(); ?>
+		<?php echo flacso_the_publication_download_list(); ?>
 	</div>
 
 	<div class="col-md-9">
@@ -28,9 +28,9 @@
 			<div class="entry-meta">
 				<?php
 
-				$country = get_post_meta( $post->ID, 'document-country', true );
+				$country = get_post_meta( $post->ID, 'publication-country', true );
 				if ( ! empty ( $country ) ) {
-					printf( '<div class="document-country">Country: ' . $country . '</div>' );
+					printf( '<div class="publication-country">Country: ' . $country . '</div>' );
 				}
 
 				/* translators: used between list items, there is a space after the comma */
@@ -45,9 +45,9 @@
 					printf( '<div class="tags-links">' . __( 'Tags: %1$s', 'flacso' ) . '</div>', $tags_list );
 				}
 
-				$reference = get_post_meta( $post->ID, 'document-reference', true );
+				$reference = get_post_meta( $post->ID, 'publication-reference', true );
 				if ( ! empty ( $reference ) ) {
-					printf( '<div class="document-reference">Source: ' . $reference . '</div>' );
+					printf( '<div class="publication-reference">Source: ' . $reference . '</div>' );
 				}
 				?>
 			</div><!-- .entry-meta -->
