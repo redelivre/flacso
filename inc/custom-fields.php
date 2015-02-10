@@ -33,6 +33,7 @@ class FlacsoCustomFields
 		
 		add_action('init', array($this, 'init'));
 		add_action( 'save_post', array( $this, 'save' ) );
+		add_action( 'save_post', array( $this, 'save_rel_metas' ) );
 		add_action( 'add_meta_boxes_post', array( $this, 'custom_meta' ) );
 		add_action( 'add_meta_boxes', array( $this, 'special_metas' ) );
 	}
@@ -176,6 +177,15 @@ class FlacsoCustomFields
 				update_post_meta( $post_id, $field['slug'], $mydata );
 			}
 		}
+	}
+	
+	public function save_rel_metas($post_id = null)
+	{
+		
+		if(is_null($post_id))
+		{
+			$post_id = get_the_ID();
+		}
 		
 		delete_metadata(get_post_type($post_id), $post_id, '.flacso-project-relation');
 		
@@ -191,15 +201,14 @@ class FlacsoCustomFields
 		delete_metadata(get_post_type($post_id), $post_id, '.flacso-program-relation');
 		
 		if(array_key_exists('program_rel_meta_input', $_POST))
-		{					 
+		{
 			foreach ($_POST['program_rel_meta_input'] as $id)
 			{
 				add_post_meta($post_id, '.flacso-program-relation', $id);
 				echo "$id : $post_id ";
 			}
 		}
-		
-	}
+	} 
 	
 	public function project_rel_meta()
 	{
