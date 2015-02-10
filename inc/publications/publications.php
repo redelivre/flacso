@@ -11,16 +11,16 @@ class Publications
 					'title' => __('Author', 'flacso'),
 					'tip' => __('Publication Author', 'flacso'),
 			), 
+			'fonte' => array (
+					'slug' => 'fonte',
+					'title' => __ ( 'Fonte', 'flacso' ),
+					//'tip' => __ ( '', 'flacso' ),
+			),
 			'url' => array
 			(
 					'slug' => 'url',
 					'title' => __('Url', 'flacso'),
 					'tip' => __('Source Address or external link', 'flacso'),
-			),
-			'fonte' => array (
-					'slug' => 'fonte',
-					'title' => __ ( 'Fonte', 'flacso' ),
-					//'tip' => __ ( '', 'flacso' ),
 			)
 		);
 		
