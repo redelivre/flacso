@@ -154,6 +154,45 @@ function flacso_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
+function is_gea($post_data = null)
+{
+	if( empty($post_data ) )
+	{
+		$post_data = get_post();
+	}
+	elseif(is_int($post_data) && $post_data > 0 )
+	{
+		$post_data = get_post($post_data);
+	}
+	
+	if( empty($post_data ) || ( is_object($post_data) && get_class($post_data) == 'WP_Error' ) )
+	{
+		return false;
+	}
+	
+	if($post_data->post_type == 'page')
+	{
+		$pages = get_pages( array( 'name' => 'gea' ) );
+		if(is_array($pages) && count($pages) > 0)
+		{
+			$page = $pages[0];
+			if($page->ID == $post_data->ID || $post_data->post_parent == $page->ID || (property_exists($post_data, 'ancestors') && is_array($post_data->ancestors) && in_array($page->ID, $post_data->ancestors) ))
+			{
+				return true;
+			}
+		}
+	}
+	else 
+	{
+		if(has_term('gea', 'gea', $post_data))
+		{
+			return true;
+		}
+	}
+	
+	return false;
+}
+
 /**
  * Implement the Custom Header feature.
  */
