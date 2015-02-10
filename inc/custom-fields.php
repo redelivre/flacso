@@ -224,6 +224,7 @@ class FlacsoCustomFields
 				'post_type' => 'project',
 				'orderby' => 'title',
 				'order'   => 'ASC',
+				'posts_per_page' => -1,
 		);
 		
 		$query = new WP_Query($args);
@@ -272,6 +273,7 @@ class FlacsoCustomFields
 				'post_type' => 'page',
 				'orderby' => 'title',
 				'order'   => 'ASC',
+				'posts_per_page' => -1,
 			);
 			
 			$query = new WP_Query($args);
