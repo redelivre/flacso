@@ -50,7 +50,7 @@ class FlacsoCustomFields
 	
 	function special_metas($postType)
 	{
-		$types = array('post', 'publication');
+		$types = array('post', 'publication', 'project');
 		if(in_array($postType, $types))
 		{
 			add_meta_box("project_rel_meta", __("Projeto", 'flacso'), array($this, 'project_rel_meta'), null, 'advanced', 'core');
