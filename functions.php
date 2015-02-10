@@ -151,6 +151,11 @@ function flacso_scripts() {
 	wp_register_style( 'flacso-banners-cycle', get_template_directory_uri() . '/css/banners-cycle.css' );
 	wp_enqueue_style( 'flacso-banners-cycle' );
 	
+	wp_enqueue_script('dropdown-checkbox', get_template_directory_uri() . '/js/dropdown-checkbox.js', array('jquery'));
+	wp_register_style( 'dropdown-checkbox', get_template_directory_uri() . '/css/dropdown-checkbox.css' );
+	wp_enqueue_style( 'dropdown-checkbox' );
+	
+	
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
@@ -196,6 +201,50 @@ function is_gea($post_data = null)
 	}
 	
 	return false;
+}
+
+function flacso_create_dropdown($taxonomy, $taxonomy_obj)
+{
+	$terms = get_terms($taxonomy);
+	if(count($terms) > 0)
+	{
+		?>
+	
+		<dl class="dropdown"> 
+		  
+		    <dt>
+		    	<div class="clickable">
+			      <span class="hida"><?php echo $taxonomy_obj->labels->search_items; ?></span>    
+			      <p class="multiSel"></p>
+			      <span class="caret"></span>
+		      	</div> 
+		    </dt>
+		  
+		    <dd>
+		        <div class="mutliSelect">
+		            <ul><?php
+		            	foreach ($terms as $term)
+		            	{?>
+			                <li>
+			                    <input type="checkbox" value="<?php echo $term->name; ?>" />
+			                    <?php echo $term->name; ?>
+			                </li><?php
+		            	}?>
+		            </ul>
+		        </div>
+		    </dd>
+		</dl><?php
+	} 	
+}
+
+function get_search_adv()
+{
+	global $wp_taxonomies;
+	
+	foreach ($wp_taxonomies as $taxonomy => $wp_taxonomy)
+	{
+		flacso_create_dropdown($taxonomy, $wp_taxonomy);
+	}
 }
 
 /**
