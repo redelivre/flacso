@@ -46,23 +46,7 @@
 				}
 
 				// Source
-				$url = get_post_meta( $post->ID, 'url', true );
-				if ( ! empty ( $source ) ) {
-					$url = esc_url( $url );
-				}
-
-				$source = get_post_meta( $post->ID, 'fonte', true );
-				if ( empty ( $source ) && ! empty ( $url ) ) {
-					$source_link = '<a href="' . $url . '">' . $url . '</a>';
-					printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source_link );
-				}
-				elseif ( ! empty ( $source ) && ! empty ( $url ) ) {
-					$source_link = '<a href="' . $url . '">' . $source . '</a>';
-					printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source_link );
-				}
-				elseif ( ! empty ( $source ) ) {
-					printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source );
-				}
+				flacso_the_source();
 
 				// Higher Education
 				flacso_the_terms( 'higher-education', 'Categorias: ' );

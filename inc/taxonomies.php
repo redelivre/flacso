@@ -202,8 +202,8 @@ function flacso_register_tax($name, $slug, $post_types, $plural = true, $single 
 	);
 
 	// Add another argument if we're using publication type	
-	if ( $slug == 'publication-type' ) {
-		$args['meta_box_cb'] = 'flacso_publication_type_meta_box';
+	if ( $slug == 'publication-type' || $slug == 'status' ) {
+		$args['meta_box_cb'] = 'flacso_taxonomy_dropdown_meta_box';
 	}
 	
 	return register_taxonomy($slug, $post_types, $args);
@@ -220,7 +220,7 @@ function flacso_register_tax($name, $slug, $post_types, $plural = true, $single 
  * @param  [type] $box  [description]
  * @link   http://wordpress.stackexchange.com/a/148965
  */
-function flacso_publication_type_meta_box( $post, $box ) {
+function flacso_taxonomy_dropdown_meta_box( $post, $box ) {
 
 	$defaults = array( 'taxonomy' => 'category' );
 	
