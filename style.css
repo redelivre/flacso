@@ -6369,6 +6369,14 @@ a.icon--rounded {
     margin-bottom: 1em; }
 
 /* Post type Agenda */
+@media (min-width: 768px) {
+  .post-type-archive-agenda .page-header {
+    position: relative; }
+  .post-type-archive-agenda .view-events {
+    position: absolute;
+    right: 2.125em;
+    top: 2.125em; } }
+
 .entry-agenda__item {
   border-bottom: 2px dotted #023670;
   padding: 1em 0; }

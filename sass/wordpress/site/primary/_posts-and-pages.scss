@@ -340,6 +340,21 @@
 }
 
 /* Post type Agenda */
+.post-type-archive-agenda {
+
+	@media (min-width: $screen-sm-min) {
+		.page-header {
+			position: relative;
+		}
+
+		.view-events {
+			position: absolute;
+			right: 2.125em;
+			top: 2.125em;
+		}
+	}
+}
+
 .entry-agenda__item {
 	border-bottom: 2px dotted $color__secondary;
 	padding: 1em 0;
