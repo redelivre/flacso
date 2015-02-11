@@ -105,16 +105,6 @@ class FlacsoCustomFields
 			</p>
 			<?php
 		}
-		$slug = 'project-rel';
-		?>
-		<p>
-			<label for="<?php echo $slug; ?>" class="<?php echo 'label_'.$slug; ?>"><?php _e('Projeto(s) relacionado(s)', 'flacso'); ?>:</label>
-			<input <?php echo $disable_edicao ?> id="<?php echo $slug; ?>"
-				name="<?php echo $slug; ?>"
-				class="widefat dropdown-project-rel"
-				value="<?php echo $dado; ?>" />
-		</p>
-		<?php
 		
 	}
 	
@@ -295,7 +285,7 @@ class FlacsoCustomFields
 		wp_reset_postdata();
 	}
 }
-
+global $CustomFields_global;
 $CustomFields_global = new FlacsoCustomFields();
 
 ?>
