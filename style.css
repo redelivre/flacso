@@ -5768,6 +5768,9 @@ a {
     @media (min-width: 782px) {
       .main-navigation.main-navigation--admin-bar {
         top: 32px; } }
+    @media (min-width: 992px) {
+      .main-navigation.main-navigation--admin-bar {
+        top: 0; } }
   .main-navigation .children a {
     font-size: 0.875em;
     padding: 0.571em 2.286em; }

@@ -50,6 +50,10 @@
 		@media (min-width: 782px) {
 			top: 32px;
 		}
+		
+		@media (min-width: $screen-md-min) {
+			top: 0;
+		}
 	}
 
 	.children {
