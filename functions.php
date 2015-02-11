@@ -367,13 +367,13 @@ function flacso_search_where($where)
 		(strpos($where, 'postmeta') !== false && strpos($where, 'term_relationships') !== false ) 
 	)
 	{
-		echo "<pre>";//$where\n";
+		//echo "<pre>";//$where\n";
 		$begin = strpos($where, '(');
 		$end = strpos($where, ') AND', $begin);
 		$tax = substr($where, $begin, $end -3);
 		$where = substr($where, $end + 1, -1);
 		//echo("$begin : $end\n");
-		echo("$where OR $tax) </pre>");
+		//echo("$where OR $tax) </pre>");
 		return "$where OR $tax) ";
 	}
 	return $where;
