@@ -195,6 +195,33 @@ function flacso_the_publication_download_list() {
 }
 endif;
 
+if ( ! function_exists( 'flacso_the_source' ) ) :
+/**
+ * Prints HTML with a mix between 'fonte' and 'url' custom fields
+ */
+function flacso_the_source() {
+	global $post;
+
+	$url = get_post_meta( $post->ID, 'url', true );
+	if ( ! empty ( $source ) ) {
+		$url = esc_url( $url );
+	}
+
+	$source = get_post_meta( $post->ID, 'fonte', true );
+	if ( empty ( $source ) && ! empty ( $url ) ) {
+		$source_link = '<a href="' . $url . '">' . $url . '</a>';
+		printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source_link );
+	}
+	elseif ( ! empty ( $source ) && ! empty ( $url ) ) {
+		$source_link = '<a href="' . $url . '">' . $source . '</a>';
+		printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source_link );
+	}
+	elseif ( ! empty ( $source ) ) {
+		printf( '<div class="source">' . __( 'Source: %1$s', 'flacso' ) . '</div>', $source );
+	}
+}
+endif;
+
 if ( ! function_exists( 'flacso_the_terms' ) ) :
 /**
  * Prints HTML with the selected taxonomy
