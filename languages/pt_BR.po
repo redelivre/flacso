@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flacso Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 13:04-0300\n"
+"POT-Creation-Date: 2015-02-11 14:00-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
 "Language-Team: \n"
@@ -202,8 +202,8 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Parece que pode & rsquo; t encontrar o que você & rsquo; re procurando. "
-"Talvez a pesquisa pode ajudar."
+"Parece que não pude encontrar o que você está procurando. Talvez a pesquisa "
+"possa ajudar."
 
 #: ../inc/customizer.php:22
 msgid "Front Page Content"
@@ -239,11 +239,11 @@ msgstr "Navegação Posts"
 
 #: ../inc/template-tags.php:44
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<Span class = \"meta-nav \"> & larr; </ span> Posts mais antigos"
+msgstr "<Span class=\"meta-nav\"> &larr; </span> Posts mais antigos"
 
 #: ../inc/template-tags.php:48
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Posts mais recentes <span class = \"meta-nav \"> & rarr; </ span>"
+msgstr "Posts mais recentes <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:71
 msgid "Post navigation"
@@ -252,12 +252,12 @@ msgstr "Mensagem navegação"
 #: ../inc/template-tags.php:74
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<Span class = \"meta-nav \"> & larr; </ span> & nbsp; %t itle"
+msgstr "<Span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
 #: ../inc/template-tags.php:75
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%t itle & nbsp; <span class = \"meta-nav \"> & rarr; </ span>"
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:119
 msgid "Categorias"
@@ -424,7 +424,10 @@ msgstr "Parente"
 msgid "Update"
 msgstr "Atualizar"
 
-#: ../inc/taxonomies.php:29 ../inc/taxonomies.php:30 ../inc/taxonomies.php:180
+#: ../inc/taxonomies.php:29 ../inc/taxonomies.php:30 ../inc/taxonomies.php:171
+#: ../inc/taxonomies.php:189 ../inc/taxonomies.php:207
+#: ../inc/taxonomies.php:225 ../inc/taxonomies.php:243
+#: ../inc/taxonomies.php:261 ../inc/taxonomies.php:293
 #: ../inc/projects/projects.php:96 ../inc/publications/publications.php:90
 msgid "Add new"
 msgstr "Adicionar novo"
@@ -461,7 +464,404 @@ msgstr "Internacional"
 msgid "State"
 msgstr "Estado"
 
-#: ../inc/taxonomies.php:267
+#: ../inc/taxonomies.php:121
+msgid "Languages"
+msgstr "Línguas"
+
+#: ../inc/taxonomies.php:122 ../inc/taxonomies.php:131
+msgid "Language"
+msgstr "Língua"
+
+#: ../inc/taxonomies.php:123
+msgid "Search Languages"
+msgstr "Procurar por linguás"
+
+#: ../inc/taxonomies.php:124
+msgid "All Languages"
+msgstr "Todos os idiomas"
+
+#: ../inc/taxonomies.php:125
+msgid "Parent Language"
+msgstr "Idioma mãe"
+
+#: ../inc/taxonomies.php:126
+msgid "Parent Language:"
+msgstr "Idioma mãe:"
+
+#: ../inc/taxonomies.php:127
+msgid "Edit Language"
+msgstr "Editar Idioma"
+
+#: ../inc/taxonomies.php:128
+msgid "Update Language"
+msgstr "Atualizar Idioma"
+
+#: ../inc/taxonomies.php:129
+msgid "Add New Language"
+msgstr "Adicionar novo idioma"
+
+#: ../inc/taxonomies.php:130
+msgid "New Language Name"
+msgstr "Novo nome de idioma"
+
+#: ../inc/taxonomies.php:162 ../inc/taxonomies.php:176
+#, fuzzy
+msgid "Publication Types"
+msgstr "Publicações"
+
+#: ../inc/taxonomies.php:163
+#, fuzzy
+msgid "Publication Type"
+msgstr "Título da Publicação"
+
+#: ../inc/taxonomies.php:164
+#, fuzzy
+msgid "Search for Publication Types"
+msgstr "Pesquisa Publicação"
+
+#: ../inc/taxonomies.php:165
+#, fuzzy
+msgid "All Publication Types"
+msgstr "Título da Publicação"
+
+#: ../inc/taxonomies.php:166
+#, fuzzy
+msgid "Parent Publication Type"
+msgstr "Título da Publicação"
+
+#: ../inc/taxonomies.php:167
+#, fuzzy
+msgid "Parent Publication Type:"
+msgstr "Título da Publicação"
+
+#: ../inc/taxonomies.php:168
+#, fuzzy
+msgid "Edit Publication Type"
+msgstr "Editar publicação"
+
+#: ../inc/taxonomies.php:169
+#, fuzzy
+msgid "Update Publication Type"
+msgstr "Título da Publicação"
+
+#: ../inc/taxonomies.php:170
+#, fuzzy
+msgid "Add new Publication Type"
+msgstr "Adicionar nova publicação"
+
+#: ../inc/taxonomies.php:172
+#, fuzzy
+msgid "New Publication Type"
+msgstr "Nova Publicação"
+
+#: ../inc/taxonomies.php:173
+#, fuzzy
+msgid "View Publication Type"
+msgstr "Ver Publicação"
+
+#: ../inc/taxonomies.php:174
+#, fuzzy
+msgid "No Publication Type found"
+msgstr "Publicação não encontrado"
+
+#: ../inc/taxonomies.php:175
+#, fuzzy
+msgid "No Publication Type found in the trash"
+msgstr "Publicação não encontrado no lixo"
+
+#: ../inc/taxonomies.php:180 ../inc/taxonomies.php:181
+#: ../inc/taxonomies.php:194
+#, fuzzy
+msgid "Higher Education"
+msgstr "Ver Publicação"
+
+#: ../inc/taxonomies.php:182
+#, fuzzy
+msgid "Search for Higher Education"
+msgstr "Pesquisa Publicação"
+
+#: ../inc/taxonomies.php:183
+msgid "All Higher Education"
+msgstr "Todas os ensinos superiores"
+
+#: ../inc/taxonomies.php:184
+msgid "Parent Higher Education"
+msgstr "Ensino Superior mãe"
+
+#: ../inc/taxonomies.php:185
+msgid "Parent Higher Education:"
+msgstr "Ensino Superior mãe:"
+
+#: ../inc/taxonomies.php:186
+#, fuzzy
+msgid "Edit Higher Education"
+msgstr "Editar publicação"
+
+#: ../inc/taxonomies.php:187
+msgid "Update Higher Education"
+msgstr "Atualizar Ensino Superior"
+
+#: ../inc/taxonomies.php:188
+#, fuzzy
+msgid "Add new Higher Education"
+msgstr "Adicionar nova publicação"
+
+#: ../inc/taxonomies.php:190
+#, fuzzy
+msgid "New Higher Education"
+msgstr "Nova Publicação"
+
+#: ../inc/taxonomies.php:191
+#, fuzzy
+msgid "View Higher Education"
+msgstr "Ver Publicação"
+
+#: ../inc/taxonomies.php:192
+msgid "No Higher Education found"
+msgstr "Nenhum ensino superior encontrado"
+
+#: ../inc/taxonomies.php:193
+#, fuzzy
+msgid "No Higher Education found in the trash"
+msgstr "Publicação não encontrado no lixo"
+
+#: ../inc/taxonomies.php:198 ../inc/taxonomies.php:212
+msgid "Countries"
+msgstr "Países"
+
+#: ../inc/taxonomies.php:199
+msgid "Country"
+msgstr "País"
+
+#: ../inc/taxonomies.php:200
+#, fuzzy
+msgid "Search for Countries"
+msgstr "Procurar"
+
+#: ../inc/taxonomies.php:201
+msgid "All Countries"
+msgstr ""
+
+#: ../inc/taxonomies.php:202
+#, fuzzy
+msgid "Parent Country"
+msgstr "Parente"
+
+#: ../inc/taxonomies.php:203
+msgid "Parent Country:"
+msgstr ""
+
+#: ../inc/taxonomies.php:204
+#, fuzzy
+msgid "Edit Country"
+msgstr "Editoria"
+
+#: ../inc/taxonomies.php:205
+#, fuzzy
+msgid "Update Country"
+msgstr "Atualizar"
+
+#: ../inc/taxonomies.php:206
+#, fuzzy
+msgid "Add new Country"
+msgstr "Adicionar novo projeto"
+
+#: ../inc/taxonomies.php:208
+msgid "New Country"
+msgstr ""
+
+#: ../inc/taxonomies.php:209
+msgid "View Country"
+msgstr ""
+
+#: ../inc/taxonomies.php:210
+#, fuzzy
+msgid "No Country found"
+msgstr "Projeto não encontrado"
+
+#: ../inc/taxonomies.php:211
+#, fuzzy
+msgid "No Country found in the trash"
+msgstr "Projeto não foi encontrado no lixo"
+
+#: ../inc/taxonomies.php:216 ../inc/taxonomies.php:230
+#, fuzzy
+msgid "Years"
+msgstr "Ano: %s"
+
+#: ../inc/taxonomies.php:217
+#, fuzzy
+msgid "Year"
+msgstr "Ano: %s"
+
+#: ../inc/taxonomies.php:218
+#, fuzzy
+msgid "Search for Years"
+msgstr "Procurar"
+
+#: ../inc/taxonomies.php:219
+msgid "All Years"
+msgstr ""
+
+#: ../inc/taxonomies.php:220
+#, fuzzy
+msgid "Parent Year"
+msgstr "Parente"
+
+#: ../inc/taxonomies.php:221
+#, fuzzy
+msgid "Parent Year:"
+msgstr "Parente"
+
+#: ../inc/taxonomies.php:222
+#, fuzzy
+msgid "Edit Year"
+msgstr "Editar"
+
+#: ../inc/taxonomies.php:223
+#, fuzzy
+msgid "Update Year"
+msgstr "Atualizar"
+
+#: ../inc/taxonomies.php:224
+#, fuzzy
+msgid "Add new Year"
+msgstr "Adicionar novo"
+
+#: ../inc/taxonomies.php:226
+msgid "New Year"
+msgstr ""
+
+#: ../inc/taxonomies.php:227
+#, fuzzy
+msgid "View Year"
+msgstr "Vista"
+
+#: ../inc/taxonomies.php:228
+msgid "No Year found"
+msgstr ""
+
+#: ../inc/taxonomies.php:229
+#, fuzzy
+msgid "No Year found in the trash"
+msgstr "encontrado no lixo"
+
+#: ../inc/taxonomies.php:234 ../inc/taxonomies.php:248
+msgid "Territories"
+msgstr ""
+
+#: ../inc/taxonomies.php:235
+msgid "Territory"
+msgstr ""
+
+#: ../inc/taxonomies.php:236
+#, fuzzy
+msgid "Search for Territories"
+msgstr "Procurar"
+
+#: ../inc/taxonomies.php:237
+msgid "All Territories"
+msgstr ""
+
+#: ../inc/taxonomies.php:238
+msgid "Parent Territory"
+msgstr ""
+
+#: ../inc/taxonomies.php:239
+msgid "Parent Territory:"
+msgstr ""
+
+#: ../inc/taxonomies.php:240
+msgid "Edit Territory"
+msgstr ""
+
+#: ../inc/taxonomies.php:241
+msgid "Update Territory"
+msgstr ""
+
+#: ../inc/taxonomies.php:242
+#, fuzzy
+msgid "Add new Territory"
+msgstr "Adicionar novo projeto"
+
+#: ../inc/taxonomies.php:244
+msgid "New Territory"
+msgstr ""
+
+#: ../inc/taxonomies.php:245
+msgid "View Territory"
+msgstr ""
+
+#: ../inc/taxonomies.php:246
+msgid "No Territory found"
+msgstr ""
+
+#: ../inc/taxonomies.php:247
+#, fuzzy
+msgid "No Territory found in the trash"
+msgstr "Projeto não foi encontrado no lixo"
+
+#: ../inc/taxonomies.php:252 ../inc/taxonomies.php:253
+#: ../inc/taxonomies.php:266
+#, fuzzy
+msgid "Status"
+msgstr "Status"
+
+#: ../inc/taxonomies.php:254
+#, fuzzy
+msgid "Search for Status"
+msgstr "Procurar"
+
+#: ../inc/taxonomies.php:255
+#, fuzzy
+msgid "All Status"
+msgstr "Status"
+
+#: ../inc/taxonomies.php:256
+#, fuzzy
+msgid "Parent Status"
+msgstr "Parente"
+
+#: ../inc/taxonomies.php:257
+#, fuzzy
+msgid "Parent Status:"
+msgstr "Parente"
+
+#: ../inc/taxonomies.php:258
+#, fuzzy
+msgid "Edit Status"
+msgstr "Status"
+
+#: ../inc/taxonomies.php:259
+#, fuzzy
+msgid "Update Status"
+msgstr "Atualizar"
+
+#: ../inc/taxonomies.php:260
+#, fuzzy
+msgid "Add new Status"
+msgstr "Adicionar novo"
+
+#: ../inc/taxonomies.php:262
+#, fuzzy
+msgid "New Status"
+msgstr "Status"
+
+#: ../inc/taxonomies.php:263
+#, fuzzy
+msgid "View Status"
+msgstr "Status"
+
+#: ../inc/taxonomies.php:264
+msgid "No Status found"
+msgstr ""
+
+#: ../inc/taxonomies.php:265
+#, fuzzy
+msgid "No Status found in the trash"
+msgstr "encontrado no lixo"
+
+#: ../inc/taxonomies.php:380
 #, php-format
 msgid ""
 "We could not find any publication types. <a href=\"%s\">Please add one</a>."

@@ -118,17 +118,17 @@ function flacso_create_taxs()
     $tax_language = 'language';
 
     $labels = array(
-        'name'              => 'Languages',
-        'singular_name'     => 'Language',
-        'search_items'      => 'Search Languages',
-        'all_items'         => 'All Languages',
-        'parent_item'       => 'Parent Language',
-        'parent_item_colon' => 'Parent Language:',
-        'edit_item'         => 'Edit Language',
-        'update_item'       => 'Update Language',
-        'add_new_item'      => 'Add New Language',
-        'new_item_name'     => 'New Language Name',
-        'menu_name'         => 'Language',
+        'name'              => __('Languages', 'flacso'),
+        'singular_name'     => __('Language', 'flacso'),
+        'search_items'      => __('Search Languages', 'flacso'),
+        'all_items'         => __('All Languages', 'flacso'),
+        'parent_item'       => __('Parent Language', 'flacso'),
+        'parent_item_colon' => __('Parent Language:', 'flacso'),
+        'edit_item'         => __('Edit Language', 'flacso'),
+        'update_item'       => __('Update Language', 'flacso'),
+        'add_new_item'      => __('Add New Language', 'flacso'),
+        'new_item_name'     => __('New Language Name', 'flacso'),
+        'menu_name'         => __('Language', 'flacso'),
     );
  
     $args = array(
@@ -153,6 +153,119 @@ function flacso_create_taxs()
 	
 }
 add_action('init', 'flacso_create_taxs');
+
+/** Dummy translate function **/
+function flacso_register_tax_for_translate()
+{
+	$a = array
+	(
+			'name' => __("Publication Types", "flacso"),
+			'singular_name' => __("Publication Type", "flacso"),
+			'search_items' => __("Search for Publication Types", "flacso"),
+			'all_items' => __("All Publication Types", "flacso"),
+			'parent_item' => __("Parent Publication Type", "flacso"),
+			'parent_item_colon' => __("Parent Publication Type:", "flacso"),
+			'edit_item' => __("Edit Publication Type", "flacso"),
+			'update_item' => __("Update Publication Type", "flacso"),
+			'add_new_item' => __("Add new Publication Type", "flacso"),
+			'add_new' => __("Add new", "flacso"),
+			'new_item_name' => __("New Publication Type", "flacso"),
+			'view_item' => __("View Publication Type", "flacso"),
+			'not_found' => __("No Publication Type found", "flacso"),
+			'not_found_in_trash' => __("No Publication Type found in the trash", "flacso"),
+			'menu_name' => __("Publication Types", "flacso"),
+	);
+	$a = array
+	(
+			'name' => __("Higher Education", "flacso"),
+			'singular_name' => __("Higher Education", "flacso"),
+			'search_items' => __("Search for Higher Education", "flacso"),
+			'all_items' => __("All Higher Education", "flacso"),
+			'parent_item' => __("Parent Higher Education", "flacso"),
+			'parent_item_colon' => __("Parent Higher Education:", "flacso"),
+			'edit_item' => __("Edit Higher Education", "flacso"),
+			'update_item' => __("Update Higher Education", "flacso"),
+			'add_new_item' => __("Add new Higher Education", "flacso"),
+			'add_new' => __("Add new", "flacso"),
+			'new_item_name' => __("New Higher Education", "flacso"),
+			'view_item' => __("View Higher Education", "flacso"),
+			'not_found' => __("No Higher Education found", "flacso"),
+			'not_found_in_trash' => __("No Higher Education found in the trash", "flacso"),
+			'menu_name' => __("Higher Education", "flacso"),
+	);
+	$a = array
+	(
+			'name' => __("Countries", "flacso"),
+			'singular_name' => __("Country", "flacso"),
+			'search_items' => __("Search for Countries", "flacso"),
+			'all_items' => __("All Countries", "flacso"),
+			'parent_item' => __("Parent Country", "flacso"),
+			'parent_item_colon' => __("Parent Country:", "flacso"),
+			'edit_item' => __("Edit Country", "flacso"),
+			'update_item' => __("Update Country", "flacso"),
+			'add_new_item' => __("Add new Country", "flacso"),
+			'add_new' => __("Add new", "flacso"),
+			'new_item_name' => __("New Country", "flacso"),
+			'view_item' => __("View Country", "flacso"),
+			'not_found' => __("No Country found", "flacso"),
+			'not_found_in_trash' => __("No Country found in the trash", "flacso"),
+			'menu_name' => __("Countries", "flacso"),
+	);
+	$a = array
+	(
+			'name' => __("Years", "flacso"),
+			'singular_name' => __("Year", "flacso"),
+			'search_items' => __("Search for Years", "flacso"),
+			'all_items' => __("All Years", "flacso"),
+			'parent_item' => __("Parent Year", "flacso"),
+			'parent_item_colon' => __("Parent Year:", "flacso"),
+			'edit_item' => __("Edit Year", "flacso"),
+			'update_item' => __("Update Year", "flacso"),
+			'add_new_item' => __("Add new Year", "flacso"),
+			'add_new' => __("Add new", "flacso"),
+			'new_item_name' => __("New Year", "flacso"),
+			'view_item' => __("View Year", "flacso"),
+			'not_found' => __("No Year found", "flacso"),
+			'not_found_in_trash' => __("No Year found in the trash", "flacso"),
+			'menu_name' => __("Years", "flacso"),
+	);
+	$a = array
+	(
+			'name' => __("Territories", "flacso"),
+			'singular_name' => __("Territory", "flacso"),
+			'search_items' => __("Search for Territories", "flacso"),
+			'all_items' => __("All Territories", "flacso"),
+			'parent_item' => __("Parent Territory", "flacso"),
+			'parent_item_colon' => __("Parent Territory:", "flacso"),
+			'edit_item' => __("Edit Territory", "flacso"),
+			'update_item' => __("Update Territory", "flacso"),
+			'add_new_item' => __("Add new Territory", "flacso"),
+			'add_new' => __("Add new", "flacso"),
+			'new_item_name' => __("New Territory", "flacso"),
+			'view_item' => __("View Territory", "flacso"),
+			'not_found' => __("No Territory found", "flacso"),
+			'not_found_in_trash' => __("No Territory found in the trash", "flacso"),
+			'menu_name' => __("Territories", "flacso"),
+	);
+	$a = array
+	(
+			'name' => __("Status", "flacso"),
+			'singular_name' => __("Status", "flacso"),
+			'search_items' => __("Search for Status", "flacso"),
+			'all_items' => __("All Status", "flacso"),
+			'parent_item' => __("Parent Status", "flacso"),
+			'parent_item_colon' => __("Parent Status:", "flacso"),
+			'edit_item' => __("Edit Status", "flacso"),
+			'update_item' => __("Update Status", "flacso"),
+			'add_new_item' => __("Add new Status", "flacso"),
+			'add_new' => __("Add new", "flacso"),
+			'new_item_name' => __("New Status", "flacso"),
+			'view_item' => __("View Status", "flacso"),
+			'not_found' => __("No Status found", "flacso"),
+			'not_found_in_trash' => __("No Status found in the trash", "flacso"),
+			'menu_name' => __("Status", "flacso"),
+	);
+}
 
 function flacso_register_tax($name, $slug, $post_types, $plural = true, $single = '')
 {
