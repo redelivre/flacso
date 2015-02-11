@@ -117,7 +117,7 @@ class Projects
 				'show_ui' => true, // public
 				'show_in_menu' => true,
 				'menu_position' => 5,
-				'menu_icon' => 'dashicons-book',
+				'menu_icon' => 'dashicons-portfolio',
 				'capability_type' => array('project','projects'),
 				'map_meta_cap' => true,
 				'hierarchical' => false,
