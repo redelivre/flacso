@@ -113,6 +113,9 @@ if ( ! function_exists( 'flacso_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function flacso_entry_footer() {
+	// Source
+	flacso_the_source();
+	
 	// Hide category and tag text for pages.
 	if ( in_array( get_post_type(), array( 'post', 'publication' ) ) ) {
 		/* translators: used between list items, there is a space after the comma */
