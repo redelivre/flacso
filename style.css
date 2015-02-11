@@ -6174,6 +6174,11 @@ a.icon--rounded {
 .updated:not(.published) {
   display: none; }
 
+.single-post .entry-header .entry-meta {
+  border: 0;
+  margin-top: 0;
+  padding: 0; }
+
 .page-content,
 .entry-content,
 .entry-content--summary {
@@ -6322,6 +6327,10 @@ a.icon--rounded {
 
 .archive--secondary .archive--secondary__header {
   margin-bottom: 1.5em; }
+.archive--secondary .entry-meta {
+  border: 0;
+  margin-top: 0;
+  padding: 0; }
 
 .page-header {
   background: #ebebeb;

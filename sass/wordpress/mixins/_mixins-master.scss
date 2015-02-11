@@ -26,3 +26,10 @@
 	border-color: $color__quaternary;
 	border-style: solid;
 }
+
+// Unstyled entry meta for different purposes
+@mixin entry-meta--basic() {
+	border: 0;
+	margin-top: 0;
+	padding: 0;
+}

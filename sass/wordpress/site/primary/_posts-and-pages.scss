@@ -64,6 +64,14 @@
 	display: none;
 }
 
+.single-post {
+	.entry-header {
+		.entry-meta {
+			@include entry-meta--basic;
+		}
+	}
+}
+
 .page-content,
 .entry-content,
 .entry-content--summary {
@@ -275,6 +283,10 @@
 .archive--secondary {
 	.archive--secondary__header {
 		margin-bottom: 1.5em;
+	}
+
+	.entry-meta {
+		@include entry-meta--basic;
 	}
 }
 
