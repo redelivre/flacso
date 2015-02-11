@@ -227,8 +227,10 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 		            	foreach ($terms as $term)
 		            	{?>
 			                <li>
-			                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" autocomplete="off" />
-			                    <?php echo $term->name; ?>
+			                	<label>
+				                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" autocomplete="off" />
+				                    <?php echo $term->name; ?>
+				                </label>
 			                </li><?php
 		            	}?>
 		            </ul>
