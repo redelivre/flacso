@@ -227,7 +227,7 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 		            	foreach ($terms as $term)
 		            	{?>
 			                <li>
-			                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" />
+			                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" autocomplete="off" />
 			                    <?php echo $term->name; ?>
 			                </li><?php
 		            	}?>
@@ -243,7 +243,11 @@ function get_search_adv()
 	
 	global $wp_taxonomies;
 	
-	$types = array('post', 'publication');
+	$types = array('post', 'publication');?>
+	
+	<div class="adv-search-box-custom-field">
+		<input id="adv-search-box-button-top" type="submit" value="Pesquisar" class="search-submit adv-search-box-button">
+	</div><?php
 	
 	foreach ($wp_taxonomies as $taxonomy => $wp_taxonomy)
 	{
@@ -257,15 +261,23 @@ function get_search_adv()
 	
 	$fields = array_merge($CustomFields_global->getFields(), $Publication_global->getFields());
 	
+	?><div class="adv-search-box-custom-field">
+		<label><?php _e("Publication Title", "flacso"); ?></label>
+		<input class="search-field" type="search" title="<?php echo __("Search for documents with that text", 'flacso'); ?>" name="adv-search-box-input-post_content" value="" placeholder="" autocomplete="off" />
+	</div><?php
+	
 	foreach ($fields as $field)
-	{?>
-		<div class="adv-search-box-custom-field">
-			<label><?php echo $field['title']; ?></label>
-			<input class="search-field" type="search" title="<?php echo __("Pesquisar por", 'flacso').": ".$field['title']; ?>" name="<?php echo 'adv-search-box-input-'.$field['slug']; ?>" value="" placeholder="" />
-		</div><?php
+	{
+		if(!in_array($field['slug'], array('post_content', 'post_title')))
+		{?>
+			<div class="adv-search-box-custom-field">
+				<label><?php echo $field['title']; ?></label>
+				<input class="search-field" type="search" title="<?php echo __("Pesquisar por", 'flacso').": ".$field['title']; ?>" name="<?php echo 'adv-search-box-input-'.$field['slug']; ?>" value="" placeholder="" autocomplete="off" />
+			</div><?php
+		}
 	}?>
 	<div class="adv-search-box-custom-field">
-		<input id="adv-search-box-button" type="submit" value="Pesquisar" class="search-submit">
+		<input id="adv-search-box-button" type="submit" value="Pesquisar" class="search-submit adv-search-box-button">
 	</div><?php
 }
 
@@ -297,6 +309,8 @@ function flacso_adv_search_callback()
 	}
 	$meta_query = array('relation' => 'OR');
 	
+	$post_content = false;
+	
 	foreach ($fields as $field)
 	{
 		if(!in_array($field['name'], array('post_content', 'post_title')) && trim(sanitize_text_field($field['value'])) != "")
@@ -307,27 +321,71 @@ function flacso_adv_search_callback()
 				'compare' => 'LIKE',
 			);
 		}
+		elseif($field['name'] == 'post_content' )
+		{
+			$post_content = sanitize_text_field($field['value']);
+		}
 	}
 	
 	$args = array(
 		'post_type' => array('post', 'publication'),
-		'tax_query' => $tax_query,
-		//'meta_query' => $meta_query,
+		'post_status' => 'publish',
+		//'suppress_filters' => false,
 	);
+
+	if(count($tax_query) > 1)
+	{
+		$args['tax_query'] = $tax_query;
+	}
 	
+	if(count($meta_query) > 1)
+	{
+		$args['meta_query'] = $meta_query;
+	}
+	
+	if( ! empty($post_content) )
+	{
+		$args['s'] = $post_content;
+	}
+
 	$query = new WP_Query($args);
 	while ($query->have_posts())
 	{
 		$query->the_post();
 		get_template_part( 'content', 'publication' );
 	}
-	
-	
 	echo '</div>';
 	die();
 }
 add_action( 'wp_ajax_nopriv_flacso_adv_search', 'flacso_adv_search_callback');
 add_action( 'wp_ajax_flacso_adv_search', 'flacso_adv_search_callback');
+
+function flacso_search_where($where)
+{
+	if(
+		(array_key_exists('action', $_POST) && $_POST['action'] == 'flacso_adv_search') &&
+		(strpos($where, 'postmeta') !== false && strpos($where, 'term_relationships') !== false ) 
+	)
+	{
+		//echo "<pre>";//$where\n";
+		$begin = strpos($where, '(');
+		$end = strpos($where, ') AND', $begin);
+		$tax = substr($where, $begin, $end -3);
+		$where = substr($where, $end + 1, -1);
+		//echo("$begin : $end\n");
+		//echo("$where OR $tax) </pre>");
+		return "$where OR $tax) ";
+	}
+	return $where;
+}
+add_filter('posts_where', 'flacso_search_where');
+
+function flacso_search_join($join)
+{
+	echo "<pre>$join</pre>";
+	return $join;
+}
+//add_filter('posts_join', 'flacso_search_join');
 
 /**
  * Implement the Custom Header feature.
