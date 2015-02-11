@@ -155,6 +155,7 @@ function flacso_scripts() {
 	wp_register_style( 'dropdown-checkbox', get_template_directory_uri() . '/css/dropdown-checkbox.css' );
 	wp_enqueue_style( 'dropdown-checkbox' );
 	
+	wp_enqueue_script('adv-search-box', get_template_directory_uri() . '/js/adv-search-box.js', array('jquery'));
 	
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
@@ -203,7 +204,7 @@ function is_gea($post_data = null)
 	return false;
 }
 
-function flacso_create_dropdown_checkbox($taxonomy, $taxonomy_obj)
+function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 {
 	$terms = get_terms($taxonomy);
 	if(count($terms) > 0)
@@ -211,8 +212,8 @@ function flacso_create_dropdown_checkbox($taxonomy, $taxonomy_obj)
 		?>
 	
 		<dl class="dropdown-checkbox"> 
-		  
 		    <dt>
+		    	<label class="dropdown-checkbox-header-label"><?php echo $taxonomy_obj->labels->name; ?></label>
 		    	<div class="clickable">
 			      <span class="hida"><?php echo $taxonomy_obj->labels->search_items; ?></span>    
 			      <p class="multiSel"></p>
@@ -226,7 +227,7 @@ function flacso_create_dropdown_checkbox($taxonomy, $taxonomy_obj)
 		            	foreach ($terms as $term)
 		            	{?>
 			                <li>
-			                    <input type="checkbox" value="<?php echo $term->name; ?>" />
+			                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" />
 			                    <?php echo $term->name; ?>
 			                </li><?php
 		            	}?>
@@ -240,24 +241,32 @@ function flacso_create_dropdown_checkbox($taxonomy, $taxonomy_obj)
 function get_search_adv()
 {
 	
-	$args=array(
-		'object_type' => array('post')
-	);
-	$output = 'objects';
-	$operator = 'and';
+	global $wp_taxonomies;
 	
-	$taxonomies = get_taxonomies($args, $output, $operator);
+	$types = array('post', 'publication');
 	
-	$args=array(
-		'object_type' => array('publication')
-	);
-
-	$taxonomies = array_merge($taxonomies, get_taxonomies($args, $output, $operator));
-	
-	foreach ($taxonomies as $taxonomy => $wp_taxonomy)
+	foreach ($wp_taxonomies as $taxonomy => $wp_taxonomy)
 	{
-		flacso_create_dropdown_checkbox($taxonomy, $wp_taxonomy);
+		if( count(array_intersect($types, $wp_taxonomy->object_type)) > 0 )
+		{
+			flacso_create_dropdown_checkbox('adv-search-box-'.$taxonomy, $taxonomy, $wp_taxonomy);
+		}
 	}
+	global $CustomFields_global;
+	global $Publication_global;
+	
+	$fields = array_merge($CustomFields_global->getFields(), $Publication_global->getFields());
+	
+	foreach ($fields as $field)
+	{?>
+		<div class="adv-search-box-custom-field">
+			<label><?php echo $field['title']; ?></label>
+			<input class="search-field" type="search" title="<?php echo __("Pesquisar por", 'flacso').": ".$field['title']; ?>" name="<?php echo 'adv-search-box-input-'.$field['slug']; ?>" value="" placeholder="" />
+		</div><?php
+	}?>
+	<div class="adv-search-box-custom-field">
+		<input id="adv-search-box-button" type="submit" value="Pesquisar" class="search-submit">
+	</div><?php
 }
 
 /**

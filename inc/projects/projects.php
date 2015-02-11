@@ -554,7 +554,7 @@ class Projects
 	}
 	
 }
-
+global $Project_global;
 $Project_global = new Projects();
 
 ?>

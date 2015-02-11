@@ -27,9 +27,7 @@ jQuery(document).ready(function() {
 			'click',
 			function() {
 	
-				var title = jQuery(this).closest('.mutliSelect').find(
-						'input[type="checkbox"]').val(), title = jQuery(this).val()
-						+ ",";
+				var title = jQuery(this).parent().text().trim() + ",";
 	
 				if (jQuery(this).is(':checked')) {
 					var html = '<span title="' + title + '">' + title + '</span>';

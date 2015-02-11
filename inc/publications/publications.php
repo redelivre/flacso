@@ -548,7 +548,7 @@ class Publications
 	}
 	
 }
-
+global $Publication_global; 
 $Publication_global = new Publications();
 
 ?>

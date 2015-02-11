@@ -18,14 +18,13 @@
     font-size: 12px;
 }
 .dropdown-checkbox dt .clickable {
-    background-color:#4F6877;
+    background-color:#FFFFFF;
     display:block;
     padding: 8px 20px 0px 10px;
     min-height: 25px;
     line-height: 24px;
     overflow: hidden;
     border:0;
-    width:272px;
 }
 .dropdown-checkbox dt div span, .multiSel span {
     cursor:pointer;
@@ -33,17 +32,16 @@
     padding: 0 3px 2px 0;
 }
 .dropdown-checkbox dd ul {
-    background-color: #4F6877;
+    background-color: #FFFFFF;
     border:0;
-    color:#fff;
     display:none;
     left:0px;
     padding: 2px 15px 2px 5px;
     position:absolute;
     top:2px;
-    width:280px;
     list-style:none;
-    height: 100px;
+    height: auto;
+    max-height: 240px;
     overflow: auto;
 }
 .dropdown-checkbox span.value {
@@ -66,3 +64,37 @@
     display: block;
     float: left;
 }
+
+.dropdown-checkbox-header-label {
+    color: #fff;
+}
+
+.dropdown-checkbox {
+    margin-top: 1em;
+    padding: 0.25em 1em;
+}
+
+.dropdown-checkbox .caret {
+    padding: 0;
+}
+
+.adv-search-box-custom-field {
+    padding: 0.25em 1em;
+}
+
+.flacso-search-adv-entry {
+	background-color: #002044;
+}
+
+.adv-search-box-custom-field > label {
+    color: #fff;
+    width: 100%;
+}
+
+.adv-search-box-custom-field .search-field {
+    width: 100%;
+    border-radius: 0;
+    background-color: #fff;
+    padding: 0.25em 0.25em 0;
+}
+
