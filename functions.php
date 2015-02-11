@@ -269,6 +269,66 @@ function get_search_adv()
 	</div><?php
 }
 
+function flacso_adv_search_callback()
+{
+	$checkeds = array_key_exists('checked', $_POST) && is_array($_POST['checked']) ? $_POST['checked'] : array();
+	$fields = array_key_exists('fields', $_POST) && is_array($_POST['fields']) ? $_POST['fields'] : array();
+	echo '<div class="general-list">';
+	
+	/*print_r($checkeds);
+	print_r($fields);*/
+	
+	$taxs = array();
+	foreach ($checkeds as $checked)
+	{
+		if(!array_key_exists(sanitize_text_field($checked['name']), $taxs)) $taxs[sanitize_text_field($checked['name'])] = array();
+		
+		$taxs[sanitize_text_field($checked['name'])][] = sanitize_text_field($checked['value']);
+	}
+	
+	$tax_query = array('relation' => 'OR');
+	foreach ($taxs as $tax => $terms)
+	{
+		$tax_query[] = array(
+			'taxonomy' => $tax,
+			'field'    => 'term_id',
+			'terms'    => $terms,
+		);
+	}
+	$meta_query = array('relation' => 'OR');
+	
+	foreach ($fields as $field)
+	{
+		if(!in_array($field['name'], array('post_content', 'post_title')) && trim(sanitize_text_field($field['value'])) != "")
+		{
+			$meta_query[] = array(
+				'key'     => sanitize_text_field($field['name']),
+				'value'   => "%".sanitize_text_field($field['value'])."%",
+				'compare' => 'LIKE',
+			);
+		}
+	}
+	
+	$args = array(
+		'post_type' => array('post', 'publication'),
+		'tax_query' => $tax_query,
+		//'meta_query' => $meta_query,
+	);
+	
+	$query = new WP_Query($args);
+	while ($query->have_posts())
+	{
+		$query->the_post();
+		get_template_part( 'content', 'publication' );
+	}
+	
+	
+	echo '</div>';
+	die();
+}
+add_action( 'wp_ajax_nopriv_flacso_adv_search', 'flacso_adv_search_callback');
+add_action( 'wp_ajax_flacso_adv_search', 'flacso_adv_search_callback');
+
 /**
  * Implement the Custom Header feature.
  */

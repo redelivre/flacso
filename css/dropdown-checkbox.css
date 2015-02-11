@@ -98,3 +98,7 @@
     padding: 0.25em 0.25em 0;
 }
 
+/* evitar a quebra na respota ajax */
+#main { 
+    min-height: 500px;
+}

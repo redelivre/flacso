@@ -1,37 +1,27 @@
 function flacso_adv_search_click()
 {
-	var checkValues = jQuery('input[name=taxonomy_category\\[\\]]:checked').map(function()
+	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
     {
-        return jQuery(this).val();
+        return {name: jQuery(this).attr("name").replace("adv-search-box-","").replace("[]", ""), value:jQuery(this).val()};
     }).get();
 	
-	if(jQuery('.category-solution-category-archive-list-itens').length)
-	{
-		jQuery.ajax({
-			type   : 'post',
-			url    : 'http://' + window.location.host + '/wp-admin/admin-ajax.php',
-			data   : {
-				action: 'flacso_search_solutions',
-				data: checkValues
-			},
-			success: function(response) {
-				jQuery('.category-solution-category-archive-list-itens').replaceWith(response);
-			}
-		});
-		jQuery(".solution-category-archive-category-header").hide();
-	}
-	else
-	{
-		checkValuesStr = '';
-		
-		for (index = 0; index < checkValues.length; index++)
-		{
-			checkValuesStr += 'cat=' + checkValues[index] + '&';
+	var texts = jQuery("input[name*='adv-search-box-input-']").map(function()
+    {
+		return { name:jQuery(this).attr("name").replace("adv-search-box-input-",""), value:jQuery(this).val()};
+    }).get();
+	
+	jQuery.ajax({
+		type   : 'post',
+		url    : 'http://' + window.location.host + '/wp-admin/admin-ajax.php',
+		data   : {
+			action: 'flacso_adv_search',
+			checked: checkValues,
+			fields: texts
+		},
+		success: function(response) {
+			jQuery('.general-list').replaceWith(response);
 		}
-		
-		window.location.assign(' http://' + window.location.host + '/solution?' + checkValuesStr);
-	    return false;
-	}
+	});
 }
 
 jQuery(document).ready(function () {
