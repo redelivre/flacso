@@ -47,15 +47,38 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
-				'after'  => '</div>',
-			) );
-		?>
+		/* Program / Project relation */
+		$args = array (
+			'post_type'	=> 'post',
+			'ignore_sticky_posts' => true,
+			'posts_per_page' => 5,
+			'meta_query' => array(
+				array(
+					'key'     => '_flacso-project-relation',
+					'value'   => $post->ID,
+					'compare' => 'IN',
+				),
+			)
+		);
+
+		$news = new WP_Query( $args );
+
+		if( $news->have_posts() ) : ?>
+			<div class="archive archive--secondary">
+				<h3 class="archive--secondary__header">Últimas notícias do projeto</h3>
+				<?php
+				while( $news->have_posts() ) : $news->the_post();
+					get_template_part( 'content' );
+				endwhile; ?>
+			</div>
+			<?php wp_reset_postdata(); ?>
+		<?php endif; ?>
 	</div><!-- .entry-content -->
 
 	<?php
+	/* Program / Project relation */
 	$programs = get_post_meta( $post->ID, '_flacso-program-relation', false );
 	if ( ! empty ( $programs ) ) :
 	?>

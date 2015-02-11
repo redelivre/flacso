@@ -6320,6 +6320,9 @@ a.icon--rounded {
 .archive .entry-image {
   max-width: 150px; }
 
+.archive--secondary .archive--secondary__header {
+  margin-bottom: 1.5em; }
+
 .page-header {
   background: #ebebeb;
   margin: 0 0 2em;

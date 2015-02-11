@@ -271,6 +271,13 @@
 	}
 }
 
+// For archives inside page templates, singles etc
+.archive--secondary {
+	.archive--secondary__header {
+		margin-bottom: 1.5em;
+	}
+}
+
 .page-header {
 	background: $color__quaternary;
 	margin: 0 0 2em;	
