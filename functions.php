@@ -251,11 +251,16 @@ function get_search_adv()
 		<input id="adv-search-box-button-top" type="submit" value="Pesquisar" class="search-submit adv-search-box-button">
 	</div><?php
 	
+	$not_in = array('post_format');
+	
 	foreach ($wp_taxonomies as $taxonomy => $wp_taxonomy)
 	{
-		if( count(array_intersect($types, $wp_taxonomy->object_type)) > 0 )
+		if( ! in_array($taxonomy, $not_in))
 		{
-			flacso_create_dropdown_checkbox('adv-search-box-'.$taxonomy, $taxonomy, $wp_taxonomy);
+			if( count(array_intersect($types, $wp_taxonomy->object_type)) > 0 )
+			{
+				flacso_create_dropdown_checkbox('adv-search-box-'.$taxonomy, $taxonomy, $wp_taxonomy);
+			}
 		}
 	}
 	global $CustomFields_global;
