@@ -11,9 +11,10 @@
  * Display the main menu
  */
 function flacso_the_menu() {
+	$nav_class = ( is_admin_bar_showing() ) ? ' main-navigation--admin-bar' : '';
 	?>
-	<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
-		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'flacso' ); ?></button>
+	<nav id="site-navigation" class="site-navigation main-navigation<?php echo $nav_class; ?>" role="navigation">
+		<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'flacso' ); ?></button>
 		<?php
 		wp_nav_menu( array(
             'theme_location'    => 'main',

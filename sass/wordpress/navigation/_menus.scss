@@ -7,6 +7,8 @@
 }
 
 .top-navigation {
+	display: none;
+
 	ul {
 		padding: 0.25em;
 		text-align: right;
@@ -23,6 +25,10 @@
 	a:hover {
 		color: $color__primary;
 	}
+
+	@media (min-width: $screen-md-min) {
+		display: block;
+	}
 }
 
 .main-navigation {
@@ -31,6 +37,20 @@
 	clear: both;
 	display: block;
 	padding: 0.5em 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 499; /* To be displayed below #wpadminbar */
+
+	/* Change top positioning based on WordPress media queries for the admin-bar */
+	&.main-navigation--admin-bar {
+		top: 46px;
+
+		@media (min-width: 782px) {
+			top: 32px;
+		}
+	}
 
 	.children {
 		a {
@@ -38,7 +58,6 @@
 			padding: 0.571em 2.286em;
 		}
 	}
-
 
 	ul {
 		list-style: none;
@@ -85,31 +104,41 @@
 		display: block;
 		padding: 0.5em 2em;
 		position: relative;
-	}
 
-	a:hover {
-		color: $color__tertiary;
+		&:hover {
+			color: $color__tertiary;
+		}
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
-}
 
-/* Small menu */
-.menu-toggle {
-	display: none;
-}
-
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
+	.menu-toggle {
+		border-radius: 0;
 		display: block;
+		margin-left: 2em;
+		@media (min-width: $screen-md-min) {
+			display: none;
+		}
 	}
 
-	.main-navigation ul {
+	.nav-menu {
 		display: none;
+		@media (min-width: $screen-md-min) {
+			display: block;
+		}
+	}
+	
+	&.toggled {
+		.nav-menu {
+			display: block;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		position: relative;
 	}
 }
 
