@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flacso Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 14:00-0300\n"
+"POT-Creation-Date: 2015-02-12 15:36-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
 "Language-Team: \n"
@@ -63,7 +63,7 @@ msgstr ", "
 #: ../content-publication.php:57
 #, php-format
 msgid "Tags: %1$s"
-msgstr "Tags: %1$s"
+msgstr "Palavras-chave: %1$s"
 
 #: ../content-publication.php:67 ../content-post.php:20
 #: ../content-agenda.php:27 ../content-page.php:18
@@ -106,15 +106,15 @@ msgstr "Área de Widget para Banners"
 msgid "The widget area for banners"
 msgstr "A área do widget para banners"
 
-#: ../functions.php:267
+#: ../functions.php:272
 msgid "Publication Title"
 msgstr "Título da Publicação"
 
-#: ../functions.php:268
+#: ../functions.php:273
 msgid "Search for documents with that text"
 msgstr "Pesquisa por publicações com este texto"
 
-#: ../functions.php:277
+#: ../functions.php:282
 msgid "Pesquisar por"
 msgstr "Pesquisar por"
 
@@ -207,7 +207,7 @@ msgstr ""
 
 #: ../inc/customizer.php:22
 msgid "Front Page Content"
-msgstr "Conteúdo Front Page"
+msgstr "Conteúdo da capa"
 
 #: ../inc/customizer.php:33
 msgid "Featured Page"
@@ -215,15 +215,15 @@ msgstr "Página em destaque"
 
 #: ../inc/customizer.php:43
 msgid "GEA Settings"
-msgstr "Configurações GEA"
+msgstr "Configurações do GEA"
 
 #: ../inc/customizer.php:54
 msgid "GEA Custom Label"
-msgstr "Rótulo personalizado GEA"
+msgstr "Rótulo personalizado do GEA"
 
 #: ../inc/customizer.php:64
 msgid "GEA Custom Abreviation"
-msgstr "GEA personalizado Abreviatura"
+msgstr "Abreviatura personalizada do GEA"
 
 #: ../inc/wp-bootstrap-navwalker.php:202
 msgid "Add a Menu"
@@ -235,7 +235,7 @@ msgstr "Menu"
 
 #: ../inc/template-tags.php:40
 msgid "Posts navigation"
-msgstr "Navegação Posts"
+msgstr "Navegação das postagens"
 
 #: ../inc/template-tags.php:44
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
@@ -247,7 +247,7 @@ msgstr "Posts mais recentes <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:71
 msgid "Post navigation"
-msgstr "Mensagem navegação"
+msgstr "Navegação da postagem"
 
 #: ../inc/template-tags.php:74
 msgctxt "Previous post link"
@@ -261,15 +261,15 @@ msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
 #: ../inc/template-tags.php:119
 msgid "Categorias"
-msgstr "CATEGORIAS"
+msgstr "Categorias"
 
 #: ../inc/template-tags.php:125
 msgid "Tags"
-msgstr "Etiquetas"
+msgstr "Palavras-chave"
 
 #: ../inc/template-tags.php:143
 msgid "Share"
-msgstr "Ação"
+msgstr "Compartilhar"
 
 #: ../inc/template-tags.php:180 ../inc/template-tags.php:183
 msgid "Download"
@@ -289,7 +289,7 @@ msgstr "Categoria: %s"
 #: ../inc/template-tags.php:352
 #, php-format
 msgid "Tag: %s"
-msgstr "Tag: %s"
+msgstr "Palavra-chave: %s"
 
 #: ../inc/template-tags.php:354
 #, php-format
@@ -329,7 +329,7 @@ msgstr "F j, Y"
 #: ../inc/template-tags.php:362
 msgctxt "post format archive title"
 msgid "Asides"
-msgstr "Apartes"
+msgstr "À parte"
 
 #: ../inc/template-tags.php:364
 msgctxt "post format archive title"
@@ -359,12 +359,12 @@ msgstr "Links"
 #: ../inc/template-tags.php:374
 msgctxt "post format archive title"
 msgid "Statuses"
-msgstr "Status"
+msgstr "Situações"
 
 #: ../inc/template-tags.php:376
 msgctxt "post format archive title"
 msgid "Audio"
-msgstr "Auditivo"
+msgstr "Áudios"
 
 #: ../inc/template-tags.php:378
 msgctxt "post format archive title"
@@ -383,7 +383,7 @@ msgstr "%1$s : %2$s"
 
 #: ../inc/template-tags.php:386
 msgid "Archives"
-msgstr "Arquivo"
+msgstr "Arquivos"
 
 #: ../inc/extras.php:67
 #, php-format
@@ -402,7 +402,7 @@ msgstr "%s"
 
 #: ../inc/extras.php:131
 msgid "(Edit)"
-msgstr "(Edit)"
+msgstr "(Editar)"
 
 #: ../inc/extras.php:138
 msgid "Your comment is awaiting moderation."
@@ -418,7 +418,7 @@ msgstr "Tudo"
 
 #: ../inc/taxonomies.php:25 ../inc/taxonomies.php:26
 msgid "Parent"
-msgstr "Parente"
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:28
 msgid "Update"
@@ -438,7 +438,7 @@ msgstr "Novo"
 
 #: ../inc/taxonomies.php:32
 msgid "View"
-msgstr "Vista"
+msgstr "Visualizar"
 
 #: ../inc/taxonomies.php:33 ../inc/taxonomies.php:34
 msgid "No"
@@ -474,7 +474,7 @@ msgstr "Língua"
 
 #: ../inc/taxonomies.php:123
 msgid "Search Languages"
-msgstr "Procurar por linguás"
+msgstr "Procurar por linguas"
 
 #: ../inc/taxonomies.php:124
 msgid "All Languages"
@@ -482,11 +482,11 @@ msgstr "Todos os idiomas"
 
 #: ../inc/taxonomies.php:125
 msgid "Parent Language"
-msgstr "Idioma mãe"
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:126
 msgid "Parent Language:"
-msgstr "Idioma mãe:"
+msgstr "Pai:"
 
 #: ../inc/taxonomies.php:127
 msgid "Edit Language"
@@ -505,125 +505,105 @@ msgid "New Language Name"
 msgstr "Novo nome de idioma"
 
 #: ../inc/taxonomies.php:162 ../inc/taxonomies.php:176
-#, fuzzy
 msgid "Publication Types"
-msgstr "Publicações"
+msgstr "Tipos de Publicação"
 
 #: ../inc/taxonomies.php:163
-#, fuzzy
 msgid "Publication Type"
-msgstr "Título da Publicação"
+msgstr "Tipo da Publicação"
 
 #: ../inc/taxonomies.php:164
-#, fuzzy
 msgid "Search for Publication Types"
-msgstr "Pesquisa Publicação"
+msgstr "Pesquisar por Tipo de Publicação"
 
 #: ../inc/taxonomies.php:165
-#, fuzzy
 msgid "All Publication Types"
-msgstr "Título da Publicação"
+msgstr "Todos os Tipos de Publicação"
 
 #: ../inc/taxonomies.php:166
-#, fuzzy
 msgid "Parent Publication Type"
-msgstr "Título da Publicação"
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:167
-#, fuzzy
 msgid "Parent Publication Type:"
-msgstr "Título da Publicação"
+msgstr "Pai:"
 
 #: ../inc/taxonomies.php:168
-#, fuzzy
 msgid "Edit Publication Type"
-msgstr "Editar publicação"
+msgstr "Editar Tipo de Publicação"
 
 #: ../inc/taxonomies.php:169
-#, fuzzy
 msgid "Update Publication Type"
-msgstr "Título da Publicação"
+msgstr "Atualizar Tipo de Publicação"
 
 #: ../inc/taxonomies.php:170
-#, fuzzy
 msgid "Add new Publication Type"
-msgstr "Adicionar nova publicação"
+msgstr "Adicionar novo Tipo de Publicação"
 
 #: ../inc/taxonomies.php:172
-#, fuzzy
 msgid "New Publication Type"
-msgstr "Nova Publicação"
+msgstr "Novo Tipo de Publicação"
 
 #: ../inc/taxonomies.php:173
-#, fuzzy
 msgid "View Publication Type"
-msgstr "Ver Publicação"
+msgstr "Visualizar Tipo de Publicação"
 
 #: ../inc/taxonomies.php:174
-#, fuzzy
 msgid "No Publication Type found"
-msgstr "Publicação não encontrado"
+msgstr "Tipo de Publicação não encontrado"
 
 #: ../inc/taxonomies.php:175
-#, fuzzy
 msgid "No Publication Type found in the trash"
-msgstr "Publicação não encontrado no lixo"
+msgstr "Tipo de Publicação não encontrado no lixo"
 
 #: ../inc/taxonomies.php:180 ../inc/taxonomies.php:181
 #: ../inc/taxonomies.php:194
-#, fuzzy
 msgid "Higher Education"
-msgstr "Ver Publicação"
+msgstr "Categorias de Educação Superior"
 
 #: ../inc/taxonomies.php:182
-#, fuzzy
 msgid "Search for Higher Education"
-msgstr "Pesquisa Publicação"
+msgstr "Procurar por categorias de Educação Superior"
 
 #: ../inc/taxonomies.php:183
 msgid "All Higher Education"
-msgstr "Todas os ensinos superiores"
+msgstr "Todas as categorias de Educação Superior"
 
 #: ../inc/taxonomies.php:184
 msgid "Parent Higher Education"
-msgstr "Ensino Superior mãe"
+msgstr "Mãe"
 
 #: ../inc/taxonomies.php:185
 msgid "Parent Higher Education:"
-msgstr "Ensino Superior mãe:"
+msgstr "Mãe:"
 
 #: ../inc/taxonomies.php:186
-#, fuzzy
 msgid "Edit Higher Education"
-msgstr "Editar publicação"
+msgstr "Editar  categorias de Educação Superior"
 
 #: ../inc/taxonomies.php:187
 msgid "Update Higher Education"
-msgstr "Atualizar Ensino Superior"
+msgstr "Atualizar categoria de Educação Superior"
 
 #: ../inc/taxonomies.php:188
-#, fuzzy
 msgid "Add new Higher Education"
-msgstr "Adicionar nova publicação"
+msgstr "Adicionar novas  categorias de Educação Superior"
 
 #: ../inc/taxonomies.php:190
-#, fuzzy
 msgid "New Higher Education"
-msgstr "Nova Publicação"
+msgstr "Nova  categoria de Educação Superior"
 
 #: ../inc/taxonomies.php:191
-#, fuzzy
 msgid "View Higher Education"
-msgstr "Ver Publicação"
+msgstr "Visualizar categorias de Educação Superior"
 
 #: ../inc/taxonomies.php:192
 msgid "No Higher Education found"
-msgstr "Nenhum ensino superior encontrado"
+msgstr "Nenhuma categoria de Educação Superior encontrada"
 
 #: ../inc/taxonomies.php:193
-#, fuzzy
 msgid "No Higher Education found in the trash"
-msgstr "Publicação não encontrado no lixo"
+msgstr "Categoria de Educação Superior não encontrada no lixo"
 
 #: ../inc/taxonomies.php:198 ../inc/taxonomies.php:212
 msgid "Countries"
@@ -634,232 +614,201 @@ msgid "Country"
 msgstr "País"
 
 #: ../inc/taxonomies.php:200
-#, fuzzy
 msgid "Search for Countries"
-msgstr "Procurar"
+msgstr "Pesquisar por Países"
 
 #: ../inc/taxonomies.php:201
 msgid "All Countries"
-msgstr ""
+msgstr "Todos os países"
 
 #: ../inc/taxonomies.php:202
-#, fuzzy
 msgid "Parent Country"
-msgstr "Parente"
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:203
 msgid "Parent Country:"
-msgstr ""
+msgstr "País-pai:"
 
 #: ../inc/taxonomies.php:204
-#, fuzzy
 msgid "Edit Country"
-msgstr "Editoria"
+msgstr "Editar País"
 
 #: ../inc/taxonomies.php:205
-#, fuzzy
 msgid "Update Country"
-msgstr "Atualizar"
+msgstr "Atualizar País"
 
 #: ../inc/taxonomies.php:206
-#, fuzzy
 msgid "Add new Country"
-msgstr "Adicionar novo projeto"
+msgstr "Adicionar novo País"
 
 #: ../inc/taxonomies.php:208
 msgid "New Country"
-msgstr ""
+msgstr "Novo País"
 
 #: ../inc/taxonomies.php:209
 msgid "View Country"
-msgstr ""
+msgstr "Visualizar País"
 
 #: ../inc/taxonomies.php:210
-#, fuzzy
 msgid "No Country found"
-msgstr "Projeto não encontrado"
+msgstr "País não encontrado"
 
 #: ../inc/taxonomies.php:211
-#, fuzzy
 msgid "No Country found in the trash"
-msgstr "Projeto não foi encontrado no lixo"
+msgstr "País não foi encontrado no lixo"
 
 #: ../inc/taxonomies.php:216 ../inc/taxonomies.php:230
-#, fuzzy
 msgid "Years"
-msgstr "Ano: %s"
+msgstr "Anos"
 
 #: ../inc/taxonomies.php:217
-#, fuzzy
 msgid "Year"
-msgstr "Ano: %s"
+msgstr "Ano"
 
 #: ../inc/taxonomies.php:218
-#, fuzzy
 msgid "Search for Years"
-msgstr "Procurar"
+msgstr "Procurar por Anos"
 
 #: ../inc/taxonomies.php:219
 msgid "All Years"
-msgstr ""
+msgstr "Todos os anos"
 
 #: ../inc/taxonomies.php:220
-#, fuzzy
 msgid "Parent Year"
-msgstr "Parente"
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:221
-#, fuzzy
 msgid "Parent Year:"
-msgstr "Parente"
+msgstr "Pai:"
 
 #: ../inc/taxonomies.php:222
-#, fuzzy
 msgid "Edit Year"
-msgstr "Editar"
+msgstr "Editar Ano"
 
 #: ../inc/taxonomies.php:223
-#, fuzzy
 msgid "Update Year"
-msgstr "Atualizar"
+msgstr "Atualizar Ano"
 
 #: ../inc/taxonomies.php:224
-#, fuzzy
 msgid "Add new Year"
-msgstr "Adicionar novo"
+msgstr "Adicionar novo Ano"
 
 #: ../inc/taxonomies.php:226
 msgid "New Year"
-msgstr ""
+msgstr "Novo Ano"
 
 #: ../inc/taxonomies.php:227
-#, fuzzy
 msgid "View Year"
-msgstr "Vista"
+msgstr "Visualizar Ano"
 
 #: ../inc/taxonomies.php:228
 msgid "No Year found"
-msgstr ""
+msgstr "Ano não encontrado"
 
 #: ../inc/taxonomies.php:229
-#, fuzzy
 msgid "No Year found in the trash"
-msgstr "encontrado no lixo"
+msgstr "Ano não encontrado no lixo"
 
 #: ../inc/taxonomies.php:234 ../inc/taxonomies.php:248
 msgid "Territories"
-msgstr ""
+msgstr "Abrangência territorial"
 
 #: ../inc/taxonomies.php:235
 msgid "Territory"
-msgstr ""
+msgstr "Abrangência territorial"
 
 #: ../inc/taxonomies.php:236
-#, fuzzy
 msgid "Search for Territories"
-msgstr "Procurar"
+msgstr "Procurar por abrangência territorial"
 
 #: ../inc/taxonomies.php:237
 msgid "All Territories"
-msgstr ""
+msgstr "Todas as abrangências territoriais"
 
 #: ../inc/taxonomies.php:238
 msgid "Parent Territory"
-msgstr ""
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:239
 msgid "Parent Territory:"
-msgstr ""
+msgstr "Pai:"
 
 #: ../inc/taxonomies.php:240
 msgid "Edit Territory"
-msgstr ""
+msgstr "Editar abrangência territorial"
 
 #: ../inc/taxonomies.php:241
 msgid "Update Territory"
-msgstr ""
+msgstr "Atualizar abrangência territorial"
 
 #: ../inc/taxonomies.php:242
-#, fuzzy
 msgid "Add new Territory"
-msgstr "Adicionar novo projeto"
+msgstr "Adicionar nova abrangência territorial"
 
 #: ../inc/taxonomies.php:244
 msgid "New Territory"
-msgstr ""
+msgstr "Nova abrangência territorial"
 
 #: ../inc/taxonomies.php:245
 msgid "View Territory"
-msgstr ""
+msgstr "Visualizar abrangência territorial"
 
 #: ../inc/taxonomies.php:246
 msgid "No Territory found"
-msgstr ""
+msgstr "Abrangência territorial não encontrada"
 
 #: ../inc/taxonomies.php:247
-#, fuzzy
 msgid "No Territory found in the trash"
-msgstr "Projeto não foi encontrado no lixo"
+msgstr "Abrangência territorial não encontrada no lixo"
 
 #: ../inc/taxonomies.php:252 ../inc/taxonomies.php:253
 #: ../inc/taxonomies.php:266
-#, fuzzy
 msgid "Status"
-msgstr "Status"
+msgstr "Situação"
 
 #: ../inc/taxonomies.php:254
-#, fuzzy
 msgid "Search for Status"
-msgstr "Procurar"
+msgstr "Procurar por Situação"
 
 #: ../inc/taxonomies.php:255
-#, fuzzy
 msgid "All Status"
-msgstr "Status"
+msgstr "Todas as situações"
 
 #: ../inc/taxonomies.php:256
-#, fuzzy
 msgid "Parent Status"
-msgstr "Parente"
+msgstr "Pai"
 
 #: ../inc/taxonomies.php:257
-#, fuzzy
 msgid "Parent Status:"
-msgstr "Parente"
+msgstr "Pai:"
 
 #: ../inc/taxonomies.php:258
-#, fuzzy
 msgid "Edit Status"
-msgstr "Status"
+msgstr "Editar Situação"
 
 #: ../inc/taxonomies.php:259
-#, fuzzy
 msgid "Update Status"
-msgstr "Atualizar"
+msgstr "Atualizar Situação"
 
 #: ../inc/taxonomies.php:260
-#, fuzzy
 msgid "Add new Status"
-msgstr "Adicionar novo"
+msgstr "Adicionar nova Situação"
 
 #: ../inc/taxonomies.php:262
-#, fuzzy
 msgid "New Status"
-msgstr "Status"
+msgstr "Nova Situação"
 
 #: ../inc/taxonomies.php:263
-#, fuzzy
 msgid "View Status"
-msgstr "Status"
+msgstr "Visualizar Situação"
 
 #: ../inc/taxonomies.php:264
 msgid "No Status found"
-msgstr ""
+msgstr "Situação não encontrada"
 
 #: ../inc/taxonomies.php:265
-#, fuzzy
 msgid "No Status found in the trash"
-msgstr "encontrado no lixo"
+msgstr "Situação não encontrada no lixo"
 
 #: ../inc/taxonomies.php:380
 #, php-format
@@ -875,11 +824,11 @@ msgstr "Importação de Dados"
 
 #: ../inc/options.php:43
 msgid "Configurações do Tema Flacso"
-msgstr "Configurações fazer Tema Flacso"
+msgstr "Configurações do Tema Flacso"
 
 #: ../inc/options.php:101
 msgid "Configurações personalizadas do Tema: Flacso"
-msgstr "Configurações personalizadas fazer Tema: Flacso"
+msgstr "Configurações personalizadas do Tema: Flacso"
 
 #: ../inc/back-end.php:57 ../inc/publications/publications.php:89
 msgid "Publication"
@@ -907,7 +856,7 @@ msgstr "Endereço de origem ou link externo"
 
 #: ../inc/custom-fields.php:48
 msgid "Post Details"
-msgstr "Publicar detalhes"
+msgstr "Detalhes da Postagem"
 
 #: ../inc/custom-fields.php:56
 msgid "Projeto"
@@ -919,11 +868,11 @@ msgstr "Áreas e Programas"
 
 #: ../inc/widgets.php:24
 msgid "Display a list with the elements inside Flacso Library"
-msgstr "Apresentar uma lista com os elementos dentro Flacso Biblioteca"
+msgstr "Apresentar uma lista com os elementos dentro da Biblioteca Flacso"
 
 #: ../inc/widgets.php:25
 msgid "Flacso Library"
-msgstr "Flacso Biblioteca"
+msgstr "Biblioteca Flacso"
 
 #: ../inc/widgets.php:104
 msgid "Title:"
@@ -972,7 +921,7 @@ msgstr "Ver projecto"
 
 #: ../inc/projects/projects.php:101
 msgid "Search Project"
-msgstr "Pesquisa de Projetos"
+msgstr "Pesquisa Projeto"
 
 #: ../inc/projects/projects.php:102
 msgid "Project not found"
@@ -980,7 +929,7 @@ msgstr "Projeto não encontrado"
 
 #: ../inc/projects/projects.php:103
 msgid "Project not found in the trash"
-msgstr "Projeto não foi encontrado no lixo"
+msgstr "Projeto não encontrado no lixo"
 
 #: ../inc/projects/projects.php:143
 msgid "Project Details"
@@ -1006,11 +955,11 @@ msgstr "Upload de arquivo"
 #: ../inc/publications/publications.php:212
 #: ../inc/publications/publications.php:444
 msgid "Choose or Upload an Image"
-msgstr "Escolha ou upload de uma imagem"
+msgstr "Escolha ou suba uma imagem"
 
 #: ../inc/projects/projects.php:283 ../inc/publications/publications.php:277
 msgid "Auto Draft"
-msgstr "Auto Draft"
+msgstr "Rascunho"
 
 #: ../inc/projects/projects.php:451 ../inc/publications/publications.php:445
 msgid "Use this image"
@@ -1019,17 +968,17 @@ msgstr "Use esta imagem"
 #: ../inc/projects/projects.php:534 ../inc/publications/publications.php:528
 #, php-format
 msgid "Permissão original (%s) não localizada"
-msgstr "Permissão de origem ( %s ) localizada NÃO"
+msgstr "Permissão original ( %s ) não localizada"
 
 #: ../inc/projects/projects.php:544 ../inc/publications/publications.php:538
 #, php-format
 msgid "Permissão %s não localizada"
-msgstr "Permissão %s NÃO localizada"
+msgstr "Permissão %s não localizada"
 
 #: ../inc/projects/new-project.php:15
 #: ../inc/publications/new-publication.php:15
 msgid "Invalid post type"
-msgstr "Tipo de pós inválido"
+msgstr "Tipo de postagem inválido"
 
 #: ../inc/projects/new-project.php:23
 #: ../inc/publications/new-publication.php:23
@@ -1037,13 +986,13 @@ msgid ""
 "You do not have access to this page, please make login or change your login "
 "account"
 msgstr ""
-"Você não tem acesso a esta página, por favor faça o login ou alterar sua "
-"conta de login"
+"Você não tem acesso a esta página, por favor faça o login ou altere sua "
+"conta "
 
 #: ../inc/projects/new-project.php:68
 #: ../inc/publications/new-publication.php:68
 msgid "required field"
-msgstr "campo obrigatório"
+msgstr "Campo obrigatório"
 
 #: ../inc/projects/new-project.php:68
 #: ../inc/publications/new-publication.php:68
@@ -1053,58 +1002,59 @@ msgstr "está vazia"
 #: ../inc/projects/new-project.php:119
 #: ../inc/publications/new-publication.php:119
 msgid "error on set post taxonomy"
-msgstr "erro no set pós taxonomia"
+msgstr "Erro ao setar taxonomia da postagem"
 
 #: ../inc/projects/new-project.php:143
 #: ../inc/publications/new-publication.php:143
 msgid "error on set post thumbnail image"
-msgstr "erro set imagem pós miniatura"
+msgstr "Erro ao setar miniatura da imagem"
 
 #: ../inc/projects/new-project.php:147 ../inc/projects/new-project.php:179
 #: ../inc/publications/new-publication.php:147
 #: ../inc/publications/new-publication.php:179
 msgid "error on set post header image"
-msgstr "erro conjunto imagem de cabeçalho post sobre"
+msgstr "Erro ao setar imagem de cabeçalho da postagem"
 
 #: ../inc/projects/new-project.php:151
 #: ../inc/publications/new-publication.php:151
 msgid "error on set post images"
-msgstr "erro no set postar imagens"
+msgstr "Erro ao setar imagens da postagem"
 
 #: ../inc/projects/new-project.php:171
 #: ../inc/publications/new-publication.php:171
 msgid "error on set post thumbnail"
-msgstr "erro no set pós thumbnail"
+msgstr "Erro ao setar miniatura da postagem"
 
 #: ../inc/projects/new-project.php:197
 #: ../inc/publications/new-publication.php:197
 msgid "A new document was successfully created and waiting approval, thanks"
-msgstr "Um novo documento foi criado com êxito e à espera de aprovação, graças"
+msgstr ""
+"Um novo documento foi criado com êxito e esta à espera de aprovação, obrigado"
 
 #: ../inc/projects/new-project.php:309
 #: ../inc/publications/new-publication.php:309
 msgid "Highlight Image"
-msgstr "Destaque Imagem"
+msgstr "Imagem destaque"
 
 #: ../inc/projects/new-project.php:312
 #: ../inc/publications/new-publication.php:312
 msgid "Image showed on listing, like on home or catalog!"
-msgstr "Imagem mostrou no perfil, como em casa ou catálogo!"
+msgstr "Imagem mostrada na listagem, como na home ou catálogo!"
 
 #: ../inc/projects/new-project.php:323
 #: ../inc/publications/new-publication.php:323
 msgid "Header Image"
-msgstr "Header Image"
+msgstr "Cabeçalho"
 
 #: ../inc/projects/new-project.php:326
 #: ../inc/publications/new-publication.php:326
 msgid "Image showed on Header!"
-msgstr "Imagem mostrou no cabeçalho!"
+msgstr "Imagem mostrada no cabeçalho!"
 
 #: ../inc/projects/new-project.php:343
 #: ../inc/publications/new-publication.php:343
 msgid "Publish Document"
-msgstr "Publicar Document"
+msgstr "Publicar Publicação"
 
 #: ../inc/import/data-importer.php:629
 msgid "Remote server did not respond"
@@ -1117,11 +1067,11 @@ msgstr "Servidor remoto retornou uma resposta de erro %1$d %2$s"
 
 #: ../inc/import/data-importer.php:642
 msgid "Remote file is incorrect size"
-msgstr "O arquivo remoto é tamanho incorreto"
+msgstr "O arquivo remoto está em tamanho incorreto"
 
 #: ../inc/import/data-importer.php:647
 msgid "Zero size file downloaded"
-msgstr "Arquivo Zero tamanho baixado"
+msgstr "Arquivo baixado sem tamanho"
 
 #: ../inc/import/data-importer.php:674
 msgid "Invalid file type"
@@ -1133,7 +1083,7 @@ msgstr "Autor"
 
 #: ../inc/publications/publications.php:12
 msgid "Publication Author"
-msgstr "Publicação Autor"
+msgstr " Autor da Publicação"
 
 #: ../inc/publications/publications.php:88
 #: ../inc/publications/publications.php:99
@@ -1160,15 +1110,15 @@ msgstr "Ver Publicação"
 
 #: ../inc/publications/publications.php:95
 msgid "Search Publication"
-msgstr "Pesquisa Publicação"
+msgstr "Busca por Publicação"
 
 #: ../inc/publications/publications.php:96
 msgid "Publication not found"
-msgstr "Publicação não encontrado"
+msgstr "Publicação não encontrada"
 
 #: ../inc/publications/publications.php:97
 msgid "Publication not found in the trash"
-msgstr "Publicação não encontrado no lixo"
+msgstr "Publicação não encontrada no lixo"
 
 #: ../inc/publications/publications.php:137
 msgid "Publication Details"
