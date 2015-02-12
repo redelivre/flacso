@@ -52,33 +52,7 @@ class Flacso_Library_Widget extends WP_Widget {
 		echo $title;
 		echo $after_title;
 
-		$a = array(
-			'orderby' 	=> 'name',
-			'order' 	=> 'ASC',
-			'parent' 	=> 0,
-		);
-
-		$publications = get_terms( 'publication-type', $a );
-		?>
-		<?php if ( $publications ) : ?>
-		<ul class="taxonomy-list clear taxonomy-list--inline clear">
-			<?php foreach( $publications as $publication ) : ?>
-				<?php $publication_link = get_term_link( $publication ); ?>
-				<li class="">
-					<a href="<?php echo $publication_link; ?>">
-		    		<?php
-		    		if ( function_exists( 'get_tax_meta' ) ) {
-		    			echo '<span class="icon icon--rounded ' . get_tax_meta( $publication->term_id, 'flacso_icon_picker' ) . '"></span>';
-		    		}
-			    	?>
-				   	<?php echo $publication->name; ?>
-				    </a>
-			    </li><!-- .general-list__item.media -->
-		    <?php endforeach; ?>
-		</ul><!-- .taxonomy-list -->
-		<?php
-		endif;
-
+		flacso_the_publication_types();
 
 		echo $after_widget;
 

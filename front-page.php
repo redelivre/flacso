@@ -72,32 +72,7 @@ get_header(); ?>
 				<div class="col-md-12">
 					<h4 class="area-title area-title--secondary">Biblioteca</h3>
 					<a href="<?php the_permalink(); ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a>
-					<?php
-					$args = array(
-						'orderby' 	=> 'name',
-						'order' 	=> 'ASC',
-						'parent' 	=> 0,
-					);
-
-					$publications = get_terms( 'publication-type', $args );
-					?>
-					<?php if ( $publications ) : ?>
-					<ul class="taxonomy-list clear taxonomy-list--inline clear">
-						<?php foreach( $publications as $publication ) : ?>
-							<?php $publication_link = get_term_link( $publication ); ?>
-							<li class="">
-								<a href="<?php echo $publication_link; ?>">
-					    		<?php
-					    		if ( function_exists( 'get_tax_meta' ) ) {
-					    			echo '<span class="icon icon--rounded ' . get_tax_meta( $publication->term_id, 'flacso_icon_picker' ) . '"></span>';
-					    		}
-						    	?>
-							   	<?php echo $publication->name; ?>
-							    </a>
-						    </li><!-- .general-list__item.media -->
-					    <?php endforeach; ?>
-					</ul><!-- .taxonomy-list -->
-					<?php endif; ?>
+					<?php flacso_the_publication_types(); ?>
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
