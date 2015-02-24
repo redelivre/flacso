@@ -5750,6 +5750,22 @@ a {
     .top-navigation {
       display: block; } }
 
+.top-navigation--gea li {
+  text-align: center; }
+  .top-navigation--gea li a {
+    background-color: #ebebeb;
+    display: block;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    padding: 0.5em; }
+@media (min-width: 768px) {
+  .top-navigation--gea li {
+    display: inline; }
+    .top-navigation--gea li a {
+      display: inline-block;
+      margin-bottom: 0;
+      width: 24.5%; } }
+
 .main-navigation {
   background-color: #ebebeb;
   background-image: url("images/bg-menu.png");

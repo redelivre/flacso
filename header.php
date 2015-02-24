@@ -31,21 +31,29 @@
 							<img src="<?php echo get_template_directory_uri() . '/images/header--gea.png'; ?>" alt="GEA">
 						</a>
 					</div><!-- .site-branding -->
-				<?php else : ?>
-				<div class="container">
+					<div class="container">
 						<div class="row">
-					<div class="site-complementary  wrapper--small clear">
-						
-						<div class="col-md-9">
-							<nav id="site-navigation--top" class="site-navigation top-navigation pull-right" role="navigation">
-								<?php wp_nav_menu( array( 'theme_location' => 'top', 'depth' => 1 ) ); ?>
-							</nav><!-- #site-navigation -->
-						</div>
-						<div class="col-md-3">
-							<?php get_search_form(); ?>
-						</div>
-					</div><!-- .site-complementary -->
-								</div><!-- .row -->
+							<div class="col-md-12">
+								<nav id="site-navigation--gea" class="site-navigation top-navigation--gea" role="navigation">
+									<?php wp_nav_menu( array( 'theme_location' => 'top-gea', 'depth' => 1 ) ); ?>
+								</nav><!-- #site-navigation -->
+							</div>
+						</div><!-- .row -->
+					</div><!-- .container -->
+				<?php else : ?>
+					<div class="container">
+						<div class="row">
+							<div class="site-complementary  wrapper--small clear">
+								<div class="col-md-9">
+									<nav id="site-navigation--top" class="site-navigation top-navigation pull-right" role="navigation">
+										<?php wp_nav_menu( array( 'theme_location' => 'top', 'depth' => 1 ) ); ?>
+									</nav><!-- #site-navigation -->
+								</div>
+								<div class="col-md-3">
+									<?php get_search_form(); ?>
+								</div>
+							</div><!-- .site-complementary -->
+						</div><!-- .row -->
 					</div><!-- .container -->	
 					<div class="site-branding clear">
 						<?php if ( get_header_image() ) : ?>

@@ -31,6 +31,34 @@
 	}
 }
 
+.top-navigation--gea {
+
+	li {
+		text-align: center;
+
+		a {
+			background-color: $color__quaternary;
+			display: block;
+			font-size: 1.25em;
+			margin-bottom: 0.5em;
+			padding: 0.5em;
+		}
+	}
+
+
+	@media (min-width: $screen-sm-min) {
+		li {
+			display: inline;
+
+			a {
+				display: inline-block;
+				margin-bottom: 0;
+				width: 24.5%;
+			}
+		}
+	}
+}
+
 .main-navigation {
 	background-color: $color__quaternary;
 	background-image: url('images/bg-menu.png');
