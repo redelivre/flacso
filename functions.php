@@ -209,6 +209,12 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 	$terms = get_terms($taxonomy);
 	if(count($terms) > 0)
 	{
+		//Procurar por gea automáticamente caso em gea space
+		$checked = '';
+		if($taxonomy == 'gea' && is_gea())
+		{
+			$checked = 'checked="checked"';
+		}
 		?>
 	
 		<dl class="dropdown-checkbox"> 
@@ -228,7 +234,7 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 		            	{?>
 			                <li>
 			                	<label>
-				                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" autocomplete="off" />
+				                    <input type="checkbox" name="<?php echo "{$inputname}[]"; ?>" value="<?php echo $term->term_id; ?>" autocomplete="off" <?php echo $checked; ?> />
 				                    <?php echo $term->name; ?>
 				                </label>
 			                </li><?php
