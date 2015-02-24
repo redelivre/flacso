@@ -14,9 +14,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+					<?php
+					// Check if we're inside GEA
+					$sidebar_name = ( is_gea() ) ? 'sidebar-footer-gea' : 'sidebar-footer';
+					if ( is_active_sidebar( $sidebar_name ) ) : ?>
 			        <div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
-			                <?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			            <?php dynamic_sidebar( $sidebar_name ); ?>
 			        </div><!-- .widget-area--footer -->
 			    	<?php endif; ?>
 				</div>

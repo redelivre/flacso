@@ -35,6 +35,10 @@ function flacso_body_classes( $classes ) {
 		$classes[] = 'archive';
 	}
 
+	if ( is_gea() ) {
+		$classes[] = 'gea';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'flacso_body_classes' );

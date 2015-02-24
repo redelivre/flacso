@@ -52,6 +52,7 @@ function flacso_setup() {
 	register_nav_menus( array(
 		'main' => __( 'Main Menu', 'flacso' ),
 		'top' => __( 'Top Menu', 'flacso' ),
+		'top-gea' => __( 'Top Menu (GEA)', 'flacso' ),
 	) );
 
 	/*
@@ -100,6 +101,16 @@ function flacso_widgets_init() {
 		'name'          => __( 'Footer Widget Area', 'flacso' ),
 		'id'            => 'sidebar-footer',
 		'description'	=> __( 'The widget area on the footer', 'flacso' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-3">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer Widget Area (GEA)', 'flacso' ),
+		'id'            => 'sidebar-footer-gea',
+		'description'	=> __( 'The widget area on the GEA footer', 'flacso' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-3">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',

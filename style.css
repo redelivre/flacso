@@ -6118,6 +6118,10 @@ a.icon--rounded {
   .site-footer a {
     color: #2c6db6; }
 
+/* GEA specific styles */
+.gea .site-footer {
+  background-image: url("images/bg-footer--gea.png"); }
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
