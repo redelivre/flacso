@@ -106,6 +106,16 @@ function flacso_widgets_init() {
 		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
 		'after_title'   => '</h4>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer Widget Area (GEA)', 'flacso' ),
+		'id'            => 'sidebar-footer-gea',
+		'description'	=> __( 'The widget area on the GEA footer', 'flacso' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-3">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
+		'after_title'   => '</h4>',
+	) );
 	
 	register_sidebar( array(
 		'name'          => __( 'Banners Widget Area', 'flacso' ),
