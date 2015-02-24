@@ -52,6 +52,7 @@ function flacso_setup() {
 	register_nav_menus( array(
 		'main' => __( 'Main Menu', 'flacso' ),
 		'top' => __( 'Top Menu', 'flacso' ),
+		'top-gea' => __( 'Top Menu (GEA)', 'flacso' ),
 	) );
 
 	/*
