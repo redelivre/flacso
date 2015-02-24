@@ -19,11 +19,12 @@
 	}
 
 	a {
+		color: $color__link--secondary;
 		padding: 0 0.5em;
-	}
 
-	a:hover {
-		color: $color__primary;
+		&:hover {
+			color: $color__primary;
+		}
 	}
 
 	@media (min-width: $screen-md-min) {

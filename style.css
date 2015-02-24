@@ -5743,9 +5743,10 @@ a {
   .top-navigation li {
     display: inline-block; }
   .top-navigation a {
+    color: #ba0933;
     padding: 0 0.5em; }
-  .top-navigation a:hover {
-    color: #002044; }
+    .top-navigation a:hover {
+      color: #002044; }
   @media (min-width: 992px) {
     .top-navigation {
       display: block; } }
@@ -6091,9 +6092,6 @@ a.icon--rounded {
   color: #fff; }
 
 /* Site header */
-.site-header a {
-  color: #ba0933; }
-
 .site-complementary {
   font-size: 0.875em; }
 
