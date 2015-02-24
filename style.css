@@ -5751,21 +5751,23 @@ a {
     .top-navigation {
       display: block; } }
 
-.top-navigation--gea li {
-  text-align: center; }
-  .top-navigation--gea li a {
-    background-color: #ebebeb;
-    display: block;
-    font-size: 1.25em;
-    margin-bottom: 0.5em;
-    padding: 0.5em; }
-@media (min-width: 768px) {
+.top-navigation--gea {
+  margin: 1.5em 0; }
   .top-navigation--gea li {
-    display: inline; }
+    text-align: center; }
     .top-navigation--gea li a {
-      display: inline-block;
-      margin-bottom: 0;
-      width: 24.5%; } }
+      background-color: #ebebeb;
+      display: block;
+      font-size: 1.25em;
+      margin-bottom: 0.5em;
+      padding: 0.5em; }
+  @media (min-width: 768px) {
+    .top-navigation--gea li {
+      display: inline; }
+      .top-navigation--gea li a {
+        display: inline-block;
+        margin-bottom: 0;
+        width: 24.5%; } }
 
 .main-navigation {
   background-color: #ebebeb;
@@ -6133,6 +6135,8 @@ a.icon--rounded {
     color: #2c6db6; }
 
 /* GEA specific styles */
+.gea .site-header {
+  margin-top: 1.5em; }
 .gea .site-footer {
   background-image: url("images/bg-footer--gea.png"); }
 
