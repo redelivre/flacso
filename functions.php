@@ -98,6 +98,16 @@ function flacso_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => __( 'Sidebar (GEA)', 'flacso' ),
+		'id'            => 'sidebar-main-gea',
+		'description'   => __( 'The main sidebar for GEA', 'flacso' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title area-title area-title--secondary">',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Footer Widget Area', 'flacso' ),
 		'id'            => 'sidebar-footer',
 		'description'	=> __( 'The widget area on the footer', 'flacso' ),

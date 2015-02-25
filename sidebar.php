@@ -8,10 +8,12 @@
 
 <div class="col-md-3 col-md-pull-9">
 	<div id="secondary" class="widget-area widget-area--main" role="complementary">
-		<?php flacso_the_menu(); ?>
-		
 		<?php
-		if ( is_active_sidebar( 'sidebar-main' ) ) {
+		if ( is_gea() ) {
+			dynamic_sidebar( 'sidebar-main-gea' );
+		}
+		else {
+			flacso_the_menu();
 			dynamic_sidebar( 'sidebar-main' );
 		}
 		?>
