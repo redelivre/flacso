@@ -6137,6 +6137,8 @@ a.icon--rounded {
 /* GEA specific styles */
 .gea .site-header {
   margin-top: 1.5em; }
+.gea .gea-news {
+  padding: 1.5em 0; }
 .gea .widget {
   margin-bottom: 1.5em;
   padding: 0; }
