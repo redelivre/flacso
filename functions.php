@@ -197,6 +197,11 @@ function is_gea($post_data = null)
 		$post_data = get_post($post_data);
 	}
 	
+	if(is_front_page()) // front can contain both
+	{
+		return false;
+	}
+	
 	if( empty($post_data ) || ( is_object($post_data) && get_class($post_data) == 'WP_Error' ) )
 	{
 		return false;
