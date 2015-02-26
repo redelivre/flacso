@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'flacso';
-  src: url('../font/flacso.eot?54565866');
-  src: url('../font/flacso.eot?54565866#iefix') format('embedded-opentype'),
-       url('../font/flacso.woff?54565866') format('woff'),
-       url('../font/flacso.ttf?54565866') format('truetype'),
-       url('../font/flacso.svg?54565866#flacso') format('svg');
+  src: url('../font/flacso.eot?84195737');
+  src: url('../font/flacso.eot?84195737#iefix') format('embedded-opentype'),
+       url('../font/flacso.woff?84195737') format('woff'),
+       url('../font/flacso.ttf?84195737') format('truetype'),
+       url('../font/flacso.svg?84195737#flacso') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'flacso';
-    src: url('../font/flacso.svg?54565866#flacso') format('svg');
+    src: url('../font/flacso.svg?84195737#flacso') format('svg');
   }
 }
 */
@@ -71,3 +71,4 @@
 .icon-calendar:before { content: '\e812'; } /* '' */
 .icon-book-open-1:before { content: '\e813'; } /* '' */
 .icon-search:before { content: '\e814'; } /* '' */
+.icon-globe:before { content: '\e815'; } /* '' */

@@ -131,6 +131,12 @@
       "css": "youtube",
       "code": 59408,
       "src": "zocial"
+    },
+    {
+      "uid": "1e89103762be72b0720eda0468e62b90",
+      "css": "globe",
+      "code": 59413,
+      "src": "linecons"
     }
   ]
 }
