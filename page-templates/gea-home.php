@@ -53,6 +53,7 @@ get_header(); ?>
 					<div class="col-md-12">
 						<?php
 						$noticias = new WP_Query( array (
+							'post_type' => 'post',
 							'posts_per_page' => 3,
 							'ignore_sticky_posts' => true,
 							'tax_query' => array(
