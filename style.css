@@ -6081,6 +6081,8 @@ textarea {
     right: -8px;
     background: #2b6aa6;
     z-index: -1; }
+  .widget_flacso_gea_documentation_widget .icon {
+    font-size: 4em; }
   .widget_flacso_gea_documentation_widget .widget-title {
     color: #fff;
     font-size: 1.25em;

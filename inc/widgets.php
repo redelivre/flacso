@@ -122,6 +122,7 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 
 		echo '<a href="' . $link . '" class="documentation-center-link">';
 			
+		echo '<span class="icon icon-globe"></span>';
 		echo $before_title;
 		echo $title;
 		echo $after_title;
