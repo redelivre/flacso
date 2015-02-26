@@ -16,11 +16,6 @@
 	}
 }
 
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
-
 .widget-area--main {
 	.widget {
 		padding: 1.5em;
@@ -29,6 +24,11 @@
 	.widget-title {
 		color: $color__tertiary;
 	}
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
 }
 
 /* Library widget */
@@ -57,5 +57,63 @@
 .featured-links {
 	.widget-title {
 		display: none;
+	}
+}
+
+/* GEA Documentation Center */
+.widget_flacso_gea_documentation_widget {
+	background: $color__senary;
+	border: 3px solid #fff;
+	color: #fff;
+	margin-left: 5px;
+	max-width: 241px;
+	position: relative;
+	text-align: center;
+
+	&:after {
+		content: ' ';
+		position: absolute;
+		top: -8px;
+		left: -8px;
+		bottom: -8px;
+		right: -8px;
+		background: $color__senary;
+		z-index: -1;
+	}
+
+	.widget-title {
+		color: #fff;
+		font-size: 1.25em;
+		margin-bottom: 1.2em;
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		color: #fff;
+		display: block;
+		font-weight: normal;
+		padding: 1.5em;
+
+		&:hover {
+			background-color: $color__secondary;
+		}
+	}
+
+	.documentation-center-counter {
+		display: block;
+		font-size: 1.25em;
+		font-weight: bold;
+	}
+
+	.documentation-center-highlight {
+		border-style: dotted;
+		border-width: 2px 0;
+		font-weight: bold;
+		padding: 1.5em 0;
 	}
 }

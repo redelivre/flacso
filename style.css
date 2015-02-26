@@ -6038,14 +6038,14 @@ textarea {
     margin: 0 0 1.5em;
     font-size: 1em; }
 
-/* Search widget */
-.widget_search .search-submit {
-  display: none; }
-
 .widget-area--main .widget {
   padding: 1.5em; }
 .widget-area--main .widget-title {
   color: #2c6db6; }
+
+/* Search widget */
+.widget_search .search-submit {
+  display: none; }
 
 /* Library widget */
 .widget_flacso_library {
@@ -6062,6 +6062,47 @@ textarea {
 /* Featured links / Banners Widget Area */
 .featured-links .widget-title {
   display: none; }
+
+/* GEA Documentation Center */
+.widget_flacso_gea_documentation_widget {
+  background: #2b6aa6;
+  border: 3px solid #fff;
+  color: #fff;
+  margin-left: 5px;
+  max-width: 241px;
+  position: relative;
+  text-align: center; }
+  .widget_flacso_gea_documentation_widget:after {
+    content: ' ';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    background: #2b6aa6;
+    z-index: -1; }
+  .widget_flacso_gea_documentation_widget .widget-title {
+    color: #fff;
+    font-size: 1.25em;
+    margin-bottom: 1.2em; }
+  .widget_flacso_gea_documentation_widget p:last-child {
+    margin-bottom: 0; }
+  .widget_flacso_gea_documentation_widget a {
+    color: #fff;
+    display: block;
+    font-weight: normal;
+    padding: 1.5em; }
+    .widget_flacso_gea_documentation_widget a:hover {
+      background-color: #023670; }
+  .widget_flacso_gea_documentation_widget .documentation-center-counter {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold; }
+  .widget_flacso_gea_documentation_widget .documentation-center-highlight {
+    border-style: dotted;
+    border-width: 2px 0;
+    font-weight: bold;
+    padding: 1.5em 0; }
 
 /*--------------------------------------------------------------
 10.0 Content
