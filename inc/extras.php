@@ -186,4 +186,20 @@ function remove_caption_padding( $width ) {
 	return $width - 10;
 }
 add_filter( 'img_caption_shortcode_width', 'remove_caption_padding' );
+
+function flacso_exclude_gea($wp_query)
+{
+	if(is_front_page())
+	{
+		$tax_query = array(
+			'taxonomy' => 'gea',
+			'field'    => 'slug',
+			'terms'    => 'GEA',
+			'operator' => 'NOT IN',
+		);
+		$wp_query->tax_query->queries[] = $tax_query;
+		$wp_query->query_vars['tax_query'] = $wp_query->tax_query->queries;
+	}
+}
+add_action( 'pre_get_posts', 'flacso_exclude_gea' );
 ?>

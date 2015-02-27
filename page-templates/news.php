@@ -31,8 +31,17 @@ get_header(); ?>
 				$args = array (
 					'post_type'	=> 'post',
 					'ignore_sticky_posts' => true,
-					'paged' => $paged
+					'paged' => $paged,
 				);
+				if(!is_gea())
+				{
+					$args['tax_query'] = array(array(
+						'taxonomy' => 'gea',
+						'field'    => 'slug',
+						'terms'    => 'GEA',
+						'operator' => 'NOT IN')
+					);
+				}
 
 				// Instantiate custom query
 				$news = new WP_Query( $args );
