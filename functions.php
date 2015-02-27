@@ -188,13 +188,16 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 	{
 		//Procurar por gea automáticamente caso em gea space
 		$checked = '';
+		$dlstyle = '';
+		
 		if($taxonomy == 'gea' && is_gea())
 		{
 			$checked = 'checked="checked"';
+			$dlstyle = 'style="display:none;"';
 		}
 		?>
 	
-		<dl class="dropdown-checkbox"> 
+		<dl class="dropdown-checkbox" <?php echo $dlstyle ?> > 
 		    <dt>
 		    	<label class="dropdown-checkbox-header-label"><?php echo $taxonomy_obj->labels->name; ?></label>
 		    	<div class="clickable">
