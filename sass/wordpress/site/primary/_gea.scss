@@ -1,0 +1,49 @@
+/* GEA specific styles */
+.gea {
+	
+	a,
+	.read-more {
+		color: $color__senary;
+
+		&:hover {
+			color: $color__primary;
+		}
+	}
+
+	.site-header {
+		margin-top: 1.5em;
+	}
+
+	.featured-intro .hentry {
+		border-color: $color__senary;
+	}
+
+	.gea-news {
+		padding: 1.5em 0;
+	}
+
+	.widget {
+		margin-bottom: 1.5em;
+		padding: 0;
+	}
+
+	.widget_flacso_gea_documentation_widget {
+		a {
+			color: #fff;
+		}
+	}
+
+	.widget-area--footer {
+		.widget-title {
+			color: $color__primary;
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+
+	.site-footer {
+		background-image: url('images/bg-footer--gea.png');
+	}
+}
