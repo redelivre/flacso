@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 	jQuery(".banners-widget-area").cycle({
-	    allowWrap: false,
+	    allowWrap: true,
 	    carouselFluid: true,
 	    fx: "carousel",
 	    manualSpeed: 400,
