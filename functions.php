@@ -181,6 +181,55 @@ function flacso_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
+/**
+ * Function to check if a post object is from gea place
+ * @param WP_Post|int $post_data null for global post
+ * @return boolean
+ */
+function is_gea($post_data = null)
+{
+	if( empty($post_data ) )
+	{
+		$post_data = get_post();
+	}
+	elseif(is_int($post_data) && $post_data > 0 )
+	{
+		$post_data = get_post($post_data);
+	}
+	
+	if(is_front_page()) // front can contain both
+	{
+		return false;
+	}
+	
+	if( empty($post_data ) || ( is_object($post_data) && get_class($post_data) == 'WP_Error' ) )
+	{
+		return false;
+	}
+	
+	if($post_data->post_type == 'page')
+	{
+		$pages = get_pages( array( 'name' => 'gea' ) );
+		if(is_array($pages) && count($pages) > 0)
+		{
+			$page = $pages[0];
+			if($page->ID == $post_data->ID || $post_data->post_parent == $page->ID || (property_exists($post_data, 'ancestors') && is_array($post_data->ancestors) && in_array($page->ID, $post_data->ancestors) ))
+			{
+				return true;
+			}
+		}
+	}
+	elseif(is_single($post_data))
+	{
+		if(has_term('gea', 'gea', $post_data))
+		{
+			return true;
+		}
+	}
+	
+	return false;
+}
+
 function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 {
 	$terms = get_terms($taxonomy);
