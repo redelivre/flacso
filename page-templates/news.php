@@ -13,7 +13,12 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : 
+				global $post;
+				global $wp_query;
+				$wp_query_bk = $wp_query;
+				$post_bk = $post;
+				?>
 
 				<header class="page-header">
 					<?php
@@ -33,7 +38,15 @@ get_header(); ?>
 					'ignore_sticky_posts' => true,
 					'paged' => $paged,
 				);
-				if(!is_gea())
+				if(is_gea())
+				{
+					$args['tax_query'] = array(array(
+						'taxonomy' => 'gea',
+						'field'    => 'slug',
+						'terms'    => 'GEA',
+					));
+				}
+				else
 				{
 					$args['tax_query'] = array(array(
 						'taxonomy' => 'gea',
@@ -60,6 +73,8 @@ get_header(); ?>
 
 				// Reset postdata
 				wp_reset_postdata();
+				$wp_query = $wp_query_bk;
+				$post = $post_bk;
 				?>
 
 				<?php flacso_paging_nav(); ?>
