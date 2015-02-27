@@ -530,13 +530,23 @@ function is_gea($post_data = null)
 	
 	if($post_data->post_type == 'page')
 	{
-		$pages = get_pages( array( 'name' => 'gea' ) );
-		if(is_array($pages) && count($pages) > 0)
+		if(get_page_template_slug($post_data->ID) == 'page-templates/gea-home.php')
 		{
-			$page = $pages[0];
-			if($page->ID == $post_data->ID || $post_data->post_parent == $page->ID || (property_exists($post_data, 'ancestors') && is_array($post_data->ancestors) && in_array($page->ID, $post_data->ancestors) ))
+			return true;
+		}
+		else 
+		{
+			$pages = get_posts(array(
+				'post_type' => 'page',
+				'meta_key' => '_wp_page_template',
+				'meta_value' => 'page-templates/gea-home.php'
+			));
+			foreach ($pages as $page)
 			{
-				return true;
+				if($page->ID == $post_data->ID || $post_data->post_parent == $page->ID || (property_exists($post_data, 'ancestors') && is_array($post_data->ancestors) && in_array($page->ID, $post_data->ancestors) ))
+				{
+					return true;
+				}
 			}
 		}
 	}
