@@ -93,6 +93,7 @@ get_header(); ?>
 								<a href="<?php the_permalink(); ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
 							</article><!-- #post-## -->
 						<?php endwhile; endif; ?>
+						<?php wp_reset_postdata(); ?>
 					</div>
 				</div><!-- .row -->
 		</section><!-- .featured-news -->
