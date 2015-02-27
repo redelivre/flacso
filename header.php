@@ -25,9 +25,24 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		
-				<?php if ( is_gea() ) : ?>
+				<?php if ( is_gea() ) :
+					$gea_page_template = get_posts(array(
+						'post_type' => 'page',
+						'meta_key' => '_wp_page_template',
+						'meta_value' => 'page-templates/gea-home.php'
+					));
+
+					if ( $gea_page_template ) {
+						$gea_home_page = array_pop( $gea_page_template );
+
+						$header_link = esc_url( $gea_home_page->guid );
+					}
+					else {
+						$header_link = esc_url( home_url( '/' ) );
+					}
+					?>
 					<div class="site-branding clear">
-						<a class="site-branding__image_link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<a class="site-branding__image_link" href="<?php echo $header_link; ?>" rel="home">
 							<img src="<?php echo get_template_directory_uri() . '/images/header--gea.png'; ?>" alt="GEA">
 						</a>
 					</div><!-- .site-branding -->
