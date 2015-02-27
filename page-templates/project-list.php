@@ -27,9 +27,10 @@ get_header(); ?>
 					echo '<div class="archive archive--secondary">';
 					foreach( $statuses as $status => $title ) {
 						$args = array (
-							'post_type'		=> 'project',
-							'orderby'		=> 'title',
-							'order'			=> 'ASC',
+							'post_type'			=> 'project',
+							'orderby'			=> 'title',
+							'order'				=> 'ASC',
+							'posts_per_page'	=> -1,
 							'tax_query'		=> array(
 								array (
 									'taxonomy'	=> 'status',
