@@ -1,18 +1,26 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 
-a.icon--rounded {
+.icon--rounded {
 	background-color: $color__primary;
 	border-radius: 50%;
 	color: #fff;
 	display: inline-block;
-	font-size: 3em;
 	padding: 0.25em;
 
 	&:hover {
 		background-color: $color__tertiary;
 	}
 
+}
+
+.icon--large {
+	font-size: 150%;
+}
+
+.icon--alternate {
+	background-color: #fff;
+	color: $color__primary !important;
 }
 
 .wrapper {

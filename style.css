@@ -6109,15 +6109,21 @@ textarea {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
-a.icon--rounded {
+.icon--rounded {
   background-color: #002044;
   border-radius: 50%;
   color: #fff;
   display: inline-block;
-  font-size: 3em;
   padding: 0.25em; }
-  a.icon--rounded:hover {
+  .icon--rounded:hover {
     background-color: #2c6db6; }
+
+.icon--large {
+  font-size: 150%; }
+
+.icon--alternate {
+  background-color: #fff;
+  color: #002044 !important; }
 
 .wrapper {
   padding: 2.5em 0; }
