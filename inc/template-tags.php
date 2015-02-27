@@ -540,7 +540,7 @@ function is_gea($post_data = null)
 			}
 		}
 	}
-	else 
+	elseif(is_single($post_data))
 	{
 		if(has_term('gea', 'gea', $post_data))
 		{
