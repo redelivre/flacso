@@ -115,12 +115,13 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 		 */
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Documentation Center', 'flacso' ) : $instance['title'], $instance, $this->id_base );
 		$link = esc_url( $instance['link'] );
+		$page_id = (int) $instance['page_id'];
 
 		extract($args);
 
 		echo $before_widget;
 
-		echo '<a href="' . $link . '" class="documentation-center-link">';
+		echo '<a href="' . get_page_link( $page_id ) . '" class="documentation-center-link">';
 			
 		echo '<span class="icon icon-globe"></span>';
 		echo $before_title;
@@ -151,9 +152,10 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$new_instance = wp_parse_args( (array) $new_instance, array( 'title' => '') );
+		$new_instance = wp_parse_args( (array) $new_instance, array( 'title' => '', 'page_id' => 0 ) );
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['link'] = esc_url( $new_instance['link'] );
+		$instance['page_id'] = (int) $new_instance['page_id'];
 
 		return $instance;
 	}
@@ -163,13 +165,25 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'link' => '' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'link' => '', 'page_id' => 0 ) );
 		$title = $instance['title'];
 		$link = $instance['link'];
+		$page_id = $instance['page_id'];
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'flacso' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php _e( 'Page:', 'flacso' ); ?></label>
+			<?php
+			$args = array(
+		        'id' => $this->get_field_id('page_id'),
+		        'name' => $this->get_field_name('page_id'),
+		        'selected' => $page_id
+		    );
+		    wp_dropdown_pages( $args );
+		    ?>
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php _e( 'Link:', 'flacso' ); ?></label>
