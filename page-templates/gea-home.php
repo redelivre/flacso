@@ -80,7 +80,7 @@ get_header(); ?>
 										<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 										<?php if ( 'post' == get_post_type() ) : ?>
-										<div class="entry-meta">
+										<div class="entry-meta entry-meta--basic">
 											<?php flacso_posted_on(); ?>
 										</div><!-- .entry-meta -->
 										<?php endif; ?>
