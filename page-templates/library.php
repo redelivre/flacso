@@ -33,7 +33,7 @@ get_header(); ?>
 					<?php $publication_link = get_term_link( $publication ); ?>
 					<div class="general-list__item media clear">
 						<div class="pull-left">
-							<a href="<?php echo $publication_link; ?>" class="icon--rounded">
+							<a href="<?php echo $publication_link; ?>" class="icon icon--large icon--rounded">
 					    	<?php
 					    		if ( function_exists( 'get_tax_meta' ) ) {
 					    			echo '<span class="' . get_tax_meta( $publication->term_id, 'flacso_icon_picker' ) . '"></span>';

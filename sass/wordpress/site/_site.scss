@@ -9,7 +9,13 @@
 	padding: 0.25em;
 
 	&:hover {
-		background-color: $color__tertiary;
+		background-color: $color__secondary;
+		color: #fff;
+	}
+
+	&:visited {
+		background-color: $color__primary;
+		color: #fff;
 	}
 
 }

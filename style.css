@@ -6033,7 +6033,11 @@ textarea {
   display: inline-block;
   padding: 0.25em; }
   .icon--rounded:hover {
-    background-color: #2c6db6; }
+    background-color: #023670;
+    color: #fff; }
+  .icon--rounded:visited {
+    background-color: #002044;
+    color: #fff; }
 
 .icon--large {
   font-size: 150%; }
