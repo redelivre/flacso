@@ -116,11 +116,16 @@ add_action( 'admin_head-post.php', 'flaso_excerpt_counter');
 add_action( 'admin_head-post-new.php', 'flaso_excerpt_counter');
 
 /**
- * Increase height of excerpt textarea
+ * Add and modify admin styles
  */
-function flacso_increase_excerpt_textarea_height() {
+function flacso_admin_styles() {
     echo'
     <style type="text/css">
+    	/* Apply a max-width to dropdowns */
+    	.wp-admin select {
+    		max-width: 100%;
+    	}
+    	/* Increase height of excerpt textarea */
         #excerpt {
     		height: 100px;
     		resize: vertical;
@@ -128,7 +133,7 @@ function flacso_increase_excerpt_textarea_height() {
     </style>
     ';
 }
-add_action('admin_head', 'flacso_increase_excerpt_textarea_height');
+add_action( 'admin_head', 'flacso_admin_styles' );
 
 /**
  * Create a metabox checklist with a custom data
