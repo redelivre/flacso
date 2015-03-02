@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * * Single content for Agenda post type
  *
  * @package Flacso
  */
@@ -13,17 +13,18 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>">
 					<header class="entry-header">
-						<div class="entry-meta entry-meta--tax entry-meta--basic">
-							<?php the_category(' '); ?>
-						</div><!-- .entry-meta -->
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-						<div class="entry-meta entry-meta--basic">
-							<?php flacso_posted_on(); ?>
-						</div><!-- .entry-meta -->
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="entry-image">
+								<?php the_post_thumbnail( 'singular' ); ?>
+							</div><!-- .entry-image -->
+						<?php endif; ?>
 					</header><!-- .entry-header -->
+
+					<?php echo flacso_the_agenda_list(); ?>
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -42,7 +43,8 @@ get_header(); ?>
 					<footer class="entry-footer clear">
 						<?php flacso_entry_footer(); ?>
 					</footer><!-- .entry-footer -->
-				</article><!-- #post-## -->
+			</article><!-- #post-## -->
+
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

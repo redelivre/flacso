@@ -1,5 +1,7 @@
 <?php
 /**
+ * Archive content
+ * 
  * @package Flacso
  */
 ?>
@@ -7,31 +9,22 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'media' ); ?>>
 	
 	<div class="entry-image pull-left">
-		<?php
-		if ( get_post_type() == 'publication' ) {
-			$image_size = 'publication';
-		}
-		else {
-			$image_size = 'thumbnail';
-		}
-		?>
-	
 		<a href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( $image_size ); ?>
+				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php endif; ?>
 		</a>
 	</div><!-- .entry-image -->
 	
 	<div class="media-body">
 		<header class="entry-header">
-			<div class="entry-meta entry-meta--tax">
+			<div class="entry-meta entry-meta--tax entry-meta--basic">
 				<?php the_category(' '); ?>
 			</div><!-- .entry-meta -->
 			<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
+			<?php if ( 'post' == $post_type ) : ?>
+			<div class="entry-meta entry-meta--basic">
 				<?php flacso_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>

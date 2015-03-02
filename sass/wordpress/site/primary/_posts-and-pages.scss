@@ -64,14 +64,6 @@
 	display: none;
 }
 
-.single-post {
-	.entry-header {
-		.entry-meta {
-			@include entry-meta--basic;
-		}
-	}
-}
-
 .page-content,
 .entry-content,
 .entry-content--summary {
@@ -90,12 +82,16 @@
 }
 
 .entry-footer,
-.single .entry-meta {
+.entry-meta {
 	border-width: $border-width 0;
 	border-color: $color__quaternary;
 	border-style: solid;
 	margin-top: 1.5em;
 	padding: 1em 0;
+}
+
+.entry-meta--basic {
+	@include entry-meta--basic;
 }
 
 .entry-footer {
