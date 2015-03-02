@@ -24,16 +24,7 @@
 	<div class="col-md-9">
 		<header class="entry-header">
 			<div class="entry--general-info">
-				<?php
-				// Publication type
-				flacso_the_terms( 'publication-type', '', true );
-
-				// Publication year
-				flacso_the_terms( 'year', ' &bull; ' );
-
-				// Publication country
-				flacso_the_terms( 'country', ' &bull; ' );
-				?>
+				<?php flacso_the_publication_general_info(); ?>
 			</div>
 			<?php the_title( '<h1 class="entry-title media-heading">', '</h1>' ); ?>
 

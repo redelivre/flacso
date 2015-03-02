@@ -186,6 +186,22 @@ endif;
 
 if ( ! function_exists( 'flacso_the_publication_download_list' ) ) :
 /**
+ * Creates a list with general publication info
+ */
+function flacso_the_publication_general_info() {
+	// Publication type
+	flacso_the_terms( 'publication-type', '', true );
+
+	// Publication year
+	flacso_the_terms( 'year', ' &bull; ' );
+
+	// Publication country
+	flacso_the_terms( 'country', ' &bull; ' );
+}
+endif;
+
+if ( ! function_exists( 'flacso_the_publication_download_list' ) ) :
+/**
  * Prints HTML with share buttons
  */
 function flacso_the_publication_download_list() {
