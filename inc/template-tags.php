@@ -149,6 +149,28 @@ function flacso_entry_share() {
 }
 endif;
 
+function flacso_terms_clauses($clauses, $taxonomy, $args)
+{
+	global $wpdb;
+
+	if(is_front_page() && $taxonomy == 'publication-type' )
+	{
+		/**
+		 * SELECT t.*, tt.* FROM wp_XXX_terms AS t INNER JOIN wp_XXX_term_taxonomy AS tt ON t.term_id = tt.term_id INNER JOIN wp_XXX_term_relationships as tr ON tr.term_taxonomy_id = tt.term_taxonomy_id INNER JOIN wp_XXX_posts as p ON p.ID = tr.object_id WHERE tt.taxonomy IN ('publication-type') GROUP BY t.term_id ORDER BY p.post_date DESC LIMIT 10;
+		 */
+		$clauses['join'] .= ' INNER JOIN '.$wpdb->term_relationships.' as tr ON tr.term_taxonomy_id = tt.term_taxonomy_id INNER JOIN '.$wpdb->posts.' as p ON p.ID = tr.object_id ';
+		$clauses['orderby'] = 'ORDER BY p.post_date';
+		$clauses['order'] = 'DESC';
+		$clauses['where'] .= ' GROUP BY t.term_id ';
+		$clauses['limits'] = 'LIMIT 10';
+		//print_r($clauses);//die();
+	}
+	return $clauses;
+
+}
+
+add_filter('terms_clauses', 'flacso_terms_clauses', 1, 3);
+
 if ( ! function_exists( 'flacso_the_publication_types' ) ) :
 /**
  * Prints HTML with all the publication types linked to their
