@@ -153,7 +153,7 @@ function flacso_terms_clauses($clauses, $taxonomy, $args)
 {
 	global $wpdb;
 
-	if(is_front_page() && $taxonomy == 'publication-type' )
+	if(is_front_page() && in_array('publication-type', $taxonomy) )
 	{
 		/**
 		 * SELECT t.*, tt.* FROM wp_XXX_terms AS t INNER JOIN wp_XXX_term_taxonomy AS tt ON t.term_id = tt.term_id INNER JOIN wp_XXX_term_relationships as tr ON tr.term_taxonomy_id = tt.term_taxonomy_id INNER JOIN wp_XXX_posts as p ON p.ID = tr.object_id WHERE tt.taxonomy IN ('publication-type') GROUP BY t.term_id ORDER BY p.post_date DESC LIMIT 10;
