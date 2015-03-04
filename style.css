@@ -6213,6 +6213,7 @@ textarea {
       float: left;
       font-size: 0.875em;
       line-height: 1.2;
+      min-height: 125px;
       text-align: center;
       padding: 1em;
       width: 50%; }
@@ -6445,7 +6446,8 @@ textarea {
 .widget_flacso_library {
   background: #002044; }
   .widget_flacso_library .taxonomy-list a {
-    background: transparent; }
+    background: transparent;
+    min-height: 50px; }
     @media (min-width: 992px) {
       .widget_flacso_library .taxonomy-list a {
         text-align: left;

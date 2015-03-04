@@ -39,6 +39,7 @@
 
 		a {
 			background: transparent;
+			min-height: 50px;
 		
 			@media (min-width: $screen-md-min) {
 
