@@ -27,6 +27,16 @@
 .icon--alternate {
 	background-color: #fff;
 	color: $color__primary !important;
+
+	&:visited {
+		background-color: #fff;
+		color: $color__primary !important;
+	}
+
+	&:hover {
+		background-color: $color__secondary;
+		color: #fff;
+	}
 }
 
 .wrapper {

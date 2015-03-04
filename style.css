@@ -6045,6 +6045,12 @@ textarea {
 .icon--alternate {
   background-color: #fff;
   color: #002044 !important; }
+  .icon--alternate:visited {
+    background-color: #fff;
+    color: #002044 !important; }
+  .icon--alternate:hover {
+    background-color: #023670;
+    color: #fff; }
 
 .wrapper {
   padding: 2.5em 0; }
