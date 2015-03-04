@@ -70,8 +70,19 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h4 class="area-title area-title--secondary">Biblioteca</h3>
-					<a href="<?php the_permalink(); ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a>
+					<h4 class="area-title area-title--secondary">Biblioteca</h4>
+					<?php
+					// Search for pages that use Library Page Template
+					$page_library = flacso_get_page_by_post_template( 'page-templates/library.php' );
+
+					foreach ( $page_library as $page ) {
+						// Flacso's library doesn't have a parent
+						if ( $page->post_parent == 0 ) {
+							$page_library_permalink = get_permalink( $page->ID );
+						}
+					}
+					?>
+					<a href="<?php echo $page_library_permalink; ?>" class="read-more read-more--absolute"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a>
 					<?php flacso_the_publication_types(); ?>
 				</div>
 			</div><!-- .row -->

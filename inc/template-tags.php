@@ -519,6 +519,28 @@ add_action( 'edit_category', 'flacso_category_transient_flusher' );
 add_action( 'save_post',     'flacso_category_transient_flusher' );
 
 /**
+ * Get pages that use a certain Page Template File
+ * @param  string $page_template_file The page template file name
+ * @return array  $page_template An array with pages
+ */
+function flacso_get_page_by_post_template( $page_template_file = '' ) {
+	
+	if ( empty( $page_template_file ) ) {
+		return;
+	}
+
+	$page_template = get_posts(array (
+		'post_type' => 'page',
+		'meta_key' => '_wp_page_template',
+		'meta_value' => $page_template_file
+	) );
+
+	if ( $page_template ) {
+		return $page_template;
+	}
+}
+
+/**
  * Function to check if a post object is from gea place
  * @param WP_Post|int $post_data null for global post
  * @return boolean
