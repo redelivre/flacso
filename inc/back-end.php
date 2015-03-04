@@ -20,6 +20,10 @@ function flacso_manage_metaboxes() {
 		remove_meta_box( 'slugdiv', $post_type, 'normal' ); // Slug Metabox
 		remove_meta_box( 'trackbacksdiv', $post_type, 'normal' ); // Trackback Metabox
 	}
+
+	// Remove menu pages
+	remove_menu_page( 'edit-comments.php' );  
+
 }
 add_action( 'admin_menu','flacso_manage_metaboxes' );
 
