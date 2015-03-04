@@ -26,14 +26,16 @@
 		color: #fff;
 	}
 
-	.widget {
-		margin-bottom: 1.5em;
-		padding: 0;
-	}
+	.widget-area--main {
+		.widget {
+			margin-bottom: 1.5em;
+			padding: 0;
+		}
 
-	.widget_flacso_gea_documentation_widget {
-		a {
-			color: #fff;
+		.widget_flacso_gea_documentation_widget {
+			a {
+				color: #fff;
+			}
 		}
 	}
 

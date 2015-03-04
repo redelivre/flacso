@@ -6518,10 +6518,10 @@ textarea {
   padding: 1.5em 0; }
 .gea .share-link {
   color: #fff; }
-.gea .widget {
+.gea .widget-area--main .widget {
   margin-bottom: 1.5em;
   padding: 0; }
-.gea .widget_flacso_gea_documentation_widget a {
+.gea .widget-area--main .widget_flacso_gea_documentation_widget a {
   color: #fff; }
 .gea .widget-area--footer .widget-title {
   color: #002044; }
