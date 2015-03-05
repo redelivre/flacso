@@ -295,6 +295,7 @@ function flacso_adv_search_callback()
 	
 	
 	$geaid = array();
+	$tax_query = array();
 	foreach ($taxs as $tax => $terms)
 	{
 		if($tax == 'gea')
@@ -380,7 +381,7 @@ function flacso_adv_search_callback()
 		$args['s'] = $post_content;
 	}
 
-	var_dump($args);//die();
+	//var_dump($args);//die();
 	
 	$query = new WP_Query($args);
 	while ($query->have_posts())
