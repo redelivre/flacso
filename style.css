@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /*
 Theme Name: Flacso
-Theme URI: http://underscores.me/
-Author: Automattic
-Author URI: http://automattic.com/
-Description: Hi. I'm a starter theme called <code>Flacso</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-Version: 1.0-wpcom
+Theme URI: http://github.com/redelivre/flacso
+Author: Ethymos
+Author URI: http://ethymos.com.br
+Description: The Flacso theme
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Flacso
+Text Domain: flacso
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -6045,6 +6045,12 @@ textarea {
 .icon--alternate {
   background-color: #fff;
   color: #002044 !important; }
+  .icon--alternate:visited {
+    background-color: #fff;
+    color: #002044 !important; }
+  .icon--alternate:hover {
+    background-color: #023670;
+    color: #fff; }
 
 .wrapper {
   padding: 2.5em 0; }
@@ -6213,6 +6219,7 @@ textarea {
       float: left;
       font-size: 0.875em;
       line-height: 1.2;
+      min-height: 125px;
       text-align: center;
       padding: 1em;
       width: 50%; }
@@ -6445,7 +6452,8 @@ textarea {
 .widget_flacso_library {
   background: #002044; }
   .widget_flacso_library .taxonomy-list a {
-    background: transparent; }
+    background: transparent;
+    min-height: 50px; }
     @media (min-width: 992px) {
       .widget_flacso_library .taxonomy-list a {
         text-align: left;
@@ -6518,10 +6526,10 @@ textarea {
   padding: 1.5em 0; }
 .gea .share-link {
   color: #fff; }
-.gea .widget {
+.gea .widget-area--main .widget {
   margin-bottom: 1.5em;
   padding: 0; }
-.gea .widget_flacso_gea_documentation_widget a {
+.gea .widget-area--main .widget_flacso_gea_documentation_widget a {
   color: #fff; }
 .gea .widget-area--footer .widget-title {
   color: #002044; }
