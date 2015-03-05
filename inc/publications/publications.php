@@ -223,7 +223,7 @@ class Publications
 	
 	function rewrite_rules()
 	{
-		add_rewrite_rule(self::NEW_DOCUMENT_PAGE.'(.*)', 'index.php?'.self::NEW_DOCUMENT_PAGE.'=true$matches[1]', 'top');
+		//add_rewrite_rule(self::NEW_DOCUMENT_PAGE.'(.*)', 'index.php?'.self::NEW_DOCUMENT_PAGE.'=true$matches[1]', 'top');
 		flush_rewrite_rules();
 	}
 	

@@ -31,7 +31,7 @@ class Projects
 		);
 		
 		add_action('init', array($this, 'init'));
-		//add_action('init', array($this, 'rewrite_rules'));
+		add_action('init', array($this, 'rewrite_rules'));
 		//add_action('template_redirect', array($this, 'form'));
 		//add_action('wp_ajax_resetpass', array($this, 'form'));
 		//add_action('wp_ajax_nopriv_resetpass', array($this, 'form'));
@@ -229,7 +229,7 @@ class Projects
 	
 	function rewrite_rules()
 	{
-		add_rewrite_rule(self::NEW_DOCUMENT_PAGE.'(.*)', 'index.php?'.self::NEW_DOCUMENT_PAGE.'=true$matches[1]', 'top');
+		//add_rewrite_rule(self::NEW_DOCUMENT_PAGE.'(.*)', 'index.php?'.self::NEW_DOCUMENT_PAGE.'=true$matches[1]', 'top');
 		flush_rewrite_rules();
 	}
 	
