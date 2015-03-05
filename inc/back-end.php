@@ -275,4 +275,27 @@ function flacso_manage_views( $views ) {
 }
 add_filter( 'views_edit-post', 'flacso_manage_views' );
 
+/**
+ * Manage post states inside post edit
+ *
+ * Right now only working for GEA and inside post edit
+ * 
+ * @param  array $post_states An array of post display states.
+ * @param  object $post       The post object
+ * @return array              The new array of post display states.
+ */
+function flacso_manage_post_states( $post_states, $post ) {
+	global $typenow;
+
+	if ( $typenow != 'post' ) {
+		return;
+	}
+
+	if ( has_term( 'gea', 'gea', $post->ID ) ) {
+		$post_states['gea'] = 'GEA';
+	}
+
+	return $post_states;
+}
+add_filter( 'display_post_states', 'flacso_manage_post_states', 10, 2 );
 ?>
