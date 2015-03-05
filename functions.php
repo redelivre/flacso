@@ -366,7 +366,7 @@ function flacso_adv_search_callback()
 		//'suppress_filters' => false,
 	);
 
-	if(count($tax_query) > 1)
+	if(count($tax_query) > 0)
 	{
 		$args['tax_query'] = $tax_query;
 	}
@@ -387,7 +387,7 @@ function flacso_adv_search_callback()
 	while ($query->have_posts())
 	{
 		$query->the_post();
-		get_template_part( 'content', 'publication' );
+		get_template_part( 'content', get_post_type() );
 	}
 	echo '</div>';
 	die();
