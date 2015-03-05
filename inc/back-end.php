@@ -144,6 +144,10 @@ function flacso_admin_styles() {
 		#dashboard_right_now li.project-count span:before {
 		  content: "\f322";
 		}
+		#dashboard_right_now li.agenda-count a:before,
+		#dashboard_right_now li.agenda-count span:before {
+		  content: "\f145";
+		}
     	/* Apply a max-width to dropdowns */
     	.wp-admin select {
     		max-width: 100%;
@@ -191,7 +195,7 @@ function flacso_metabox_checkbox( $name, $post, $data )
  */
 function flacso_manage_dashboard_glance_iems( $items = array() ) {
 
-    $post_types = array( 'publication', 'project' );
+    $post_types = array( 'publication', 'project', 'agenda' );
     
     foreach( $post_types as $type ) {
 
