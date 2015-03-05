@@ -115,7 +115,8 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 		 */
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Documentation Center', 'flacso' ) : $instance['title'], $instance, $this->id_base );
 		$link = esc_url( $instance['link'] );
-		$page_id = (int) $instance['page_id'];
+		if(array_key_exists('page_id', $instance)) $page_id = (int) $instance['page_id'];
+		else $page_id = 0;
 
 		extract($args);
 
