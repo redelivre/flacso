@@ -291,18 +291,56 @@ function flacso_adv_search_callback()
 		$taxs[sanitize_text_field($checked['name'])][] = sanitize_text_field($checked['value']);
 	}
 	
-	$tax_query = array('relation' => 'OR');
+	$gea = false;
+	
+	
+	$geaid = array();
 	foreach ($taxs as $tax => $terms)
 	{
+		if($tax == 'gea')
+		{
+			$gea = true;
+			$geaid = $terms;
+			continue;
+		}
 		$tax_query[] = array(
 			'taxonomy' => $tax,
 			'field'    => 'term_id',
 			'terms'    => $terms,
 		);
 	}
-	$meta_query = array('relation' => 'OR');
+	
+	if(count($tax_query) > 1)
+	{
+		$tax_query['relation'] = 'OR';
+	}
+	
+	if($gea)
+	{
+		if( count($tax_query) > 0 )
+		{
+			$tax_query_gea = array();
+			$tax_query_gea['relation'] = 'AND';
+			$tax_query_gea[] = array(
+					'taxonomy' => 'gea',
+					'field'    => 'term_id',
+					'terms'    => $geaid,
+			);
+			$tax_query = array_merge($tax_query_gea, $tax_query);
+		}
+		else 
+		{
+			$tax_query = array(array(
+					'taxonomy' => 'gea',
+					'field'    => 'term_id',
+					'terms'    => $geaid,
+			));
+		}
+	}
 	
 	$post_content = false;
+	
+	$meta_query = array();
 	
 	foreach ($fields as $field)
 	{
@@ -319,6 +357,7 @@ function flacso_adv_search_callback()
 			$post_content = sanitize_text_field($field['value']);
 		}
 	}
+	if(count($meta_query) > 1) $meta_query[] = array('relation' => 'OR');
 	
 	$args = array(
 		'post_type' => array('post', 'publication'),
@@ -341,6 +380,8 @@ function flacso_adv_search_callback()
 		$args['s'] = $post_content;
 	}
 
+	var_dump($args);//die();
+	
 	$query = new WP_Query($args);
 	while ($query->have_posts())
 	{
