@@ -56,6 +56,30 @@ class FlacsoSettingsPage
             </div>
         </div>
         <?php
+        /**
+         * TODO create funtion to reset gea tax
+         */
+        /*$cat = get_category_by_slug('flacso-midia');
+        $args = array(
+        	'post_type' => 'post',
+        	'posts_per_page' => -1,
+        	'category__not_in' => array($cat->term_id),
+        	'tax_query' => array(
+        			array(
+        					'taxonomy' => 'gea',
+        					'field'    => 'slug',
+        					'terms'    => 'GEA',
+        					'operator' => 'NOT IN',
+        			)
+        	),
+        );
+        $query = new WP_Query($args);
+        while ($query->have_posts())
+        {
+        	$query->the_post();
+        	wp_set_object_terms(get_the_ID(), $cat->term_id, 'category');
+        }
+        wp_reset_postdata();*/
     }
 
     /**
