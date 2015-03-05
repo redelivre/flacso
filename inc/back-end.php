@@ -135,6 +135,15 @@ add_action( 'admin_head-post-new.php', 'flaso_excerpt_counter');
 function flacso_admin_styles() {
     echo'
     <style type="text/css">
+    	/* Add dashicons to custom post types */
+	    #dashboard_right_now li.publication-count a:before,
+		#dashboard_right_now li.publication-count span:before {
+		  content: "\f330";
+		}
+		#dashboard_right_now li.project-count a:before,
+		#dashboard_right_now li.project-count span:before {
+		  content: "\f322";
+		}
     	/* Apply a max-width to dropdowns */
     	.wp-admin select {
     		max-width: 100%;
@@ -172,3 +181,45 @@ function flacso_metabox_checkbox( $name, $post, $data )
 		</ul>
 	</div><?php
 }
+
+/**
+ * Add custom post types to At a Glance dashboard widget
+ * 
+ * @param  array  $items [description]
+ * @return array $items    [description]
+ * @link http://www.hughlashbrooke.com/2014/02/wordpress-add-items-glance-widget/
+ */
+function flacso_manage_dashboard_glance_iems( $items = array() ) {
+
+    $post_types = array( 'publication', 'project' );
+    
+    foreach( $post_types as $type ) {
+
+        if( ! post_type_exists( $type ) ) {
+        	continue;
+        }
+
+        $num_posts = wp_count_posts( $type );
+        
+        if( $num_posts ) {
+            
+            $published = intval( $num_posts->publish );
+            $post_type = get_post_type_object( $type );
+            
+            $text = _n( '%s ' . $post_type->labels->singular_name, '%s ' . $post_type->labels->name, $published, 'flacso' );
+            $text = sprintf( $text, number_format_i18n( $published ) );
+            
+            if ( current_user_can( $post_type->cap->edit_posts ) ) {
+                $output = '<a href="edit.php?post_type=' . $post_type->name . '">' . $text . '</a>';  
+                echo '<li class="' . $post_type->name . '-count">' . $output . '</li>'; 
+            } else {
+                $output = '<span>' . $text . '</span>';  
+                echo '<li class="' . $post_type->name . '-count">' . $output . '</li>';  
+            }
+        }
+    }
+    
+    return $items;
+}
+add_filter( 'dashboard_glance_items', 'flacso_manage_dashboard_glance_iems', 10, 1 );
+?>
