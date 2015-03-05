@@ -9,10 +9,14 @@ function flacso_remove_page_comments_support() {
 add_action( 'init', 'flacso_remove_page_comments_support' );
 
 /**
- * Remove unnecessary metaboxes from posts, pages and publications
+ * Manage metaboxes across post types
  */
 function flacso_manage_metaboxes() {
 
+	// Remove menu pages
+	remove_menu_page( 'edit-comments.php' );  
+
+	// Remove generic meta boxes
 	foreach ( array( 'post', 'page', 'publication' ) as $post_type ) {
 		remove_meta_box( 'authordiv', $post_type, 'normal' ); // Author Metabox
 		remove_meta_box( 'postcustom', $post_type, 'normal' ); // Custom Fields Metabox
@@ -20,8 +24,15 @@ function flacso_manage_metaboxes() {
 		remove_meta_box( 'trackbacksdiv', $post_type, 'normal' ); // Trackback Metabox
 	}
 
-	// Remove menu pages
-	remove_menu_page( 'edit-comments.php' );  
+	
+	/**
+	 * Remove custom meta box for publication type modified by a callback
+	 * and readd it as a high priority meta box
+	 *
+	 * @see flacso_taxonomy_dropdown_meta_box() The meta box callback
+	 */
+	remove_meta_box( 'publication-typediv', 'publication', 'side' );
+	add_meta_box( 'publication-typediv', __( 'Publication Type', 'flacso' ), 'flacso_taxonomy_dropdown_meta_box', 'publication', 'advanced', 'high', array( 'taxonomy' => 'publication-type' ));
 
 }
 add_action( 'admin_menu','flacso_manage_metaboxes' );
