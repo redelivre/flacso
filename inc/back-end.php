@@ -226,4 +226,53 @@ function flacso_manage_dashboard_glance_iems( $items = array() ) {
     return $items;
 }
 add_filter( 'dashboard_glance_items', 'flacso_manage_dashboard_glance_iems', 10, 1 );
+
+/**
+ * Manage views above WP List Table
+ * 
+ * @param  array $views An array with the possible views
+ * @return array $new_views The new array
+ */
+function flacso_manage_views( $views ) {
+    global $wp_query;
+
+    $new_views = array();
+
+    $gea_query = array(
+        'post_type'   => 'post',
+        //'post_status' => 'publish',
+    	'tax_query' => array(
+    		array(
+			'taxonomy' => 'gea',
+			'field'    => 'slug',
+			'terms'    => 'GEA',
+			)
+		)
+    );
+
+    $result = new WP_Query( $gea_query );
+
+    foreach ( $views as $key => $value ) {
+
+    	if ( $key == 'publish' ) {
+    		$class = ( isset( $wp_query->query_vars['gea'] ) && $wp_query->query_vars['gea'] == 'gea' ) ? ' class="current"' : '';
+
+		    $new_views['gea'] = sprintf(
+		    	__( '<a href="%s"'. $class .'>GEA <span class="count">(%d)</span></a>', 'flacso' ),
+		        admin_url( 'edit.php?post_type=post&gea=gea' ),
+		        $result->found_posts
+		    );
+
+		    // Readd 'publish' view
+		    $new_views[$key] = $value;
+    	}
+    	else {
+    		$new_views[$key] = $value;
+    	}
+    }
+
+    return $new_views;
+}
+add_filter( 'views_edit-post', 'flacso_manage_views' );
+
 ?>
