@@ -6,6 +6,8 @@
  */
 ?>
 
+<?php $post_type = get_post_type(); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'media' ); ?>>
 	
 	<div class="entry-image pull-left">
@@ -19,7 +21,9 @@
 	<div class="media-body">
 		<header class="entry-header">
 			<div class="entry-meta entry-meta--tax entry-meta--basic">
-				<?php the_category(' '); ?>
+				<?php
+					flacso_the_terms('category', '', true, true );
+				?>
 			</div><!-- .entry-meta -->
 			<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 

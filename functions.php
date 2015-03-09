@@ -178,6 +178,10 @@ function flacso_scripts() {
 	
 	wp_enqueue_script('adv-search-box', get_template_directory_uri() . '/js/adv-search-box.js', array('jquery'));
 	
+	$gea = array('gea' => (is_gea() ? get_term_by('slug', 'GEA', 'gea')->term_id : false ));
+	
+	wp_localize_script('adv-search-box', 'adv_search_box', $gea);
+	
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 

@@ -32,3 +32,28 @@ jQuery(document).ready(function () {
 		flacso_adv_search_click();
 	});
 });
+
+function flacso_tax_click(name, id)
+{
+	var checkValues = [{name:name, value:id}];
+	
+	if(adv_search_box.gea != '')
+	{
+		checkValues[1] = {name:'gea', value:adv_search_box.gea} 
+	}
+	
+	var texts = [];
+	
+	jQuery.ajax({
+		type   : 'post',
+		url    : 'http://' + window.location.host + '/wp-admin/admin-ajax.php',
+		data   : {
+			action: 'flacso_adv_search',
+			checked: checkValues,
+			fields: texts
+		},
+		success: function(response) {
+			jQuery('.general-list').replaceWith(response);
+		}
+	});
+}

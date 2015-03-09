@@ -29,11 +29,17 @@ get_header(); ?>
 				?>
 				<?php if ( $publications ) : ?>
 				<div class="general-list">
-					<?php foreach( $publications as $publication ) : ?>
-					<?php $publication_link = get_term_link( $publication ); ?>
+					<?php
+					foreach( $publications as $publication ) :
+						$publication_link = get_term_link( $publication );
+						if( is_gea() )
+						{
+							$publication_link .= (strpos($publication_link, '?') ? '&' : '?').'gea=GEA';
+						}
+					?>
 					<div class="general-list__item media clear">
 						<div class="pull-left">
-							<a href="<?php echo $publication_link; ?>" class="icon icon--large icon--rounded">
+							<a href="<?php echo 'javascript:flacso_tax_click(\'publication-type\', '.$publication->term_id.');' ?>" class="icon icon--large icon--rounded">
 					    	<?php
 					    		if ( function_exists( 'get_tax_meta' ) ) {
 					    			echo '<span class="' . get_tax_meta( $publication->term_id, 'flacso_icon_picker' ) . '"></span>';
@@ -42,11 +48,11 @@ get_header(); ?>
 					    	</a>
 						</div>
 						<div class="media-body">
-						    <h1 class="general-list__title page-title media-heading"><a href="<?php echo $publication_link; ?>"><?php echo $publication->name; ?></a></h1>
+						    <h1 class="general-list__title page-title media-heading"><a href="<?php echo 'javascript:flacso_tax_click(\'publication-type\', '.$publication->term_id.');'; ?>"><?php echo $publication->name; ?></a></h1>
 						    <?php if ( ! empty( $publication->description ) ) : ?>
 						    <div class="taxonomy-description"><?php echo $publication->description; ?></div>
 							<?php endif; ?>
-						    <a href="<?php echo $publication_link; ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
+						    <a href="<?php echo 'javascript:flacso_tax_click(\'publication-type\', '.$publication->term_id.');'; ?>" class="read-more pull-right"><?php _e( 'Read more', 'flacso' ); ?><span class="more-sign">+</span></a>
 						</div><!-- .media-body -->
 				    </div><!-- .general-list__item.media -->
 				    <?php endforeach; ?>

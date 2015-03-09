@@ -190,7 +190,7 @@ if ( ! function_exists( 'flacso_the_publication_download_list' ) ) :
  */
 function flacso_the_publication_general_info() {
 	// Publication type
-	flacso_the_terms( 'publication-type', '', true );
+	flacso_the_terms( 'publication-type', '', true, true );
 
 	// Publication year
 	flacso_the_terms( 'year', ' &bull; ' );
@@ -277,7 +277,7 @@ if ( ! function_exists( 'flacso_the_terms' ) ) :
  * @param  string  $before 	 The html printed before
  * @param  boolean $link     Whether to print the terms with links
  */
-function flacso_the_terms( $taxonomy = '', $before = '', $link = false ) {
+function flacso_the_terms( $taxonomy = '', $before = '', $link = false, $adv_search = false ) {
 	global $post;
 
 	if ( empty ( $taxonomy ) ) {
@@ -291,8 +291,16 @@ function flacso_the_terms( $taxonomy = '', $before = '', $link = false ) {
 		$terms_list = array();
 
 		foreach ( $terms as $term ) {
-			if ( $link ) {
-				$terms_list[] = '<a href="' . get_term_link( $term->slug, $taxonomy ) . '">' . $term->name . '</a>';
+			if ( $link )
+			{
+				if($adv_search)
+				{
+					$terms_list[] = '<a href="javascript:flacso_tax_click(\''.$taxonomy.'\', '.$term->term_id.');">' . $term->name . '</a>';
+				}
+				else
+				{
+					$terms_list[] = '<a href="' . get_term_link( $term->slug, $taxonomy ) . '">' . $term->name . '</a>';
+				}
 			}
 			else {
 				$terms_list[] = $term->name;
