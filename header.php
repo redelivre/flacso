@@ -58,7 +58,7 @@
 				<?php else : ?>
 					<div class="container">
 						<div class="row">
-							<div class="site-complementary  wrapper--small clear">
+							<div class="site-complementary wrapper--small clear">
 								<div class="col-md-9">
 									<nav id="site-navigation--top" class="site-navigation top-navigation pull-right" role="navigation">
 										<?php wp_nav_menu( array( 'theme_location' => 'top', 'depth' => 1 ) ); ?>

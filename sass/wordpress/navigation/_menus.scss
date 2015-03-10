@@ -6,24 +6,28 @@
 	}
 }
 
-.top-navigation {
+
+.site-complementary {
 	display: none;
+	
+	.top-navigation {
 
-	ul {
-		padding: 0.25em;
-		text-align: right;
-	}
+		ul {
+			padding: 0.25em;
+			text-align: right;
+		}
 
-	li {
-		display: inline-block;
-	}
+		li {
+			display: inline-block;
+		}
 
-	a {
-		color: $color__link--secondary;
-		padding: 0 0.5em;
+		a {
+			color: $color__link--secondary;
+			padding: 0 0.5em;
 
-		&:hover {
-			color: $color__primary;
+			&:hover {
+				color: $color__primary;
+			}
 		}
 	}
 
@@ -67,7 +71,6 @@
 	clear: both;
 	display: block;
 	padding: 0.5em 0;
-	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -168,6 +171,21 @@
 	&.toggled {
 		.nav-menu {
 			display: block;
+		}
+	}
+
+	/* The top navigation inside main navigation for small screens */
+	.top-navigation--main-menu {
+		display: none;
+
+		&.toggled {
+			@media (max-width: $screen-md-min) {
+				display: block;
+			}
+		}
+
+		.search-form {
+			padding: 0.5em 2em;
 		}
 	}
 
