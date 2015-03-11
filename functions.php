@@ -178,9 +178,50 @@ function flacso_scripts() {
 	
 	wp_enqueue_script('adv-search-box', get_template_directory_uri() . '/js/adv-search-box.js', array('jquery'));
 	
-	$gea = array('gea' => (is_gea() ? get_term_by('slug', 'GEA', 'gea')->term_id : false ));
+	$adv_args = array();
 	
-	wp_localize_script('adv-search-box', 'adv_search_box', $gea);
+	$adv_args['gea'] = (is_gea() ? get_term_by('slug', 'GEA', 'gea')->term_id : false );
+	
+	$inlib = false;
+	if(is_page() && basename(get_page_template()) == 'library.php')
+	{
+		$inlib = true;
+	} 
+	$adv_args['library'] = $inlib;
+	$adv_args['library_url'] = '';
+	
+	if(!$inlib)
+	{
+		$pages_data = get_posts(array(
+			'post_type' => 'page',
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'page-templates/library.php'
+		));
+		$pages = get_posts(array(
+			'post_type' => 'page',
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'page-templates/gea-home.php'
+		));
+		foreach ($pages_data as $post_data)
+		{
+			foreach ($pages as $page)
+			{
+				if( is_gea() && ($page->ID == $post_data->ID || $post_data->post_parent == $page->ID || (property_exists($post_data, 'ancestors') && is_array($post_data->ancestors) && in_array($page->ID, $post_data->ancestors) )))
+				{
+					$adv_args['library_url'] = get_permalink($post_data->ID);
+					break;
+				}
+				elseif( !is_gea() )
+				{
+					$adv_args['library_url'] = get_permalink($post_data->ID);
+					break;
+				}
+				
+			}
+		}
+	}
+	
+	wp_localize_script('adv-search-box', 'adv_search_box', $adv_args);
 	
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );

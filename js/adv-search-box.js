@@ -42,6 +42,12 @@ function flacso_tax_click(name, id)
 		checkValues[1] = {name:'gea', value:adv_search_box.gea} 
 	}
 	
+	if(adv_search_box.library != 1)
+	{
+		window.location.href = adv_search_box.library_url + "&"+name+"="+id;
+		return false;
+	}
+	
 	var texts = [];
 	
 	jQuery.ajax({
