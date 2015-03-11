@@ -21,7 +21,15 @@ function flacso_the_menu() {
             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
             'walker'            => new wp_bootstrap_navwalker()
         ));
-        ?>
+		
+		// Top menu inside <nav> to unify both navigations in small screens
+		?>
+		<div class="top-navigation--main-menu">
+			<?php
+	        wp_nav_menu( array( 'theme_location' => 'top', 'depth' => 1 ) );
+	        get_search_form();
+        	?>
+        </div><!-- .top-navigation--main-menu -->
 	</nav><!-- #site-navigation -->  	
 	<?php
 }

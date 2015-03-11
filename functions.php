@@ -201,7 +201,7 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 		}
 		?>
 	
-		<dl class="dropdown-checkbox" <?php echo $dlstyle ?> > 
+		<dl class="dropdown-checkbox search-item" <?php echo $dlstyle ?> > 
 		    <dt>
 		    	<label class="dropdown-checkbox-header-label"><?php echo $taxonomy_obj->labels->name; ?></label>
 		    	<div class="clickable">
@@ -237,8 +237,8 @@ function get_search_adv()
 	
 	$types = array('post', 'publication');?>
 	
-	<div class="adv-search-box-custom-field">
-		<input id="adv-search-box-button-top" type="submit" value="Pesquisar" class="search-submit adv-search-box-button">
+	<div class="adv-search-box-custom-field search-item">
+		<input id="adv-search-box-button-top" type="submit" value="Pesquisar" class="search-submit adv-search-box-button btn-block">
 	</div><?php
 	
 	$not_in = array('post_format');
@@ -258,7 +258,7 @@ function get_search_adv()
 	
 	$fields = array_merge($CustomFields_global->getFields(), $Publication_global->getFields());
 	
-	?><div class="adv-search-box-custom-field">
+	?><div class="adv-search-box-custom-field search-item">
 		<label><?php _e("Publication Title", "flacso"); ?></label>
 		<input class="search-field" type="search" title="<?php echo __("Search for documents with that text", 'flacso'); ?>" name="adv-search-box-input-post_content" value="" placeholder="" autocomplete="off" />
 	</div><?php
@@ -267,14 +267,14 @@ function get_search_adv()
 	{
 		if(!in_array($field['slug'], array('post_content', 'post_title')))
 		{?>
-			<div class="adv-search-box-custom-field">
+			<div class="adv-search-box-custom-field search-item">
 				<label><?php echo $field['title']; ?></label>
 				<input class="search-field" type="search" title="<?php echo __("Pesquisar por", 'flacso').": ".$field['title']; ?>" name="<?php echo 'adv-search-box-input-'.$field['slug']; ?>" value="" placeholder="" autocomplete="off" />
 			</div><?php
 		}
 	}?>
 	<div class="adv-search-box-custom-field">
-		<input id="adv-search-box-button" type="submit" value="Pesquisar" class="search-submit adv-search-box-button">
+		<input id="adv-search-box-button" type="submit" value="Pesquisar" class="search-submit adv-search-box-button btn-block">
 	</div><?php
 }
 

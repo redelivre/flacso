@@ -5735,20 +5735,20 @@ a {
   margin: 0;
   padding: 0; }
 
-.top-navigation {
+.site-complementary {
   display: none; }
-  .top-navigation ul {
+  .site-complementary .top-navigation ul {
     padding: 0.25em;
     text-align: right; }
-  .top-navigation li {
+  .site-complementary .top-navigation li {
     display: inline-block; }
-  .top-navigation a {
+  .site-complementary .top-navigation a {
     color: #ba0933;
     padding: 0 0.5em; }
-    .top-navigation a:hover {
+    .site-complementary .top-navigation a:hover {
       color: #002044; }
   @media (min-width: 992px) {
-    .top-navigation {
+    .site-complementary {
       display: block; } }
 
 .top-navigation--gea {
@@ -5775,13 +5775,13 @@ a {
   clear: both;
   display: block;
   padding: 0.5em 0;
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 499;
   /* To be displayed below #wpadminbar */
-  /* Change top positioning based on WordPress media queries for the admin-bar */ }
+  /* Change top positioning based on WordPress media queries for the admin-bar */
+  /* The top navigation inside main navigation for small screens */ }
   .main-navigation.main-navigation--admin-bar {
     top: 46px; }
     @media (min-width: 782px) {
@@ -5829,6 +5829,13 @@ a {
         display: block; } }
   .main-navigation.toggled .nav-menu {
     display: block; }
+  .main-navigation .top-navigation--main-menu {
+    display: none; }
+    @media (max-width: 992px) {
+      .main-navigation .top-navigation--main-menu.toggled {
+        display: block; } }
+    .main-navigation .top-navigation--main-menu .search-form {
+      padding: 0.5em 2em; }
   @media (min-width: 992px) {
     .main-navigation {
       position: relative; } }

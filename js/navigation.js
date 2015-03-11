@@ -4,7 +4,10 @@
  * Handles toggling the navigation menu for small screens.
  */
 ( function() {
-	var container, button, menu;
+	var container, button, menu, topMenuInsideMainMenu;
+
+	// In small screens, we'll use the top menu inside the main one
+	topMenuInsideMainMenu = document.getElementsByClassName( 'top-navigation--main-menu' )[0];
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -33,10 +36,12 @@
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
+			topMenuInsideMainMenu.className = topMenuInsideMainMenu.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className += ' toggled';
+			topMenuInsideMainMenu.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
