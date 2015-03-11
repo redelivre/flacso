@@ -579,6 +579,14 @@ function is_gea($post_data = null)
 	
 	if( empty($post_data ) || ( is_object($post_data) && get_class($post_data) == 'WP_Error' ) )
 	{
+		if(is_archive())
+		{
+			$gea_var = get_query_var('gea', false);
+			if ($gea_var == 'GEA')
+			{
+				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -619,6 +627,5 @@ function is_gea($post_data = null)
 			return true;
 		}
 	}
-	
 	return false;
 }

@@ -122,7 +122,7 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 
 		echo $before_widget;
 
-		echo '<a href="' . get_page_link( $page_id ) . '" class="documentation-center-link">';
+		if($page_id > 0) echo '<a href="' . get_page_link( $page_id ) . '" class="documentation-center-link">';
 			
 		echo '<span class="icon icon-globe"></span>';
 		echo $before_title;
@@ -145,7 +145,7 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 		echo '<p class="documentation-center-highlight">' . __( 'Clique aqui para acessar o Centro de Documentação e pesquise por tema, fonte, região ou país', 'flacso' ) . '</p>';
 		echo '<p>' . __( 'Acesso gratuito para o download de arquivos.', 'flacso' ) . '</p>';
 
-		echo '</a>';
+		if($page_id > 0) echo '</a>';
 
 		echo $after_widget;
 
