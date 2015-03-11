@@ -611,6 +611,14 @@ function is_gea($post_data = null)
 			return true;
 		}
 	}
+	else 
+	{
+		$gea_var = get_query_var('gea', false);
+		if ($gea_var == 'GEA')
+		{
+			return true;
+		}
+	}
 	
 	return false;
 }
