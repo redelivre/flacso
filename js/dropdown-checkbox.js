@@ -31,13 +31,13 @@ jQuery(document).ready(function() {
 	
 				if (jQuery(this).is(':checked')) {
 					var html = '<span title="' + title + '">' + title + '</span>';
-					jQuery(this).parent().parent().parent().parent().parent().find('.multiSel').append(html);
-					jQuery(this).parent().parent().parent().parent().parent().find(".hida").hide();
+					jQuery(this).parent().parent().parent().parent().parent().parent().find('.multiSel').append(html);
+					jQuery(this).parent().parent().parent().parent().parent().parent().find(".hida").hide();
 				} else {
-					jQuery(this).parent().parent().parent().parent().parent().find('span[title="' + title + '"]').remove();
-					if(jQuery(this).parent().parent().parent().parent().parent().find('span').length == 1)
+					jQuery(this).parent().parent().parent().parent().parent().parent().find('span[title="' + title + '"]').remove();
+					if(jQuery(this).parent().parent().parent().parent().parent().parent().find('.multiSel').children().length <= 0)
 					{
-						jQuery(this).parent().parent().parent().parent().parent().find(".hida").show();
+						jQuery(this).parent().parent().parent().parent().parent().parent().find(".hida").show();
 					}
 				}
 			});

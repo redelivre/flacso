@@ -30,6 +30,7 @@
     font-weight: normal;
     padding: 0.25em 0.5em;
     min-height: 25px;
+    max-height: 60px;
     line-height: 24px;
     overflow: hidden;
     border:0;
@@ -80,6 +81,7 @@
 .dropdown-checkbox .clickable p {
     display: block;
     float: left;
+    width: 100%;
 }
 
 .dropdown-checkbox-header-label {
@@ -103,6 +105,13 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.multiSel > span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 /* evitar a quebra na respota ajax */
