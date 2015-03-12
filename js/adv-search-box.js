@@ -20,9 +20,11 @@ function flacso_adv_search_click()
 			paged: jQuery('input[name="adv-search-paged"]').val()
 		},
 		success: function(response) {
+			jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 			jQuery('.general-list').replaceWith(response);
 		}
 	});
+	
 }
 
 jQuery(document).ready(function () {
