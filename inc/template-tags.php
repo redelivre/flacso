@@ -64,21 +64,39 @@ endif;
 
 if ( ! function_exists( 'flacso_adv_search_nav' ) ) :
 
-function flacso_adv_searchget_pagenum_link($page, $link = false)
+function flacso_adv_searchget_pagenum_link($page, $link = false, $next = false)
 {
 	if($link)
 	{
-		$label = __( '&laquo; Previous Page' );
-		
+		if($next)
+		{
+			$label = __( 'Next Page &raquo;' );
+				
+			/**
+			 * Filter the anchor tag attributes for the next posts page link.
+			 *
+			 * @since 2.7.0
+			 *
+			 * @param string $attributes Attributes for the anchor tag.
+			*/
+			$attr = apply_filters( 'next_posts_link_attributes', '' );
+			
+			return '<a href="' . "javascript:flacso_adv_searchget_pagenum(".$page.");" . "\" $attr>" . preg_replace('/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label) . '</a>';
+		}
+		else 
+		{
+			$label = __( '&laquo; Previous Page' );
+				
 			/**
 			 * Filter the anchor tag attributes for the previous posts page link.
 			 *
 			 * @since 2.7.0
 			 *
 			 * @param string $attributes Attributes for the anchor tag.
-			 */
-		$attr = apply_filters( 'previous_posts_link_attributes', '' );
-		return '<a href="' . "javascript:flacso_adv_searchget_pagenum(".$page.");" . "\" $attr>". preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label ) .'</a>';
+			*/
+			$attr = apply_filters( 'previous_posts_link_attributes', '' );
+			return '<a href="' . "javascript:flacso_adv_searchget_pagenum(".$page.");" . "\" $attr>". preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label ) .'</a>';
+		}
 	}
 	return "javascript:flacso_adv_searchget_pagenum(".$page.");";
 }
@@ -132,7 +150,6 @@ function flacso_adv_search_nav()
 		if ( ! in_array( 2, $links ) )
 			echo '<li>…</li>';
 	}
-	get_previous_posts_link();
 	
 	/** Link to current page, plus 2 pages in either direction if necessary */
 	sort( $links );
@@ -152,7 +169,7 @@ function flacso_adv_search_nav()
 	
 	/** Next Post Link */
 	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", flacso_adv_searchget_pagenum_link($paged + 1, true) );
+		printf( '<li>%s</li>' . "\n", flacso_adv_searchget_pagenum_link($paged + 1, true, true) );
 	
 	echo '</ul><input type="hidden" name="adv-search-paged" value="'.$paged.'"> </div>' . "\n";
 }
