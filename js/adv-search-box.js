@@ -16,7 +16,8 @@ function flacso_adv_search_click()
 		data   : {
 			action: 'flacso_adv_search',
 			checked: checkValues,
-			fields: texts
+			fields: texts,
+			paged: jQuery('input[name="adv-search-paged"]').val()
 		},
 		success: function(response) {
 			jQuery('.general-list').replaceWith(response);
@@ -36,6 +37,8 @@ jQuery(document).ready(function () {
 function flacso_tax_click(name, id)
 {
 	var checkValues = [{name:name, value:id}];
+	
+	jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
 	
 	if(adv_search_box.gea != '')
 	{
@@ -62,4 +65,10 @@ function flacso_tax_click(name, id)
 			jQuery('.general-list').replaceWith(response);
 		}
 	});
+}
+
+function flacso_adv_searchget_pagenum(num)
+{
+	jQuery('input[name="adv-search-paged"]').val(num);
+	flacso_adv_search_click();
 }

@@ -408,6 +408,7 @@ function flacso_adv_search_callback()
 	$args = array(
 		'post_type' => array('post', 'publication'),
 		'post_status' => 'publish',
+		'paged' => array_key_exists('paged', $_POST) ? (int)$_POST['paged'] : 1,
 		//'suppress_filters' => false,
 	);
 
@@ -434,6 +435,9 @@ function flacso_adv_search_callback()
 		$query->the_post();
 		get_template_part( 'content', get_post_type() );
 	}
+	global $wp_query;
+	$wp_query = $query;
+	flacso_adv_search_nav();
 	echo '</div>';
 	die();
 }

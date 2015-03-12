@@ -62,6 +62,102 @@ function flacso_paging_nav() {
 }
 endif;
 
+if ( ! function_exists( 'flacso_adv_search_nav' ) ) :
+
+function flacso_adv_searchget_pagenum_link($page, $link = false)
+{
+	if($link)
+	{
+		$label = __( '&laquo; Previous Page' );
+		
+			/**
+			 * Filter the anchor tag attributes for the previous posts page link.
+			 *
+			 * @since 2.7.0
+			 *
+			 * @param string $attributes Attributes for the anchor tag.
+			 */
+		$attr = apply_filters( 'previous_posts_link_attributes', '' );
+		return '<a href="' . "javascript:flacso_adv_searchget_pagenum(".$page.");" . "\" $attr>". preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label ) .'</a>';
+	}
+	return "javascript:flacso_adv_searchget_pagenum(".$page.");";
+}
+
+/**
+ * Display navigation to next/previous set of posts when applicable.
+*/
+function flacso_adv_search_nav()
+{
+	if( is_singular() )
+		return;
+	
+	global $wp_query;
+	
+	/** Stop execution if there's only 1 page */
+	if( $wp_query->max_num_pages <= 1 )
+		return;
+	
+	global $paged;
+	
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$max   = intval( $wp_query->max_num_pages );
+	
+	/** Add current page to the array */
+	if ( $paged >= 1 )
+		$links[] = $paged;
+	
+	/** Add the pages around the current page to the array */
+	if ( $paged >= 3 ) {
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
+	
+	if ( ( $paged + 2 ) <= $max ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	}
+	
+	echo '<div class="navigation"><ul>' . "\n";
+	
+	/** Previous Post Link */
+	if ( get_previous_posts_link() )
+		printf( '<li>%s</li>' . "\n", flacso_adv_searchget_pagenum_link($paged - 1, true) );
+	
+	/** Link to first page, plus ellipses if necessary */
+	if ( ! in_array( 1, $links ) ) {
+		$class = 1 == $paged ? ' class="active"' : '';
+	
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, ( flacso_adv_searchget_pagenum_link( 1 ) ), '1' );
+	
+		if ( ! in_array( 2, $links ) )
+			echo '<li>…</li>';
+	}
+	get_previous_posts_link();
+	
+	/** Link to current page, plus 2 pages in either direction if necessary */
+	sort( $links );
+	foreach ( (array) $links as $link ) {
+		$class = $paged == $link ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, ( flacso_adv_searchget_pagenum_link( $link ) ), $link );
+	}
+	
+	/** Link to last page, plus ellipses if necessary */
+	if ( ! in_array( $max, $links ) ) {
+		if ( ! in_array( $max - 1, $links ) )
+			echo '<li>…</li>' . "\n";
+	
+		$class = $paged == $max ? ' class="active"' : '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, ( flacso_adv_searchget_pagenum_link( $max ) ), $max );
+	}
+	
+	/** Next Post Link */
+	if ( get_next_posts_link() )
+		printf( '<li>%s</li>' . "\n", flacso_adv_searchget_pagenum_link($paged + 1, true) );
+	
+	echo '</ul><input type="hidden" name="adv-search-paged" value="'.$paged.'"> </div>' . "\n";
+}
+endif;
+
 if ( ! function_exists( 'flacso_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
