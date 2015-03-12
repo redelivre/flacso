@@ -223,6 +223,9 @@ function flacso_scripts() {
 	
 	wp_localize_script('adv-search-box', 'adv_search_box', $adv_args);
 	
+	wp_register_style( 'flacso-adv-search', get_template_directory_uri() . '/css/flacso-adv-search.css' );
+	wp_enqueue_style( 'flacso-adv-search' );
+	
 }
 add_action( 'wp_enqueue_scripts', 'flacso_scripts' );
 
