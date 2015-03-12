@@ -5,8 +5,13 @@
 	background-color: $color__primary;
 	border-radius: 50%;
 	color: #fff;
-	display: inline-block;
 	padding: 0.25em;
+}
+
+a.icon--rounded {
+	background-color: $color__primary;
+	color: #fff;
+	display: inline-block;
 
 	&:hover {
 		background-color: $color__secondary;
@@ -17,26 +22,25 @@
 		background-color: $color__primary;
 		color: #fff;
 	}
-
 }
 
-.icon--large {
-	font-size: 150%;
-}
-
-.icon--alternate {
+a.icon--alternate {
 	background-color: #fff;
-	color: $color__primary !important;
-
-	&:visited {
-		background-color: #fff;
-		color: $color__primary !important;
-	}
+	color: $color__primary;
 
 	&:hover {
 		background-color: $color__secondary;
 		color: #fff;
 	}
+
+	&:visited {
+		background-color: #fff;
+		color: $color__primary;
+	}
+}
+
+.icon--large {
+	font-size: 150%;
 }
 
 .wrapper {
@@ -107,7 +111,7 @@
 	background-image: url('images/bg-footer.png');
 	color: $color__text-alternate;
 
-	a {
+	a:not(.icon--rounded) {
 		color: $color__tertiary;
 	}
 }

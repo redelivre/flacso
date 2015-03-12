@@ -126,7 +126,6 @@
 
 
 		a {
-			background: rgba(0,0,0,0.1);
 			border: 1px solid $color__primary;
 			display: block;
 			color: $color__text-alternate;
@@ -137,6 +136,10 @@
 			text-align: center;
 			padding: 1em;
 			width: 50%;
+
+			&:hover {
+				color: $color__tertiary;
+			}
 
 			@media (min-width: $screen-xs-min) {
 				width: 25%;

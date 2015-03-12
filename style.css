@@ -6037,27 +6037,31 @@ textarea {
   background-color: #002044;
   border-radius: 50%;
   color: #fff;
-  display: inline-block;
   padding: 0.25em; }
-  .icon--rounded:hover {
+
+a.icon--rounded {
+  background-color: #002044;
+  color: #fff;
+  display: inline-block; }
+  a.icon--rounded:hover {
     background-color: #023670;
     color: #fff; }
-  .icon--rounded:visited {
+  a.icon--rounded:visited {
     background-color: #002044;
     color: #fff; }
 
-.icon--large {
-  font-size: 150%; }
-
-.icon--alternate {
+a.icon--alternate {
   background-color: #fff;
-  color: #002044 !important; }
-  .icon--alternate:visited {
-    background-color: #fff;
-    color: #002044 !important; }
-  .icon--alternate:hover {
+  color: #002044; }
+  a.icon--alternate:hover {
     background-color: #023670;
     color: #fff; }
+  a.icon--alternate:visited {
+    background-color: #fff;
+    color: #002044; }
+
+.icon--large {
+  font-size: 150%; }
 
 .wrapper {
   padding: 2.5em 0; }
@@ -6114,7 +6118,7 @@ textarea {
   background-color: #002044;
   background-image: url("images/bg-footer.png");
   color: #fff; }
-  .site-footer a {
+  .site-footer a:not(.icon--rounded) {
     color: #2c6db6; }
 
 /*--------------------------------------------------------------
@@ -6219,7 +6223,6 @@ textarea {
     display: inline;
     width: 10%; }
     .taxonomy-list li a {
-      background: rgba(0, 0, 0, 0.1);
       border: 1px solid #002044;
       display: block;
       color: #fff;
@@ -6230,6 +6233,8 @@ textarea {
       text-align: center;
       padding: 1em;
       width: 50%; }
+      .taxonomy-list li a:hover {
+        color: #2c6db6; }
       @media (min-width: 480px) {
         .taxonomy-list li a {
           width: 25%; } }
