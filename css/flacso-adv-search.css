@@ -1,0 +1,26 @@
+.page-template-library .navigation li a, .page-template-library .navigation li a:hover,
+.page-template-library .navigation li.active a,
+.page-template-library .navigation li.disabled {
+    color: #fff;
+    text-decoration:none;
+}
+	 
+.page-template-library .navigation li {
+    display: inline;
+}
+ 
+.page-template-library .navigation li a,
+.page-template-library .navigation li a:hover,
+.page-template-library .navigation li.active a,
+.page-template-library .navigation li.disabled {
+    background-color: #2c6db6;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 12px;
+    padding: 0.75rem;
+}
+ 
+.page-template-library .navigation li a:hover,
+.page-template-library .navigation li.active a {
+    background-color: #002044;
+}
