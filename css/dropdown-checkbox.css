@@ -2,7 +2,6 @@
 
 .flacso-search-adv-entry {
     background-color: #002044;
-    padding: 1.5em;
 }
 .flacso-search-adv-entry .search-item {
     margin-bottom: 1em;
@@ -29,13 +28,10 @@
     display: block;
     font-weight: normal;
     padding: 0.25em 0.5em;
-    min-height: 25px;
-    max-height: 60px;
-    line-height: 24px;
-    overflow: hidden;
     border:0;
 }
 .dropdown-checkbox dt .clickable:hover {
+    background-color: #ebebeb;
     cursor: pointer;
 }
 .dropdown-checkbox dt div span, .multiSel span {
@@ -54,8 +50,10 @@
     border:0;
     display:none;
     font-size: 0.875em;
-    left:0px;
     padding: 0.571em;
+    position: relative;
+        left:0;
+        top: -1.45em;
     list-style:none;
     height: auto;
     max-height: 240px;

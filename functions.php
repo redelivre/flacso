@@ -249,7 +249,7 @@ function flacso_create_dropdown_checkbox($inputname, $taxonomy, $taxonomy_obj)
 		    <dt>
 		    	<label class="dropdown-checkbox-header-label"><?php echo $taxonomy_obj->labels->name; ?></label>
 		    	<div class="clickable">
-			      <span class="hida">&#x25BC;<?php echo $taxonomy_obj->labels->search_items; ?></span>    
+			      <span class="hida"><?php _e( 'Select', 'flacso' ); ?>&nbsp;<span class="caret"></span></span>
 			      <p class="multiSel"></p>
 		      	</div> 
 		    </dt>

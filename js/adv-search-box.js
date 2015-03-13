@@ -28,7 +28,7 @@ function flacso_adv_search_click()
 }
 
 jQuery(document).ready(function () {
-	var w = jQuery('.clickable').width() + 10;
+	var w = jQuery('.clickable').width();
 	jQuery('.mutliSelect ul').width(w);
 	
 	jQuery('.adv-search-box-button').click(function(){
