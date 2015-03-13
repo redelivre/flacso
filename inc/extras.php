@@ -202,4 +202,55 @@ function flacso_exclude_gea($wp_query)
 	}
 }
 add_action( 'pre_get_posts', 'flacso_exclude_gea' );
+
+/**
+ * Filter post type Agenda and change past events behavior
+ *
+ * This should be automatically done in the post type. However, the
+ * main code has yet to be updated
+ * 
+ * @param object $wp_query [description]
+ * @link https://github.com/redelivre/redelivre/blob/master/src/wp-content/mu-plugins/agenda/agenda.php
+ */
+function flacso_filter_agenda( $wp_query ) {
+    
+    if (is_admin()) return;
+    
+    if (isset($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === 'agenda' && is_post_type_archive('agenda')) {
+        
+        
+        if (!isset($wp_query->query_vars['meta_query']) || !is_array($wp_query->query_vars['meta_query'])) {
+            $wp_query->query_vars['meta_query'] = array();
+        }
+        
+        $wp_query->query_vars['orderby'] = 'meta_value';
+        $wp_query->query_vars['order'] = 'ASC';
+        $wp_query->query_vars['meta_key'] = '_data_inicial';
+        
+        if ($wp_query->query_vars['paged'] > 0 || (isset($_GET['eventos']) && $_GET['eventos'] == 'passados')) {
+            array_push($wp_query->query_vars['meta_query'],
+                array(
+                    'key' => '_data_final',
+                    'value' => date('Y-m-d'),
+                    'compare' => '<=',
+                    'type' => 'DATETIME',
+                )
+            );
+
+            $wp_query->query_vars['order'] = 'DESC';
+
+        } else {
+            $wp_query->query_vars['posts_per_page'] = -1;
+            array_push($wp_query->query_vars['meta_query'],
+                array(
+                    'key' => '_data_final',
+                    'value' => date('Y-m-d'),
+                    'compare' => '>=',
+                    'type' => 'DATETIME'
+                )
+            );
+        }
+    }
+}
+add_action('pre_get_posts', 'flacso_filter_agenda');
 ?>
