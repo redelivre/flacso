@@ -11,6 +11,8 @@ function getSelectedValue(id) {
 jQuery(document).ready(function() {
 	jQuery(".dropdown-checkbox dt .clickable").on('click', function() {
 		jQuery(this).parent().parent().find('dd ul').slideToggle('fast');
+		jQuery(this).toggleClass( 'toggled' );
+
 	});
 	
 	jQuery(".dropdown-checkbox dd ul li a").on('click', function() {
@@ -23,6 +25,7 @@ jQuery(document).ready(function() {
 			jQuery(".dropdown-checkbox dd ul").hide();
 	});
 	
+	/*
 	jQuery('.mutliSelect input[type="checkbox"]').on(
 			'click',
 			function() {
@@ -40,5 +43,7 @@ jQuery(document).ready(function() {
 						jQuery(this).parent().parent().parent().parent().parent().parent().find(".hida").show();
 					}
 				}
-			});
+			}
+	);
+	*/
 });

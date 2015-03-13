@@ -34,6 +34,10 @@
     background-color: #ebebeb;
     cursor: pointer;
 }
+.dropdown-checkbox dt .clickable.toggled {
+    background-color: #2c6db6;
+    color: #fff;
+}
 .dropdown-checkbox dt div span, .multiSel span {
     cursor:pointer;
     display:inline-block;
