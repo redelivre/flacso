@@ -70,6 +70,8 @@ get_header(); ?>
 
 						<?php endif; ?>
 
+						<?php flacso_paging_nav(); ?>
+
 					<?php endwhile; ?>
 
 				<?php else : ?>
