@@ -89,9 +89,4 @@ get_header(); ?>
 	</div><!-- .col-md-# -->
 
 <?php get_sidebar(); ?>
-<div class="flacso-search-adv col-md-3 col-md-pull-9">
-	<div class="flacso-search-adv-entry" role="complementary">
-		<?php get_search_adv(); ?>
-	</div>
-</div>
 <?php get_footer(); ?>

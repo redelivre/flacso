@@ -17,5 +17,11 @@
 			dynamic_sidebar( 'sidebar-main' );
 		}
 		?>
+
+		<?php if ( is_page_template( 'page-templates/library.php' ) ) : ?>
+		<div class="flacso-search-adv-entry widget" role="complementary">
+			<?php get_search_adv(); ?>
+		</div>
+		<?php endif; ?>
 	</div><!-- #secondary -->
 </div><!-- .col-md-# -->
