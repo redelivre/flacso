@@ -459,12 +459,12 @@ function flacso_the_agenda_list() {
 			if ( $date_end && $date_end != $date_start ) :
 				/* translators: Initial & final date for the event */
 				printf(
-					'%1$s to %2$s',
-					date( get_option( 'date_format' ), strtotime( $date_start ) ),
-					date( get_option( 'date_format' ), strtotime( $date_end ) )
+					__( '%1$s to %2$s', 'flacso' ),
+					date( 'd/m/y', strtotime( $date_start ) ),
+					date( 'd/m/y', strtotime( $date_end ) )
 				);
 			else :
-				echo date( get_option( 'date_format' ), strtotime( $date_start ) );
+				echo date( 'd/m/y', strtotime( $date_start ) );
 			endif;
 			?>
 		</li><!-- .entry-agenda__item -->
