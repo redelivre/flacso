@@ -74,7 +74,9 @@ get_header(); ?>
 					<?php
 					// Search for pages that use Library Page Template
 					$page_library = flacso_get_page_by_post_template( 'page-templates/library.php' );
-
+					
+					$page_library_permalink = "#";
+					
 					foreach ( $page_library as $page ) {
 						// Flacso's library doesn't have a parent
 						if ( $page->post_parent == 0 ) {
