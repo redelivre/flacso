@@ -20,7 +20,7 @@
 	
 	<div class="media-body">
 		<header class="entry-header">
-			<div class="entry-meta entry-meta--tax entry-meta--basic">
+			<div class="entry-meta entry-meta--tax">
 				<?php
 					flacso_the_terms('category', '', true, true );
 				?>
@@ -28,7 +28,7 @@
 			<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 			<?php if ( 'post' == $post_type ) : ?>
-			<div class="entry-meta entry-meta--basic">
+			<div class="entry-meta">
 				<?php flacso_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>

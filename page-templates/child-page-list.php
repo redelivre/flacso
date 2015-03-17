@@ -14,8 +14,24 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'page' ); ?>
-				<?php endwhile; // end of the loop. ?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="page-header">
+						<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+					</header><!-- .page-header -->
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div>
+				</article>
+
+				<?php endwhile; ?>
 
 				<?php
 				$args = array (

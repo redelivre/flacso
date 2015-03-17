@@ -6189,8 +6189,7 @@ a.icon--alternate {
   clear: both;
   margin: 0 0 1.5em; }
 
-.entry-footer,
-.entry-meta {
+.entry-footer {
   border-width: 6px 0;
   border-color: #ebebeb;
   border-style: solid;
