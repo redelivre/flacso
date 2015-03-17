@@ -15,12 +15,12 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<div class="entry-meta entry-meta--tax entry-meta--basic">
+						<div class="entry-meta entry-meta--tax">
 							<?php the_category(' '); ?>
 						</div><!-- .entry-meta -->
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-						<div class="entry-meta entry-meta--basic">
+						<div class="entry-meta">
 							<?php flacso_posted_on(); ?>
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->

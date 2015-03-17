@@ -19,7 +19,7 @@
 	
 	<div class="media-body">
 		<header class="entry-header">
-			<div class="entry-meta entry-meta--basic">
+			<div class="entry-meta">
 				<?php
 				// Project status
 				flacso_the_terms( 'status', '' );

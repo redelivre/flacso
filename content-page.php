@@ -19,7 +19,7 @@
 	
 	<div class="media-body">
 		<header class="entry-header">
-			<div class="entry-meta entry-meta--tax entry-meta--basic">
+			<div class="entry-meta entry-meta--tax">
 			</div><!-- .entry-meta -->
 			<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		</header><!-- .entry-header -->
