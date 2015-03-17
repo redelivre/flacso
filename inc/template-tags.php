@@ -748,4 +748,4 @@ function flacso_filter_tag_link( $termlink, $term_id )
 	return "javascript:flacso_tax_click('post_tag', $term_id);";
 }
 
-add_filter('tag_link', 'flacso_filter_tag_link');
+add_filter('tag_link', 'flacso_filter_tag_link', 10, 2);
