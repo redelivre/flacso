@@ -14,9 +14,25 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
-				<header class="page-header">
-					<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-				</header><!-- .page-header -->
+				<?php while ( have_posts() ) : the_post(); ?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="page-header">
+						<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+					</header><!-- .page-header -->
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div>
+				</article>
+
+				<?php endwhile; ?>
 
 				<?php
 				if(get_query_var('publication-type', false) || get_query_var('cat', false))
