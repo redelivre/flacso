@@ -22,8 +22,53 @@ function flacso_adv_search_click()
 		success: function(response) {
 			jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 			jQuery('.general-list').replaceWith(response);
+			flacso_adv_search_result();
 		}
 	});
+	
+}
+
+function flacso_adv_search_result()
+{
+	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
+    {
+        return {
+        	name:  jQuery(this).attr("name").replace("adv-search-box-","").replace("[]", ""),
+        	value: jQuery(this).val(),
+        	title: jQuery(this).parent().text().trim(),
+        	tax_label: jQuery(this).parent().parent().parent().parent().parent().parent().find('.dropdown-checkbox-header-label').text()
+        };
+    }).get();
+	
+	var texts = jQuery("input[name*='adv-search-box-input-']").map(function()
+	{
+		if(jQuery(this).val().length > 0)
+		{
+			return { 
+				name:jQuery(this).attr("name").replace("adv-search-box-input-",""),
+				value:jQuery(this).val(),
+				label: jQuery(this).parent().find('label').text()
+			};
+		}
+	}).get();
+	
+	/*<header class="page-header">
+						<h1 class="page-title">Biblioteca</h1>					</header>*/
+	
+	var html = '<header class="page-header"><h1 class="page-title">Busca por:</h1>';
+	
+	for (i = 0; i < checkValues.length; i++)
+	{
+		html+="<h4>" + checkValues[i].tax_label + ": "+ checkValues[i].title + "</h4>";
+	}
+	for (i = 0; i < texts.length; i++)
+	{
+		html+="<h4>" + texts[i].label + ": "+ texts[i].value + "</h4>";
+	}
+	html+="</header>";
+	
+	jQuery('main article header').first().replaceWith(html);
+	jQuery('main article .entry-content').hide();
 	
 }
 
@@ -64,7 +109,9 @@ function flacso_tax_click(name, id)
 			fields: texts
 		},
 		success: function(response) {
+			jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 			jQuery('.general-list').replaceWith(response);
+			flacso_adv_search_result();
 		}
 	});
 }
