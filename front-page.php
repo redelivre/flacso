@@ -77,10 +77,13 @@ get_header(); ?>
 					
 					$page_library_permalink = "#";
 					
-					foreach ( $page_library as $page ) {
-						// Flacso's library doesn't have a parent
-						if ( $page->post_parent == 0 ) {
-							$page_library_permalink = get_permalink( $page->ID );
+					if(is_array($page_library))
+					{
+						foreach ( $page_library as $page ) {
+							// Flacso's library doesn't have a parent
+							if ( $page->post_parent == 0 ) {
+								$page_library_permalink = get_permalink( $page->ID );
+							}
 						}
 					}
 					?>
