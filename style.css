@@ -6240,12 +6240,6 @@ a.icon--alternate {
       @media (min-width: 768px) {
         .taxonomy-list li a {
           width: 12.5%; } }
-      @media (min-width: 992px) {
-        .taxonomy-list li a {
-          width: 16.666%; } }
-      @media (min-width: 1200px) {
-        .taxonomy-list li a {
-          width: 8.333%; } }
     .taxonomy-list li .icon {
       display: block;
       margin-bottom: 0.5em; }
