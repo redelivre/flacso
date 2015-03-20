@@ -314,10 +314,10 @@ function flacso_the_publication_general_info() {
 	flacso_the_terms( 'publication-type', '', true, true );
 
 	// Publication year
-	flacso_the_terms( 'year', ' &bull; ' );
+	flacso_the_terms( 'year', ' &bull; ', true, true );
 
 	// Publication country
-	flacso_the_terms( 'country', ' &bull; ' );
+	flacso_the_terms( 'country', ' &bull; ', true, true );
 }
 endif;
 

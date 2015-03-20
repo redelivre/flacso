@@ -37,13 +37,9 @@
 				flacso_the_source();
 
 				// Higher Education
-				flacso_the_terms( 'higher-education', 'Categorias: ' );
+				flacso_the_terms( 'higher-education', 'Categorias: ', true, true );
 
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'flacso' ) );
-				if ( $tags_list ) {
-					printf( '<div class="tags-links">' . __( 'Tags: %1$s', 'flacso' ) . '</div>', $tags_list );
-				}
+				flacso_the_terms('post_tag', __('Tags: ', 'flacso'), true, true);
 				?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
