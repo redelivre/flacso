@@ -86,6 +86,7 @@ function flacso_tax_click(name, id)
 	var checkValues = [{name:name, value:id}];
 	
 	jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
+	dropdownCheckboxMark();
 	
 	if(adv_search_box.gea != '')
 	{
