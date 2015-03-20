@@ -1,6 +1,7 @@
 function flacso_adv_search_click()
 {
 	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
+	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
     {
         return {name: jQuery(this).attr("name").replace("adv-search-box-","").replace("[]", ""), value:jQuery(this).val()};
@@ -21,10 +22,8 @@ function flacso_adv_search_click()
 			paged: jQuery('input[name="adv-search-paged"]').val()
 		},
 		success: function(response) {
-			jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 			jQuery('.general-list').replaceWith(response);
 			flacso_adv_search_result();
-			jQuery('.icon-spin6.animate-spin.icon--large').addClass('hidden')
 		}
 	});
 	
@@ -71,6 +70,7 @@ function flacso_adv_search_result()
 	
 	jQuery('main article header').first().replaceWith(html);
 	jQuery('main article .entry-content').hide();
+	jQuery('.icon-spin6.animate-spin.icon--large').addClass('hidden')
 	
 }
 
@@ -94,6 +94,9 @@ jQuery(document).ready(function () {
 
 function flacso_tax_click(name, id)
 {
+	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
+	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
+	
 	var checkValues = [{name:name, value:id}];
 	
 	jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
