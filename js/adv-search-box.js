@@ -79,6 +79,15 @@ jQuery(document).ready(function () {
 	jQuery('.adv-search-box-button').click(function(){
 		flacso_adv_search_click();
 	});
+	jQuery('.adv-search-box-custom-field input').bind("enterKey",function(e){
+		flacso_adv_search_click();
+	});
+	jQuery('.adv-search-box-custom-field input').keyup(function(e){
+	    if(e.keyCode == 13)
+	    {
+	        jQuery(this).trigger("enterKey");
+	    }
+	});
 });
 
 function flacso_tax_click(name, id)
