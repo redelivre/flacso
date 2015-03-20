@@ -47,7 +47,7 @@ get_header(); ?>
 						$tax_query = '"cat", '.get_query_var('cat', false);
 					}
 					?>
-					<div class="general-list archive">
+					<div class="general-list archive"><span class="icon-spin6 animate-spin icon--large hidden"></span>
 					</div>
 					<script type="text/javascript">
 					<!--
@@ -69,7 +69,7 @@ get_header(); ?>
 					$publications = get_terms( 'publication-type', $args );
 					?>
 					<?php if ( $publications ) : ?>
-					<div class="general-list">
+					<div class="general-list"><span class="icon-spin6 animate-spin icon--large hidden"></span>
 						<?php
 						foreach( $publications as $publication ) :
 							$publication_link = get_term_link( $publication );

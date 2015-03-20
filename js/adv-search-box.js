@@ -1,5 +1,6 @@
 function flacso_adv_search_click()
 {
+	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
 	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
     {
         return {name: jQuery(this).attr("name").replace("adv-search-box-","").replace("[]", ""), value:jQuery(this).val()};
@@ -23,6 +24,7 @@ function flacso_adv_search_click()
 			jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 			jQuery('.general-list').replaceWith(response);
 			flacso_adv_search_result();
+			jQuery('.icon-spin6.animate-spin.icon--large').addClass('hidden')
 		}
 	});
 	
