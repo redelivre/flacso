@@ -313,4 +313,15 @@ function flacso_manage_post_states( $post_states, $post ) {
 	return $post_states;
 }
 add_filter( 'display_post_states', 'flacso_manage_post_states', 10, 2 );
+
+/**
+ * Add new mime types for upload
+ * @param  array $mime_types Mime types list
+ * @return array $mime_types The updated mimes list
+ */
+function flacso_upload_mime_types( $mime_types ) {
+	$mime_types['epub|mobi'] = 'application/octet-stream';
+	return $mime_types;
+}
+add_filter( 'upload_mimes', 'flacso_upload_mime_types' );
 ?>

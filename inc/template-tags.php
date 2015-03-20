@@ -329,7 +329,8 @@ function flacso_the_publication_download_list() {
 	$allowed_medias = array(
 		'application/pdf', // PDF (.pdf)
 		'application/msword', // Microsoft Word (.doc)
-		'application/vnd.oasis.opendocument.text' // OpenOffice (.odt)
+		'application/vnd.oasis.opendocument.text', // OpenOffice (.odt)
+		'application/octet-stream' // ePUB, Mobi
 	);
 
 	$documents = get_attached_media( $allowed_medias );
