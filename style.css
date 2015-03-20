@@ -6095,6 +6095,13 @@ a.icon--alternate {
   font-size: 1.5em;
   margin-top: 0; }
 
+.search-form label {
+  display: block; }
+.search-form .search-field {
+  width: 100%; }
+.search-form .search-submit {
+  display: none; }
+
 /* Front Page content */
 .featured-intro .hentry {
   border-width: 0 0 6px;

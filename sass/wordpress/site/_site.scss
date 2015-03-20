@@ -84,6 +84,20 @@ a.icon--alternate {
 	margin-top: 0;
 }
 
+.search-form {
+	label {
+		display: block;
+	}
+
+	.search-field {
+		width: 100%;
+	}
+
+	.search-submit {
+		display: none;
+	}
+}
+
 /* Front Page content */
 .featured-intro .hentry {
 	@include main-border-bottom;
