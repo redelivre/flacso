@@ -3,53 +3,65 @@
 .flacso-search-adv-entry {
     background-color: #002044;
 }
+
 .flacso-search-adv-entry .search-item {
     margin-bottom: 1em;
 }
+
 .dropdown-checkbox dd, .dropdown-checkbox dt {
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
+
 .dropdown-checkbox ul {
     margin: -1px 0 0 0;
 }
+
 .dropdown-checkbox dd {
     clear: left;
-    position:relative;
+    position: relative;
 }
+
 .dropdown-checkbox a, 
 .dropdown-checkbox a:visited {
-    color:#fff;
-    text-decoration:none;
-    outline:none;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
     font-size: 12px;
 }
+
 .dropdown-checkbox dt .clickable {
     background-color: #FFFFFF;
     display: block;
     font-weight: normal;
     padding: 0.25em 0.5em;
-    border:0;
+    border: 0;
 }
+
 .dropdown-checkbox dt .clickable:hover {
     background-color: #ebebeb;
     cursor: pointer;
 }
+
 .dropdown-checkbox dt .clickable.toggled {
     background-color: #2c6db6;
     color: #fff;
 }
+
 .dropdown-checkbox dt div span, .multiSel span {
     cursor:pointer;
     display:inline-block;
     padding: 0 3px 2px 0;
 }
+
 .dropdown-checkbox .mutliSelect label {
     font-weight: normal;
 }
+
 .dropdown-checkbox .mutliSelect label:hover {
     cursor: pointer;
 }
+
 .dropdown-checkbox dd ul {
     background: #ebebeb;
     border:0;
@@ -65,13 +77,16 @@
     overflow: auto;
     width: 100%;
 }
+
 .dropdown-checkbox span.value {
     display:none;
 }
+
 .dropdown-checkbox dd ul li a {
     padding:5px;
     display:block;
 }
+
 .dropdown-checkbox dd ul li a:hover {
     background-color:#fff;
 }
