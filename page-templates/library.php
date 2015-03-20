@@ -47,7 +47,7 @@ get_header(); ?>
 						$tax_query = '"cat", '.get_query_var('cat', false);
 					}
 					?>
-					<div class="general-list">
+					<div class="general-list archive">
 					</div>
 					<script type="text/javascript">
 					<!--
