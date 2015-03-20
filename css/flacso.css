@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'flacso';
-  src: url('../font/flacso.eot?20169697');
-  src: url('../font/flacso.eot?20169697#iefix') format('embedded-opentype'),
-       url('../font/flacso.woff?20169697') format('woff'),
-       url('../font/flacso.ttf?20169697') format('truetype'),
-       url('../font/flacso.svg?20169697#flacso') format('svg');
+  src: url('../font/flacso.eot?59992054');
+  src: url('../font/flacso.eot?59992054#iefix') format('embedded-opentype'),
+       url('../font/flacso.woff?59992054') format('woff'),
+       url('../font/flacso.ttf?59992054') format('truetype'),
+       url('../font/flacso.svg?59992054#flacso') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'flacso';
-    src: url('../font/flacso.svg?20169697#flacso') format('svg');
+    src: url('../font/flacso.svg?59992054#flacso') format('svg');
   }
 }
 */
@@ -76,3 +76,4 @@
 .icon-doc:before { content: '\e817'; } /* '' */
 .icon-doc-text:before { content: '\e818'; } /* '' */
 .icon-doc-text-inv:before { content: '\e819'; } /* '' */
+.icon-spin6:before { content: '\e81a'; } /* '' */

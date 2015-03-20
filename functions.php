@@ -153,6 +153,8 @@ function flacso_scripts() {
     // Icon fonts by Fontello
     wp_register_style( 'flacso-icons', get_template_directory_uri() . '/css/flacso.css' );
     wp_enqueue_style( 'flacso-icons' );
+    wp_register_style( 'flacso-icons-animation', get_template_directory_uri() . '/css/animation.css' );
+    wp_enqueue_style( 'flacso-icons-animation' );
 
 	wp_enqueue_script( 'flacso-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
