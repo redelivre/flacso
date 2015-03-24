@@ -35,7 +35,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 				<?php
-				if(get_query_var('publication-type', false) || get_query_var('cat', false) || get_query_var('post_tag', false))
+				if(get_query_var('publication-type', false) || get_query_var('cat', false) || get_query_var('tag', false))
 				{
 					$tax_query = '"", ""';
 					if(get_query_var('publication-type', false))
@@ -48,7 +48,7 @@ get_header(); ?>
 					}
 					else 
 					{
-						$tax_query = '"post_tag", '.get_query_var('post_tag', false);
+						$tax_query = '"post_tag", '.get_query_var('tag', false);
 					}
 					?>
 					<div class="general-list archive"><span class="icon-spin6 animate-spin icon--large hidden"></span>
