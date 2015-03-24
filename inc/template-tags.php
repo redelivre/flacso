@@ -287,7 +287,7 @@ function flacso_the_publication_types() {
 	<?php if ( $publications ) : ?>
 	<ul class="taxonomy-list clear">
 		<?php foreach( $publications as $publication ) : ?>
-			<?php $publication_link = get_term_link( $publication ); ?>
+			<?php $publication_link = 'javascript:flacso_tax_click(\'publication-type\', '.$publication->term_id.');' ?>
 			<li class="">
 				<a href="<?php echo $publication_link; ?>">
 	    		<?php
