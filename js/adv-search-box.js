@@ -124,7 +124,7 @@ function flacso_tax_click(name, id)
 			fields: texts
 		},
 		success: function(response) {
-			jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+			jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 			jQuery('.general-list').replaceWith(response);
 			flacso_adv_search_result();
 		}
