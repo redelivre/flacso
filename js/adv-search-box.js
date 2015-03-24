@@ -1,5 +1,6 @@
 function flacso_adv_search_click()
 {
+	jQuery('main article .entry-content').hide();
 	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
 	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
