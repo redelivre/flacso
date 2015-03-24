@@ -14,7 +14,7 @@
 		}
 		else {
 			flacso_the_menu();
-			dynamic_sidebar( 'sidebar-main' );
+			if ( !is_page_template( 'page-templates/library.php' ) ) dynamic_sidebar( 'sidebar-main' );
 		}
 		?>
 
