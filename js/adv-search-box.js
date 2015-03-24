@@ -94,8 +94,6 @@ jQuery(document).ready(function () {
 
 function flacso_tax_click(name, id)
 {
-	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
-	
 	var checkValues = [{name:name, value:id}];
 	
 	jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
@@ -111,6 +109,7 @@ function flacso_tax_click(name, id)
 		window.location.href = adv_search_box.library_url + "&"+name+"="+id;
 		return false;
 	}
+	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
 	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	
 	var texts = [];
