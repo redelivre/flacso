@@ -95,7 +95,6 @@ jQuery(document).ready(function () {
 function flacso_tax_click(name, id)
 {
 	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
-	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	
 	var checkValues = [{name:name, value:id}];
 	
@@ -112,6 +111,7 @@ function flacso_tax_click(name, id)
 		window.location.href = adv_search_box.library_url + "&"+name+"="+id;
 		return false;
 	}
+	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	
 	var texts = [];
 	
