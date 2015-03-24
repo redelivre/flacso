@@ -222,6 +222,10 @@ function flacso_scripts() {
 			}
 		}
 	}
+	else 
+	{
+		$adv_args['library_url'] = get_permalink(get_queried_object_id());
+	}
 	
 	wp_localize_script('adv-search-box', 'adv_search_box', $adv_args);
 	

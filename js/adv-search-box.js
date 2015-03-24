@@ -30,6 +30,22 @@ function flacso_adv_search_click()
 	
 }
 
+function flacso_adv_serach_clear()
+{
+	jQuery(':input','.flacso-search-adv-entry')
+	  .not(':button, :submit, :reset,[type=hidden]')
+	  .val('')
+	  .removeAttr('checked')
+	  .removeAttr('selected');
+	flacso_adv_search_click();
+}
+
+function flacso_adv_search_voltar()
+{
+	window.location.href = adv_search_box.library_url;
+	return false;
+}
+
 function flacso_adv_search_result()
 {
 	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
@@ -67,7 +83,7 @@ function flacso_adv_search_result()
 	{
 		html+="<h4>" + texts[i].label + ": "+ texts[i].value + "</h4>";
 	}
-	html+="</header>";
+	html+='<a href="javascript:flacso_adv_search_voltar();">Voltar</a></header>';
 	
 	jQuery('main article header').first().replaceWith(html);
 	jQuery('main article .entry-content').hide();
