@@ -6033,36 +6033,6 @@ textarea {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
-.icon--rounded {
-  background-color: #002044;
-  border-radius: 50%;
-  color: #fff;
-  padding: 0.25em; }
-
-a.icon--rounded {
-  background-color: #002044;
-  color: #fff;
-  display: inline-block; }
-  a.icon--rounded:hover {
-    background-color: #023670;
-    color: #fff; }
-  a.icon--rounded:visited {
-    background-color: #002044;
-    color: #fff; }
-
-a.icon--alternate {
-  background-color: #fff;
-  color: #002044; }
-  a.icon--alternate:hover {
-    background-color: #023670;
-    color: #fff; }
-  a.icon--alternate:visited {
-    background-color: #fff;
-    color: #002044; }
-
-.icon--large {
-  font-size: 150%; }
-
 .wrapper {
   padding: 2.5em 0; }
 
@@ -6101,6 +6071,37 @@ a.icon--alternate {
   width: 100%; }
 .search-form .search-submit {
   display: none; }
+
+/* Icons */
+.icon--rounded {
+  background-color: #002044;
+  border-radius: 50%;
+  color: #fff;
+  padding: 0.25em; }
+
+a.icon--rounded {
+  background-color: #002044;
+  color: #fff;
+  display: inline-block; }
+  a.icon--rounded:hover {
+    background-color: #023670 !important;
+    color: #fff; }
+  a.icon--rounded:visited {
+    background-color: #002044;
+    color: #fff; }
+
+a.icon--alternate {
+  background-color: #fff;
+  color: #002044 !important; }
+  a.icon--alternate:hover {
+    background-color: #023670;
+    color: #fff; }
+  a.icon--alternate:visited {
+    background-color: #fff;
+    color: #002044; }
+
+.icon--large {
+  font-size: 150%; }
 
 /* Front Page content */
 .featured-intro .hentry {
