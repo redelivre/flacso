@@ -6103,6 +6103,24 @@ a.icon--alternate {
 .icon--large {
   font-size: 150%; }
 
+/* Image placeholder */
+.wp-post-image--placeholder {
+  background-color: #ebebeb;
+  color: #dddddd;
+  height: 212px;
+  position: relative;
+  width: 150px; }
+  .wp-post-image--placeholder .icon {
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
 /* Front Page content */
 .featured-intro .hentry {
   border-width: 0 0 6px;

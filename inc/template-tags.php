@@ -499,18 +499,26 @@ endif;
 if ( ! function_exists( 'flacso_the_dummy_image' ) ) :
 /**
  * Prints HTML for a dummy image
+ *
+ * For publication types, it also displays its icon
+ * 
+ * @param  string $post_type The post type
  */
 function flacso_the_dummy_image( $post_type = 'post' ) {
+	global $post;
+	?>
 
-	if ( $post_type == 'publication' ) {
-		$placeholder_size = '176x234';	
-	}
-	else {
-		$placeholder_size = '150x150';
-	}
-
-	echo '<img alt="Image" src="http://placehold.it/' . $placeholder_size . '/eeeeee/cccccc&text=Imagem" />';
-
+	<div class="wp-post-image--placeholder">
+		<?php
+		$publication_types = get_the_terms( $post->ID, 'publication-type' );
+		foreach( $publication_types as $publication_type ) {
+			if ( function_exists( 'get_tax_meta' ) ) {
+				echo '<span class="icon ' . get_tax_meta( $publication_type->term_id, 'flacso_icon_picker' ) . '"></span>';
+			}
+		}
+		?>
+	</div>
+	<?php
 }
 endif;
 

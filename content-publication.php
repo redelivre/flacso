@@ -11,9 +11,14 @@
 	<?php $post_type = get_post_type(); ?>
 	<div class="entry-image pull-left">
 		<a href="<?php the_permalink(); ?>">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'publication' ); ?>
-			<?php endif; ?>
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'publication' );
+			}
+			else {
+				flacso_the_dummy_image( 'publication' );
+			}
+			?>
 		</a>
 		<?php echo flacso_the_publication_download_list(); ?>
 	</div><!-- .entry-image -->

@@ -99,6 +99,24 @@ a.icon--alternate {
 	font-size: 150%;
 }
 
+/* Image placeholder */
+.wp-post-image--placeholder {
+	background-color: $color__quaternary;
+	color: $color__septenary;
+	height: 212px;
+	position: relative;
+	width: 150px;
+
+	.icon {
+		font-size: 5em;
+		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		text-align: center;
+  		@include translate(-50%, -50%);
+	}
+}
+
 /* Front Page content */
 .featured-intro .hentry {
 	@include main-border-bottom;
