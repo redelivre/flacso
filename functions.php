@@ -44,8 +44,8 @@ function flacso_setup() {
 	add_image_size( 'featured', 328, 328, true );
 	add_image_size( 'archive', 328, 246, true );
 	add_image_size( 'singular', 825, 619, false );
-	add_image_size( 'document', 176, 234, true );
-	add_image_size( 'document--small', 150, 212, true );
+	add_image_size( 'publication', 176, 234, true );
+	add_image_size( 'publication--small', 150, 212, true );
 
 
 	// This theme uses wp_nav_menu() in one location.
