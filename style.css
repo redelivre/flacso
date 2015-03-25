@@ -6496,6 +6496,12 @@ a.icon--alternate {
 .featured-links .widget-title {
   display: none; }
 
+/* SendPress widget */
+.widget.sendpress p {
+  margin-bottom: 0; }
+.widget.sendpress .sendpress-submit {
+  width: 100%; }
+
 /* GEA Documentation Center */
 .widget_flacso_gea_documentation_widget {
   background: #2b6aa6;

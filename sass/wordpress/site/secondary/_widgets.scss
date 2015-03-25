@@ -61,6 +61,17 @@
 	}
 }
 
+/* SendPress widget */
+.widget.sendpress {
+	p {
+		margin-bottom: 0;
+	}
+
+	.sendpress-submit {
+		width: 100%;
+	}
+}
+
 /* GEA Documentation Center */
 .widget_flacso_gea_documentation_widget {
 	background: $color__senary;
