@@ -452,6 +452,30 @@ function flacso_adv_search_callback()
 add_action( 'wp_ajax_nopriv_flacso_adv_search', 'flacso_adv_search_callback');
 add_action( 'wp_ajax_flacso_adv_search', 'flacso_adv_search_callback');
 
+function get_infoflacso_content_callback()
+{
+	global $post;
+	$post = get_post($_REQUEST['id']);
+	if($post->post_type == 'page' && basename(get_page_template_slug($post)) == 'infoflacso.php' && $post->post_status == 'publish' )
+	{
+		echo htmlspecialchars_decode($post->post_content);
+	}
+	die();
+}
+add_action( 'wp_ajax_nopriv_get_infoflacso_content', 'get_infoflacso_content_callback');
+add_action( 'wp_ajax_get_infoflacso_content', 'get_infoflacso_content_callback');
+
+function flacso_wp_editor_settings($settings)
+{
+	global $post;
+	if($post->post_type == 'page' && basename(get_page_template_slug($post)) == 'infoflacso.php' )
+	{
+		$settings['wpautop'] = true;
+	}
+	return $settings;
+}
+add_filter('wp_editor_settings', 'flacso_wp_editor_settings');
+
 function flacso_search_where($where)
 {
 	if(
