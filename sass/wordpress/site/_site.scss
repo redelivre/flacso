@@ -1,48 +1,6 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 
-.icon--rounded {
-	background-color: $color__primary;
-	border-radius: 50%;
-	color: #fff;
-	padding: 0.25em;
-}
-
-a.icon--rounded {
-	background-color: $color__primary;
-	color: #fff;
-	display: inline-block;
-
-	&:hover {
-		background-color: $color__secondary;
-		color: #fff;
-	}
-
-	&:visited {
-		background-color: $color__primary;
-		color: #fff;
-	}
-}
-
-a.icon--alternate {
-	background-color: #fff;
-	color: $color__primary;
-
-	&:hover {
-		background-color: $color__secondary;
-		color: #fff;
-	}
-
-	&:visited {
-		background-color: #fff;
-		color: $color__primary;
-	}
-}
-
-.icon--large {
-	font-size: 150%;
-}
-
 .wrapper {
 	padding: $section__padding 0;
 }
@@ -96,6 +54,49 @@ a.icon--alternate {
 	.search-submit {
 		display: none;
 	}
+}
+
+/* Icons */
+.icon--rounded {
+	background-color: $color__primary;
+	border-radius: 50%;
+	color: #fff;
+	padding: 0.25em;
+}
+
+a.icon--rounded {
+	background-color: $color__primary;
+	color: #fff;
+	display: inline-block;
+
+	&:hover {
+		background-color: $color__secondary !important;
+		color: #fff;
+	}
+
+	&:visited {
+		background-color: $color__primary;
+		color: #fff;
+	}
+}
+
+a.icon--alternate {
+	background-color: #fff;
+	color: $color__primary !important;
+
+	&:hover {
+		background-color: $color__secondary;
+		color: #fff;
+	}
+
+	&:visited {
+		background-color: #fff;
+		color: $color__primary;
+	}
+}
+
+.icon--large {
+	font-size: 150%;
 }
 
 /* Front Page content */
