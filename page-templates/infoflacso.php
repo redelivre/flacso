@@ -9,14 +9,12 @@
  */
 
 get_header(); ?>
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @package Flacso
- */
 
-get_header(); ?>
+<script type="text/javascript">
+  function resizeIframe(iframe) {
+    iframe.height = iframe.contentWindow.document.body.scrollHeight + 4 + "px";
+  }
+</script>
 
 	<div class="col-md-9 col-md-push-3">
 		<div id="primary" class="content-area">
@@ -30,7 +28,7 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<div class="entry-content">
-						<iframe src="<?php echo admin_url( 'admin-ajax.php' ).'?action=get_infoflacso_content&id='.get_queried_object_id(); ?>" style="width: 100%;height:1510px;" ></iframe>
+						<iframe onload="resizeIframe(this);" src="<?php echo admin_url( 'admin-ajax.php' ).'?action=get_infoflacso_content&id='.get_queried_object_id(); ?>" style="width: 100%;" ></iframe>
 						<?php
 							wp_link_pages( array(
 								'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
