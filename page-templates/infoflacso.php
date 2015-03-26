@@ -12,7 +12,7 @@ get_header(); ?>
 
 <script type="text/javascript">
   function resizeIframe(iframe) {
-    iframe.height = iframe.contentWindow.document.body.scrollHeight + 4 + "px";
+	iframe.height = jQuery('iframe').contents().height() + 4 + "px";
   }
 </script>
 
@@ -28,7 +28,7 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<div class="entry-content">
-						<iframe onload="resizeIframe(this);" src="<?php echo admin_url( 'admin-ajax.php' ).'?action=get_infoflacso_content&id='.get_queried_object_id(); ?>" style="width: 100%;" ></iframe>
+						<iframe onload="setTimeout(resizeIframe(this), 50);" src="<?php echo admin_url( 'admin-ajax.php' ).'?action=get_infoflacso_content&id='.get_queried_object_id(); ?>" style="width: 100%;" ></iframe>
 						<?php
 							wp_link_pages( array(
 								'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
