@@ -20,6 +20,8 @@ get_header(); ?>
 					<header class="page-header">
 						<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 					</header><!-- .page-header -->
+					
+					<?php flacso_the_loading_area(); ?>
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -51,8 +53,7 @@ get_header(); ?>
 						$tax_query = '"post_tag", '.get_query_var('tag', false);
 					}
 					?>
-					<div class="general-list archive"><span class="icon-spin6 animate-spin icon--large hidden"></span>
-					</div>
+
 					<script type="text/javascript">
 					<!--
 						jQuery(document).ready(function () {
@@ -73,7 +74,7 @@ get_header(); ?>
 					$publications = get_terms( 'publication-type', $args );
 					?>
 					<?php if ( $publications ) : ?>
-					<div class="general-list"><span class="icon-spin6 animate-spin icon--large hidden"></span>
+					<div class="general-list">
 						<?php
 						foreach( $publications as $publication ) :
 							$publication_link = get_term_link( $publication );

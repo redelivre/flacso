@@ -331,8 +331,11 @@ function flacso_adv_search_callback()
 {
 	$checkeds = array_key_exists('checked', $_POST) && is_array($_POST['checked']) ? $_POST['checked'] : array();
 	$fields = array_key_exists('fields', $_POST) && is_array($_POST['fields']) ? $_POST['fields'] : array();
-	echo '<div class="general-list archive"><span class="icon-spin6 animate-spin icon--large hidden"></span>';
 	
+	flacso_the_loading_area();
+
+	echo '<div class="general-list archive">';
+
 	/*print_r($checkeds);
 	print_r($fields);*/
 	
