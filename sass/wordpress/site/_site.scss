@@ -1,6 +1,9 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 
+.alert-info--loading {
+	display: none;
+}
 .wrapper {
 	padding: $section__padding 0;
 }

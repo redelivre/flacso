@@ -1,7 +1,7 @@
 function flacso_adv_search_click()
 {
-	jQuery('main article .entry-content').hide();
-	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
+	jQuery('main article .entry-content').first().slideUp();
+	jQuery('.alert-info--loading').fadeIn();
 	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	var checkValues = jQuery("input[name*='adv-search-box-']:checked").map(function()
     {
@@ -23,8 +23,9 @@ function flacso_adv_search_click()
 			paged: jQuery('input[name="adv-search-paged"]').val()
 		},
 		success: function(response) {
-			jQuery('.general-list').replaceWith(response);
 			flacso_adv_search_result();
+			jQuery('.alert-info--loading').fadeOut();
+			jQuery('.general-list').slideUp().replaceWith(response);
 		}
 	});
 	
@@ -86,8 +87,8 @@ function flacso_adv_search_result()
 	html+='<a href="javascript:flacso_adv_search_voltar();">Voltar</a></header>';
 	
 	jQuery('main article header').first().replaceWith(html);
-	jQuery('main article .entry-content').hide();
-	jQuery('.icon-spin6.animate-spin.icon--large').addClass('hidden')
+	jQuery('main article .entry-content').first().slideUp();
+	jQuery('.alert-info--loading').fadeOut();
 	
 }
 
@@ -126,7 +127,7 @@ function flacso_tax_click(name, id)
 		window.location.href = adv_search_box.library_url + "&"+name+"="+id;
 		return false;
 	}
-	jQuery('.icon-spin6.animate-spin.icon--large').removeClass('hidden');
+	jQuery('.alert-info--loading').fadeIn();
 	jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
 	
 	var texts = [];
@@ -141,7 +142,7 @@ function flacso_tax_click(name, id)
 		},
 		success: function(response) {
 			jQuery("html, body").animate({ scrollTop: jQuery('#main').first().offset().top }, "slow");
-			jQuery('.general-list').replaceWith(response);
+			jQuery('.general-list').slideUp().replaceWith(response);
 			flacso_adv_search_result();
 		}
 	});

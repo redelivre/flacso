@@ -758,3 +758,18 @@ function flacso_filter_tag_link( $termlink, $term_id )
 }
 
 add_filter('tag_link', 'flacso_filter_tag_link', 10, 2);
+
+/**
+ * Prints HTML for custom ajax loading area
+ *
+ * It works inside Library's advanced search
+ */
+function flacso_the_loading_area() {
+	?>
+	<div class="alert alert-info alert-dismissible alert-info--loading" role="alert">
+		<span class="icon-spin6 animate-spin"></span>
+		<?php _e( 'Carregando as informações', 'flacso' ); ?>
+	</div>
+	<?php
+}
+?>
