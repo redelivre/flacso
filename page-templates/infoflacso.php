@@ -28,58 +28,63 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<div class="entry-content">
-						<iframe onload="setTimeout(resizeIframe(this), 50);" src="<?php echo admin_url( 'admin-ajax.php' ).'?action=get_infoflacso_content&id='.get_queried_object_id(); ?>" style="width: 100%;" ></iframe>
-						<?php
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
-								'after'  => '</div>',
-							) );
-						?>
-
-						<?php
-						/*
-						 * If is child of our page template that serves Programs, display the
-						 * related projects
-						 */
-						$parent_page_template = get_post_meta( $post->post_parent, '_wp_page_template', true );
-
-						if ( $parent_page_template == 'page-templates/child-page-list.php' ) :
-
-							// Loop through the terms
-							$statuses = get_terms( 'status', array( 'hide_empty' => true ) );
-
-							foreach ( $statuses as $status ) {
-
-								$args = array (
-									'post_type' => 'project',
-									'posts_per_page' => -1,
-									'meta_key'   => '_flacso-program-relation',
-									'meta_value' => $post->ID,
-									'tax_query' => array(
-										array(
-											'taxonomy' => 'status',
-											'field'    => 'id',
-											'terms'    => array( $status->term_id ),
+						<?php $page = get_post();
+						if($page->post_parent !== 0) : ?>
+							<iframe onload="setTimeout(resizeIframe(this), 50);" src="<?php echo admin_url( 'admin-ajax.php' ).'?action=get_infoflacso_content&id='.get_queried_object_id(); ?>" style="width: 100%;" ></iframe>
+							<?php
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . __( 'Pages:', 'flacso' ),
+									'after'  => '</div>',
+								) );
+							?>
+	
+							<?php
+							/*
+							 * If is child of our page template that serves Programs, display the
+							 * related projects
+							 */
+							$parent_page_template = get_post_meta( $post->post_parent, '_wp_page_template', true );
+	
+							if ( $parent_page_template == 'page-templates/child-page-list.php' ) :
+	
+								// Loop through the terms
+								$statuses = get_terms( 'status', array( 'hide_empty' => true ) );
+	
+								foreach ( $statuses as $status ) {
+	
+									$args = array (
+										'post_type' => 'project',
+										'posts_per_page' => -1,
+										'meta_key'   => '_flacso-program-relation',
+										'meta_value' => $post->ID,
+										'tax_query' => array(
+											array(
+												'taxonomy' => 'status',
+												'field'    => 'id',
+												'terms'    => array( $status->term_id ),
+											)
 										)
-									)
-								);
-							
-								$projects = new WP_Query( $args );
-
-								if ( $projects->have_posts() ) : ?>
-
-									<h3><?php echo $status->name; ?></h3>
-									<ul>
-										<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
-											<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php edit_post_link( __( 'Editar projeto', 'flacso' ), '&nbsp;<span class="edit-link">', '</span>' ); ?></li>
-										<?php endwhile; ?>
-									</ul>
-								<?php
-								endif;
-
-								wp_reset_postdata();
-							}
-
+									);
+								
+									$projects = new WP_Query( $args );
+	
+									if ( $projects->have_posts() ) : ?>
+	
+										<h3><?php echo $status->name; ?></h3>
+										<ul>
+											<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
+												<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php edit_post_link( __( 'Editar projeto', 'flacso' ), '&nbsp;<span class="edit-link">', '</span>' ); ?></li>
+											<?php endwhile; ?>
+										</ul>
+									<?php
+									endif;
+	
+									wp_reset_postdata();
+								}
+	
+							endif;
+						else :
+							the_content();
 						endif;
 						?>
 					</div><!-- .entry-content -->
@@ -103,14 +108,15 @@ get_header(); ?>
 					'post_type'		=> 'page',
 					'post_parent'	=> $post->ID,
 					'orderby'		=> 'title',
-					'order'			=> 'ASC'
+					'order'			=> 'ASC',
+					'posts_per_page'	=> -1,
 				);
 
 				$child_pages = new WP_Query( $args );
 
 				if( $child_pages->have_posts() ) : while( $child_pages->have_posts() ) : $child_pages->the_post();
 
-					get_template_part( 'content' );
+					get_template_part( 'content', 'infoflacso' );
 
 				endwhile; endif;
 
