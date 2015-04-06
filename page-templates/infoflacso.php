@@ -108,7 +108,7 @@ get_header(); ?>
 					'post_type'		=> 'page',
 					'post_parent'	=> $post->ID,
 					'orderby'		=> 'title',
-					'order'			=> 'ASC',
+					'order'			=> 'DESC',
 					'posts_per_page'	=> -1,
 				);
 
