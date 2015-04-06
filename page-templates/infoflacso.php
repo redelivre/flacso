@@ -97,6 +97,24 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; // end of the loop. ?>
+			
+			<?php
+				$args = array (
+					'post_type'		=> 'page',
+					'post_parent'	=> $post->ID,
+					'orderby'		=> 'title',
+					'order'			=> 'ASC'
+				);
+
+				$child_pages = new WP_Query( $args );
+
+				if( $child_pages->have_posts() ) : while( $child_pages->have_posts() ) : $child_pages->the_post();
+
+					get_template_part( 'content' );
+
+				endwhile; endif;
+
+			?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
