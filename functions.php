@@ -334,11 +334,6 @@ function flacso_adv_search_callback()
 	
 	echo '<div class="general-list archive">';
 	
-	flacso_the_loading_area();
-
-	/*print_r($checkeds);
-	print_r($fields);*/
-	
 	$taxs = array();
 	foreach ($checkeds as $checked)
 	{
