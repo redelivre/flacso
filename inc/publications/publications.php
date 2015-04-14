@@ -44,6 +44,32 @@ class Publications
 			'administrator' => array('Novo' => false, 'Caps' => array
 			(
 				'delete_publications',
+				'edit_publication',
+				'edit_publications',
+				'read_publication',
+			)),
+			'contributor' => array('Novo' => false, 'Caps' => array
+			(
+				'read_publication',
+			)),
+			'subscriber' => array('Novo' => false, 'Caps' => array
+			(
+				'read_publication',
+			)),
+			'author' => array('Novo' => false, 'Caps' => array
+			(
+				'delete_publications',
+				'edit_publication',
+				'edit_publications',
+				'publish_publications',
+				'read_publication',
+				'delete_published_publications',
+				'edit_published_publications',
+				'edit_published_publication',
+			)),
+			'editor' => array('Novo' => false, 'Caps' => array
+			(
+				'delete_publications',
 				'delete_private_publications',
 				'edit_publication',
 				'edit_publications',
@@ -58,22 +84,6 @@ class Publications
 				'edit_others_publication',
 				'delete_others_publications',
 				'delete_others_publication'
-			)),
-			'contributor' => array('Novo' => false, 'Caps' => array
-			(
-				'read_publication',
-			)),
-			'subscriber' => array('Novo' => false, 'Caps' => array
-			(
-				'read_publication',
-			)),
-			'author' => array('Novo' => false, 'Caps' => array
-			(
-				'read_publication',
-			)),
-			'editor' => array('Novo' => false, 'Caps' => array
-			(
-				'read_publication',
 			)),
 		);
 		
