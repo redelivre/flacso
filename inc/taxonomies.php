@@ -46,8 +46,8 @@ function flacso_create_taxs()
 			'label' => __($gea_label,'flacso'),
 			'labels' => $labels,
 			'public' => true,
-			'capabilities' => array('assign_terms' => 'edit_publications',
-					'edit_terms' => 'edit_publications'),
+			/*'capabilities' => array('assign_terms' => 'edit_posts',
+					'edit_terms' => 'edit_posts'),*/
 			//'show_in_nav_menus' => true, // Public
 			// 'show_ui' => '', // Public
 			'hierarchical' => true,
@@ -303,8 +303,8 @@ function flacso_register_tax($name, $slug, $post_types, $plural = true, $single 
 			"label" => __("{$name}{$s}","flacso"),
 			"labels" => $labels,
 			"public" => true,
-			"capabilities" => array("assign_terms" => "edit_publications",
-					"edit_terms" => "edit_publications"),
+			/*"capabilities" => array("assign_terms" => "edit_publications",
+					"edit_terms" => "edit_publications"),*/
 			//"show_in_nav_menus" => true, // Public
 			// "show_ui" => "", // Public
 			"hierarchical" => true,
