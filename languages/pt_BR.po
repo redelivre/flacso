@@ -53,7 +53,7 @@ msgstr "Este Projeto Pertence ao (s) Programa (s) %s"
 #: ../content-publication.php:45
 #, php-format
 msgid "Author: %1$s"
-msgstr "Autor: %1$s"
+msgstr "Autoria: %1$s"
 
 #: ../content-publication.php:55 ../inc/template-tags.php:116
 #: ../inc/template-tags.php:123
@@ -294,7 +294,7 @@ msgstr "Palavra-chave: %s"
 #: ../inc/template-tags.php:354
 #, php-format
 msgid "Author: %s"
-msgstr "Autor: %s"
+msgstr "Autoria: %s"
 
 #: ../inc/template-tags.php:356
 #, php-format
@@ -1079,11 +1079,11 @@ msgstr "Tipo de arquivo inválido"
 
 #: ../inc/publications/publications.php:11
 msgid "Author"
-msgstr "Autor"
+msgstr "Autoria"
 
 #: ../inc/publications/publications.php:12
 msgid "Publication Author"
-msgstr " Autor da Publicação"
+msgstr " Autoria da Publicação"
 
 #: ../inc/publications/publications.php:88
 #: ../inc/publications/publications.php:99
