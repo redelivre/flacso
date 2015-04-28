@@ -704,7 +704,7 @@ function is_gea($post_data = null)
 		if(is_archive())
 		{
 			$gea_var = get_query_var('gea', false);
-			if ($gea_var == 'GEA')
+			if ($gea_var == 'GEA' || $gea_var == 'gea' )
 			{
 				return true;
 			}

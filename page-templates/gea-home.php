@@ -94,7 +94,7 @@ get_header(); ?>
 							</article><!-- #post-## -->
 						<?php endwhile; endif; ?>
 						<?php wp_reset_postdata(); ?>
-						<a href="<?php echo get_term_link('GEA', 'gea'); ?>" class="more-news pull-right"><?php _e( 'More News', 'flacso' ); ?></a>
+						<a href="<?php get_term_link('GEA', 'gea'); ?>" class="more-news pull-right"><?php _e( 'More News', 'flacso' ); ?></a>
 					</div>
 				</div><!-- .row -->
 		</section><!-- .featured-news -->
