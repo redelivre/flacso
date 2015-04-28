@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flacso Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-12 15:36-0300\n"
+"POT-Creation-Date: 2015-04-28 16:01-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
 "Language-Team: \n"
@@ -20,55 +20,64 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: ../front-page.php:43 ../front-page.php:74 ../front-page.php:115
-#: ../front-page.php:141 ../content.php:44 ../page-templates/library.php:49
+#: ../front-page.php:43 ../front-page.php:90 ../front-page.php:106
+#: ../front-page.php:132 ../content-project.php:35
+#: ../content-publication.php:56 ../archive-agenda.php:68
+#: ../content-agenda.php:32 ../content.php:41 ../content-page.php:31
+#: ../page-templates/library.php:100 ../page-templates/gea-home.php:93
 msgid "Read more"
 msgstr "Leia mais"
 
-#: ../content-project.php:24
-#, php-format
-msgid "Coordenação: %1$s"
-msgstr "Coordenação: %1$s"
+#: ../page.php:38 ../single-agenda.php:27 ../single.php:32
+#: ../single-publication.php:66 ../page-templates/child-page-list.php:27
+#: ../page-templates/library.php:30 ../page-templates/infoflacso.php:36
+#: ../page-templates/project-list.php:27
+msgid "Pages:"
+msgstr "Páginas:"
 
-#: ../content-project.php:30
-#, php-format
-msgid "Patrocínio: %1$s"
-msgstr "Patrocínio: %1$s"
+#: ../page.php:78 ../page-templates/infoflacso.php:76
+msgid "Editar projeto"
+msgstr "Editar Projeto"
 
-#: ../content-project.php:36
-#, php-format
-msgid "Financiamento: %1$s"
-msgstr "Financiamento: %1$s"
+#: ../page.php:91 ../page-templates/gea-home.php:34
+#: ../page-templates/infoflacso.php:92 ../inc/template-tags.php:250
+#: ../inc/taxonomies.php:27
+msgid "Edit"
+msgstr "Editar"
 
-#: ../content-project.php:42
-#, php-format
-msgid "Instituições parceiras: %1$s"
-msgstr "Instituições Parceiras: %1$s"
-
-#: ../content-project.php:91
-#, php-format
-msgid "Este projeto pertence ao(s) programa(s) %s"
-msgstr "Este Projeto Pertence ao (s) Programa (s) %s"
-
-#: ../content-publication.php:45
+#: ../content-publication.php:38 ../single-publication.php:44
 #, php-format
 msgid "Author: %1$s"
 msgstr "Autoria: %1$s"
 
-#: ../content-publication.php:55 ../inc/template-tags.php:116
-#: ../inc/template-tags.php:123
-msgid ", "
-msgstr ", "
+#: ../content-publication.php:47
+msgid "Tags: "
+msgstr "Palavras-chave:"
 
-#: ../content-publication.php:57
+#: ../archive-agenda.php:21
+msgid "Eventos passados"
+msgstr "Eventos passados"
+
+#: ../archive-agenda.php:22
+msgid "Ver eventos futuros &rarr;"
+msgstr "Ver eventos futuros &rarr;"
+
+#: ../archive-agenda.php:24
+msgid "Próximos eventos"
+msgstr "Próximos eventos"
+
+#: ../archive-agenda.php:25
+msgid "&larr; Ver eventos passados"
+msgstr "&larr; Ver eventos passados"
+
+#: ../archive-agenda.php:52 ../inc/template-tags.php:463
 #, php-format
-msgid "Tags: %1$s"
-msgstr "Palavras-chave: %1$s"
+msgid "%1$s to %2$s"
+msgstr "%1$s até %2$s"
 
-#: ../content-publication.php:67 ../content-post.php:20
-#: ../content-agenda.php:27 ../content-page.php:18
-msgid "Pages:"
-msgstr "Páginas:"
+#: ../archive-agenda.php:80
+msgid "Não há eventos nesta lista"
+msgstr "Não há eventos nesta lista"
 
 #: ../header.php:24
 msgid "Skip to content"
@@ -82,39 +91,63 @@ msgstr "Menu Principal"
 msgid "Top Menu"
 msgstr "Menu Superior"
 
-#: ../functions.php:90
+#: ../functions.php:55
+msgid "Top Menu (GEA)"
+msgstr "Menu Superior"
+
+#: ../functions.php:91
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: ../functions.php:92
+#: ../functions.php:93
 msgid "The main sidebar"
 msgstr "A principal barra lateral"
 
-#: ../functions.php:100
+#: ../functions.php:101
+msgid "Sidebar (GEA)"
+msgstr "Barra Lateral (GEA)"
+
+#: ../functions.php:103
+msgid "The main sidebar for GEA"
+msgstr "A principal barra lateral do GEA"
+
+#: ../functions.php:111
 msgid "Footer Widget Area"
 msgstr "Área de Widget do Rodapé"
 
-#: ../functions.php:102
+#: ../functions.php:113
 msgid "The widget area on the footer"
 msgstr "Área de widget no rodapé"
 
-#: ../functions.php:110
+#: ../functions.php:121
+msgid "Footer Widget Area (GEA)"
+msgstr "Área de Widget do Rodapé (GEA)"
+
+#: ../functions.php:123
+msgid "The widget area on the GEA footer"
+msgstr "Área de widget no rodapé do GEA"
+
+#: ../functions.php:131
 msgid "Banners Widget Area"
 msgstr "Área de Widget para Banners"
 
-#: ../functions.php:112
+#: ../functions.php:133
 msgid "The widget area for banners"
 msgstr "A área do widget para banners"
 
-#: ../functions.php:272
+#: ../functions.php:258
+msgid "Select"
+msgstr "Selecione"
+
+#: ../functions.php:311
 msgid "Publication Title"
 msgstr "Título da Publicação"
 
-#: ../functions.php:273
+#: ../functions.php:312
 msgid "Search for documents with that text"
 msgstr "Pesquisa por publicações com este texto"
 
-#: ../functions.php:282
+#: ../functions.php:321
 msgid "Pesquisar por"
 msgstr "Pesquisar por"
 
@@ -144,15 +177,6 @@ msgstr "Tente procurar nos arquivos mensais. %1$s"
 msgid "Search Results for: %s"
 msgstr "Resultados da pesquisa para: %s"
 
-#: ../content-page.php:58
-msgid "Editar projeto"
-msgstr "Editar Projeto"
-
-#: ../content-page.php:71 ../inc/template-tags.php:129
-#: ../inc/taxonomies.php:27
-msgid "Edit"
-msgstr "Editar"
-
 #: ../comments.php:28
 #, php-format
 msgctxt "comments title"
@@ -176,6 +200,31 @@ msgstr "Comentários Recentes &rarr;"
 #: ../comments.php:66
 msgid "Comments are closed."
 msgstr "Os comentários estão fechados."
+
+#: ../single-project.php:32
+#, php-format
+msgid "Coordenação: %1$s"
+msgstr "Coordenação: %1$s"
+
+#: ../single-project.php:38
+#, php-format
+msgid "Patrocínio: %1$s"
+msgstr "Patrocínio: %1$s"
+
+#: ../single-project.php:44
+#, php-format
+msgid "Financiamento: %1$s"
+msgstr "Financiamento: %1$s"
+
+#: ../single-project.php:50
+#, php-format
+msgid "Instituições parceiras: %1$s"
+msgstr "Instituições Parceiras: %1$s"
+
+#: ../single-project.php:99
+#, php-format
+msgid "Este projeto pertence ao(s) programa(s) %s"
+msgstr "Este Projeto Pertence ao (s) Programa (s) %s"
 
 #: ../content-none.php:13
 msgid "Nothing Found"
@@ -205,6 +254,28 @@ msgstr ""
 "Parece que não pude encontrar o que você está procurando. Talvez a pesquisa "
 "possa ajudar."
 
+#: ../single-publication.php:54 ../inc/template-tags.php:237
+#: ../inc/template-tags.php:244
+msgid ", "
+msgstr ", "
+
+#: ../single-publication.php:56
+#, php-format
+msgid "Tags: %1$s"
+msgstr "Palavras-chave: %1$s"
+
+#: ../page-templates/gea-home.php:97
+msgid "More News"
+msgstr "Mais notícias"
+
+#: ../page-templates/project-list.php:38
+msgid "Projetos em andamento"
+msgstr "Projetos em andamento"
+
+#: ../page-templates/project-list.php:39
+msgid "Projetos realizados"
+msgstr "Projetos realizados"
+
 #: ../inc/customizer.php:22
 msgid "Front Page Content"
 msgstr "Conteúdo da capa"
@@ -233,178 +304,190 @@ msgstr "Adicionar um menu"
 msgid "Menu"
 msgstr "Menu"
 
-#: ../inc/template-tags.php:40
+#: ../inc/template-tags.php:48
 msgid "Posts navigation"
 msgstr "Navegação das postagens"
 
-#: ../inc/template-tags.php:44
+#: ../inc/template-tags.php:52
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<Span class=\"meta-nav\"> &larr; </span> Posts mais antigos"
 
-#: ../inc/template-tags.php:48
+#: ../inc/template-tags.php:56
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Posts mais recentes <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../inc/template-tags.php:71
+#: ../inc/template-tags.php:73
+msgid "Next Page &raquo;"
+msgstr "Próxima Página &raquo;"
+
+#: ../inc/template-tags.php:88
+msgid "&laquo; Previous Page"
+msgstr "&laquo; Página Anterior"
+
+#: ../inc/template-tags.php:192
 msgid "Post navigation"
 msgstr "Navegação da postagem"
 
-#: ../inc/template-tags.php:74
+#: ../inc/template-tags.php:195
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr "<Span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
-#: ../inc/template-tags.php:75
+#: ../inc/template-tags.php:196
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
-#: ../inc/template-tags.php:119
+#: ../inc/template-tags.php:240
 msgid "Categorias"
 msgstr "Categorias"
 
-#: ../inc/template-tags.php:125
+#: ../inc/template-tags.php:246
 msgid "Tags"
 msgstr "Palavras-chave"
 
-#: ../inc/template-tags.php:143
+#: ../inc/template-tags.php:264
 msgid "Share"
 msgstr "Compartilhar"
 
-#: ../inc/template-tags.php:180 ../inc/template-tags.php:183
+#: ../inc/template-tags.php:353 ../inc/template-tags.php:356
 msgid "Download"
 msgstr "Baixar"
 
-#: ../inc/template-tags.php:210 ../inc/template-tags.php:214
-#: ../inc/template-tags.php:217
+#: ../inc/template-tags.php:383 ../inc/template-tags.php:387
+#: ../inc/template-tags.php:390
 #, php-format
 msgid "Source: %1$s"
 msgstr "Fonte: %1$s"
 
-#: ../inc/template-tags.php:350
+#: ../inc/template-tags.php:539
 #, php-format
 msgid "Category: %s"
 msgstr "Categoria: %s"
 
-#: ../inc/template-tags.php:352
+#: ../inc/template-tags.php:541
 #, php-format
 msgid "Tag: %s"
 msgstr "Palavra-chave: %s"
 
-#: ../inc/template-tags.php:354
+#: ../inc/template-tags.php:543
 #, php-format
 msgid "Author: %s"
 msgstr "Autoria: %s"
 
-#: ../inc/template-tags.php:356
+#: ../inc/template-tags.php:545
 #, php-format
 msgid "Year: %s"
 msgstr "Ano: %s"
 
-#: ../inc/template-tags.php:356
+#: ../inc/template-tags.php:545
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: ../inc/template-tags.php:358
+#: ../inc/template-tags.php:547
 #, php-format
 msgid "Month: %s"
 msgstr "Mês: %s"
 
-#: ../inc/template-tags.php:358
+#: ../inc/template-tags.php:547
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "FY"
 
-#: ../inc/template-tags.php:360
+#: ../inc/template-tags.php:549
 #, php-format
 msgid "Day: %s"
 msgstr "Dia: %s"
 
-#: ../inc/template-tags.php:360
+#: ../inc/template-tags.php:549
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: ../inc/template-tags.php:362
+#: ../inc/template-tags.php:551
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "À parte"
 
-#: ../inc/template-tags.php:364
+#: ../inc/template-tags.php:553
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galerias"
 
-#: ../inc/template-tags.php:366
+#: ../inc/template-tags.php:555
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Imagens"
 
-#: ../inc/template-tags.php:368
+#: ../inc/template-tags.php:557
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vídeos"
 
-#: ../inc/template-tags.php:370
+#: ../inc/template-tags.php:559
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Cotações"
 
-#: ../inc/template-tags.php:372
+#: ../inc/template-tags.php:561
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Links"
 
-#: ../inc/template-tags.php:374
+#: ../inc/template-tags.php:563
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Situações"
 
-#: ../inc/template-tags.php:376
+#: ../inc/template-tags.php:565
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Áudios"
 
-#: ../inc/template-tags.php:378
+#: ../inc/template-tags.php:567
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Bate-papo"
 
-#: ../inc/template-tags.php:380
+#: ../inc/template-tags.php:569
 #, php-format
 msgid "Archives: %s"
 msgstr "Arquivos: %s"
 
-#: ../inc/template-tags.php:384
+#: ../inc/template-tags.php:573
 #, php-format
 msgid "%1$s: %2$s"
 msgstr "%1$s : %2$s"
 
-#: ../inc/template-tags.php:386
+#: ../inc/template-tags.php:575
 msgid "Archives"
 msgstr "Arquivos"
 
-#: ../inc/extras.php:67
+#: ../inc/template-tags.php:771
+msgid "Carregando as informações"
+msgstr "Carregando as informações"
+
+#: ../inc/extras.php:71
 #, php-format
 msgid "Page %s"
 msgstr "Página %s"
 
-#: ../inc/extras.php:125
+#: ../inc/extras.php:129
 #, php-format
 msgid "<cite class=\"fn media-heading\">%s</cite>"
 msgstr "<Cite class = \"fn media-título \"> %s </ cite>"
 
-#: ../inc/extras.php:131
+#: ../inc/extras.php:135
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: ../inc/extras.php:131
+#: ../inc/extras.php:135
 msgid "(Edit)"
 msgstr "(Editar)"
 
-#: ../inc/extras.php:138
+#: ../inc/extras.php:142
 msgid "Your comment is awaiting moderation."
 msgstr "Seu comentário está aguardando moderação."
 
@@ -428,7 +511,7 @@ msgstr "Atualizar"
 #: ../inc/taxonomies.php:189 ../inc/taxonomies.php:207
 #: ../inc/taxonomies.php:225 ../inc/taxonomies.php:243
 #: ../inc/taxonomies.php:261 ../inc/taxonomies.php:293
-#: ../inc/projects/projects.php:96 ../inc/publications/publications.php:90
+#: ../inc/projects/projects.php:96 ../inc/publications/publications.php:100
 msgid "Add new"
 msgstr "Adicionar novo"
 
@@ -508,7 +591,7 @@ msgstr "Novo nome de idioma"
 msgid "Publication Types"
 msgstr "Tipos de Publicação"
 
-#: ../inc/taxonomies.php:163
+#: ../inc/taxonomies.php:163 ../inc/back-end.php:35
 msgid "Publication Type"
 msgstr "Tipo da Publicação"
 
@@ -826,13 +909,25 @@ msgstr "Importação de Dados"
 msgid "Configurações do Tema Flacso"
 msgstr "Configurações do Tema Flacso"
 
-#: ../inc/options.php:101
+#: ../inc/options.php:125
 msgid "Configurações personalizadas do Tema: Flacso"
 msgstr "Configurações personalizadas do Tema: Flacso"
 
-#: ../inc/back-end.php:57 ../inc/publications/publications.php:89
+#: ../inc/back-end.php:71 ../inc/publications/publications.php:99
 msgid "Publication"
 msgstr "Publicação"
+
+#: ../inc/back-end.php:228
+#, php-format
+msgid "%s "
+msgid_plural "%s "
+msgstr[0] "%s "
+msgstr[1] "%s "
+
+#: ../inc/back-end.php:276
+#, php-format
+msgid "<a href=\"%s\""
+msgstr "<a href=\"%s\""
 
 #: ../inc/tax-meta-fields.php:67
 msgid "Icon"
@@ -866,17 +961,58 @@ msgstr "Projeto"
 msgid "Areas e Programas"
 msgstr "Áreas e Programas"
 
-#: ../inc/widgets.php:24
+#: ../inc/widgets.php:23
 msgid "Display a list with the elements inside Flacso Library"
 msgstr "Apresentar uma lista com os elementos dentro da Biblioteca Flacso"
 
-#: ../inc/widgets.php:25
+#: ../inc/widgets.php:24
 msgid "Flacso Library"
 msgstr "Biblioteca Flacso"
 
-#: ../inc/widgets.php:104
+#: ../inc/widgets.php:78 ../inc/widgets.php:175
 msgid "Title:"
 msgstr "Título:"
+
+#: ../inc/widgets.php:94
+msgid "The Documentation Center counter widget"
+msgstr "Widget contador da central de documentos"
+
+#: ../inc/widgets.php:95
+msgid "GEA Documentation Center"
+msgstr "Centro de Documentação do GEA"
+
+#: ../inc/widgets.php:116
+msgid "Documentation Center"
+msgstr "Centro de Documentação"
+
+#: ../inc/widgets.php:144
+#, php-format
+msgid ""
+"Estão disponíveis %s documentos sobre políticas de educação superior no "
+"Brasil e na América Latina."
+msgstr ""
+"Estão disponíveis %s documentos sobre políticas de educação superior no "
+"Brasil e na América Latina."
+
+#: ../inc/widgets.php:145
+msgid ""
+"Clique aqui para acessar o Centro de Documentação e pesquise por tema, "
+"fonte, região ou país"
+msgstr ""
+"Clique aqui para acessar o Centro de Documentação e pesquise por tema, "
+"fonte, região ou país"
+
+#: ../inc/widgets.php:146
+msgid "Acesso gratuito para o download de arquivos."
+msgstr "Acesso gratuito para o download de arquivos."
+
+#: ../inc/widgets.php:179
+msgid "Page:"
+msgstr "Páginas:"
+
+#: ../inc/widgets.php:190
+msgid "Link:"
+msgstr "Link:"
 
 #: ../inc/projects/projects.php:10
 msgid "Coordenação"
@@ -939,38 +1075,38 @@ msgstr "Detalhes do Projeto"
 msgid "Project name"
 msgstr "Nome do projeto"
 
-#: ../inc/projects/projects.php:161 ../inc/publications/publications.php:155
+#: ../inc/projects/projects.php:161 ../inc/publications/publications.php:165
 msgid "Description"
 msgstr "Descrição"
 
-#: ../inc/projects/projects.php:162 ../inc/publications/publications.php:156
+#: ../inc/projects/projects.php:162 ../inc/publications/publications.php:166
 msgid "Maximum 300 characters"
 msgstr "Máximo de 300 caracteres"
 
-#: ../inc/projects/projects.php:216 ../inc/publications/publications.php:210
+#: ../inc/projects/projects.php:216 ../inc/publications/publications.php:220
 msgid "File Upload"
 msgstr "Upload de arquivo"
 
 #: ../inc/projects/projects.php:218 ../inc/projects/projects.php:450
-#: ../inc/publications/publications.php:212
-#: ../inc/publications/publications.php:444
+#: ../inc/publications/publications.php:222
+#: ../inc/publications/publications.php:454
 msgid "Choose or Upload an Image"
 msgstr "Escolha ou suba uma imagem"
 
-#: ../inc/projects/projects.php:283 ../inc/publications/publications.php:277
+#: ../inc/projects/projects.php:283 ../inc/publications/publications.php:287
 msgid "Auto Draft"
 msgstr "Rascunho"
 
-#: ../inc/projects/projects.php:451 ../inc/publications/publications.php:445
+#: ../inc/projects/projects.php:451 ../inc/publications/publications.php:455
 msgid "Use this image"
 msgstr "Use esta imagem"
 
-#: ../inc/projects/projects.php:534 ../inc/publications/publications.php:528
+#: ../inc/projects/projects.php:534 ../inc/publications/publications.php:538
 #, php-format
 msgid "Permissão original (%s) não localizada"
 msgstr "Permissão original ( %s ) não localizada"
 
-#: ../inc/projects/projects.php:544 ../inc/publications/publications.php:538
+#: ../inc/projects/projects.php:544 ../inc/publications/publications.php:548
 #, php-format
 msgid "Permissão %s não localizada"
 msgstr "Permissão %s não localizada"
@@ -1083,48 +1219,48 @@ msgstr "Autoria"
 
 #: ../inc/publications/publications.php:12
 msgid "Publication Author"
-msgstr " Autoria da Publicação"
+msgstr "Autoria da Publicação"
 
-#: ../inc/publications/publications.php:88
-#: ../inc/publications/publications.php:99
-#: ../inc/publications/publications.php:105
-#: ../inc/publications/publications.php:107
+#: ../inc/publications/publications.php:98
+#: ../inc/publications/publications.php:109
+#: ../inc/publications/publications.php:115
+#: ../inc/publications/publications.php:117
 msgid "Publications"
 msgstr "Publicações"
 
-#: ../inc/publications/publications.php:91
+#: ../inc/publications/publications.php:101
 msgid "Add new publication"
 msgstr "Adicionar nova publicação"
 
-#: ../inc/publications/publications.php:92
+#: ../inc/publications/publications.php:102
 msgid "Edit publication"
 msgstr "Editar publicação"
 
-#: ../inc/publications/publications.php:93
+#: ../inc/publications/publications.php:103
 msgid "New Publication"
 msgstr "Nova Publicação"
 
-#: ../inc/publications/publications.php:94
+#: ../inc/publications/publications.php:104
 msgid "View Publication"
 msgstr "Ver Publicação"
 
-#: ../inc/publications/publications.php:95
+#: ../inc/publications/publications.php:105
 msgid "Search Publication"
 msgstr "Busca por Publicação"
 
-#: ../inc/publications/publications.php:96
+#: ../inc/publications/publications.php:106
 msgid "Publication not found"
 msgstr "Publicação não encontrada"
 
-#: ../inc/publications/publications.php:97
+#: ../inc/publications/publications.php:107
 msgid "Publication not found in the trash"
 msgstr "Publicação não encontrada no lixo"
 
-#: ../inc/publications/publications.php:137
+#: ../inc/publications/publications.php:147
 msgid "Publication Details"
 msgstr "Detalhes da publicação"
 
-#: ../inc/publications/publications.php:148
+#: ../inc/publications/publications.php:158
 msgid "Publication name"
 msgstr "Nome da publicação"
 
