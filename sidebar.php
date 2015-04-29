@@ -11,17 +11,23 @@
 		<?php
 		if ( is_gea() ) {
 			dynamic_sidebar( 'sidebar-main-gea' );
+			if ( is_page_template( 'page-templates/library.php' ) ) : ?>
+				<div class="flacso-search-adv-entry widget" role="complementary">
+					<?php get_search_adv(); ?>
+				</div>
+			<?php endif;
 		}
 		else {
 			flacso_the_menu();
+			if ( is_page_template( 'page-templates/library.php' ) ) : ?>
+				<div class="flacso-search-adv-entry widget" role="complementary">
+					<?php get_search_adv(); ?>
+				</div>
+			<?php endif;
 			dynamic_sidebar( 'sidebar-main' );
 		}
 		?>
 
-		<?php if ( is_page_template( 'page-templates/library.php' ) ) : ?>
-		<div class="flacso-search-adv-entry widget" role="complementary">
-			<?php get_search_adv(); ?>
-		</div>
-		<?php endif; ?>
+		
 	</div><!-- #secondary -->
 </div><!-- .col-md-# -->
