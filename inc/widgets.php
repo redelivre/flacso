@@ -31,7 +31,11 @@ class Flacso_Library_Widget extends WP_Widget {
 	 * @param array An array of settings for this widget instance
 	 * @return void Echoes it's output
 	 **/
-	function widget( $args, $instance ) {
+	function widget( $args, $instance )
+	{
+		
+		if ( is_page_template( 'page-templates/library.php' ) ) // do not show in library template as issue #152
+			return;
 
 		/**
 		 * Filter the widget title.
