@@ -19,7 +19,7 @@ get_header(); ?>
 				<header class="page-header">
 					<?php  if ( $showing_past ) : ?>
 						<h1 class="page-title"><?php _e( 'Eventos passados', 'flacso' ); ?></h1>
-						<a class="view-events" href="<?php echo get_post_type_archive_link( 'agenda' ); ?>"><?php _e( 'Ver eventos futuros &rarr;', 'flacso' ); ?></a>
+						<a class="view-events" href="<?php echo remove_query_arg( array('eventos', 'paged') ); ?>"><?php _e( 'Ver eventos futuros &rarr;', 'flacso' ); ?></a>
 					<?php else: ?>
 						<h1 class="page-title"><?php _e( 'Próximos eventos', 'flacso' ); ?></h1>
 						<a class="view-events" href="<?php echo add_query_arg( 'eventos', 'passados' ); ?>"><?php _e( '&larr; Ver eventos passados', 'flacso' ); ?></a>
