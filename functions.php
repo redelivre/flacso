@@ -318,7 +318,7 @@ function get_search_adv()
 		{?>
 			<div class="adv-search-box-custom-field search-item">
 				<label><?php echo $field['title']; ?></label>
-				<input class="search-field" type="search" title="<?php echo __("Pesquisar por", 'flacso').": ".$field['title']; ?>" name="<?php echo 'adv-search-box-input-'.$field['slug']; ?>" value="" placeholder="" autocomplete="off" />
+				<input class="search-field" type="search" title="<?php echo __("Search for", 'flacso').": ".$field['title']; ?>" name="<?php echo 'adv-search-box-input-'.$field['slug']; ?>" value="" placeholder="" autocomplete="off" />
 			</div><?php
 		}
 	}?>

@@ -14,19 +14,19 @@ class FlacsoCustomFields
 			'fonte' => array
 			(
 					'slug' => 'fonte',
-					'title' => __('Fonte', 'flacso'),
+					'title' => __('Source', 'flacso'),
 					//'tip' => __('', 'flacso'),
 			),
 			'editoria' => array
 			(
 					'slug' => 'editoria',
-					'title' => __('Editoria', 'flacso'),
+					'title' => __('Editorship', 'flacso'),
 					//'tip' => __('', 'flacso'),
 			),
 			'url' => array
 			(
 					'slug' => 'url',
-					'title' => __('Url', 'flacso'),
+					'title' => __('URL', 'flacso'),
 					'tip' => __('Source Address or external link', 'flacso'),
 			)
 		);
@@ -53,8 +53,8 @@ class FlacsoCustomFields
 		$types = array('post', 'publication', 'project');
 		if(in_array($postType, $types))
 		{
-			if($postType != 'project') add_meta_box("project_rel_meta", __("Projeto", 'flacso'), array($this, 'project_rel_meta'), null, 'advanced', 'low');
-			add_meta_box("program_rel_meta", __("Areas e Programas", 'flacso'), array($this, 'program_rel_meta'), null, 'advanced', 'low');
+			if($postType != 'project') add_meta_box("project_rel_meta", __("Project", 'flacso'), array($this, 'project_rel_meta'), null, 'advanced', 'low');
+			add_meta_box("program_rel_meta", __("Areas & Programs", 'flacso'), array($this, 'program_rel_meta'), null, 'advanced', 'low');
 		}
 	}
 	

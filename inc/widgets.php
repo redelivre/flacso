@@ -141,9 +141,9 @@ class Flacso_GEA_Documentation_Center extends WP_Widget {
 			),
 		) );		
 
-		echo '<p>' . sprintf( __( 'Estão disponíveis %s documentos sobre políticas de educação superior no Brasil e na América Latina.', 'flacso' ), '<span class="documentation-center-counter">' . $noticias->found_posts . '</span>' ) . '</p>';
-		echo '<p class="documentation-center-highlight">' . __( 'Clique aqui para acessar o Centro de Documentação e pesquise por tema, fonte, região ou país', 'flacso' ) . '</p>';
-		echo '<p>' . __( 'Acesso gratuito para o download de arquivos.', 'flacso' ) . '</p>';
+		echo '<p>' . sprintf( __( 'There are %s available documents on higher education policies in Brazil and Latin America', 'flacso' ), '<span class="documentation-center-counter">' . $noticias->found_posts . '</span>' ) . '</p>';
+		echo '<p class="documentation-center-highlight">' . __( 'Access here the Documentation Centre and search by subject, source, region or country', 'flacso' ) . '</p>';
+		echo '<p>' . __( 'Free access for downloading files', 'flacso' ) . '</p>';
 
 		if($page_id > 0) echo '</a>';
 

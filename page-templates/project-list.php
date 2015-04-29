@@ -35,8 +35,8 @@ get_header(); ?>
 
 				<?php
 				$statuses = array(
-					'em-andamento' 	=> __( 'Projetos em andamento', 'flacso' ),
-					'realizado'		=> __( 'Projetos realizados', 'flacso' )
+					'em-andamento' 	=> __( 'Ongoing projects', 'flacso' ),
+					'realizado'		=> __( 'Accomplished projects', 'flacso' )
 				);
 
 				if ( $statuses ) {

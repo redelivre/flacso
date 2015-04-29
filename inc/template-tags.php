@@ -248,7 +248,7 @@ function flacso_entry_footer() {
 		$categories_list = get_the_category_list( __( ', ', 'flacso' ) );
 		if ( $categories_list && flacso_categorized_blog() ) {
 
-			echo '<div class="cat-links tax-links"><span class="tax-name">' . __( 'Categorias', 'flacso' ) . '</span>' . $categories_list . '</div>';
+			echo '<div class="cat-links tax-links"><span class="tax-name">' . __( 'Categories', 'flacso' ) . '</span>' . $categories_list . '</div>';
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -779,7 +779,7 @@ function flacso_the_loading_area() {
 	?>
 	<div class="alert alert-info alert-dismissible alert-info--loading" role="alert">
 		<span class="icon-spin6 animate-spin"></span>
-		<?php _e( 'Carregando as informações', 'flacso' ); ?>
+		<?php _e( 'Loading the requested information', 'flacso' ); ?>
 	</div>
 	<?php
 }

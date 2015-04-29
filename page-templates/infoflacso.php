@@ -73,7 +73,7 @@ get_header(); ?>
 										<h3><?php echo $status->name; ?></h3>
 										<ul>
 											<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
-												<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php edit_post_link( __( 'Editar projeto', 'flacso' ), '&nbsp;<span class="edit-link">', '</span>' ); ?></li>
+												<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php edit_post_link( __( 'Edit project', 'flacso' ), '&nbsp;<span class="edit-link">', '</span>' ); ?></li>
 											<?php endwhile; ?>
 										</ul>
 									<?php
