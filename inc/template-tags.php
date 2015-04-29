@@ -43,17 +43,28 @@ function flacso_paging_nav() {
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
+	
+	$post_type = get_post_type();
+	if(!is_string($post_type) || strlen($post_type) <= 0 )
+	{
+		$post_type = 'post';
+	}
+	
+	$post_type_obj = get_post_type_object($post_type);
+	
+	$name = $post_type_obj->labels->name;
+	
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'flacso' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'flacso' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( '<span class="meta-nav">&larr;</span> '.__('Older', 'flacso' )." ".$name ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'flacso' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer', 'flacso' )." ".$name.' <span class="meta-nav">&rarr;</span>' ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
