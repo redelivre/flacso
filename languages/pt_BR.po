@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flacso Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 16:01-0300\n"
+"POT-Creation-Date: 2015-04-28 21:49-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgid "Editar projeto"
 msgstr "Editar Projeto"
 
 #: ../page.php:91 ../page-templates/gea-home.php:34
-#: ../page-templates/infoflacso.php:92 ../inc/template-tags.php:250
+#: ../page-templates/infoflacso.php:92 ../inc/template-tags.php:261
 #: ../inc/taxonomies.php:27
 msgid "Edit"
 msgstr "Editar"
@@ -70,7 +70,7 @@ msgstr "Próximos eventos"
 msgid "&larr; Ver eventos passados"
 msgstr "&larr; Ver eventos passados"
 
-#: ../archive-agenda.php:52 ../inc/template-tags.php:463
+#: ../archive-agenda.php:52 ../inc/template-tags.php:474
 #, php-format
 msgid "%1$s to %2$s"
 msgstr "%1$s até %2$s"
@@ -254,8 +254,8 @@ msgstr ""
 "Parece que não pude encontrar o que você está procurando. Talvez a pesquisa "
 "possa ajudar."
 
-#: ../single-publication.php:54 ../inc/template-tags.php:237
-#: ../inc/template-tags.php:244
+#: ../single-publication.php:54 ../inc/template-tags.php:248
+#: ../inc/template-tags.php:255
 msgid ", "
 msgstr ", "
 
@@ -304,167 +304,167 @@ msgstr "Adicionar um menu"
 msgid "Menu"
 msgstr "Menu"
 
-#: ../inc/template-tags.php:48
+#: ../inc/template-tags.php:59
 msgid "Posts navigation"
 msgstr "Navegação das postagens"
 
-#: ../inc/template-tags.php:52
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<Span class=\"meta-nav\"> &larr; </span> Posts mais antigos"
+#: ../inc/template-tags.php:63
+msgid "Older"
+msgstr "Antigas"
 
-#: ../inc/template-tags.php:56
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Posts mais recentes <span class=\"meta-nav\">&rarr;</span>"
+#: ../inc/template-tags.php:67
+msgid "Newer"
+msgstr "Novas"
 
-#: ../inc/template-tags.php:73
+#: ../inc/template-tags.php:84
 msgid "Next Page &raquo;"
 msgstr "Próxima Página &raquo;"
 
-#: ../inc/template-tags.php:88
+#: ../inc/template-tags.php:99
 msgid "&laquo; Previous Page"
 msgstr "&laquo; Página Anterior"
 
-#: ../inc/template-tags.php:192
+#: ../inc/template-tags.php:203
 msgid "Post navigation"
 msgstr "Navegação da postagem"
 
-#: ../inc/template-tags.php:195
+#: ../inc/template-tags.php:206
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr "<Span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 
-#: ../inc/template-tags.php:196
+#: ../inc/template-tags.php:207
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 
-#: ../inc/template-tags.php:240
+#: ../inc/template-tags.php:251
 msgid "Categorias"
 msgstr "Categorias"
 
-#: ../inc/template-tags.php:246
+#: ../inc/template-tags.php:257
 msgid "Tags"
 msgstr "Palavras-chave"
 
-#: ../inc/template-tags.php:264
+#: ../inc/template-tags.php:275
 msgid "Share"
 msgstr "Compartilhar"
 
-#: ../inc/template-tags.php:353 ../inc/template-tags.php:356
+#: ../inc/template-tags.php:364 ../inc/template-tags.php:367
 msgid "Download"
 msgstr "Baixar"
 
-#: ../inc/template-tags.php:383 ../inc/template-tags.php:387
-#: ../inc/template-tags.php:390
+#: ../inc/template-tags.php:394 ../inc/template-tags.php:398
+#: ../inc/template-tags.php:401
 #, php-format
 msgid "Source: %1$s"
 msgstr "Fonte: %1$s"
 
-#: ../inc/template-tags.php:539
+#: ../inc/template-tags.php:550
 #, php-format
 msgid "Category: %s"
 msgstr "Categoria: %s"
 
-#: ../inc/template-tags.php:541
+#: ../inc/template-tags.php:552
 #, php-format
 msgid "Tag: %s"
 msgstr "Palavra-chave: %s"
 
-#: ../inc/template-tags.php:543
+#: ../inc/template-tags.php:554
 #, php-format
 msgid "Author: %s"
 msgstr "Autoria: %s"
 
-#: ../inc/template-tags.php:545
+#: ../inc/template-tags.php:556
 #, php-format
 msgid "Year: %s"
 msgstr "Ano: %s"
 
-#: ../inc/template-tags.php:545
+#: ../inc/template-tags.php:556
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: ../inc/template-tags.php:547
+#: ../inc/template-tags.php:558
 #, php-format
 msgid "Month: %s"
 msgstr "Mês: %s"
 
-#: ../inc/template-tags.php:547
+#: ../inc/template-tags.php:558
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "FY"
 
-#: ../inc/template-tags.php:549
+#: ../inc/template-tags.php:560
 #, php-format
 msgid "Day: %s"
 msgstr "Dia: %s"
 
-#: ../inc/template-tags.php:549
+#: ../inc/template-tags.php:560
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "F j, Y"
 
-#: ../inc/template-tags.php:551
+#: ../inc/template-tags.php:562
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "À parte"
 
-#: ../inc/template-tags.php:553
+#: ../inc/template-tags.php:564
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "Galerias"
 
-#: ../inc/template-tags.php:555
+#: ../inc/template-tags.php:566
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "Imagens"
 
-#: ../inc/template-tags.php:557
+#: ../inc/template-tags.php:568
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "Vídeos"
 
-#: ../inc/template-tags.php:559
+#: ../inc/template-tags.php:570
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "Cotações"
 
-#: ../inc/template-tags.php:561
+#: ../inc/template-tags.php:572
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "Links"
 
-#: ../inc/template-tags.php:563
+#: ../inc/template-tags.php:574
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "Situações"
 
-#: ../inc/template-tags.php:565
+#: ../inc/template-tags.php:576
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "Áudios"
 
-#: ../inc/template-tags.php:567
+#: ../inc/template-tags.php:578
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "Bate-papo"
 
-#: ../inc/template-tags.php:569
+#: ../inc/template-tags.php:580
 #, php-format
 msgid "Archives: %s"
 msgstr "Arquivos: %s"
 
-#: ../inc/template-tags.php:573
+#: ../inc/template-tags.php:584
 #, php-format
 msgid "%1$s: %2$s"
 msgstr "%1$s : %2$s"
 
-#: ../inc/template-tags.php:575
+#: ../inc/template-tags.php:586
 msgid "Archives"
 msgstr "Arquivos"
 
-#: ../inc/template-tags.php:771
+#: ../inc/template-tags.php:782
 msgid "Carregando as informações"
 msgstr "Carregando as informações"
 
@@ -1284,3 +1284,9 @@ msgstr "Carregar Imagem"
 #: ../inc/Tax-meta-class/Tax-meta-class.php:744
 msgid "Select a color"
 msgstr "Selecione uma cor"
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+#~ msgstr "<Span class=\"meta-nav\"> &larr; </span> Posts mais antigos"
+
+#~ msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Posts mais recentes <span class=\"meta-nav\">&rarr;</span>"
