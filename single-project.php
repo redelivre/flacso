@@ -27,27 +27,27 @@ get_header(); ?>
 						<div class="entry-meta">
 							<?php
 							// Coordenation / Coordernação
-							$coordenation = get_post_meta( $post->ID, 'coordenacao', true );
-							if ( ! empty ( $coordenation ) ) {
-								printf( '<div class="coordenation">' . __( 'Coordenação: %1$s', 'flacso' ) . '</div>', $coordenation );
+							$coordination = get_post_meta( $post->ID, 'coordenacao', true );
+							if ( ! empty ( $coordination ) ) {
+								printf( '<div class="coordination">' . __( 'Coordination: %1$s', 'flacso' ) . '</div>', $coordination );
 							}
 
 							// Sponsorship / Patrocínio
 							$sponsorship = get_post_meta( $post->ID, 'patrocinio', true );
 							if ( ! empty ( $sponsorship ) ) {
-								printf( '<div class="sponsorship">' . __( 'Patrocínio: %1$s', 'flacso' ) . '</div>', $sponsorship );
+								printf( '<div class="sponsorship">' . __( 'Sponsorship: %1$s', 'flacso' ) . '</div>', $sponsorship );
 							}
 
 							// Funding / Financiamento
 							$funding = get_post_meta( $post->ID, 'financiamento', true );
 							if ( ! empty ( $funding ) ) {
-								printf( '<div class="funding">' . __( 'Financiamento: %1$s', 'flacso' ) . '</div>', $funding );
+								printf( '<div class="funding">' . __( 'Funding: %1$s', 'flacso' ) . '</div>', $funding );
 							}
 
 							// Partnership / Parceria
 							$partnership = get_post_meta( $post->ID, 'parceria', true );
 							if ( ! empty ( $partnership ) ) {
-								printf( '<div class="partnership">' . __( 'Instituições parceiras: %1$s', 'flacso' ) . '</div>', $partnership );
+								printf( '<div class="partnership">' . __( 'Partnership: %1$s', 'flacso' ) . '</div>', $partnership );
 							}
 							?>
 						</div><!-- .entry-meta -->
@@ -75,7 +75,7 @@ get_header(); ?>
 
 						if( $news->have_posts() ) : ?>
 							<div class="archive archive--secondary">
-								<h3 class="archive--secondary__header">Últimas notícias do projeto</h3>
+								<h3 class="archive--secondary__header"><?php _e( 'Latest news about the project', 'flacso' ); ?></h3>
 								<?php
 								while( $news->have_posts() ) : $news->the_post();
 									get_template_part( 'content' );
@@ -96,9 +96,8 @@ get_header(); ?>
 							$program_links[] = '<a href="' . get_page_link( $program ) . '">' . trim( get_post_field( 'post_title', $program ) ) . '</a>';
 						endforeach;
 
-						printf( __( 'Este projeto pertence ao(s) programa(s) %s', 'flacso' ), join( ', ', $program_links ) );
+						printf( __( 'This project belongs to the following programs: %s', 'flacso' ), join( ', ', $program_links ) );
 						?>
-						<?php //printf( '<div class="partnership">' . __( 'Instituições parceiras: %1$s', 'flacso' ) . '</div>', $programs ); ?>
 					</div>
 					<?php endif; ?>
 

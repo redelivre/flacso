@@ -18,11 +18,11 @@ get_header(); ?>
 
 				<header class="page-header">
 					<?php  if ( $showing_past ) : ?>
-						<h1 class="page-title"><?php _e( 'Eventos passados', 'flacso' ); ?></h1>
-						<a class="view-events" href="<?php echo remove_query_arg( array('eventos', 'paged') ); ?>"><?php _e( 'Ver eventos futuros &rarr;', 'flacso' ); ?></a>
+						<h1 class="page-title"><?php _e( 'Past events', 'flacso' ); ?></h1>
+						<a class="view-events" href="<?php echo get_post_type_archive_link( 'agenda' ); ?>"><?php _e( 'View upcoming events &rarr;', 'flacso' ); ?></a>
 					<?php else: ?>
-						<h1 class="page-title"><?php _e( 'Próximos eventos', 'flacso' ); ?></h1>
-						<a class="view-events" href="<?php echo add_query_arg( 'eventos', 'passados' ); ?>"><?php _e( '&larr; Ver eventos passados', 'flacso' ); ?></a>
+						<h1 class="page-title"><?php _e( 'Upcoming events', 'flacso' ); ?></h1>
+						<a class="view-events" href="<?php echo add_query_arg( 'eventos', 'passados' ); ?>"><?php _e( '&larr; View past events', 'flacso' ); ?></a>
 					<?php endif; ?>
 				</header><!-- .page-header -->
 
@@ -77,7 +77,7 @@ get_header(); ?>
 				<?php else : ?>
 
 					<div class="entry-content">
-						<?php _e( 'Não há eventos nesta lista' ); ?>
+						<?php _e( 'There is no events to display right now', 'flacso' ); ?>
 					</div>
 
 				<?php endif; ?>

@@ -40,7 +40,7 @@ class FlacsoSettingsPage
 		$this->options = get_option( 'flacso_theme_options', array() );
 		?>
         <div class="wrap">
-            <h2><?php _e('Configurações do Tema Flacso', 'flacso') ?></h2>           
+            <h2><?php _e('Flacso Settings', 'flacso') ?></h2>           
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
@@ -122,7 +122,7 @@ class FlacsoSettingsPage
      */
     public function print_section_info()
     {
-        _e('Configurações personalizadas do Tema: Flacso', 'flacso');
+        _e('Theme Custom Settings', 'flacso');
     }
     
     protected $logfilename = 'csv_import.log';
