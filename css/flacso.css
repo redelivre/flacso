@@ -91,3 +91,7 @@ a.more-news {
     text-align: center;
     width: 12em;
 }
+
+.gea .button.download-link.btn-block {
+    color: #ffffff;
+}
