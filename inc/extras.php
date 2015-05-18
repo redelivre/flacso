@@ -189,8 +189,6 @@ add_filter( 'img_caption_shortcode_width', 'remove_caption_padding' );
 
 function flacso_exclude_gea($wp_query)
 {
-	$wp_query = new WP_Query();
-	
 	if( ( $wp_query->is_category || is_front_page() )   && !is_gea())
 	{
 		$tax_query = array(
