@@ -189,7 +189,7 @@ add_filter( 'img_caption_shortcode_width', 'remove_caption_padding' );
 
 function flacso_exclude_gea($wp_query)
 {
-	if(is_front_page())
+	if(!is_gea())
 	{
 		$tax_query = array(
 			'taxonomy' => 'gea',
