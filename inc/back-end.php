@@ -254,13 +254,13 @@ function flacso_manage_views( $views ) {
     $new_views = array();
 
     $gea_query = array(
-        'post_type'   => 'post',
+        'post_type'   	=> $wp_query->query_vars['post_type'],
         //'post_status' => 'publish',
-    	'tax_query' => array(
+    	'tax_query'		=> array(
     		array(
-			'taxonomy' => 'gea',
-			'field'    => 'slug',
-			'terms'    => 'GEA',
+			'taxonomy' 	=> 'gea',
+			'field'    	=> 'slug',
+			'terms'    	=> 'GEA',
 			)
 		)
     );
@@ -271,14 +271,14 @@ function flacso_manage_views( $views ) {
 
     	if ( $key == 'publish' ) {
     		$class = ( isset( $wp_query->query_vars['gea'] ) && $wp_query->query_vars['gea'] == 'gea' ) ? ' class="current"' : '';
-
+    		$edit_post_link = 'edit.php?post_type=' . $wp_query->query_vars['post_type'] . '&gea=gea';
 		    $new_views['gea'] = sprintf(
 		    	__( '<a href="%s"'. $class .'>GEA <span class="count">(%d)</span></a>', 'flacso' ),
-		        admin_url( 'edit.php?post_type=post&gea=gea' ),
+		        admin_url( $edit_post_link ),
 		        $result->found_posts
 		    );
 
-		    // Readd 'publish' view
+		    // Reinsert 'publish' view
 		    $new_views[$key] = $value;
     	}
     	else {
@@ -289,6 +289,8 @@ function flacso_manage_views( $views ) {
     return $new_views;
 }
 add_filter( 'views_edit-post', 'flacso_manage_views' );
+add_filter( 'views_edit-publication', 'flacso_manage_views' );
+add_filter( 'views_edit-agenda', 'flacso_manage_views' );
 
 /**
  * Manage post states inside post edit
