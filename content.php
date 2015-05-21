@@ -20,7 +20,7 @@
 	
 	<div class="media-body">
 		<header class="entry-header">
-			<div class="entry-meta entry-meta--tax">
+			<div class="entry-meta">
 				<?php
 					flacso_the_terms('category', '', true, true );
 				?>

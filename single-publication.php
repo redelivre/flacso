@@ -31,7 +31,7 @@ get_header(); ?>
 
 					<div class="col-md-9">
 						<header class="entry-header">
-							<div class="entry--general-info">
+							<div class="entry-meta entry--general-info">
 								<?php flacso_the_publication_general_info(); ?>
 							</div>
 							<?php the_title( '<h1 class="entry-title media-heading">', '</h1>' ); ?>

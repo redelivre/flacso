@@ -6154,13 +6154,6 @@ a.icon--alternate {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 /* General items */
-.entry-meta--tax {
-  margin-bottom: 0.5em; }
-  .entry-meta--tax a {
-    background-color: #ebebeb;
-    font-size: 0.875em;
-    padding: 0.5em; }
-
 .post-edit-link {
   background-color: #ebebeb;
   display: inline-block;
@@ -6199,9 +6192,25 @@ a.icon--alternate {
   font-size: 0.875em;
   padding: 0.5em; }
 
+/* Regular style for posts */
 .entry-title {
   font-weight: bold;
-  margin-bottom: 0.25em; }
+  margin-bottom: 0; }
+
+.entry-meta {
+  font-size: 0.875em; }
+
+.entry-meta--basic {
+  border: 0;
+  margin-top: 0;
+  padding: 0; }
+
+.entry-meta--tax {
+  margin-bottom: 0.5em; }
+  .entry-meta--tax a {
+    background-color: #ebebeb;
+    font-size: 0.875em;
+    padding: 0.5em; }
 
 .updated:not(.published) {
   display: none; }
@@ -6224,11 +6233,6 @@ a.icon--alternate {
   border-style: solid;
   margin-top: 1.5em;
   padding: 1em 0; }
-
-.entry-meta--basic {
-  border: 0;
-  margin-top: 0;
-  padding: 0; }
 
 .entry-footer .tax-name {
   margin-right: 0.5em;

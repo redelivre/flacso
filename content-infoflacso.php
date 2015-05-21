@@ -20,10 +20,8 @@
 	
 	<div class="media-body">
 		<header class="entry-header">
-			<div class="entry-meta entry-meta--tax">
-				<?php
-					flacso_the_terms('category', '', true, true );
-				?>
+			<div class="entry-meta">
+				<?php flacso_the_terms( 'category', '', true, true ); ?>
 			</div><!-- .entry-meta -->
 			<?php the_title( sprintf( '<h1 class="entry-title media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 

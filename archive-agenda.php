@@ -42,7 +42,7 @@ get_header(); ?>
 							
 							<div class="media-body">
 								<header class="entry-header">
-									<div class="entry-meta entry-meta--tax">
+									<div class="entry-meta">
 										<span aria-hidden="true" class="icon-calendar"></span>
 										<?php
 										$date_end = get_post_meta( $post->ID, '_data_final', true );

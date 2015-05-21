@@ -16,7 +16,7 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'row' ); ?>>
 
 					<header class="entry-header">
-						<div class="entry--general-info">
+						<div class="entry-meta entry--general-info">
 							<?php
 							// Project status
 							flacso_the_terms( 'status', '' );

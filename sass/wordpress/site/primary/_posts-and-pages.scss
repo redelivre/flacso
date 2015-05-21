@@ -1,14 +1,4 @@
 /* General items */
-.entry-meta--tax {
-	margin-bottom: 0.5em;
-	
-	a {
-		background-color: $color__quaternary;
-		font-size: 0.875em;
-		padding: 0.5em;
-	}
-}
-
 .post-edit-link {
 	background-color: $color__quaternary;
 	display: inline-block;
@@ -55,9 +45,28 @@
 	padding: 0.5em;
 }
 
+/* Regular style for posts */
 .entry-title {
 	font-weight: bold;
-	margin-bottom: 0.25em;
+	margin-bottom: 0;
+}
+
+.entry-meta {
+	font-size: 0.875em;
+}
+
+.entry-meta--basic {
+	@include entry-meta--basic;
+}
+
+.entry-meta--tax {
+	margin-bottom: 0.5em;
+	
+	a {
+		background-color: $color__quaternary;
+		font-size: 0.875em;
+		padding: 0.5em;
+	}
 }
 
 .updated:not(.published){
@@ -87,10 +96,6 @@
 	border-style: solid;
 	margin-top: 1.5em;
 	padding: 1em 0;
-}
-
-.entry-meta--basic {
-	@include entry-meta--basic;
 }
 
 .entry-footer {
