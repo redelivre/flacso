@@ -501,6 +501,26 @@ function flacso_search_join($join)
 }
 //add_filter('posts_join', 'flacso_search_join');
 
+function flacso_wp_loaded()
+{
+	if($_SERVER['REQUEST_URI'] == '/gea' || $_SERVER['REQUEST_URI'] == '/gea/')
+	{
+		$pages = get_posts(array(
+				'post_type' => 'page',
+				'meta_key' => '_wp_page_template',
+				'meta_value' => 'page-templates/gea-home.php'
+		));
+		if(is_array($pages) && count($pages) > 0)
+		{
+			$gea = array_pop($pages);
+			wp_redirect(get_permalink($gea));
+			exit();
+		}
+	}
+}
+add_action('wp_loaded', 'flacso_wp_loaded');
+
+
 /**
  * Implement the Custom Header feature.
  */
