@@ -94,6 +94,30 @@ get_header(); ?>
 		</div><!-- .container -->
 	</section><!-- .featured-category-->
 
+	<section class="wrapper feature featured-links">
+		<div class="container">
+			<div class="row">
+				<h4 class="area-title">Destaques</h3>
+					<div class="col-md-1 banners-cycle-button" >
+						<div class="banners-cycle-ball" id="banners-cycle-prev">
+						</div>
+					</div> 
+					<div class="col-md-10 banners-widget-area">
+						<?php
+						if ( is_active_sidebar( 'sidebar-banners' ) )
+						{
+							dynamic_sidebar( 'sidebar-banners' );
+						}
+						?>
+					</div>
+					<div class="col-md-1 banners-cycle-button" >
+						<div class="banners-cycle-ball" id="banners-cycle-next">
+						</div>
+					</div>
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section><!-- .featured-links -->
+
 	<section class="wrapper feature featured-news">
 		<div class="container">
 			<div class="row">
@@ -137,29 +161,5 @@ get_header(); ?>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- .featured-news -->
-
-	<section class="wrapper feature featured-links">
-		<div class="container">
-			<div class="row">
-				<h4 class="area-title">Destaques</h3>
-					<div class="col-md-1 banners-cycle-button" >
-						<div class="banners-cycle-ball" id="banners-cycle-prev">
-						</div>
-					</div> 
-					<div class="col-md-10 banners-widget-area">
-						<?php
-						if ( is_active_sidebar( 'sidebar-banners' ) )
-						{
-							dynamic_sidebar( 'sidebar-banners' );
-						}
-						?>
-					</div>
-					<div class="col-md-1 banners-cycle-button" >
-						<div class="banners-cycle-ball" id="banners-cycle-next">
-						</div>
-					</div>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section><!-- .featured-links -->
 
 <?php get_footer(); ?>
