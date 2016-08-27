@@ -6269,15 +6269,15 @@ a.icon--alternate {
         color: #2c6db6; }
       @media (min-width: 480px) {
         .taxonomy-list li a {
-          width: 25%; } }
+          width: 25%;   }
       @media (min-width: 768px) {
         .taxonomy-list li a {
-          width: 12.5%; } }
+          width: 20%; } }
     .taxonomy-list li .icon {
       display: block;
       margin-bottom: 0.5em; }
       .taxonomy-list li .icon:before {
-        font-size: 3em;
+        font-size: 5em;
         vertical-align: middle; }
 
 /* Read more */
@@ -6308,6 +6308,21 @@ a.icon--alternate {
   position: absolute;
   top: 0.5em;
   right: 1.5em; }
+
+.col-md-2.read-more--prefix {
+	color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 18%;
+}
+
+@media(max-width: 768px) {
+	.col-md-2.read-more--prefix {
+		right: unset;
+    	top: 12%;
+    	width: 100%;
+} }
 
 .read-more:visited {
   color: #ba0933; }
