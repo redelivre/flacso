@@ -292,13 +292,74 @@ function flacso_the_publication_types() {
 		'order' 	=> 'ASC',
 		'parent' 	=> 0,
 	);
-
-	$publications = get_terms( 'publication-type', $a );
+	/*$types = array(
+		'Ensaios e Artigos' => array(
+			'ensaios',
+			'artigos'
+		),
+		'Mídias' => array(
+			'fotografias',
+			'videos',
+			'audios',
+		),
+		'Publicações' => array(
+			'cadernos',
+			'colecoes',
+			'dissertacoes',
+			'documentos',
+			'estudos ',
+			'livros',
+			'opiniao',
+			'revista-forum',
+			'series',
+			'teses'
+		),
+		'Leis e Normas' => array(
+			'leis-e-normas'
+		)
+	);*/
+	$groups = array(
+		'ensaios' => 'Ensaios e Artigos',
+		'artigos' => 'Ensaios e Artigos',
+		'fotografias' => 'Mídias',
+		'videos' => 'Mídias',
+		'audios' => 'Mídias',
+		'cadernos' => 'Publicações',
+		'colecoes' => 'Publicações' ,
+		'dissertacoes' => 'Publicações',
+		'documentos' => 'Publicações',
+		'estudos' => 'Publicações',
+		'livros' => 'Publicações',
+		'opiniao' => 'Publicações',
+		'revista-forum' => 'Publicações',
+		'series' => 'Publicações',
+		'teses' => 'Publicações',
+		'leis-e-normas' => 'Leis e Normas'
+	);
+	$publications = array();
+	$publications_terms = get_terms( 'publication-type', $a );
+	/* @var WP_Term $publication */
+	foreach ($publications_terms as $publication)
+	{
+		if(array_key_exists($publication->slug, $groups))
+		{
+			if(!array_key_exists($groups[$publication->slug], $publications)) $publications[$groups[$publication->slug]] = array();
+			$publications[$groups[$publication->slug]][] = $publication;
+		}
+	}
+	
 	?>
 	<?php if ( $publications ) : ?>
 	<ul class="taxonomy-list clear">
-		<?php foreach( $publications as $publication ) : ?>
-			<?php $publication_link = 'javascript:flacso_tax_click(\'publication-type\', '.$publication->term_id.');' ?>
+		<?php foreach( $publications as $group => $publication_list ) :
+			$ids = array();
+			$publication = false;
+			foreach ($publication_list as $publication_tmp)
+			{
+				if(!$publication) $publication = $publication_tmp;
+				$ids[] = $publication_tmp->term_id;
+			}
+			$publication_link = 'javascript:flacso_tax_click(\'publication-type\', \''.implode(',', $ids).'\');' ?>
 			<li class="">
 				<a href="<?php echo $publication_link; ?>">
 	    		<?php
@@ -306,7 +367,7 @@ function flacso_the_publication_types() {
 	    			echo '<span class="icon icon--rounded ' . get_tax_meta( $publication->term_id, 'flacso_icon_picker' ) . '"></span>';
 	    		}
 		    	?>
-			   	<?php echo $publication->name; ?>
+			   	<?php echo $group; ?>
 			    </a>
 		    </li><!-- .general-list__item.media -->
 	    <?php endforeach; ?>

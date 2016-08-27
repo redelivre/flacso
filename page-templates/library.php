@@ -42,15 +42,15 @@ get_header(); ?>
 						$tax_query = '"", ""';
 						if(get_query_var('publication-type', false))
 						{
-							$tax_query = '"publication-type", '.get_query_var('publication-type', false);
+							$tax_query = '"publication-type", "'.get_query_var('publication-type', false).'"';
 						}
 						elseif(get_query_var('cat', false)) 
 						{
-							$tax_query = '"cat", '.get_query_var('cat', false);
+							$tax_query = '"cat", "'.get_query_var('cat', false).'"';
 						}
 						else 
 						{
-							$tax_query = '"post_tag", '.get_query_var('tag', false);
+							$tax_query = '"post_tag", "'.get_query_var('tag', false).'"';
 						}
 						?>
 	

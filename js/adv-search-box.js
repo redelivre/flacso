@@ -112,9 +112,33 @@ jQuery(document).ready(function () {
 
 function flacso_tax_click(name, id)
 {
-	var checkValues = [{name:name, value:id}];
+	if(typeof id == 'string')
+	{
+		var ids = id.split(',');
+		var checkValues = [];
+		if(ids.length > 1)
+		{
+			var query = '';
+			for(i = 0; i < ids.length; i++)
+			{
+				if(query.length > 0) query += ',';
+				query += "input[name='adv-search-box-"+name+"[]'][value="+ids[i]+"]";
+				checkValues.push({name:name, value:ids[i]});
+			}
+			jQuery(query).attr("checked", "checked");
+		}
+		else
+		{
+			checkValues = [{name:name, value:id}];
+			jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
+		}
+	}
+	else
+	{
+		checkValues = [{name:name, value:id}];
+		jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
+	}
 	
-	jQuery("input[name='adv-search-box-"+name+"[]'][value="+id+"]").attr("checked", "checked");
 	dropdownCheckboxMark();
 	
 	if(adv_search_box.gea != '')
