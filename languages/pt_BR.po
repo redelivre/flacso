@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flacso\n"
-"POT-Creation-Date: 2016-08-27 14:28-0300\n"
-"PO-Revision-Date: 2016-08-27 14:29-0300\n"
+"POT-Creation-Date: 2016-08-27 14:30-0300\n"
+"PO-Revision-Date: 2016-08-27 14:40-0300\n"
 "Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -1111,7 +1111,7 @@ msgstr "Apresentar uma lista com os elementos dentro da Biblioteca Flacso"
 msgid "Flacso Library"
 msgstr "Biblioteca Flacso"
 
-#: ../inc/widgets.php:82 ../inc/widgets.php:179 ../inc/widgets.php:291
+#: ../inc/widgets.php:82 ../inc/widgets.php:179
 msgid "Title:"
 msgstr "Título:"
 
@@ -1123,11 +1123,11 @@ msgstr "Widget contador da central de documentos"
 msgid "GEA Documentation Center"
 msgstr "Centro de Documentação do GEA"
 
-#: ../inc/widgets.php:120 ../inc/widgets.php:232
+#: ../inc/widgets.php:120
 msgid "Documentation Center"
 msgstr "Centro de Documentação"
 
-#: ../inc/widgets.php:148 ../inc/widgets.php:260
+#: ../inc/widgets.php:148
 #, php-format
 msgid ""
 "There are %s available documents on higher education policies in Brazil and "
@@ -1136,7 +1136,7 @@ msgstr ""
 "Estão disponíveis %s documentos sobre políticas de educação superior no "
 "Brasil e na América Latina"
 
-#: ../inc/widgets.php:149 ../inc/widgets.php:261
+#: ../inc/widgets.php:149
 msgid ""
 "Access here the Documentation Centre and search by subject, source, region "
 "or country"
@@ -1144,25 +1144,17 @@ msgstr ""
 "Acesse aqui o Centro de Documentação e pesquise por tema, fonte, região ou "
 "país"
 
-#: ../inc/widgets.php:150 ../inc/widgets.php:262
+#: ../inc/widgets.php:150
 msgid "Free access for downloading files"
 msgstr "O download de arquivos é gratuito"
 
-#: ../inc/widgets.php:183 ../inc/widgets.php:295
+#: ../inc/widgets.php:183
 msgid "Page:"
 msgstr "Páginas:"
 
-#: ../inc/widgets.php:194 ../inc/widgets.php:306
+#: ../inc/widgets.php:194
 msgid "Link:"
 msgstr "Link:"
-
-#: ../inc/widgets.php:210
-msgid "Group terms widget"
-msgstr ""
-
-#: ../inc/widgets.php:211
-msgid "Group terms"
-msgstr ""
 
 #: ../inc/wp-bootstrap-navwalker.php:202
 msgid "Add a Menu"
