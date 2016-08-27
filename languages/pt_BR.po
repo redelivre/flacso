@@ -2,1281 +2,1303 @@
 # This file is distributed under the same license as the Flacso package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-04-29 12:01-0300\n"
+"Project-Id-Version: Flacso\n"
+"POT-Creation-Date: 2016-08-27 14:28-0300\n"
+"PO-Revision-Date: 2016-08-27 14:29-0300\n"
+"Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Flacso\n"
-"POT-Creation-Date: \n"
-"Last-Translator: Eduardo Zulian <eduardozulian@gmail.com>\n"
-"Language-Team: \n"
-
-#: inc/widgets.php:144
-msgid "There are %s available documents on higher education policies in Brazil and Latin America"
-msgstr "Estão disponíveis %s documentos sobre políticas de educação superior no Brasil e na América Latina"
-
-#: functions.php:113
-msgid "The widget area on the footer"
-msgstr "Área de widget no rodapé"
-
-msgid "The Flacso theme"
-msgstr "O tema para a Flacso"
-
-#: functions.php:121
-msgid "Footer Widget Area (GEA)"
-msgstr "Área de Widget do Rodapé (GEA)"
-
-msgid "Ethymos"
-msgstr "Ethymos"
-
-#: functions.php:123
-msgid "The widget area on the GEA footer"
-msgstr "Área de widget no rodapé do GEA"
-
-msgid "http://ethymos.com.br"
-msgstr "http://ethymos.com.br"
-
-#: functions.php:131
-msgid "Banners Widget Area"
-msgstr "Área de Widget para Banners"
-
-#: functions.php:133
-msgid "The widget area for banners"
-msgstr "A área do widget para banners"
-
-#: functions.php:258
-msgid "Select"
-msgstr "Selecione"
-
-#: functions.php:311
-msgid "Publication Title"
-msgstr "Título da Publicação"
-
-#: functions.php:312
-msgid "Search for documents with that text"
-msgstr "Pesquisa por publicações com este texto"
-
-#: functions.php:321
-#: inc/taxonomies.php:23
-msgid "Search for"
-msgstr "Procurar"
-
-#: header.php:24
-msgid "Skip to content"
-msgstr "Ir para o conteúdo"
-
-#: inc/back-end.php:35
-#: inc/taxonomies.php:163
-msgid "Publication Type"
-msgstr "Tipo da Publicação"
-
-#: inc/back-end.php:71
-#: inc/publications/publications.php:99
-msgid "Publication"
-msgstr "Publicação"
-
-#: inc/custom-fields.php:17
-msgid "Source"
-msgstr "Fonte"
-
-#: inc/custom-fields.php:23
-msgid "Editorship"
-msgstr "Editoria"
-
-#: inc/custom-fields.php:29
-msgid "URL"
-msgstr "URL"
-
-#: inc/custom-fields.php:30
-#: inc/publications/publications.php:23
-msgid "Source Address or external link"
-msgstr "Endereço de origem ou link externo"
-
-#: inc/custom-fields.php:48
-msgid "Post Details"
-msgstr "Detalhes da Postagem"
-
-#: inc/custom-fields.php:56
-#: inc/projects/projects.php:95
-msgid "Project"
-msgstr "Projeto"
-
-#: inc/custom-fields.php:57
-msgid "Areas & Programs"
-msgstr "Áreas e programas"
-
-#: inc/customizer.php:22
-msgid "Front Page Content"
-msgstr "Conteúdo da capa"
-
-#: inc/customizer.php:33
-msgid "Featured Page"
-msgstr "Página em destaque"
-
-#: inc/customizer.php:43
-msgid "GEA Settings"
-msgstr "Configurações do GEA"
-
-#: inc/customizer.php:54
-msgid "GEA Custom Label"
-msgstr "Rótulo personalizado do GEA"
-
-#: inc/customizer.php:64
-msgid "GEA Custom Abreviation"
-msgstr "Abreviatura personalizada do GEA"
-
-#: inc/extras.php:71
-msgid "Page %s"
-msgstr "Página %s"
-
-#: inc/extras.php:129
-msgid "<cite class=\"fn media-heading\">%s</cite>"
-msgstr "<Cite class = \"fn media-título \"> %s </ cite>"
-
-#: inc/extras.php:135
-msgid "%s"
-msgstr "%s"
-
-#: inc/extras.php:135
-msgid "(Edit)"
-msgstr "(Editar)"
-
-#: inc/extras.php:142
-msgid "Your comment is awaiting moderation."
-msgstr "Seu comentário está aguardando moderação."
-
-#: inc/import/data-importer.php:629
-msgid "Remote server did not respond"
-msgstr "O servidor remoto não respondeu"
-
-#: inc/import/data-importer.php:635
-msgid "Remote server returned error response %1$d %2$s"
-msgstr "Servidor remoto retornou uma resposta de erro %1$d %2$s"
-
-#: inc/import/data-importer.php:642
-msgid "Remote file is incorrect size"
-msgstr "O arquivo remoto está em tamanho incorreto"
-
-#: inc/import/data-importer.php:647
-msgid "Zero size file downloaded"
-msgstr "Arquivo baixado sem tamanho"
-
-#: inc/import/data-importer.php:674
-msgid "Invalid file type"
-msgstr "Tipo de arquivo inválido"
-
-#: inc/options.php:26
-#: inc/options.php:27
-msgid "Data Import"
-msgstr "Importação de Dados"
-
-#: inc/options.php:43
-msgid "Flacso Settings"
-msgstr "Configurações da Flacso"
-
-#: inc/options.php:125
-msgid "Theme Custom Settings"
-msgstr "Configurações personalizadas do tema"
-
-#: inc/projects/new-project.php:15
-#: inc/publications/new-publication.php:15
-msgid "Invalid post type"
-msgstr "Tipo de postagem inválido"
-
-#: inc/projects/new-project.php:23
-#: inc/publications/new-publication.php:23
-msgid "You do not have access to this page, please make login or change your login account"
-msgstr "Você não tem acesso a esta página, por favor faça o login ou altere sua conta "
-
-#: inc/projects/new-project.php:68
-#: inc/publications/new-publication.php:68
-msgid "required field"
-msgstr "Campo obrigatório"
-
-#: inc/projects/new-project.php:68
-#: inc/publications/new-publication.php:68
-msgid "is empty"
-msgstr "está vazia"
-
-#: inc/projects/new-project.php:119
-#: inc/publications/new-publication.php:119
-msgid "error on set post taxonomy"
-msgstr "Erro ao setar taxonomia da postagem"
-
-#: inc/projects/new-project.php:143
-#: inc/publications/new-publication.php:143
-msgid "error on set post thumbnail image"
-msgstr "Erro ao setar miniatura da imagem"
-
-#: inc/projects/new-project.php:147
-#: inc/projects/new-project.php:179
-#: inc/publications/new-publication.php:147
-#: inc/publications/new-publication.php:179
-msgid "error on set post header image"
-msgstr "Erro ao setar imagem de cabeçalho da postagem"
-
-#: inc/projects/new-project.php:151
-#: inc/publications/new-publication.php:151
-msgid "error on set post images"
-msgstr "Erro ao setar imagens da postagem"
-
-#: inc/projects/new-project.php:171
-#: inc/publications/new-publication.php:171
-msgid "error on set post thumbnail"
-msgstr "Erro ao setar miniatura da postagem"
-
-#: inc/projects/new-project.php:197
-#: inc/publications/new-publication.php:197
-msgid "A new document was successfully created and waiting approval, thanks"
-msgstr "Um novo documento foi criado com êxito e esta à espera de aprovação, obrigado"
-
-#: inc/projects/new-project.php:309
-#: inc/publications/new-publication.php:309
-msgid "Highlight Image"
-msgstr "Imagem destaque"
-
-#: inc/projects/new-project.php:312
-#: inc/publications/new-publication.php:312
-msgid "Image showed on listing, like on home or catalog!"
-msgstr "Imagem mostrada na listagem, como na home ou catálogo!"
-
-#: inc/projects/new-project.php:323
-#: inc/publications/new-publication.php:323
-msgid "Header Image"
-msgstr "Cabeçalho"
-
-#: inc/projects/new-project.php:326
-#: inc/publications/new-publication.php:326
-msgid "Image showed on Header!"
-msgstr "Imagem mostrada no cabeçalho!"
-
-#: inc/projects/new-project.php:343
-#: inc/publications/new-publication.php:343
-msgid "Publish Document"
-msgstr "Publicar Publicação"
-
-#: inc/projects/projects.php:10
-msgid "Coordenação"
-msgstr "Coordenação"
-
-#: inc/projects/projects.php:16
-#: inc/projects/projects.php:17
-msgid "Instituições Parceiras"
-msgstr "Instituições Parceiras"
-
-#: inc/projects/projects.php:22
-#: inc/projects/projects.php:23
-msgid "Patrocínio"
-msgstr "Patrocínio"
-
-#: inc/projects/projects.php:28
-msgid "Financiamento"
-msgstr "Financiamento"
-
-#: inc/projects/projects.php:94
-#: inc/projects/projects.php:105
-#: inc/projects/projects.php:111
-#: inc/projects/projects.php:113
-msgid "Projects"
-msgstr "Projetos"
-
-#: inc/projects/projects.php:96
-#: inc/publications/publications.php:100
-#: inc/taxonomies.php:29
-#: inc/taxonomies.php:30
-#: inc/taxonomies.php:171
-#: inc/taxonomies.php:189
-#: inc/taxonomies.php:207
-#: inc/taxonomies.php:225
-#: inc/taxonomies.php:243
-#: inc/taxonomies.php:261
-#: inc/taxonomies.php:293
-msgid "Add new"
-msgstr "Adicionar novo"
-
-#: inc/projects/projects.php:97
-msgid "Add new project"
-msgstr "Adicionar novo projeto"
-
-#: inc/projects/projects.php:98
-#: page-templates/infoflacso.php:76
-#: page.php:78
-msgid "Edit project"
-msgstr "Editar projeto"
-
-#: inc/projects/projects.php:99
-msgid "New Project"
-msgstr "Novo projeto"
-
-#: inc/projects/projects.php:100
-msgid "View Project"
-msgstr "Ver projecto"
-
-#: inc/projects/projects.php:101
-msgid "Search Project"
-msgstr "Pesquisa Projeto"
-
-#: inc/projects/projects.php:102
-msgid "Project not found"
-msgstr "Projeto não encontrado"
-
-#: inc/projects/projects.php:103
-msgid "Project not found in the trash"
-msgstr "Projeto não encontrado no lixo"
-
-#: inc/projects/projects.php:143
-msgid "Project Details"
-msgstr "Detalhes do Projeto"
-
-#: inc/projects/projects.php:154
-msgid "Project name"
-msgstr "Nome do projeto"
-
-#: inc/projects/projects.php:161
-#: inc/publications/publications.php:165
-msgid "Description"
-msgstr "Descrição"
-
-#: inc/projects/projects.php:162
-#: inc/publications/publications.php:166
-msgid "Maximum 300 characters"
-msgstr "Máximo de 300 caracteres"
-
-#: inc/projects/projects.php:216
-#: inc/publications/publications.php:220
-msgid "File Upload"
-msgstr "Upload de arquivo"
-
-#: inc/projects/projects.php:218
-#: inc/projects/projects.php:450
-#: inc/publications/publications.php:222
-#: inc/publications/publications.php:454
-msgid "Choose or Upload an Image"
-msgstr "Escolha ou suba uma imagem"
-
-#: inc/projects/projects.php:283
-#: inc/publications/publications.php:287
-msgid "Auto Draft"
-msgstr "Rascunho"
-
-#: inc/projects/projects.php:451
-#: inc/publications/publications.php:455
-msgid "Use this image"
-msgstr "Use esta imagem"
-
-#: inc/projects/projects.php:534
-#: inc/publications/publications.php:538
-msgid "Permissão original (%s) não localizada"
-msgstr "Permissão original ( %s ) não localizada"
-
-#: inc/projects/projects.php:544
-#: inc/publications/publications.php:548
-msgid "Permissão %s não localizada"
-msgstr "Permissão %s não localizada"
-
-#: inc/publications/publications.php:11
-msgid "Author"
-msgstr "Autoria"
-
-#: inc/publications/publications.php:12
-msgid "Publication Author"
-msgstr "Autoria da Publicação"
-
-#: inc/publications/publications.php:16
-msgid "Fonte"
-msgstr "Fonte"
-
-#: inc/publications/publications.php:22
-msgid "Url"
-msgstr "Url"
-
-#: inc/publications/publications.php:98
-#: inc/publications/publications.php:109
-#: inc/publications/publications.php:115
-#: inc/publications/publications.php:117
-msgid "Publications"
-msgstr "Publicações"
-
-#: inc/publications/publications.php:101
-msgid "Add new publication"
-msgstr "Adicionar nova publicação"
-
-#: inc/publications/publications.php:102
-msgid "Edit publication"
-msgstr "Editar publicação"
-
-#: inc/publications/publications.php:103
-msgid "New Publication"
-msgstr "Nova Publicação"
-
-#: inc/publications/publications.php:104
-msgid "View Publication"
-msgstr "Ver Publicação"
-
-#: inc/publications/publications.php:105
-msgid "Search Publication"
-msgstr "Busca por Publicação"
-
-#: inc/publications/publications.php:106
-msgid "Publication not found"
-msgstr "Publicação não encontrada"
-
-#: inc/publications/publications.php:107
-msgid "Publication not found in the trash"
-msgstr "Publicação não encontrada no lixo"
-
-#: inc/publications/publications.php:147
-msgid "Publication Details"
-msgstr "Detalhes da publicação"
-
-#: inc/publications/publications.php:158
-msgid "Publication name"
-msgstr "Nome da publicação"
-
-#: inc/Tax-meta-class/Tax-meta-class.php:373
-#: inc/Tax-meta-class/Tax-meta-class.php:420
-msgid "Remove"
-msgstr "Remover"
-
-#: inc/Tax-meta-class/Tax-meta-class.php:386
-msgid "Add"
-msgstr "Adicionar"
-
-#: inc/Tax-meta-class/Tax-meta-class.php:722
-msgid "Remove Image"
-msgstr "Remover imagem"
-
-#: inc/Tax-meta-class/Tax-meta-class.php:724
-msgid "Upload Image"
-msgstr "Carregar Imagem"
-
-#: inc/Tax-meta-class/Tax-meta-class.php:744
-msgid "Select a color"
-msgstr "Selecione uma cor"
-
-#: inc/tax-meta-fields.php:67
-msgid "Icon"
-msgstr "Ícone"
-
-#: inc/taxonomies.php:24
-msgid "All"
-msgstr "Tudo"
-
-#: inc/taxonomies.php:25
-#: inc/taxonomies.php:26
-msgid "Parent"
-msgstr "Pai"
-
-#: inc/taxonomies.php:27
-#: inc/template-tags.php:261
-#: page-templates/gea-home.php:34
-#: page-templates/infoflacso.php:92
-#: page.php:91
-msgid "Edit"
-msgstr "Editar"
-
-#: inc/taxonomies.php:28
-msgid "Update"
-msgstr "Atualizar"
-
-#: inc/taxonomies.php:31
-msgid "New"
-msgstr "Novo"
-
-#: inc/taxonomies.php:32
-msgid "View"
-msgstr "Visualizar"
-
-#: inc/taxonomies.php:33
-#: inc/taxonomies.php:34
-msgid "No"
-msgstr "Não"
-
-#: inc/taxonomies.php:33
-msgid "found"
-msgstr "encontrado"
-
-#: inc/taxonomies.php:34
-msgid "found in the trash"
-msgstr "encontrado no lixo"
-
-#: inc/taxonomies.php:97
-#: inc/taxonomies.php:99
-msgid "National"
-msgstr "Nacional"
-
-#: inc/taxonomies.php:99
-msgid "International"
-msgstr "Internacional"
-
-#: inc/taxonomies.php:99
-msgid "State"
-msgstr "Estado"
-
-#: inc/taxonomies.php:121
-msgid "Languages"
-msgstr "Línguas"
-
-#: inc/taxonomies.php:122
-#: inc/taxonomies.php:131
-msgid "Language"
-msgstr "Língua"
-
-#: inc/taxonomies.php:123
-msgid "Search Languages"
-msgstr "Procurar por linguas"
-
-#: inc/taxonomies.php:124
-msgid "All Languages"
-msgstr "Todos os idiomas"
-
-#: inc/taxonomies.php:125
-msgid "Parent Language"
-msgstr "Pai"
-
-#: inc/taxonomies.php:126
-msgid "Parent Language:"
-msgstr "Pai:"
-
-#: inc/taxonomies.php:127
-msgid "Edit Language"
-msgstr "Editar Idioma"
-
-#: inc/taxonomies.php:128
-msgid "Update Language"
-msgstr "Atualizar Idioma"
-
-#: inc/taxonomies.php:129
-msgid "Add New Language"
-msgstr "Adicionar novo idioma"
-
-#: inc/taxonomies.php:130
-msgid "New Language Name"
-msgstr "Novo nome de idioma"
-
-#: inc/taxonomies.php:162
-#: inc/taxonomies.php:176
-msgid "Publication Types"
-msgstr "Tipos de Publicação"
-
-#: inc/taxonomies.php:164
-msgid "Search for Publication Types"
-msgstr "Pesquisar por Tipo de Publicação"
-
-#: inc/taxonomies.php:165
-msgid "All Publication Types"
-msgstr "Todos os Tipos de Publicação"
-
-#: inc/taxonomies.php:166
-msgid "Parent Publication Type"
-msgstr "Pai"
-
-#: inc/taxonomies.php:167
-msgid "Parent Publication Type:"
-msgstr "Pai:"
-
-#: inc/taxonomies.php:168
-msgid "Edit Publication Type"
-msgstr "Editar Tipo de Publicação"
-
-#: inc/taxonomies.php:169
-msgid "Update Publication Type"
-msgstr "Atualizar Tipo de Publicação"
-
-#: inc/taxonomies.php:170
-msgid "Add new Publication Type"
-msgstr "Adicionar novo Tipo de Publicação"
-
-#: inc/taxonomies.php:172
-msgid "New Publication Type"
-msgstr "Novo Tipo de Publicação"
-
-#: inc/taxonomies.php:173
-msgid "View Publication Type"
-msgstr "Visualizar Tipo de Publicação"
-
-#: inc/taxonomies.php:174
-msgid "No Publication Type found"
-msgstr "Tipo de Publicação não encontrado"
-
-#: inc/taxonomies.php:175
-msgid "No Publication Type found in the trash"
-msgstr "Tipo de Publicação não encontrado no lixo"
-
-#: inc/taxonomies.php:180
-#: inc/taxonomies.php:181
-#: inc/taxonomies.php:194
-msgid "Higher Education"
-msgstr "Categorias de Educação Superior"
-
-#: inc/taxonomies.php:182
-msgid "Search for Higher Education"
-msgstr "Procurar por categorias de Educação Superior"
-
-#: inc/taxonomies.php:183
-msgid "All Higher Education"
-msgstr "Todas as categorias de Educação Superior"
-
-#: inc/taxonomies.php:184
-msgid "Parent Higher Education"
-msgstr "Mãe"
-
-#: inc/taxonomies.php:185
-msgid "Parent Higher Education:"
-msgstr "Mãe:"
-
-#: inc/taxonomies.php:186
-msgid "Edit Higher Education"
-msgstr "Editar  categorias de Educação Superior"
-
-#: inc/taxonomies.php:187
-msgid "Update Higher Education"
-msgstr "Atualizar categoria de Educação Superior"
-
-#: inc/taxonomies.php:188
-msgid "Add new Higher Education"
-msgstr "Adicionar novas  categorias de Educação Superior"
-
-#: inc/taxonomies.php:190
-msgid "New Higher Education"
-msgstr "Nova  categoria de Educação Superior"
-
-#: inc/taxonomies.php:191
-msgid "View Higher Education"
-msgstr "Visualizar categorias de Educação Superior"
-
-#: inc/taxonomies.php:192
-msgid "No Higher Education found"
-msgstr "Nenhuma categoria de Educação Superior encontrada"
-
-#: inc/taxonomies.php:193
-msgid "No Higher Education found in the trash"
-msgstr "Categoria de Educação Superior não encontrada no lixo"
-
-#: inc/taxonomies.php:198
-#: inc/taxonomies.php:212
-msgid "Countries"
-msgstr "Países"
-
-#: inc/taxonomies.php:199
-msgid "Country"
-msgstr "País"
-
-#: inc/taxonomies.php:200
-msgid "Search for Countries"
-msgstr "Pesquisar por Países"
-
-#: inc/taxonomies.php:201
-msgid "All Countries"
-msgstr "Todos os países"
-
-#: inc/taxonomies.php:202
-msgid "Parent Country"
-msgstr "Pai"
-
-#: inc/taxonomies.php:203
-msgid "Parent Country:"
-msgstr "País-pai:"
-
-#: inc/taxonomies.php:204
-msgid "Edit Country"
-msgstr "Editar País"
-
-#: inc/taxonomies.php:205
-msgid "Update Country"
-msgstr "Atualizar País"
-
-#: inc/taxonomies.php:206
-msgid "Add new Country"
-msgstr "Adicionar novo País"
-
-#: inc/taxonomies.php:208
-msgid "New Country"
-msgstr "Novo País"
-
-#: inc/taxonomies.php:209
-msgid "View Country"
-msgstr "Visualizar País"
-
-#: inc/taxonomies.php:210
-msgid "No Country found"
-msgstr "País não encontrado"
-
-#: inc/taxonomies.php:211
-msgid "No Country found in the trash"
-msgstr "País não foi encontrado no lixo"
-
-#: inc/taxonomies.php:216
-#: inc/taxonomies.php:230
-msgid "Years"
-msgstr "Anos"
-
-#: inc/taxonomies.php:217
-msgid "Year"
-msgstr "Ano"
-
-#: inc/taxonomies.php:218
-msgid "Search for Years"
-msgstr "Procurar por Anos"
-
-#: inc/taxonomies.php:219
-msgid "All Years"
-msgstr "Todos os anos"
-
-#: inc/taxonomies.php:220
-msgid "Parent Year"
-msgstr "Pai"
-
-#: inc/taxonomies.php:221
-msgid "Parent Year:"
-msgstr "Pai:"
-
-#: inc/taxonomies.php:222
-msgid "Edit Year"
-msgstr "Editar Ano"
-
-#: inc/taxonomies.php:223
-msgid "Update Year"
-msgstr "Atualizar Ano"
-
-#: inc/taxonomies.php:224
-msgid "Add new Year"
-msgstr "Adicionar novo Ano"
-
-#: inc/taxonomies.php:226
-msgid "New Year"
-msgstr "Novo Ano"
-
-#: inc/taxonomies.php:227
-msgid "View Year"
-msgstr "Visualizar Ano"
-
-#: inc/taxonomies.php:228
-msgid "No Year found"
-msgstr "Ano não encontrado"
-
-#: inc/taxonomies.php:229
-msgid "No Year found in the trash"
-msgstr "Ano não encontrado no lixo"
-
-#: inc/taxonomies.php:234
-#: inc/taxonomies.php:248
-msgid "Territories"
-msgstr "Abrangência territorial"
-
-#: inc/taxonomies.php:235
-msgid "Territory"
-msgstr "Abrangência territorial"
-
-#: inc/taxonomies.php:236
-msgid "Search for Territories"
-msgstr "Procurar por abrangência territorial"
-
-#: inc/taxonomies.php:237
-msgid "All Territories"
-msgstr "Todas as abrangências territoriais"
-
-#: inc/taxonomies.php:238
-msgid "Parent Territory"
-msgstr "Pai"
-
-#: inc/taxonomies.php:239
-msgid "Parent Territory:"
-msgstr "Pai:"
-
-#: inc/taxonomies.php:240
-msgid "Edit Territory"
-msgstr "Editar abrangência territorial"
-
-#: inc/taxonomies.php:241
-msgid "Update Territory"
-msgstr "Atualizar abrangência territorial"
-
-#: inc/taxonomies.php:242
-msgid "Add new Territory"
-msgstr "Adicionar nova abrangência territorial"
-
-#: inc/taxonomies.php:244
-msgid "New Territory"
-msgstr "Nova abrangência territorial"
-
-#: inc/taxonomies.php:245
-msgid "View Territory"
-msgstr "Visualizar abrangência territorial"
-
-#: inc/taxonomies.php:246
-msgid "No Territory found"
-msgstr "Abrangência territorial não encontrada"
-
-#: inc/taxonomies.php:247
-msgid "No Territory found in the trash"
-msgstr "Abrangência territorial não encontrada no lixo"
-
-#: inc/taxonomies.php:252
-#: inc/taxonomies.php:253
-#: inc/taxonomies.php:266
-msgid "Status"
-msgstr "Situação"
-
-#: inc/taxonomies.php:254
-msgid "Search for Status"
-msgstr "Procurar por Situação"
-
-#: inc/taxonomies.php:255
-msgid "All Status"
-msgstr "Todas as situações"
-
-#: inc/taxonomies.php:256
-msgid "Parent Status"
-msgstr "Pai"
-
-#: inc/taxonomies.php:257
-msgid "Parent Status:"
-msgstr "Pai:"
-
-#: inc/taxonomies.php:258
-msgid "Edit Status"
-msgstr "Editar Situação"
-
-#: inc/taxonomies.php:259
-msgid "Update Status"
-msgstr "Atualizar Situação"
-
-#: inc/taxonomies.php:260
-msgid "Add new Status"
-msgstr "Adicionar nova Situação"
-
-#: inc/taxonomies.php:262
-msgid "New Status"
-msgstr "Nova Situação"
-
-#: inc/taxonomies.php:263
-msgid "View Status"
-msgstr "Visualizar Situação"
-
-#: inc/taxonomies.php:264
-msgid "No Status found"
-msgstr "Situação não encontrada"
-
-#: inc/taxonomies.php:265
-msgid "No Status found in the trash"
-msgstr "Situação não encontrada no lixo"
-
-#: inc/taxonomies.php:380
-msgid "We could not find any publication types. <a href=\"%s\">Please add one</a>."
-msgstr "Nós não conseguimos encontrar quaisquer tipos de publicação. <A href = \" %s \"> Por favor, adicione um </a>."
-
-#: inc/template-tags.php:17
-msgid "Menu"
-msgstr "Menu"
-
-#: inc/template-tags.php:59
-msgid "Posts navigation"
-msgstr "Navegação das postagens"
-
-#: inc/template-tags.php:63
-msgid "Older"
-msgstr "Página anterior"
-
-#: inc/template-tags.php:67
-msgid "Newer"
-msgstr "Próxima página"
-
-#: inc/template-tags.php:84
-msgid "Next Page &raquo;"
-msgstr "Próxima Página &raquo;"
-
-#: inc/template-tags.php:99
-msgid "&laquo; Previous Page"
-msgstr "&laquo; Página Anterior"
-
-#: inc/template-tags.php:203
-msgid "Post navigation"
-msgstr "Navegação da postagem"
-
-#: inc/template-tags.php:206
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<Span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#: inc/template-tags.php:207
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:248
-#: inc/template-tags.php:255
-#: single-publication.php:54
-msgid ", "
-msgstr ", "
-
-#: inc/template-tags.php:251
-msgid "Categories"
-msgstr "Categorias"
-
-#: inc/template-tags.php:257
-msgid "Tags"
-msgstr "Palavras-chave"
-
-#: inc/template-tags.php:275
-msgid "Share"
-msgstr "Compartilhar"
-
-#: inc/template-tags.php:364
-#: inc/template-tags.php:367
-msgid "Download"
-msgstr "Baixar"
-
-#: inc/template-tags.php:394
-#: inc/template-tags.php:398
-#: inc/template-tags.php:401
-msgid "Source: %1$s"
-msgstr "Fonte: %1$s"
-
-#: inc/template-tags.php:550
-msgid "Category: %s"
-msgstr "Categoria: %s"
-
-#: inc/template-tags.php:552
-msgid "Tag: %s"
-msgstr "Palavra-chave: %s"
-
-#: inc/template-tags.php:554
-msgid "Author: %s"
-msgstr "Autoria: %s"
-
-#: inc/template-tags.php:556
-msgid "Year: %s"
-msgstr "Ano: %s"
-
-#: inc/template-tags.php:556
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: inc/template-tags.php:558
-msgid "Month: %s"
-msgstr "Mês: %s"
-
-#: inc/template-tags.php:558
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "FY"
-
-#: inc/template-tags.php:560
-msgid "Day: %s"
-msgstr "Dia: %s"
-
-#: inc/template-tags.php:560
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr "F j, Y"
-
-#: inc/template-tags.php:562
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr "À parte"
-
-#: inc/template-tags.php:564
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr "Galerias"
-
-#: inc/template-tags.php:566
-msgctxt "post format archive title"
-msgid "Images"
-msgstr "Imagens"
-
-#: inc/template-tags.php:568
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr "Vídeos"
-
-#: inc/template-tags.php:570
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr "Cotações"
-
-#: inc/template-tags.php:572
-msgctxt "post format archive title"
-msgid "Links"
-msgstr "Links"
-
-#: inc/template-tags.php:574
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr "Situações"
-
-#: inc/template-tags.php:576
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr "Áudios"
-
-#: inc/template-tags.php:578
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr "Bate-papo"
-
-#: inc/template-tags.php:580
-msgid "Archives: %s"
-msgstr "Arquivos: %s"
-
-#: inc/template-tags.php:584
-msgid "%1$s: %2$s"
-msgstr "%1$s : %2$s"
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr "Categorias Mais Utilizadas"
-
-#: inc/template-tags.php:586
-msgid "Archives"
-msgstr "Arquivos"
-
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente procurar nos arquivos mensais. %1$s"
-
-#: inc/template-tags.php:782
-msgid "Loading the requested information"
-msgstr "Carregando a informação solicitada"
-
-#: archive-agenda.php:21
-msgid "Past events"
-msgstr "Eventos passados"
-
-#: inc/widgets.php:23
-msgid "Display a list with the elements inside Flacso Library"
-msgstr "Apresentar uma lista com os elementos dentro da Biblioteca Flacso"
-
-#: archive-agenda.php:22
-msgid "View upcoming events &rarr;"
-msgstr "Ver eventos futuros &rarr;"
-
-#: inc/widgets.php:24
-msgid "Flacso Library"
-msgstr "Biblioteca Flacso"
-
-#: archive-agenda.php:24
-msgid "Upcoming events"
-msgstr "Eventos futuros"
-
-#: inc/widgets.php:78
-#: inc/widgets.php:175
-msgid "Title:"
-msgstr "Título:"
-
-#: archive-agenda.php:25
-msgid "&larr; View past events"
-msgstr "&larr; Ver eventos passados"
-
-#: inc/widgets.php:94
-msgid "The Documentation Center counter widget"
-msgstr "Widget contador da central de documentos"
-
-#: archive-agenda.php:52
-#: inc/template-tags.php:474
-msgid "%1$s to %2$s"
-msgstr "%1$s até %2$s"
-
-#: inc/widgets.php:95
-msgid "GEA Documentation Center"
-msgstr "Centro de Documentação do GEA"
-
-#: archive-agenda.php:68
-#: content-agenda.php:32
-#: content-page.php:31
-#: content-project.php:35
-#: content-publication.php:56
-#: content.php:41
-#: front-page.php:43
-#: front-page.php:90
-#: front-page.php:106
-#: front-page.php:132
-#: page-templates/gea-home.php:93
-#: page-templates/library.php:100
-msgid "Read more"
-msgstr "Leia mais"
-
-#: inc/widgets.php:116
-msgid "Documentation Center"
-msgstr "Centro de Documentação"
-
-#: archive-agenda.php:80
-msgid "There is no events to display right now"
-msgstr "Não há eventos para serem mostrados agora"
-
-#: comments.php:28
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Uma ideia sobre &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s ideias sobre &ldquo;%2$s&rdquo;"
-
-#: inc/widgets.php:145
-msgid "Access here the Documentation Centre and search by subject, source, region or country"
-msgstr "Acesse aqui o Centro de Documentação e pesquise por tema, fonte, região ou país"
-
-#: comments.php:35
-#: comments.php:54
-msgid "Comment navigation"
-msgstr "Navegação nos comentários"
-
-#: inc/widgets.php:146
-msgid "Free access for downloading files"
-msgstr "O download de arquivos é gratuito"
-
-#: comments.php:36
-#: comments.php:55
-msgid "&larr; Older Comments"
-msgstr "&larr; Comentários mais antigos"
-
-#: inc/widgets.php:179
-msgid "Page:"
-msgstr "Páginas:"
-
-#: comments.php:37
-#: comments.php:56
-msgid "Newer Comments &rarr;"
-msgstr "Comentários Recentes &rarr;"
-
-#: inc/widgets.php:190
-msgid "Link:"
-msgstr "Link:"
-
-#: comments.php:66
-msgid "Comments are closed."
-msgstr "Os comentários estão fechados."
-
-#: inc/wp-bootstrap-navwalker.php:202
-msgid "Add a Menu"
-msgstr "Adicionar um menu"
-
-#: content-none.php:13
-msgid "Nothing Found"
-msgstr "Nada foi encontrado"
-
-#: page-templates/child-page-list.php:27
-#: page-templates/infoflacso.php:36
-#: page-templates/library.php:30
-#: page-templates/project-list.php:27
-#: page.php:38
-#: single-agenda.php:27
-#: single-publication.php:66
-#: single.php:32
-msgid "Pages:"
-msgstr "Páginas:"
-
-#: content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Pronto para publicar o seu primeiro post? <A href = \"%1$s\"> Comece aqui </a>."
-
-#: page-templates/gea-home.php:97
-msgid "More News"
-msgstr "Mais notícias"
-
-#: content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Desculpe, mas nada foi encontrado na sua pesquisa. Por favor, tente novamente com palavras diferentes."
-
-#: page-templates/project-list.php:38
-msgid "Ongoing projects"
-msgstr "Projetos em andamento"
-
-#: content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "Parece que não pude encontrar o que você está procurando. Talvez a pesquisa possa ajudar."
-
-#: page-templates/project-list.php:39
-msgid "Accomplished projects"
-msgstr "Projetos realizados"
-
-#: content-publication.php:38
-#: single-publication.php:44
-msgid "Author: %1$s"
-msgstr "Autoria: %1$s"
-
-#: search.php:17
-msgid "Search Results for: %s"
-msgstr "Resultados da pesquisa para: %s"
-
-#: content-publication.php:47
-msgid "Tags: "
-msgstr "Palavras-chave:"
-
-#: single-project.php:32
-msgid "Coordination: %1$s"
-msgstr "Coordenação: %1$s"
-
-#: functions.php:53
-msgid "Main Menu"
-msgstr "Menu Principal"
-
-#: single-project.php:38
-msgid "Sponsorship: %1$s"
-msgstr "Patrocínio: %1$s"
-
-#: functions.php:54
-msgid "Top Menu"
-msgstr "Menu Superior"
-
-#: single-project.php:44
-msgid "Funding: %1$s"
-msgstr "Financiamento: %1$s"
-
-#: functions.php:55
-msgid "Top Menu (GEA)"
-msgstr "Menu Superior"
-
-#: single-project.php:50
-msgid "Partnership: %1$s"
-msgstr "Instituições parceiras: %1$s"
-
-#: functions.php:91
-msgid "Sidebar"
-msgstr "Barra Lateral"
-
-#: single-project.php:78
-msgid "Latest news about the project"
-msgstr "Últimas notícias do projeto"
-
-#: functions.php:93
-msgid "The main sidebar"
-msgstr "A principal barra lateral"
-
-#: single-project.php:99
-msgid "This project belongs to the following programs: %s"
-msgstr "Este projeto pertence aos seguintes programas: %s"
-
-#: functions.php:101
-msgid "Sidebar (GEA)"
-msgstr "Barra Lateral (GEA)"
-
-#: single-publication.php:56
-msgid "Tags: %1$s"
-msgstr "Palavras-chave: %1$s"
-
-#: functions.php:103
-msgid "The main sidebar for GEA"
-msgstr "A principal barra lateral do GEA"
-
-msgid "Flacso"
-msgstr "Flacso"
-
-#: functions.php:111
-msgid "Footer Widget Area"
-msgstr "Área de Widget do Rodapé"
-
-msgid "http://github.com/redelivre/flacso"
-msgstr "http://github.com/redelivre/flacso"
-
-#: 404.php:15
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2\n"
+"_n_noop: 1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;\n"
+"esc_attr__;esc_attr_e;esc_attr_x: 1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: ../404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ops! Essa página não pode ser encontrado."
 
-#: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr "Parece que nada foi encontrado neste local. Tente talvez um dos links abaixo ou uma pesquisa?"
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que nada foi encontrado neste local. Tente talvez um dos links abaixo "
+"ou uma pesquisa?"
 
+#: ../404.php:27
+msgid "Most Used Categories"
+msgstr "Categorias Mais Utilizadas"
+
+#: ../404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente procurar nos arquivos mensais. %1$s"
+
+#: ../archive-agenda.php:21
+msgid "Past events"
+msgstr "Eventos passados"
+
+#: ../archive-agenda.php:22
+msgid "View upcoming events &rarr;"
+msgstr "Ver eventos futuros &rarr;"
+
+#: ../archive-agenda.php:24
+msgid "Upcoming events"
+msgstr "Eventos futuros"
+
+#: ../archive-agenda.php:25
+msgid "&larr; View past events"
+msgstr "&larr; Ver eventos passados"
+
+#: ../archive-agenda.php:52 ../inc/template-tags.php:535
+#, php-format
+msgid "%1$s to %2$s"
+msgstr "%1$s até %2$s"
+
+#: ../archive-agenda.php:68 ../content-agenda.php:32 ../content-page.php:29
+#: ../content-project.php:35 ../content-publication.php:56 ../content.php:41
+#: ../front-page.php:43 ../front-page.php:130 ../front-page.php:156
+#: ../page-templates/gea-home.php:93 ../page-templates/library.php:100
+msgid "Read more"
+msgstr "Leia mais"
+
+#: ../archive-agenda.php:80
+msgid "There is no events to display right now"
+msgstr "Não há eventos para serem mostrados agora"
+
+#: ../comments.php:35 ../comments.php:54
+msgid "Comment navigation"
+msgstr "Navegação nos comentários"
+
+#: ../comments.php:36 ../comments.php:55
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentários mais antigos"
+
+#: ../comments.php:37 ../comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr "Comentários Recentes &rarr;"
+
+#: ../comments.php:66
+msgid "Comments are closed."
+msgstr "Os comentários estão fechados."
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Nada foi encontrado"
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para publicar o seu primeiro post? <A href = \"%1$s\"> Comece aqui </"
+"a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Desculpe, mas nada foi encontrado na sua pesquisa. Por favor, tente "
+"novamente com palavras diferentes."
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que não pude encontrar o que você está procurando. Talvez a pesquisa "
+"possa ajudar."
+
+#: ../content-publication.php:38 ../single-publication.php:44
+#, php-format
+msgid "Author: %1$s"
+msgstr "Autoria: %1$s"
+
+#: ../content-publication.php:47
+msgid "Tags: "
+msgstr "Palavras-chave:"
+
+#: ../front-page.php:90
+msgid "Look"
+msgstr "Ver"
+
+#: ../front-page.php:90
+msgid "Full Library"
+msgstr "Biblioteca completa"
+
+#: ../functions.php:53
+msgid "Main Menu"
+msgstr "Menu Principal"
+
+#: ../functions.php:54
+msgid "Top Menu"
+msgstr "Menu Superior"
+
+#: ../functions.php:55
+msgid "Top Menu (GEA)"
+msgstr "Menu Superior"
+
+#: ../functions.php:91
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: ../functions.php:93
+msgid "The main sidebar"
+msgstr "A principal barra lateral"
+
+#: ../functions.php:101
+msgid "Sidebar (GEA)"
+msgstr "Barra Lateral (GEA)"
+
+#: ../functions.php:103
+msgid "The main sidebar for GEA"
+msgstr "A principal barra lateral do GEA"
+
+#: ../functions.php:111
+msgid "Footer Widget Area"
+msgstr "Área de Widget do Rodapé"
+
+#: ../functions.php:113
+msgid "The widget area on the footer"
+msgstr "Área de widget no rodapé"
+
+#: ../functions.php:121
+msgid "Footer Widget Area (GEA)"
+msgstr "Área de Widget do Rodapé (GEA)"
+
+#: ../functions.php:123
+msgid "The widget area on the GEA footer"
+msgstr "Área de widget no rodapé do GEA"
+
+#: ../functions.php:131
+msgid "Banners Widget Area"
+msgstr "Área de Widget para Banners"
+
+#: ../functions.php:133
+msgid "The widget area for banners"
+msgstr "A área do widget para banners"
+
+#: ../functions.php:258
+msgid "Select"
+msgstr "Selecione"
+
+#: ../functions.php:311
+msgid "Publication Title"
+msgstr "Título da Publicação"
+
+#: ../functions.php:312
+msgid "Search for documents with that text"
+msgstr "Pesquisa por publicações com este texto"
+
+#: ../functions.php:321 ../inc/taxonomies.php:23
+msgid "Search for"
+msgstr "Procurar"
+
+#: ../header.php:24
+msgid "Skip to content"
+msgstr "Ir para o conteúdo"
+
+#: ../inc/Tax-meta-class/Tax-meta-class.php:373
+#: ../inc/Tax-meta-class/Tax-meta-class.php:420
+msgid "Remove"
+msgstr "Remover"
+
+#: ../inc/Tax-meta-class/Tax-meta-class.php:386
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../inc/Tax-meta-class/Tax-meta-class.php:722
+msgid "Remove Image"
+msgstr "Remover imagem"
+
+#: ../inc/Tax-meta-class/Tax-meta-class.php:724
+msgid "Upload Image"
+msgstr "Carregar Imagem"
+
+#: ../inc/Tax-meta-class/Tax-meta-class.php:744
+msgid "Select a color"
+msgstr "Selecione uma cor"
+
+#: ../inc/back-end.php:35 ../inc/taxonomies.php:163
+msgid "Publication Type"
+msgstr "Tipo da Publicação"
+
+#: ../inc/back-end.php:71 ../inc/publications/publications.php:99
+msgid "Publication"
+msgstr "Publicação"
+
+#: ../inc/back-end.php:228
+#, php-format
+msgid "%s "
+msgid_plural "%s "
+msgstr[0] "%s "
+msgstr[1] "%s "
+
+#: ../inc/back-end.php:276
+#, php-format
+msgid "<a href=\"%s\""
+msgstr "<a href=\"%s\""
+
+#: ../inc/custom-fields.php:17
+msgid "Source"
+msgstr "Fonte"
+
+#: ../inc/custom-fields.php:23
+msgid "Editorship"
+msgstr "Editoria"
+
+#: ../inc/custom-fields.php:29
+msgid "URL"
+msgstr "URL"
+
+#: ../inc/custom-fields.php:30 ../inc/publications/publications.php:23
+msgid "Source Address or external link"
+msgstr "Endereço de origem ou link externo"
+
+#: ../inc/custom-fields.php:48
+msgid "Post Details"
+msgstr "Detalhes da Postagem"
+
+#: ../inc/custom-fields.php:56 ../inc/projects/projects.php:95
+msgid "Project"
+msgstr "Projeto"
+
+#: ../inc/custom-fields.php:57
+msgid "Areas & Programs"
+msgstr "Áreas e programas"
+
+#: ../inc/customizer.php:22
+msgid "Front Page Content"
+msgstr "Conteúdo da capa"
+
+#: ../inc/customizer.php:33
+msgid "Featured Page"
+msgstr "Página em destaque"
+
+#: ../inc/customizer.php:43
+msgid "GEA Settings"
+msgstr "Configurações do GEA"
+
+#: ../inc/customizer.php:54
+msgid "GEA Custom Label"
+msgstr "Rótulo personalizado do GEA"
+
+#: ../inc/customizer.php:64
+msgid "GEA Custom Abreviation"
+msgstr "Abreviatura personalizada do GEA"
+
+#: ../inc/extras.php:71
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: ../inc/extras.php:129
+#, php-format
+msgid "<cite class=\"fn media-heading\">%s</cite>"
+msgstr "<Cite class = \"fn media-título \"> %s </ cite>"
+
+#: ../inc/extras.php:135
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../inc/extras.php:135
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: ../inc/extras.php:142
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando moderação."
+
+#: ../inc/import/data-importer.php:629
+msgid "Remote server did not respond"
+msgstr "O servidor remoto não respondeu"
+
+#: ../inc/import/data-importer.php:635
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr "Servidor remoto retornou uma resposta de erro %1$d %2$s"
+
+#: ../inc/import/data-importer.php:642
+msgid "Remote file is incorrect size"
+msgstr "O arquivo remoto está em tamanho incorreto"
+
+#: ../inc/import/data-importer.php:647
+msgid "Zero size file downloaded"
+msgstr "Arquivo baixado sem tamanho"
+
+#: ../inc/import/data-importer.php:674
+msgid "Invalid file type"
+msgstr "Tipo de arquivo inválido"
+
+#: ../inc/options.php:26 ../inc/options.php:27
+msgid "Data Import"
+msgstr "Importação de Dados"
+
+#: ../inc/options.php:43
+msgid "Flacso Settings"
+msgstr "Configurações da Flacso"
+
+#: ../inc/options.php:125
+msgid "Theme Custom Settings"
+msgstr "Configurações personalizadas do tema"
+
+#: ../inc/projects/new-project.php:15
+#: ../inc/publications/new-publication.php:15
+msgid "Invalid post type"
+msgstr "Tipo de postagem inválido"
+
+#: ../inc/projects/new-project.php:23
+#: ../inc/publications/new-publication.php:23
+msgid ""
+"You do not have access to this page, please make login or change your login "
+"account"
+msgstr ""
+"Você não tem acesso a esta página, por favor faça o login ou altere sua "
+"conta "
+
+#: ../inc/projects/new-project.php:68
+#: ../inc/publications/new-publication.php:68
+msgid "required field"
+msgstr "Campo obrigatório"
+
+#: ../inc/projects/new-project.php:68
+#: ../inc/publications/new-publication.php:68
+msgid "is empty"
+msgstr "está vazia"
+
+#: ../inc/projects/new-project.php:119
+#: ../inc/publications/new-publication.php:119
+msgid "error on set post taxonomy"
+msgstr "Erro ao setar taxonomia da postagem"
+
+#: ../inc/projects/new-project.php:143
+#: ../inc/publications/new-publication.php:143
+msgid "error on set post thumbnail image"
+msgstr "Erro ao setar miniatura da imagem"
+
+#: ../inc/projects/new-project.php:147 ../inc/projects/new-project.php:179
+#: ../inc/publications/new-publication.php:147
+#: ../inc/publications/new-publication.php:179
+msgid "error on set post header image"
+msgstr "Erro ao setar imagem de cabeçalho da postagem"
+
+#: ../inc/projects/new-project.php:151
+#: ../inc/publications/new-publication.php:151
+msgid "error on set post images"
+msgstr "Erro ao setar imagens da postagem"
+
+#: ../inc/projects/new-project.php:171
+#: ../inc/publications/new-publication.php:171
+msgid "error on set post thumbnail"
+msgstr "Erro ao setar miniatura da postagem"
+
+#: ../inc/projects/new-project.php:197
+#: ../inc/publications/new-publication.php:197
+msgid "A new document was successfully created and waiting approval, thanks"
+msgstr ""
+"Um novo documento foi criado com êxito e esta à espera de aprovação, obrigado"
+
+#: ../inc/projects/new-project.php:309
+#: ../inc/publications/new-publication.php:309
+msgid "Highlight Image"
+msgstr "Imagem destaque"
+
+#: ../inc/projects/new-project.php:312
+#: ../inc/publications/new-publication.php:312
+msgid "Image showed on listing, like on home or catalog!"
+msgstr "Imagem mostrada na listagem, como na home ou catálogo!"
+
+#: ../inc/projects/new-project.php:323
+#: ../inc/publications/new-publication.php:323
+msgid "Header Image"
+msgstr "Cabeçalho"
+
+#: ../inc/projects/new-project.php:326
+#: ../inc/publications/new-publication.php:326
+msgid "Image showed on Header!"
+msgstr "Imagem mostrada no cabeçalho!"
+
+#: ../inc/projects/new-project.php:343
+#: ../inc/publications/new-publication.php:343
+msgid "Publish Document"
+msgstr "Publicar Publicação"
+
+#: ../inc/projects/projects.php:10
+msgid "Coordenação"
+msgstr "Coordenação"
+
+#: ../inc/projects/projects.php:16 ../inc/projects/projects.php:17
+msgid "Instituições Parceiras"
+msgstr "Instituições Parceiras"
+
+#: ../inc/projects/projects.php:22 ../inc/projects/projects.php:23
+msgid "Patrocínio"
+msgstr "Patrocínio"
+
+#: ../inc/projects/projects.php:28
+msgid "Financiamento"
+msgstr "Financiamento"
+
+#: ../inc/projects/projects.php:94 ../inc/projects/projects.php:105
+#: ../inc/projects/projects.php:111 ../inc/projects/projects.php:113
+msgid "Projects"
+msgstr "Projetos"
+
+#: ../inc/projects/projects.php:96 ../inc/publications/publications.php:100
+#: ../inc/taxonomies.php:29 ../inc/taxonomies.php:30 ../inc/taxonomies.php:171
+#: ../inc/taxonomies.php:189 ../inc/taxonomies.php:207
+#: ../inc/taxonomies.php:225 ../inc/taxonomies.php:243
+#: ../inc/taxonomies.php:261 ../inc/taxonomies.php:293
+msgid "Add new"
+msgstr "Adicionar novo"
+
+#: ../inc/projects/projects.php:97
+msgid "Add new project"
+msgstr "Adicionar novo projeto"
+
+#: ../inc/projects/projects.php:98 ../page-templates/infoflacso.php:76
+#: ../page.php:78
+msgid "Edit project"
+msgstr "Editar projeto"
+
+#: ../inc/projects/projects.php:99
+msgid "New Project"
+msgstr "Novo projeto"
+
+#: ../inc/projects/projects.php:100
+msgid "View Project"
+msgstr "Ver projecto"
+
+#: ../inc/projects/projects.php:101
+msgid "Search Project"
+msgstr "Pesquisa Projeto"
+
+#: ../inc/projects/projects.php:102
+msgid "Project not found"
+msgstr "Projeto não encontrado"
+
+#: ../inc/projects/projects.php:103
+msgid "Project not found in the trash"
+msgstr "Projeto não encontrado no lixo"
+
+#: ../inc/projects/projects.php:143
+msgid "Project Details"
+msgstr "Detalhes do Projeto"
+
+#: ../inc/projects/projects.php:154
+msgid "Project name"
+msgstr "Nome do projeto"
+
+#: ../inc/projects/projects.php:161 ../inc/publications/publications.php:165
+msgid "Description"
+msgstr "Descrição"
+
+#: ../inc/projects/projects.php:162 ../inc/publications/publications.php:166
+msgid "Maximum 300 characters"
+msgstr "Máximo de 300 caracteres"
+
+#: ../inc/projects/projects.php:216 ../inc/publications/publications.php:220
+msgid "File Upload"
+msgstr "Upload de arquivo"
+
+#: ../inc/projects/projects.php:218 ../inc/projects/projects.php:450
+#: ../inc/publications/publications.php:222
+#: ../inc/publications/publications.php:454
+msgid "Choose or Upload an Image"
+msgstr "Escolha ou suba uma imagem"
+
+#: ../inc/projects/projects.php:283 ../inc/publications/publications.php:287
+msgid "Auto Draft"
+msgstr "Rascunho"
+
+#: ../inc/projects/projects.php:451 ../inc/publications/publications.php:455
+msgid "Use this image"
+msgstr "Use esta imagem"
+
+#: ../inc/projects/projects.php:534 ../inc/publications/publications.php:538
+#, php-format
+msgid "Permissão original (%s) não localizada"
+msgstr "Permissão original ( %s ) não localizada"
+
+#: ../inc/projects/projects.php:544 ../inc/publications/publications.php:548
+#, php-format
+msgid "Permissão %s não localizada"
+msgstr "Permissão %s não localizada"
+
+#: ../inc/publications/publications.php:11
+msgid "Author"
+msgstr "Autoria"
+
+#: ../inc/publications/publications.php:12
+msgid "Publication Author"
+msgstr "Autoria da Publicação"
+
+#: ../inc/publications/publications.php:16
+msgid "Fonte"
+msgstr "Fonte"
+
+#: ../inc/publications/publications.php:22
+msgid "Url"
+msgstr "Url"
+
+#: ../inc/publications/publications.php:98
+#: ../inc/publications/publications.php:109
+#: ../inc/publications/publications.php:115
+#: ../inc/publications/publications.php:117
+msgid "Publications"
+msgstr "Publicações"
+
+#: ../inc/publications/publications.php:101
+msgid "Add new publication"
+msgstr "Adicionar nova publicação"
+
+#: ../inc/publications/publications.php:102
+msgid "Edit publication"
+msgstr "Editar publicação"
+
+#: ../inc/publications/publications.php:103
+msgid "New Publication"
+msgstr "Nova Publicação"
+
+#: ../inc/publications/publications.php:104
+msgid "View Publication"
+msgstr "Ver Publicação"
+
+#: ../inc/publications/publications.php:105
+msgid "Search Publication"
+msgstr "Busca por Publicação"
+
+#: ../inc/publications/publications.php:106
+msgid "Publication not found"
+msgstr "Publicação não encontrada"
+
+#: ../inc/publications/publications.php:107
+msgid "Publication not found in the trash"
+msgstr "Publicação não encontrada no lixo"
+
+#: ../inc/publications/publications.php:147
+msgid "Publication Details"
+msgstr "Detalhes da publicação"
+
+#: ../inc/publications/publications.php:158
+msgid "Publication name"
+msgstr "Nome da publicação"
+
+#: ../inc/tax-meta-fields.php:67
+msgid "Icon"
+msgstr "Ícone"
+
+#: ../inc/taxonomies.php:24
+msgid "All"
+msgstr "Tudo"
+
+#: ../inc/taxonomies.php:25 ../inc/taxonomies.php:26
+msgid "Parent"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:27 ../inc/template-tags.php:261
+#: ../page-templates/gea-home.php:34 ../page-templates/infoflacso.php:92
+#: ../page.php:91
+msgid "Edit"
+msgstr "Editar"
+
+#: ../inc/taxonomies.php:28
+msgid "Update"
+msgstr "Atualizar"
+
+#: ../inc/taxonomies.php:31
+msgid "New"
+msgstr "Novo"
+
+#: ../inc/taxonomies.php:32
+msgid "View"
+msgstr "Visualizar"
+
+#: ../inc/taxonomies.php:33 ../inc/taxonomies.php:34
+msgid "No"
+msgstr "Não"
+
+#: ../inc/taxonomies.php:33
+msgid "found"
+msgstr "encontrado"
+
+#: ../inc/taxonomies.php:34
+msgid "found in the trash"
+msgstr "encontrado no lixo"
+
+#: ../inc/taxonomies.php:97 ../inc/taxonomies.php:99
+msgid "National"
+msgstr "Nacional"
+
+#: ../inc/taxonomies.php:99
+msgid "International"
+msgstr "Internacional"
+
+#: ../inc/taxonomies.php:99
+msgid "State"
+msgstr "Estado"
+
+#: ../inc/taxonomies.php:121
+msgid "Languages"
+msgstr "Línguas"
+
+#: ../inc/taxonomies.php:122 ../inc/taxonomies.php:131
+msgid "Language"
+msgstr "Língua"
+
+#: ../inc/taxonomies.php:123
+msgid "Search Languages"
+msgstr "Procurar por linguas"
+
+#: ../inc/taxonomies.php:124
+msgid "All Languages"
+msgstr "Todos os idiomas"
+
+#: ../inc/taxonomies.php:125
+msgid "Parent Language"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:126
+msgid "Parent Language:"
+msgstr "Pai:"
+
+#: ../inc/taxonomies.php:127
+msgid "Edit Language"
+msgstr "Editar Idioma"
+
+#: ../inc/taxonomies.php:128
+msgid "Update Language"
+msgstr "Atualizar Idioma"
+
+#: ../inc/taxonomies.php:129
+msgid "Add New Language"
+msgstr "Adicionar novo idioma"
+
+#: ../inc/taxonomies.php:130
+msgid "New Language Name"
+msgstr "Novo nome de idioma"
+
+#: ../inc/taxonomies.php:162 ../inc/taxonomies.php:176
+msgid "Publication Types"
+msgstr "Tipos de Publicação"
+
+#: ../inc/taxonomies.php:164
+msgid "Search for Publication Types"
+msgstr "Pesquisar por Tipo de Publicação"
+
+#: ../inc/taxonomies.php:165
+msgid "All Publication Types"
+msgstr "Todos os Tipos de Publicação"
+
+#: ../inc/taxonomies.php:166
+msgid "Parent Publication Type"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:167
+msgid "Parent Publication Type:"
+msgstr "Pai:"
+
+#: ../inc/taxonomies.php:168
+msgid "Edit Publication Type"
+msgstr "Editar Tipo de Publicação"
+
+#: ../inc/taxonomies.php:169
+msgid "Update Publication Type"
+msgstr "Atualizar Tipo de Publicação"
+
+#: ../inc/taxonomies.php:170
+msgid "Add new Publication Type"
+msgstr "Adicionar novo Tipo de Publicação"
+
+#: ../inc/taxonomies.php:172
+msgid "New Publication Type"
+msgstr "Novo Tipo de Publicação"
+
+#: ../inc/taxonomies.php:173
+msgid "View Publication Type"
+msgstr "Visualizar Tipo de Publicação"
+
+#: ../inc/taxonomies.php:174
+msgid "No Publication Type found"
+msgstr "Tipo de Publicação não encontrado"
+
+#: ../inc/taxonomies.php:175
+msgid "No Publication Type found in the trash"
+msgstr "Tipo de Publicação não encontrado no lixo"
+
+#: ../inc/taxonomies.php:180 ../inc/taxonomies.php:181
+#: ../inc/taxonomies.php:194
+msgid "Higher Education"
+msgstr "Categorias de Educação Superior"
+
+#: ../inc/taxonomies.php:182
+msgid "Search for Higher Education"
+msgstr "Procurar por categorias de Educação Superior"
+
+#: ../inc/taxonomies.php:183
+msgid "All Higher Education"
+msgstr "Todas as categorias de Educação Superior"
+
+#: ../inc/taxonomies.php:184
+msgid "Parent Higher Education"
+msgstr "Mãe"
+
+#: ../inc/taxonomies.php:185
+msgid "Parent Higher Education:"
+msgstr "Mãe:"
+
+#: ../inc/taxonomies.php:186
+msgid "Edit Higher Education"
+msgstr "Editar  categorias de Educação Superior"
+
+#: ../inc/taxonomies.php:187
+msgid "Update Higher Education"
+msgstr "Atualizar categoria de Educação Superior"
+
+#: ../inc/taxonomies.php:188
+msgid "Add new Higher Education"
+msgstr "Adicionar novas  categorias de Educação Superior"
+
+#: ../inc/taxonomies.php:190
+msgid "New Higher Education"
+msgstr "Nova  categoria de Educação Superior"
+
+#: ../inc/taxonomies.php:191
+msgid "View Higher Education"
+msgstr "Visualizar categorias de Educação Superior"
+
+#: ../inc/taxonomies.php:192
+msgid "No Higher Education found"
+msgstr "Nenhuma categoria de Educação Superior encontrada"
+
+#: ../inc/taxonomies.php:193
+msgid "No Higher Education found in the trash"
+msgstr "Categoria de Educação Superior não encontrada no lixo"
+
+#: ../inc/taxonomies.php:198 ../inc/taxonomies.php:212
+msgid "Countries"
+msgstr "Países"
+
+#: ../inc/taxonomies.php:199
+msgid "Country"
+msgstr "País"
+
+#: ../inc/taxonomies.php:200
+msgid "Search for Countries"
+msgstr "Pesquisar por Países"
+
+#: ../inc/taxonomies.php:201
+msgid "All Countries"
+msgstr "Todos os países"
+
+#: ../inc/taxonomies.php:202
+msgid "Parent Country"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:203
+msgid "Parent Country:"
+msgstr "País-pai:"
+
+#: ../inc/taxonomies.php:204
+msgid "Edit Country"
+msgstr "Editar País"
+
+#: ../inc/taxonomies.php:205
+msgid "Update Country"
+msgstr "Atualizar País"
+
+#: ../inc/taxonomies.php:206
+msgid "Add new Country"
+msgstr "Adicionar novo País"
+
+#: ../inc/taxonomies.php:208
+msgid "New Country"
+msgstr "Novo País"
+
+#: ../inc/taxonomies.php:209
+msgid "View Country"
+msgstr "Visualizar País"
+
+#: ../inc/taxonomies.php:210
+msgid "No Country found"
+msgstr "País não encontrado"
+
+#: ../inc/taxonomies.php:211
+msgid "No Country found in the trash"
+msgstr "País não foi encontrado no lixo"
+
+#: ../inc/taxonomies.php:216 ../inc/taxonomies.php:230
+msgid "Years"
+msgstr "Anos"
+
+#: ../inc/taxonomies.php:217
+msgid "Year"
+msgstr "Ano"
+
+#: ../inc/taxonomies.php:218
+msgid "Search for Years"
+msgstr "Procurar por Anos"
+
+#: ../inc/taxonomies.php:219
+msgid "All Years"
+msgstr "Todos os anos"
+
+#: ../inc/taxonomies.php:220
+msgid "Parent Year"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:221
+msgid "Parent Year:"
+msgstr "Pai:"
+
+#: ../inc/taxonomies.php:222
+msgid "Edit Year"
+msgstr "Editar Ano"
+
+#: ../inc/taxonomies.php:223
+msgid "Update Year"
+msgstr "Atualizar Ano"
+
+#: ../inc/taxonomies.php:224
+msgid "Add new Year"
+msgstr "Adicionar novo Ano"
+
+#: ../inc/taxonomies.php:226
+msgid "New Year"
+msgstr "Novo Ano"
+
+#: ../inc/taxonomies.php:227
+msgid "View Year"
+msgstr "Visualizar Ano"
+
+#: ../inc/taxonomies.php:228
+msgid "No Year found"
+msgstr "Ano não encontrado"
+
+#: ../inc/taxonomies.php:229
+msgid "No Year found in the trash"
+msgstr "Ano não encontrado no lixo"
+
+#: ../inc/taxonomies.php:234 ../inc/taxonomies.php:248
+msgid "Territories"
+msgstr "Abrangência territorial"
+
+#: ../inc/taxonomies.php:235
+msgid "Territory"
+msgstr "Abrangência territorial"
+
+#: ../inc/taxonomies.php:236
+msgid "Search for Territories"
+msgstr "Procurar por abrangência territorial"
+
+#: ../inc/taxonomies.php:237
+msgid "All Territories"
+msgstr "Todas as abrangências territoriais"
+
+#: ../inc/taxonomies.php:238
+msgid "Parent Territory"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:239
+msgid "Parent Territory:"
+msgstr "Pai:"
+
+#: ../inc/taxonomies.php:240
+msgid "Edit Territory"
+msgstr "Editar abrangência territorial"
+
+#: ../inc/taxonomies.php:241
+msgid "Update Territory"
+msgstr "Atualizar abrangência territorial"
+
+#: ../inc/taxonomies.php:242
+msgid "Add new Territory"
+msgstr "Adicionar nova abrangência territorial"
+
+#: ../inc/taxonomies.php:244
+msgid "New Territory"
+msgstr "Nova abrangência territorial"
+
+#: ../inc/taxonomies.php:245
+msgid "View Territory"
+msgstr "Visualizar abrangência territorial"
+
+#: ../inc/taxonomies.php:246
+msgid "No Territory found"
+msgstr "Abrangência territorial não encontrada"
+
+#: ../inc/taxonomies.php:247
+msgid "No Territory found in the trash"
+msgstr "Abrangência territorial não encontrada no lixo"
+
+#: ../inc/taxonomies.php:252 ../inc/taxonomies.php:253
+#: ../inc/taxonomies.php:266
+msgid "Status"
+msgstr "Situação"
+
+#: ../inc/taxonomies.php:254
+msgid "Search for Status"
+msgstr "Procurar por Situação"
+
+#: ../inc/taxonomies.php:255
+msgid "All Status"
+msgstr "Todas as situações"
+
+#: ../inc/taxonomies.php:256
+msgid "Parent Status"
+msgstr "Pai"
+
+#: ../inc/taxonomies.php:257
+msgid "Parent Status:"
+msgstr "Pai:"
+
+#: ../inc/taxonomies.php:258
+msgid "Edit Status"
+msgstr "Editar Situação"
+
+#: ../inc/taxonomies.php:259
+msgid "Update Status"
+msgstr "Atualizar Situação"
+
+#: ../inc/taxonomies.php:260
+msgid "Add new Status"
+msgstr "Adicionar nova Situação"
+
+#: ../inc/taxonomies.php:262
+msgid "New Status"
+msgstr "Nova Situação"
+
+#: ../inc/taxonomies.php:263
+msgid "View Status"
+msgstr "Visualizar Situação"
+
+#: ../inc/taxonomies.php:264
+msgid "No Status found"
+msgstr "Situação não encontrada"
+
+#: ../inc/taxonomies.php:265
+msgid "No Status found in the trash"
+msgstr "Situação não encontrada no lixo"
+
+#: ../inc/taxonomies.php:380
+#, php-format
+msgid ""
+"We could not find any publication types. <a href=\"%s\">Please add one</a>."
+msgstr ""
+"Nós não conseguimos encontrar quaisquer tipos de publicação. <A href = \" %s "
+"\"> Por favor, adicione um </a>."
+
+#: ../inc/template-tags.php:17
+msgid "Menu"
+msgstr "Menu"
+
+#: ../inc/template-tags.php:59
+msgid "Posts navigation"
+msgstr "Navegação das postagens"
+
+#: ../inc/template-tags.php:63
+msgid "Older"
+msgstr "Página anterior"
+
+#: ../inc/template-tags.php:67
+msgid "Newer"
+msgstr "Próxima página"
+
+#: ../inc/template-tags.php:84
+msgid "Next Page &raquo;"
+msgstr "Próxima Página &raquo;"
+
+#: ../inc/template-tags.php:99
+msgid "&laquo; Previous Page"
+msgstr "&laquo; Página Anterior"
+
+#: ../inc/template-tags.php:203
+msgid "Post navigation"
+msgstr "Navegação da postagem"
+
+#: ../inc/template-tags.php:248 ../inc/template-tags.php:255
+#: ../single-publication.php:54
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:251
+msgid "Categories"
+msgstr "Categorias"
+
+#: ../inc/template-tags.php:257
+msgid "Tags"
+msgstr "Palavras-chave"
+
+#: ../inc/template-tags.php:275
+msgid "Share"
+msgstr "Compartilhar"
+
+#: ../inc/template-tags.php:425 ../inc/template-tags.php:428
+msgid "Download"
+msgstr "Baixar"
+
+#: ../inc/template-tags.php:455 ../inc/template-tags.php:459
+#: ../inc/template-tags.php:462
+#, php-format
+msgid "Source: %1$s"
+msgstr "Fonte: %1$s"
+
+#: ../inc/template-tags.php:611
+#, php-format
+msgid "Category: %s"
+msgstr "Categoria: %s"
+
+#: ../inc/template-tags.php:613
+#, php-format
+msgid "Tag: %s"
+msgstr "Palavra-chave: %s"
+
+#: ../inc/template-tags.php:615
+#, php-format
+msgid "Author: %s"
+msgstr "Autoria: %s"
+
+#: ../inc/template-tags.php:617
+#, php-format
+msgid "Year: %s"
+msgstr "Ano: %s"
+
+#: ../inc/template-tags.php:619
+#, php-format
+msgid "Month: %s"
+msgstr "Mês: %s"
+
+#: ../inc/template-tags.php:621
+#, php-format
+msgid "Day: %s"
+msgstr "Dia: %s"
+
+#: ../inc/template-tags.php:641
+#, php-format
+msgid "Archives: %s"
+msgstr "Arquivos: %s"
+
+#: ../inc/template-tags.php:645
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s : %2$s"
+
+#: ../inc/template-tags.php:647
+msgid "Archives"
+msgstr "Arquivos"
+
+#: ../inc/template-tags.php:843
+msgid "Loading the requested information"
+msgstr "Carregando a informação solicitada"
+
+#: ../inc/widgets.php:23
+msgid "Display a list with the elements inside Flacso Library"
+msgstr "Apresentar uma lista com os elementos dentro da Biblioteca Flacso"
+
+#: ../inc/widgets.php:24
+msgid "Flacso Library"
+msgstr "Biblioteca Flacso"
+
+#: ../inc/widgets.php:82 ../inc/widgets.php:179 ../inc/widgets.php:291
+msgid "Title:"
+msgstr "Título:"
+
+#: ../inc/widgets.php:98
+msgid "The Documentation Center counter widget"
+msgstr "Widget contador da central de documentos"
+
+#: ../inc/widgets.php:99
+msgid "GEA Documentation Center"
+msgstr "Centro de Documentação do GEA"
+
+#: ../inc/widgets.php:120 ../inc/widgets.php:232
+msgid "Documentation Center"
+msgstr "Centro de Documentação"
+
+#: ../inc/widgets.php:148 ../inc/widgets.php:260
+#, php-format
+msgid ""
+"There are %s available documents on higher education policies in Brazil and "
+"Latin America"
+msgstr ""
+"Estão disponíveis %s documentos sobre políticas de educação superior no "
+"Brasil e na América Latina"
+
+#: ../inc/widgets.php:149 ../inc/widgets.php:261
+msgid ""
+"Access here the Documentation Centre and search by subject, source, region "
+"or country"
+msgstr ""
+"Acesse aqui o Centro de Documentação e pesquise por tema, fonte, região ou "
+"país"
+
+#: ../inc/widgets.php:150 ../inc/widgets.php:262
+msgid "Free access for downloading files"
+msgstr "O download de arquivos é gratuito"
+
+#: ../inc/widgets.php:183 ../inc/widgets.php:295
+msgid "Page:"
+msgstr "Páginas:"
+
+#: ../inc/widgets.php:194 ../inc/widgets.php:306
+msgid "Link:"
+msgstr "Link:"
+
+#: ../inc/widgets.php:210
+msgid "Group terms widget"
+msgstr ""
+
+#: ../inc/widgets.php:211
+msgid "Group terms"
+msgstr ""
+
+#: ../inc/wp-bootstrap-navwalker.php:202
+msgid "Add a Menu"
+msgstr "Adicionar um menu"
+
+#: ../page-templates/child-page-list.php:27 ../page-templates/infoflacso.php:36
+#: ../page-templates/library.php:30 ../page-templates/project-list.php:27
+#: ../page.php:38 ../single-agenda.php:27 ../single-publication.php:66
+#: ../single.php:32
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../page-templates/gea-home.php:97
+msgid "More News"
+msgstr "Mais notícias"
+
+#: ../page-templates/project-list.php:38
+msgid "Ongoing projects"
+msgstr "Projetos em andamento"
+
+#: ../page-templates/project-list.php:39
+msgid "Accomplished projects"
+msgstr "Projetos realizados"
+
+#: ../search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa para: %s"
+
+#: ../single-project.php:32
+#, php-format
+msgid "Coordination: %1$s"
+msgstr "Coordenação: %1$s"
+
+#: ../single-project.php:38
+#, php-format
+msgid "Sponsorship: %1$s"
+msgstr "Patrocínio: %1$s"
+
+#: ../single-project.php:44
+#, php-format
+msgid "Funding: %1$s"
+msgstr "Financiamento: %1$s"
+
+#: ../single-project.php:50
+#, php-format
+msgid "Partnership: %1$s"
+msgstr "Instituições parceiras: %1$s"
+
+#: ../single-project.php:78
+msgid "Latest news about the project"
+msgstr "Últimas notícias do projeto"
+
+#: ../single-project.php:99
+#, php-format
+msgid "This project belongs to the following programs: %s"
+msgstr "Este projeto pertence aos seguintes programas: %s"
+
+#: ../single-publication.php:56
+#, php-format
+msgid "Tags: %1$s"
+msgstr "Palavras-chave: %1$s"
+
+#~ msgid "The Flacso theme"
+#~ msgstr "O tema para a Flacso"
+
+#~ msgid "Ethymos"
+#~ msgstr "Ethymos"
+
+#~ msgid "http://ethymos.com.br"
+#~ msgstr "http://ethymos.com.br"
+
+#~ msgctxt "Previous post link"
+#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+#~ msgstr "<Span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+
+#~ msgctxt "Next post link"
+#~ msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgctxt "yearly archives date format"
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "FY"
+
+#~ msgctxt "daily archives date format"
+#~ msgid "F j, Y"
+#~ msgstr "F j, Y"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Asides"
+#~ msgstr "À parte"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Galleries"
+#~ msgstr "Galerias"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Images"
+#~ msgstr "Imagens"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Videos"
+#~ msgstr "Vídeos"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Quotes"
+#~ msgstr "Cotações"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Links"
+#~ msgstr "Links"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Statuses"
+#~ msgstr "Situações"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Audio"
+#~ msgstr "Áudios"
+
+#~ msgctxt "post format archive title"
+#~ msgid "Chats"
+#~ msgstr "Bate-papo"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Uma ideia sobre &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s ideias sobre &ldquo;%2$s&rdquo;"
+
+#~ msgid "Flacso"
+#~ msgstr "Flacso"
+
+#~ msgid "http://github.com/redelivre/flacso"
+#~ msgstr "http://github.com/redelivre/flacso"
