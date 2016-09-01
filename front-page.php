@@ -100,7 +100,8 @@ get_header(); ?>
 	<section class="wrapper feature featured-links">
 		<div class="container">
 			<div class="row">
-				<h4 class="area-title">Destaques</h3>
+				<div class="col-md-12">
+					<h4 class="area-title">Destaques</h3>
 					<div class="col-md-1 col-sm-1 col-xs-2 banners-cycle-button banners-cycle-prev" >
 						<div class="banners-cycle-ball" id="banners-cycle-prev">
 						</div>
@@ -117,6 +118,7 @@ get_header(); ?>
 						<div class="banners-cycle-ball" id="banners-cycle-next">
 						</div>
 					</div>
+				</h4>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- .featured-links -->
