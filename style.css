@@ -6305,6 +6305,12 @@ a.icon--alternate {
 	font-size: 5em;
 }
 
+/* IE6 and below */
+@media screen and (min-width:0\0) {
+	.home .taxonomy-list li .icon:before {
+		font-size: 0.5em;
+	}
+}
 /* Read more */
 .more-sign {
   background: #002044;
