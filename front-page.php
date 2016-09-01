@@ -86,9 +86,12 @@ get_header(); ?>
 							}
 						}
 					}
-					?>
-					<div class="col-md-2 read-more--prefix"><?php _e('Look', 'flacso'); ?>&nbsp;<a href="<?php echo $page_library_permalink; ?>" class="read-more"><?php _e( 'Full Library', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a></div>
-					<?php flacso_the_publication_types(); ?>
+					flacso_the_publication_types(true); ?>
+					<div class="col-md-2 read-more--prefix">
+						<div class="read-more-content">
+							<?php _e('Look', 'flacso'); ?>&nbsp;<a href="<?php echo $page_library_permalink; ?>" class="read-more"><?php _e( 'Full Library', 'flacso' ); ?><span class="more-sign more-sign--alternate">+</span></a>
+						</div>
+					</div>
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->

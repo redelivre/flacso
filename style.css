@@ -6250,35 +6250,60 @@ a.icon--alternate {
 .taxonomy-list {
   list-style-type: none;
   margin: 0;
-  padding: 0; }
-  .taxonomy-list li {
-    display: inline;
-    width: 10%; }
-    .taxonomy-list li a {
-      border: 1px solid #002044;
-      display: block;
-      color: #fff;
-      float: left;
-      font-size: 0.875em;
-      line-height: 1.2;
-      min-height: 125px;
-      text-align: center;
-      padding: 1em;
-      width: 50%; }
-      .taxonomy-list li a:hover {
-        color: #2c6db6; }
-      @media (min-width: 480px) {
-        .taxonomy-list li a {
-          width: 25%;   }
-      @media (min-width: 768px) {
-        .taxonomy-list li a {
-          width: 20%; } }
-    .taxonomy-list li .icon {
-      display: block;
-      margin-bottom: 0.5em; }
-      .taxonomy-list li .icon:before {
-        font-size: 5em;
-        vertical-align: middle; }
+  padding: 0;
+}
+
+.taxonomy-list li {
+	display: inline;
+	width: 10%;
+}
+
+.taxonomy-list li a {
+	border: 1px solid #002044;
+	display: block;
+	color: #fff;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.2;
+	min-height: 125px;
+	text-align: center;
+	padding: 1em;
+	width: 50%;
+}
+
+.taxonomy-list li a:hover {
+	color: #2c6db6;
+}
+
+@media ( min-width : 480px) {
+	.taxonomy-list li a {
+		width: 25%;
+	}
+}
+
+@media ( min-width : 768px) {
+	.taxonomy-list li a {
+		width: 12.5%;
+	}
+	
+	.home .taxonomy-list li a {
+		width: 20%;
+	}
+}
+
+.taxonomy-list li .icon {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+.taxonomy-list li .icon:before {
+	font-size: 3em;
+	vertical-align: middle;
+}
+
+.home .taxonomy-list li .icon:before {
+	font-size: 5em;
+}
 
 /* Read more */
 .more-sign {
@@ -6314,14 +6339,26 @@ a.icon--alternate {
     position: absolute;
     right: 0;
     top: 50%;
-    width: 18%;
+    width: 20%;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
+.col-md-2.read-more--prefix a {
+	text-transform: none;
+}
+
+@media (max-width: 992px) {
+	.col-md-2.read-more--prefix {
+		width: 26%;
+} }
 
 @media(max-width: 768px) {
 	.col-md-2.read-more--prefix {
 		right: unset;
-    	top: 12%;
-    	width: 100%;
+    	top: unset;
+    	width: 95%;
 } }
 
 .read-more:visited {
