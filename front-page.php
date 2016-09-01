@@ -101,11 +101,11 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<h4 class="area-title">Destaques</h3>
-					<div class="col-md-1 banners-cycle-button" >
+					<div class="col-md-1 col-sm-1 col-xs-2 banners-cycle-button banners-cycle-prev" >
 						<div class="banners-cycle-ball" id="banners-cycle-prev">
 						</div>
 					</div> 
-					<div class="col-md-10 banners-widget-area">
+					<div class="col-md-10 col-sm-10 col-xs-8 banners-widget-area">
 						<?php
 						if ( is_active_sidebar( 'sidebar-banners' ) )
 						{
@@ -113,7 +113,7 @@ get_header(); ?>
 						}
 						?>
 					</div>
-					<div class="col-md-1 banners-cycle-button" >
+					<div class="col-md-1 col-sm-1 col-xs-2 banners-cycle-button" >
 						<div class="banners-cycle-ball" id="banners-cycle-next">
 						</div>
 					</div>

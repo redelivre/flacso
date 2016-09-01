@@ -21,3 +21,17 @@
     background-image: url(../images/next.png);
     
 }
+@media (max-width: 992px) {
+	.banners-cycle-prev {
+		padding: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.banners-cycle-prev {
+		padding: 0 15px;
+	}
+	.banners-cycle-prev div {
+	    float: right;
+	}
+}
