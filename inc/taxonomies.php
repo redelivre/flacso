@@ -80,7 +80,7 @@ function flacso_create_taxs()
 		}
 	}
 	
-	if(!term_exists('2014') )
+	if(!term_exists('2014', 'year') )
 	{
 		for ($i = 2000; $i < 2021; $i++)
 		{
