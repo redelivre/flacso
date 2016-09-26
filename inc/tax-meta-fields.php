@@ -49,7 +49,7 @@ if ( is_admin() ) {
     $icon_prefix = 'icon-';
     $icon_list = array();
 
-    $slices = json_decode( file_get_contents( get_template_directory_uri() . '/font/config.json' ), true );
+    $slices = json_decode( file_get_contents( get_stylesheet_directory() . '/font/config.json' ), true );
    
     if ( $slices ) {
         //$icon_prefix = $slices[]
