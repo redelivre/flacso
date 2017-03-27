@@ -19,7 +19,12 @@ get_header(); ?>
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					?>
+						if(is_gea() && get_query_var('publication-type') == 'cadernos' )
+						{?>
+							<div class="taxonomy-description">
+								O periódico Cadernos do GEA é uma publicação semestral que tem por objetivo divulgar reflexões sobre democratização do acesso ao ensino superior e questões relacionadas a políticas públicas de ação afirmativa. Pretende contribuir para a realização de debates com vistas à garantia dos direitos de acesso e permanência à educação pública.
+							</div><?php
+						}?>
 				</header><!-- .page-header -->
 
 				<?php /* Start the Loop */ ?>
