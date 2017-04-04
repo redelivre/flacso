@@ -17,7 +17,18 @@ get_header(); ?>
 
 				<header class="page-header">
 					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						if(is_gea() && get_query_var('publication-type') == 'cadernos' )
+						{
+							$title = 'Cadernos do GEA';
+							$title = apply_filters( 'get_the_archive_title', $title );?>
+							<h1 class="page-title">
+								<?php echo $title; ?>
+							</h1><?php
+						}
+						else
+						{
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+						}
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						if(is_gea() && get_query_var('publication-type') == 'cadernos' )
 						{?>
