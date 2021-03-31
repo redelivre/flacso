@@ -15,7 +15,7 @@ function flacso_adv_search_click()
 	
 	jQuery.ajax({
 		type   : 'post',
-		url    : 'http://' + window.location.host + '/wp-admin/admin-ajax.php',
+		url    : (location.protocol == 'https:' ? 'https://' : 'http://') + window.location.host + '/wp-admin/admin-ajax.php',
 		data   : {
 			action: 'flacso_adv_search',
 			checked: checkValues,
@@ -158,7 +158,7 @@ function flacso_tax_click(name, id)
 	
 	jQuery.ajax({
 		type   : 'post',
-		url    : 'http://' + window.location.host + '/wp-admin/admin-ajax.php',
+		url    : (location.protocol == 'https:' ? 'https://' : 'http://') + window.location.host + '/wp-admin/admin-ajax.php',
 		data   : {
 			action: 'flacso_adv_search',
 			checked: checkValues,

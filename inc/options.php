@@ -161,7 +161,7 @@ class FlacsoSettingsPage
     		$imp = new dataImporter();
     		$imp->debug = false;
     		$imp->gea = false;
-    		$imp->img_url = "http://flacso.org.br/portal/intranet/flacsomidia/imagenes/";
+    		$imp->img_url = "//flacso.org.br/portal/intranet/flacsomidia/imagenes/";
     		$imp->ImportCsV();
     		
     	}
@@ -181,7 +181,7 @@ class FlacsoSettingsPage
     		$imp = new dataImporter();
     		$imp->debug = false;
     		$imp->gea = true;
-    		$imp->img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
+    		$imp->img_url = "//flacso.org.br/gea/administracion/gea_clipping/imagenes/";
     		$imp->ImportCsV('/tmp/importgea.csv');
     
     	}
@@ -201,7 +201,7 @@ class FlacsoSettingsPage
     		$imp = new dataImporter();
     		$imp->debug = false;
     		$imp->gea = true;
-    		$imp->img_url = "http://flacso.org.br/gea/documentos/archivos/";
+    		$imp->img_url = "//flacso.org.br/gea/documentos/archivos/";
     		$imp->ImportDocsCsV();
     
     	}

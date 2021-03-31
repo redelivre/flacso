@@ -5,7 +5,7 @@ class dataImporter
 
 	public $debug = true;
 	public $gea = true;
-	public $img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
+	public $img_url = "//flacso.org.br/gea/administracion/gea_clipping/imagenes/";
 	//$img_url = "http://flacso.org.br/portal/intranet/flacsomidia/imagenes/";
 	//$img_url = "http://flacso.org.br/gea/administracion/gea_clipping/imagenes/";
 	
